@@ -1,0 +1,8 @@
+<html>
+<head>
+<title>PerlFu</title>
+</head>
+<body>
+[% content %]
+</body>
+</html>

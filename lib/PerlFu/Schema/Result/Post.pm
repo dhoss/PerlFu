@@ -48,8 +48,12 @@ __PACKAGE__->add_columns(
 );
 
 __PACKAGE__->set_primary_key('postid');
-__PACKAGE__->add_unique_constraint('title');
-__PACKAGE__->belongs_to( 'forum' => 'PerlFu::Schema::Result::Forum' );
+__PACKAGE__->add_unique_constraint(['title']);
+__PACKAGE__->belongs_to( 'forum' => 'PerlFu::Schema::Result::Forum',
+  {
+    'foreign.forumid' => 'self.forumid',
+  }
+);
 __PACKAGE__->belongs_to(
   'author' => 'PerlFu::Schema::Result::User',
   { 'foreign.userid' => 'self.author', }

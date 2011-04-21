@@ -1,0 +1,6 @@
+<h2>Forums</h2>
+<ul>
+[% FOR forum IN forums %]
+<li><a href="[% c.uri_for_action('/forum/view', [forum.forumid]) %]">[% forum.name %]</a></li>
+[% END %]
+</ul>
