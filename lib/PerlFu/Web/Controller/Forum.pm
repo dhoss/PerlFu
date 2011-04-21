@@ -16,7 +16,7 @@ Catalyst Controller.
 
 =cut
 
-sub base : Chained('/') PathPart('forum') CaptureArgs(1) {
+sub thread : Chained('/') PathPart('forum') CaptureArgs(1) {
   my ($self, $c, $forumid) = @_;
   my $forum = $c->model('Database::Forum')->find($forumid);
   $c->detach('forum_not_found') unless defined $forum;
@@ -34,11 +34,11 @@ sub index :Path('/forums') :Args(0) {
 
 }
 
-sub view : Chained('base') PathPart('') Args(0) {
+sub view : Chained('thread') PathPart('') Args(0) {
   my ($self, $c) = @_;
   my $forum = $c->stash->{'forum'};
-  my $thread_rs = $forum->threads;
-  $c->stash( threads => $thread_rs->all );
+  my @threads = $forum->threads->all;
+  $c->stash( threads => \@threads );
 }
 
 sub forum_not_found : Private {

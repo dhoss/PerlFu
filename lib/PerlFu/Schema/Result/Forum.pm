@@ -21,7 +21,7 @@ __PACKAGE__->set_primary_key('forumid');
 __PACKAGE__->add_unique_constraint(['name']);
 __PACKAGE__->has_many('threads' => 'PerlFu::Schema::Result::Post',
   {
-    'foreign.parent' => undef,
+    'foreign.forumid' => 'self.forumid'
   }
 );
 

@@ -10,6 +10,7 @@ __PACKAGE__->config(
     INCLUDE_PATH       => [ PerlFu::Web->path_to( 'root', 'site' ), ],
     WRAPPER            => 'wrapper.tt',
     render_die         => 1,
+    RECURSION          => 1,
 );
 
 =head1 NAME

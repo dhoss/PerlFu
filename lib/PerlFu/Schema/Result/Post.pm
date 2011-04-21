@@ -14,7 +14,10 @@ __PACKAGE__->add_columns(
     data_type   => 'integer',
     is_nullable => 0,
   },
-  rootid => { data_type => 'integer', },
+  rootid => { 
+    data_type => 'integer', 
+    is_nullable => 1,
+  },
   left   => {
     data_type   => 'integer',
     is_nullable => 0,

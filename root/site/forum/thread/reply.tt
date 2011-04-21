@@ -1,0 +1,13 @@
+<h2>Replying to [% thread.title %] in [% forum.name %]</h2>
+[% IF reply %]
+<p>reply created: <a href="[% c.uri_for_action('/forum/thread/view', [ forum.forumid, reply.postid ]) %]">[% reply.title %]</a></p>
+[% END %]
+<form action="[% c.uri_for_action('/forum/thread/reply', [ forum.forumid, thread.postid ]) %]" method="POST">
+<p>Author: <input type="text" name="author" /></p>
+<p>Title: <input type="text" name="title" /></p>
+<p>Body:</p>
+<div><textarea rows=10 cols=45 name="body"></textarea></div>
+<p>Tags: <input type="text" name="tags" /></p>
+<p><input type="submit" name="submit" value="create reply" /></p>
+</form>
+
