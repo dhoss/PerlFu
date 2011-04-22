@@ -1,8 +1,8 @@
 <h2>[% thread.title %]</h2>
 <p>by [% thread.author.name %]
 [% UNLESS thread.is_root %] 
-in reply to <a href="[% c.uri_for_action('/forum/thread/view', [ forum.forumid, thread.parent.postid ]) %]">
-[% thread.parent.title %]
+in reply to <a href="[% c.uri_for_action('/forum/thread/view', [ forum.forumid, parent.postid ]) %]">
+[% parent.title %]
 </a>
 [% END %]
 </p>
