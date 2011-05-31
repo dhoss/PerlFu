@@ -49,7 +49,7 @@ sub index : Chained('base_plural') PathPart('') : Args(0) {
 
 }
 
-sub view : Chained('base') Pathpart('') Args(0) {
+sub view : Chained('base') PathPart('') Args(0) {
   my ( $self, $c ) = @_;
   my $thread = $c->stash->{'thread'};
   $c->stash( parent => $thread->parent );
