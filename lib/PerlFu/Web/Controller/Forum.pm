@@ -37,7 +37,7 @@ sub index :Path('/forums') :Args(0) {
 sub view : Chained('thread') PathPart('') Args(0) {
   my ($self, $c) = @_;
   my $forum = $c->stash->{'forum'};
-  my @threads = $forum->threads->all;
+  my @threads = $forum->threads->search({ parent => undef })->all;
   $c->stash( threads => \@threads );
 }
 
