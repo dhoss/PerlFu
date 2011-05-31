@@ -2,7 +2,11 @@ package PerlFu::Schema::Result::Post;
 
 use parent qw( DBIx::Class::Core );
 
-__PACKAGE__->load_components(qw( TimeStamp Tree::NestedSet ));
+__PACKAGE__->load_components(qw( TimeStamp +DBICx::MaterializedPath ));
+__PACKAGE__->parent_column("parent"); # default "parent"
+__PACKAGE__->path_column("path");     # default "materialized_path"
+__PACKAGE__->path_separator(".");     # default "/"
+
 __PACKAGE__->table('posts');
 __PACKAGE__->add_columns(
   postid => {
@@ -14,20 +18,13 @@ __PACKAGE__->add_columns(
     data_type   => 'integer',
     is_nullable => 0,
   },
-  rootid => { 
+  parent => { 
     data_type => 'integer', 
     is_nullable => 1,
   },
-  left   => {
-    data_type   => 'integer',
-    is_nullable => 0,
-  },
-  right => {
-    data_type   => 'integer',
-    is_nullable => 0,
-  },
-  level => {
-    data_type   => 'integer',
+  path   => {
+    data_type   => 'varchar',
+    size        => 255,
     is_nullable => 0,
   },
   title => {
@@ -57,17 +54,17 @@ __PACKAGE__->belongs_to( 'forum' => 'PerlFu::Schema::Result::Forum',
     'foreign.forumid' => 'self.forumid',
   }
 );
+
 __PACKAGE__->belongs_to(
   'author' => 'PerlFu::Schema::Result::User',
   { 'foreign.userid' => 'self.author', }
 );
-__PACKAGE__->tree_columns(
-  {
-    root_column  => 'rootid',
-    left_column  => 'left',
-    right_column => 'right',
-    level_column => 'level',
-  }
-);
 
+sub sqlt_deploy_hook { 
+  $_[1]->add_index(
+    name => "posts_idx_parent",
+    fields => ['parent'],
+  );
+}
+  
 1;
