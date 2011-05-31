@@ -17,7 +17,10 @@ requires 'Moose';
 requires 'namespace::autoclean';
 requires 'Config::General'; # This should reflect the config file format you've chosen
                  # See Catalyst::Plugin::ConfigLoader for supported formats
+
+requires 'DBICx::MaterializedPath';
 test_requires 'Test::More' => '0.88';
+test_requires 'Test::Class';
 catalyst;
 
 install_script glob('script/*.pl');

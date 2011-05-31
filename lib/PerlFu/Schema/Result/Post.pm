@@ -26,7 +26,7 @@ __PACKAGE__->add_columns(
   path   => {
     data_type   => 'varchar',
     size        => 255,
-    is_nullable => 0,
+    is_nullable => 1,
   },
   title => {
     data_type   => 'varchar',
