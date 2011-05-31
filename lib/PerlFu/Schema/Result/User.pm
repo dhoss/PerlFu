@@ -6,9 +6,10 @@ __PACKAGE__->load_components(qw( TimeStamp ));
 __PACKAGE__->table('users');
 __PACKAGE__->add_columns(
   userid => {
-    data_type      => 'serial',
+    data_type      => 'integer',
     is_nullable    => 0,
     is_primary_key => 1,
+    is_auto_increment => 1
   },
   name => {
     data_type   => 'varchar',
