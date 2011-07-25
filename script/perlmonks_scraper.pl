@@ -4,6 +4,6 @@ use PerlFu::Scraper;
 use Data::Dumper;
 use URI;
 my $scraper = PerlFu::Scraper->new( driver => "perlmonks" );
-my $res = $scraper->scrape_it(URI->new("http://perlmonks.org/?node=Seekers%20of%20Perl%20Wisdom"));
+my $res = $scraper->scrape_it(URI->new("http://perlmonks.org/?node_id=30175;xmlstyle=rss;types=perlquestion"));
 
 print Dumper $res;
