@@ -15,9 +15,9 @@ with 'PerlFu::Scraper::Driver';
 
 
 sub scrape_it {
-  my ($self, $uri) = @_;
+  my ($self, $uri, $opts) = @_;
   $self->setup;
-  $self->scrape_action($uri);
+  $self->scrape_action($uri, $opts);
 }
 
 1;
