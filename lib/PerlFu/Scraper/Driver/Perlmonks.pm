@@ -56,8 +56,8 @@ sub scrape_action {
       my $t = $self->twig;
       print "File name: $file\n";
       print "Parsing...\n";
-      $t->safe_parsefile($file) 
-        or warn "Can't parse $file: $!";
+      try { $t->safe_parsefile($file) }
+      catch { warn "Can't parse $file: $!" };
       my $root = $t->root;
       my $node = $t->first_elt('node');
       my $author;
