@@ -19,5 +19,5 @@ sub scrape_it {
   $self->setup;
   $self->scrape_action($uri, $opts);
 }
-
+__PACKAGE__->meta->make_immutable;
 1;
