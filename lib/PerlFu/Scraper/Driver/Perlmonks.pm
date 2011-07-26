@@ -34,15 +34,6 @@ has 'twig' => (
   },
 );
 
-has 'rule' => (
-  is       => 'ro',
-  lazy     => 1,
-  required => 1,
-  default  => sub {
-    File::Find::Rule->new->file();
-  }
-);
-
 sub scrape_action {
   my ( $self, $uri, $opts ) = @_;
   my $rss;
@@ -50,9 +41,7 @@ sub scrape_action {
   if ( defined $opts->{directory} ) {
     print "Dir: " . $uri . "\n";
     print "Collecting files...\n";
-    my $rule = $self->rule->name("*.xml");
-    my @files = $rule->in($uri);
-    for my $file ( @files ) {
+    my $file = $uri;
       my $t = $self->twig;
       print "File name: $file\n";
       print "Parsing...\n";
@@ -85,7 +74,6 @@ sub scrape_action {
         data  => $data,
         create => 1,
       );
-    }
   } else {
     $rss = XML::Feed->parse($uri)
       or die XML::Feed->errstr;
