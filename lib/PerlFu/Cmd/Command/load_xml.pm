@@ -28,10 +28,11 @@ has loader => (
 sub execute {
   my ( $self, $opt, $args ) = @_;
   say "Beginning processing";
-  my $dir_handle = dir($self->dir)->open
+  my $dir_handle = dir($self->dir)
     or die "Can't open " . $self->dir->stringify . " : $!";
-  while ( my $file = $dir_handle->read ) {
+  while ( my $file = $dir_handle->next ) {
     say "Processing $file";
+
   }
 
 }
