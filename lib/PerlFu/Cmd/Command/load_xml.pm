@@ -6,6 +6,8 @@ use namespace::autoclean;
 use File::Find::Rule;
 use XML::Toolkit::App;
 use Try::Tiny;
+use Data::Dumper;
+use Moose::Autobox;
 
 extends qw(MooseX::App::Cmd::Command);
 
@@ -38,13 +40,22 @@ sub execute {
     say "Processing $file";
     say "Creating XML::Toolkit object";
     try {
-      $xml_loader->parse_file($file) 
-        or die "Error parsing: $!";
+      $xml_loader->parse_file($file);
+      my $root = $xml_loader->root_object;
+      say "Node title :" . $root->title;
+      say "Created on: " . $root->created;
+      say "Data: "; 
+      for my $data ( $root->data_collection ) {
+        for my $field ( $data->field_collection ) {
+          say "name: " . $field->name;
+          say "text: " . $field->text;
+        }
+      }
+      
     } catch {
       say "Whoops, couldn't parse $file: $_";
     };
     say "Completed processing";
-
 
   }
 
