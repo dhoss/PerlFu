@@ -3,10 +3,9 @@ package PerlFu::Cmd::Command::load_xml;
 use 5.12.0;
 use Moose;
 use namespace::autoclean;
-use File::Find::Rule;
+use File::Find;
 use XML::Toolkit::App;
 use Try::Tiny;
-use Data::Dumper;
 use ElasticSearch;
 use Data::Page;
 
@@ -57,7 +56,8 @@ sub execute {
   my ( $self, $opt, $args ) = @_;
   my $dir = $self->dir;
   say "Getting file list...";
-  my @files = File::Find::Rule->file()->name('*.xml')->in($dir);
+  my @files;
+  find( sub { push @files, $File::Find::name if /\.xml$/ }, $dir );
   say "Building data structure...";
   my $pages = $self->pager;
   my @parsed = $self->build_bulk_data( \@files );
