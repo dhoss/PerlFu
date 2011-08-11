@@ -7,7 +7,6 @@ use File::Find::Rule;
 use XML::Toolkit::App;
 use Try::Tiny;
 use Data::Dumper;
-use IO::All;
 use ElasticSearch;
 use Data::Page;
 
@@ -22,6 +21,8 @@ has dir => (
   required      => 1,
   cmd_aliases   => 'd',
   documentation => "specify a directory to grab XML files from.",
+  lazy          => 1,
+  default       => ".",
 );
 
 has app_loader => (
@@ -61,17 +62,13 @@ sub execute {
   my $pages = $self->pager;
   my @parsed = $self->build_bulk_data( \@files );
   $pages->total_entries(scalar @parsed);
-  say Dumper \@parsed;
   say "Indexing...";
   my $result;
   for ( $pages->next_page ) {
-    warn "INSIDE";
     my $records = $pages->splice( \@parsed );
     say "****Page: " . $pages->current_page;
-    io('records.txt') < Dumper $records;
     $result = $self->es->bulk_index( $records );
     say "Indexed successfully";
-    Dumper $records > io('records.txt');
   }
 
 }
@@ -85,7 +82,9 @@ sub build_bulk_data {
   for my $file (@file_list) {
     try {
       say "Parsing $file";
-      my $contents = io($file)->slurp;
+      open my $fh, "<",  $file or die "can't open $file :$!";
+      my $contents = do { local $/; <$fh> };
+      close $fh;
       eval { $xml_loader->parse_string($contents) };
       next if $@;
       my $root = $xml_loader->root_object;
