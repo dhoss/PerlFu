@@ -11,7 +11,7 @@ use IO::All;
 use ElasticSearch;
 use Data::Page;
 
-$XML::SAX::ParserPackage = 'XML::LibXML::SAX';
+$XML::SAX::ParserPackage = 'XML::SAX::ExpatXS';
 
 extends qw(MooseX::App::Cmd::Command);
 
