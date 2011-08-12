@@ -63,7 +63,6 @@ sub execute {
     say "****Page: " . $pages->current_page;
 
     $result = $self->es->bulk_index($records);
-    say 'Result: ' . Dumper $result;
     say "Indexed successfully";
   }
 
