@@ -46,7 +46,7 @@ has 'pager' => (
   lazy     => 1,
   traits   => [qw( NoGetopt )],
   default  => sub {
-    Data::Page->new( entries_per_page => 5000 );
+    Data::Page->new( entries_per_page => 1000 );
   }
 );
 
