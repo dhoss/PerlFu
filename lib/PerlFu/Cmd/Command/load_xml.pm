@@ -51,15 +51,15 @@ sub execute {
   find( sub { push @files, $File::Find::name if /\.xml$/ }, $dir );
   say "Building data structure...";
   my $pages  = $self->pager;
-  my @parsed = $self->build_bulk_data( \@files );
+  my $parsed = $self->build_bulk_data( \@files );
   say "Done parsing...";
-  $pages->total_entries( scalar @parsed );
-  say "Parsed " . scalar @parsed . " files";
+  $pages->total_entries( scalar @{ $parsed } );
+  say "Parsed " . scalar @{ $parsed } . " files";
   say "Indexing...";
   my $result;
 
   for ( $pages->next_page ) {
-    my $records = $pages->splice( \@parsed );
+    my $records = $pages->splice( $parsed );
     say "****Page: " . $pages->current_page;
 
     #$result = $self->es->bulk_index($records);
@@ -102,36 +102,27 @@ sub build_bulk_data {
         my $node = shift @nodes;
         my $type = $node->[0];
         if ( $type == XML_READER_TYPE_ELEMENT ) {
-          print
-            "element $node->[1] is from ns $node->[2] '$ns_map[$node->[2]]'\n";
-          push @nodes, @{ $node->[4] };    # queue children
+          if ( $node->[1] eq 'node' ) {
+            say "element $node->[1] info:";
+            # holy mother of fuck help
+            
+            push @bulk_data, {
+              index     => 'perlmonks',
+              type      => 'perlmonks_node',
+              data      => {
+                author_id => $node->[4][3][3]->{'id'},        # author id
+                content   => $node->[4][5][4][1][4][0][1],    # node content/doctext
+                title     => $node->[3]->{'title'},           # node title
+                created   => $node->[3]->{'created'},         # create date
+                updated   => $node->[3]->{'updated'},         # updated
+              },
+            };
+            push @nodes, @{ $node->[4] };    # queue children
+          }
         } elsif ( $type == XML_READER_TYPE_DOCUMENT ) {
           push @nodes, @{ $node->[2] };    # queue children
         }
       }
-
-      #if ( $root->title =~ /(^Permission Denied|user image)/g ) {
-      #  warn "Title: " . $root->title;
-      #  warn "Node ID: " . $root->id;
-      #  next;
-      #}
-      #my $data = @{ $root->data_collection }[0];
-      push @bulk_data, $tree;
-
-      #  {
-      #  index => 'perlmonks',
-      #  type  => 'perlmonks_node',
-      #  data  => {
-      #    node => {
-      #      title   => $root->title,
-      #      author  => @{ $root->author_collection }[0]->text,
-      #      id      => $root->id,
-      #      content => @{ $data->field_collection }[0]->text,
-      #      created => $root->created,
-      #      updated => $root->updated,
-      #    }
-      #  }
-      #  };
 
     }
     catch {
