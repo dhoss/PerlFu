@@ -23,7 +23,6 @@ has dir => (
   default       => ".",
 );
 
-
 has 'es' => (
   is       => 'ro',
   required => 1,
@@ -44,7 +43,6 @@ has 'pager' => (
   }
 );
 
-
 sub execute {
   my ( $self, $opt, $args ) = @_;
   my $dir = $self->dir;
@@ -63,6 +61,7 @@ sub execute {
   for ( $pages->next_page ) {
     my $records = $pages->splice( \@parsed );
     say "****Page: " . $pages->current_page;
+
     #$result = $self->es->bulk_index($records);
     say "Indexed successfully";
   }
@@ -77,17 +76,40 @@ sub build_bulk_data {
   for my $file (@file_list) {
     try {
       $counter += 1;
-      say "Parsing $file ($counter of " . scalar @file_list . " files)" . ($counter/(scalar @file_list)) . "% complete";
+      say "Parsing $file ($counter of "
+        . scalar @file_list
+        . " files) "
+        . ( $counter / ( scalar @file_list ) ) * 100 
+        . "% complete";
       open my $fh, "<", $file or die "can't open $file :$!";
       my $contents = do { local $/; <$fh> };
       close $fh;
       say "Read";
-      my $reader = XML::LibXML::Reader->new( string => $contents ) 
+      my $reader = XML::LibXML::Reader->new( string => $contents )
         || die "can't read file $!";
       say "Read in contents";
       say "creating tree";
-      my $tree = XML::CompactTree::XS::readSubtreeToPerl($reader, XCT_DOCUMENT_ROOT|XCT_IGNORE_WS|XCT_IGNORE_COMMENTS);
+      my @ns_map;
+      my %ns;
+      my $tree =
+        XML::CompactTree::XS::readSubtreeToPerl( $reader, XCT_DOCUMENT_ROOT,
+        \%ns );
+      $ns_map[$ns{$_}]=$_ for keys %ns;
       say "Set contents";
+      my @nodes = ($tree);
+
+      while (@nodes) {
+        my $node = shift @nodes;
+        my $type = $node->[0];
+        if ( $type == XML_READER_TYPE_ELEMENT ) {
+          print
+            "element $node->[1] is from ns $node->[2] '$ns_map[$node->[2]]'\n";
+          push @nodes, @{ $node->[4] };    # queue children
+        } elsif ( $type == XML_READER_TYPE_DOCUMENT ) {
+          push @nodes, @{ $node->[2] };    # queue children
+        }
+      }
+
       #if ( $root->title =~ /(^Permission Denied|user image)/g ) {
       #  warn "Title: " . $root->title;
       #  warn "Node ID: " . $root->id;
@@ -95,6 +117,7 @@ sub build_bulk_data {
       #}
       #my $data = @{ $root->data_collection }[0];
       push @bulk_data, $tree;
+
       #  {
       #  index => 'perlmonks',
       #  type  => 'perlmonks_node',
