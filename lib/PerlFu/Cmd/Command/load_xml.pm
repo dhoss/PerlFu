@@ -61,11 +61,13 @@ sub execute {
   for ( $pages->first_page .. $pages->last_page ) {
     $pages->current_page($_);
 
-    my $records = $pages->splice( $parsed );
+    my @records = $pages->splice( $parsed );
     say "****Page: $_";
+    say "Size: " . scalar @records;
 
-    $result = $self->es->bulk_index($records);
+    $result = $self->es->bulk_index(\@records);
     if ( !exists $result->{'errors'} ) {
+      say "Result: " . Dumper $result->{'actions'};
       say "Indexed successfully"; 
     } else {
       say "ERROR INDEXING";
@@ -124,6 +126,7 @@ sub build_bulk_data {
                 created   => $node->[3]->{'created'},         # create date
                 updated   => $node->[3]->{'updated'},         # updated
               },
+
             };
             push @nodes, @{ $node->[4] };    # queue children
           }
