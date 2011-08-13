@@ -58,12 +58,20 @@ sub execute {
   say "Indexing...";
   my $result;
 
-  for ( $pages->next_page ) {
+  for ( $pages->first_page .. $pages->last_page ) {
+    $pages->current_page($_);
+
     my $records = $pages->splice( $parsed );
-    say "****Page: " . $pages->current_page;
+    say "****Page: $_";
 
     $result = $self->es->bulk_index($records);
-    say "Indexed successfully";
+    if ( !exists $result->{'errors'} ) {
+      say "Indexed successfully"; 
+    } else {
+      say "ERROR INDEXING";
+      say "*****************";
+      say $_->{'error'} for @{$result->{'errors'}};
+    }
   }
 
 }
@@ -78,9 +86,9 @@ sub build_bulk_data {
       $counter += 1;
       say "Parsing $file ($counter of "
         . scalar @file_list
-        . " files) "
-        . ( $counter / ( scalar @file_list ) ) * 100 
-        . "% complete";
+        . " files) ";
+        #. ( $counter / ( scalar @file_list ) ) * 100 
+        #. "% complete";
       open my $fh, "<", $file or die "can't open $file :$!";
       my $contents = do { local $/; <$fh> };
       close $fh;
