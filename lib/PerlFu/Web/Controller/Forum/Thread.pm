@@ -92,7 +92,7 @@ sub reply : Chained('base') PathPart('reply') Args(0) {
       {
         author  => { name => $c->req->param('author') },
         body    => $c->req->param('body'),
-        title   => 'RE:' . $thread->title,
+        title   => $c->req->param('title'),
         forumid => $forum->forumid,
         parent  => $thread
       }

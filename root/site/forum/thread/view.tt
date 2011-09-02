@@ -1,6 +1,6 @@
 <h2>[% thread.title %]</h2>
 <p>by [% thread.author.name %]
-[% UNLESS thread.is_root %] 
+[% IF thread.parent %] 
 in reply to <a href="[% c.uri_for_action('/forum/thread/view', [ forum.forumid, parent.postid ]) %]">
 [% parent.title %]
 </a>
@@ -13,7 +13,7 @@ in reply to <a href="[% c.uri_for_action('/forum/thread/view', [ forum.forumid, 
 <div>
 <div>
 <ul>
-[% FOR reply IN thread.descendants %]
+[% FOR reply IN thread.children %]
 <li>[% PROCESS 'forum/thread/view.tt' thread=reply %]</li>
 [% END %]
 </ul>
