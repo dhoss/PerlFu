@@ -41,6 +41,17 @@ sub view : Chained('thread') PathPart('') Args(0) {
   $c->stash( threads => \@threads );
 }
 
+sub create : Path('/forum/new') {
+  my ($self, $c) = @_;
+  my $params = $c->req->params;
+  if ( defined $params->{'create'} ) {
+    my $forum = $c->model('Database::Forum')->create({
+      name => $params->{'name'}
+    });
+    $c->stash( forum_id => $forum->forumid );
+  }
+}
+
 sub forum_not_found : Private {
   my ($self, $c) = @_;
   $c->error("Forum was not found");

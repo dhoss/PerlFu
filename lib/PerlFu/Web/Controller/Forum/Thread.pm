@@ -88,12 +88,13 @@ sub reply : Chained('base') PathPart('reply') Args(0) {
   my $thread = $c->stash->{'thread'};
   if ( $c->req->param ) {
     $c->log->debug( "*** CREATING REPLY TO " . $thread->title );
-    my $reply = $thread->add_to_children(
+    my $reply = $c->model('Database::Post')->create( 
       {
         author  => { name => $c->req->param('author') },
         body    => $c->req->param('body'),
         title   => 'RE:' . $thread->title,
         forumid => $forum->forumid,
+        parent  => $thread
       }
     );
     $c->stash( reply => $reply );

@@ -1,0 +1,7 @@
+[% IF forum_id %]
+<p>Created forum <a href="[% c.uri_for_action('/forum/view', [ forum_id ]) %]">[% forum_id %]</a></p>
+[% END %]
+<form method="POST" action="">
+<p>name: <input type="text" name="name" /></p>
+<p><input type="submit" name="create" /></p>
+</form>
