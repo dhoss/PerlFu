@@ -17,10 +17,11 @@ __PACKAGE__->add_columns(
   },
   password => {
     data_type           => 'char',
-    size                => 59,
+    is_nullable         => 0,
+    size                => 60,
     encode_column       => 1,
     encode_class        => 'Crypt::Eksblowfish::Bcrypt',
-    encode_args         => { key_nul => 0, cost => 8 },
+    encode_args         => { key_nul => 1, cost => 8 },
     encode_check_method => 'check_password'
   },
 );
