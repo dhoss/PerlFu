@@ -1,6 +1,6 @@
 -- 
 -- Created by SQL::Translator::Producer::PostgreSQL
--- Created on Tue Sep  6 13:17:20 2011
+-- Created on Tue Sep  6 16:26:20 2011
 -- 
 ;
 --
@@ -18,8 +18,9 @@ CREATE TABLE "forums" (
 -- Table: users
 --
 CREATE TABLE "users" (
-  "userid" serial NOT NULL,
+  "userid" integer NOT NULL,
   "name" character varying(255) NOT NULL,
+  "password" character(60) NOT NULL,
   PRIMARY KEY ("userid"),
   CONSTRAINT "users_name" UNIQUE ("name")
 );
@@ -37,8 +38,6 @@ CREATE TABLE "posts" (
   "author" integer NOT NULL,
   "parent" integer,
   "path" character varying(255),
-  "created_at" timestamp NOT NULL,
-  "updated_at" timestamp,
   PRIMARY KEY ("postid"),
   CONSTRAINT "posts_title" UNIQUE ("title")
 );

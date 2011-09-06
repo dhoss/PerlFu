@@ -140,16 +140,6 @@ schema:
           order: 5
           size:
             - 0
-        created_at:
-          data_type: datetime
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 0
-          is_unique: 0
-          name: created_at
-          order: 9
-          size:
-            - 0
         forumid:
           data_type: integer
           default_value: ~
@@ -211,16 +201,6 @@ schema:
           order: 3
           size:
             - 200
-        updated_at:
-          data_type: datetime
-          default_value: ~
-          is_nullable: 1
-          is_primary_key: 0
-          is_unique: 0
-          name: updated_at
-          order: 10
-          size:
-            - 0
       indices:
         - fields:
             - author
@@ -277,10 +257,19 @@ schema:
           order: 2
           size:
             - 255
+        password:
+          data_type: char
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: password
+          order: 3
+          size:
+            - 60
         userid:
           data_type: integer
           default_value: ~
-          is_auto_increment: 1
           is_nullable: 0
           is_primary_key: 1
           is_unique: 0
@@ -354,14 +343,6 @@ translator:
             body:
               data_type: text
               is_nullable: 0
-            created_at:
-              _ic_dt_method: datetime
-              _inflate_info:
-                deflate: !!perl/code '{ "DUMMY" }'
-                inflate: !!perl/code '{ "DUMMY" }'
-              data_type: datetime
-              dynamic_default_on_create: get_timestamp
-              is_nullable: 0
             forumid:
               data_type: integer
               is_nullable: 0
@@ -388,15 +369,6 @@ translator:
               data_type: varchar
               is_nullable: 0
               size: 200
-            updated_at:
-              _ic_dt_method: datetime
-              _inflate_info:
-                deflate: !!perl/code '{ "DUMMY" }'
-                inflate: !!perl/code '{ "DUMMY" }'
-              data_type: datetime
-              dynamic_default_on_create: get_timestamp
-              dynamic_default_on_update: get_timestamp
-              is_nullable: 1
           _columns_info_loaded: 0
           _ordered_columns:
             - postid
@@ -407,8 +379,6 @@ translator:
             - author
             - parent
             - path
-            - created_at
-            - updated_at
           _primaries: &3
             - postid
           _relationships:
@@ -468,15 +438,25 @@ translator:
               data_type: varchar
               is_nullable: 0
               size: 255
+            password:
+              data_type: char
+              encode_args:
+                cost: 8
+                key_nul: 1
+              encode_check_method: check_password
+              encode_class: Crypt::Eksblowfish::Bcrypt
+              encode_column: 1
+              is_nullable: 0
+              size: 60
             userid:
               data_type: integer
-              is_auto_increment: 1
               is_nullable: 0
               is_primary_key: 1
           _columns_info_loaded: 0
           _ordered_columns:
             - userid
             - name
+            - password
           _primaries: &4
             - userid
           _relationships:
@@ -534,7 +514,7 @@ translator:
           schema: *1
           source_name: __VERSION
       storage: !!perl/hash:DBIx::Class::Storage::DBI::Pg
-        _conn_pid: 13486
+        _conn_pid: 16619
         _connect_info:
           - AutoCommit: 1
             dsn: dbi:Pg:dbname=perlfu_dev;host=10.9.8.1
