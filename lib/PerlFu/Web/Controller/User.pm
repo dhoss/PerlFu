@@ -15,6 +15,8 @@ sub load_user : Chained('base') PathPart('') CaptureArgs(1) {
   $c->stash( user => $c->model('Database::User')->find($userid) );
 }
 
+sub index : Chained('base') PathPart('') Args(0) {}
+
 sub read : Chained('load_user') PathPart('') Args(0) {
   my ( $self, $c ) = @_;
 }
@@ -27,7 +29,7 @@ sub update : Chained('load_user') PathPart('update') Args(0) {
     try {
       my $updated_user = $c->model('Database')->txn_do(
         sub {
-          $user->update( $results->valid_values )
+          $user->update( $params )
         }
       );
       $c->stash( updated => $updated_user );
