@@ -1,6 +1,6 @@
 package PerlFu::Schema::Result::User;
 
-use parent qw( DBIx::Class::Core );
+use parent qw( DBIx::Class::Core EncodedColumn);
 
 __PACKAGE__->load_components(qw( TimeStamp ));
 __PACKAGE__->table('users');
@@ -15,9 +15,18 @@ __PACKAGE__->add_columns(
     size        => '255',
     is_nullable => 0,
   },
+  password => {
+    data_type           => 'CHAR',
+    size                => 59,
+    encode_column       => 1,
+    encode_class        => 'Crypt::Eksblowfish::Bcrypt',
+    encode_args         => { key_nul => 0, cost => 8 },
+    encode_check_method => 'check_password'
+  },
 );
+
 __PACKAGE__->set_primary_key('userid');
-__PACKAGE__->add_unique_constraint(['name']);
+__PACKAGE__->add_unique_constraint( ['name'] );
 __PACKAGE__->has_many(
   'posts' => 'PerlFu::Schema::Result::Post',
   { 'foreign.author' => 'self.userid', }
