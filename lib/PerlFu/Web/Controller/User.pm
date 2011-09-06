@@ -60,6 +60,26 @@ sub create : Chained('base') PathPart('new') Args(0) {
   }
 }
 
+sub login : Chained('base') PathPart('login') Args(0) {
+  my ( $self, $c ) = @_;
+  my $params = $c->req->params;
+  if ( $params->{'submit'} ) {
+   if ( $c->authenticate({
+          name => $params->{'username'},
+          password => $params->{'password'}
+        }) ) {
+      $c->stash(
+        success => 1
+      );
+      $c->res->redirect(
+        $c->uri_for_action('/user/read', [ $c->user->obj->user_id ])
+      );
+    } else {
+      $c->error("Sorry, username/password is wrong");
+    }
+  }
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;

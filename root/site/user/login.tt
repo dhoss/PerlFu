@@ -1,0 +1,6 @@
+<h2>Login</h2>
+<form method="POST" action="[% c.uri_for_action('/user/login') %]">
+<p>username: <input type="text" name="username" /></p>
+<p>password: <input type="password" name="password" /></p>
+<p><input type="submit" name="submit" value="Login" /></p>
+</form>
