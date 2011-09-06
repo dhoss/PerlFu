@@ -21,13 +21,10 @@ Catalyst Controller.
 sub base : Chained('.') PathPart('thread') CaptureArgs(1) {
   my ( $self, $c, $threadid ) = @_;
   $c->log->debug("*** GETTING POST ***");
-  my $ql     = DBIx::Class::QueryLog->new;
   my $schema = $c->model('Database')->schema;
-  $schema->storage->debugobj($ql);
-  $schema->storage->debug(1);
   my $thread = $c->model('Database::Post')->find($threadid);
   $c->detach('thread_not_found') unless defined $thread;
-  $c->stash( thread => $thread, ql => $ql );
+  $c->stash( thread => $thread );
 }
 
 sub base_plural : Chained('.') PathPart('threads') CaptureArgs(0) {
@@ -44,20 +41,13 @@ sub index : Chained('base_plural') PathPart('') : Args(0) {
   my $forum = $c->stash->{'forum'};
   $c->log->debug( "*** GETTING ALL THREADS IN FORUM " . $forum->name );
   my @threads =
-    $forum->threads->search( undef, { prefetch => ['descendenants'] } )->all;
+    $forum->threads->search( undef, { prefetch => ['children'] } )->all;
   $c->stash( threads => \@threads );
 
 }
 
 sub view : Chained('base') Pathpart('') Args(0) {
   my ( $self, $c ) = @_;
-  my $thread = $c->stash->{'thread'};
-  $c->stash( parent => $thread->parent );
-  my $ql      = $c->stash->{'ql'};
-  my $ana     = DBIx::Class::QueryLog::Analyzer->new( { querylog => $ql } );
-  my @queries = $ana->get_sorted_queries;
-  $c->log->debug( "query info: " . Dumper \@queries );
-
 }
 
 sub thread_not_found : Private {
