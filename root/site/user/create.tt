@@ -1,0 +1,9 @@
+[% IF user %]
+<p>Congrats, [% user.name %], your account has been <a href="[% c.uri_for_action('/user/read', [user.userid]) %]">created</a></p>
+[% END %]
+<h2>Sign up</h2>
+<form action="[% c.uri_for_action('/user/create') %]" method="POST">
+<p>username: <input type="text" name="name" /></p>
+<p>password: <input type="text" name="password" /></p>
+<p><input type="submit" value="Join" name="submit" /></p>
+</form>

@@ -1,0 +1,614 @@
+---
+schema:
+  procedures: {}
+  tables:
+    forums:
+      constraints:
+        - deferrable: 1
+          expression: ''
+          fields:
+            - forumid
+          match_type: ''
+          name: ''
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: PRIMARY KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - name
+          match_type: ''
+          name: forums_name
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: UNIQUE
+      fields:
+        forumid:
+          data_type: integer
+          default_value: ~
+          is_auto_increment: 1
+          is_nullable: 0
+          is_primary_key: 1
+          is_unique: 0
+          name: forumid
+          order: 1
+          size:
+            - 0
+        name:
+          data_type: varchar
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 1
+          name: name
+          order: 2
+          size:
+            - 255
+      indices: []
+      name: forums
+      options: []
+      order: 1
+    posts:
+      constraints:
+        - deferrable: 1
+          expression: ''
+          fields:
+            - postid
+          match_type: ''
+          name: ''
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: PRIMARY KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - title
+          match_type: ''
+          name: posts_title
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: UNIQUE
+        - deferrable: 1
+          expression: ''
+          fields:
+            - author
+          match_type: ''
+          name: posts_fk_author
+          on_delete: CASCADE
+          on_update: CASCADE
+          options: []
+          reference_fields:
+            - userid
+          reference_table: users
+          type: FOREIGN KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - forumid
+          match_type: ''
+          name: posts_fk_forumid
+          on_delete: CASCADE
+          on_update: CASCADE
+          options: []
+          reference_fields:
+            - forumid
+          reference_table: forums
+          type: FOREIGN KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - parent
+          match_type: ''
+          name: posts_fk_parent
+          on_delete: CASCADE
+          on_update: CASCADE
+          options: []
+          reference_fields:
+            - postid
+          reference_table: posts
+          type: FOREIGN KEY
+      fields:
+        author:
+          data_type: integer
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: author
+          order: 6
+          size:
+            - 0
+        body:
+          data_type: text
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: body
+          order: 5
+          size:
+            - 0
+        created_at:
+          data_type: datetime
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: created_at
+          order: 9
+          size:
+            - 0
+        forumid:
+          data_type: integer
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: forumid
+          order: 2
+          size:
+            - 0
+        parent:
+          data_type: integer
+          default_value: ~
+          is_nullable: 1
+          is_primary_key: 0
+          is_unique: 0
+          name: parent
+          order: 7
+          size:
+            - 0
+        path:
+          data_type: varchar
+          default_value: ~
+          is_nullable: 1
+          is_primary_key: 0
+          is_unique: 0
+          name: path
+          order: 8
+          size:
+            - 255
+        postid:
+          data_type: integer
+          default_value: ~
+          is_auto_increment: 1
+          is_nullable: 0
+          is_primary_key: 1
+          is_unique: 0
+          name: postid
+          order: 1
+          size:
+            - 0
+        tags:
+          data_type: varchar
+          default_value: ~
+          is_nullable: 1
+          is_primary_key: 0
+          is_unique: 0
+          name: tags
+          order: 4
+          size:
+            - 255
+        title:
+          data_type: varchar
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 1
+          name: title
+          order: 3
+          size:
+            - 200
+        updated_at:
+          data_type: datetime
+          default_value: ~
+          is_nullable: 1
+          is_primary_key: 0
+          is_unique: 0
+          name: updated_at
+          order: 10
+          size:
+            - 0
+      indices:
+        - fields:
+            - author
+          name: posts_idx_author
+          options: []
+          type: NORMAL
+        - fields:
+            - forumid
+          name: posts_idx_forumid
+          options: []
+          type: NORMAL
+        - fields:
+            - parent
+          name: posts_idx_parent
+          options: []
+          type: NORMAL
+      name: posts
+      options: []
+      order: 3
+    users:
+      constraints:
+        - deferrable: 1
+          expression: ''
+          fields:
+            - userid
+          match_type: ''
+          name: ''
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: PRIMARY KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - name
+          match_type: ''
+          name: users_name
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: UNIQUE
+      fields:
+        name:
+          data_type: varchar
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 1
+          name: name
+          order: 2
+          size:
+            - 255
+        userid:
+          data_type: integer
+          default_value: ~
+          is_auto_increment: 1
+          is_nullable: 0
+          is_primary_key: 1
+          is_unique: 0
+          name: userid
+          order: 1
+          size:
+            - 0
+      indices: []
+      name: users
+      options: []
+      order: 2
+  triggers: {}
+  views: {}
+translator:
+  add_drop_table: 0
+  filename: ~
+  no_comments: 0
+  parser_args:
+    package: &1 !!perl/hash:PerlFu::Schema
+      class_mappings:
+        DBIx::Class::DeploymentHandler::VersionStorage::Standard::VersionResult: __VERSION
+        PerlFu::Schema::Result::Forum: Forum
+        PerlFu::Schema::Result::Post: Post
+        PerlFu::Schema::Result::User: User
+      source_registrations:
+        Forum: !!perl/hash:DBIx::Class::ResultSource::Table
+          _columns:
+            forumid:
+              data_type: integer
+              is_auto_increment: 1
+              is_nullable: 0
+            name:
+              data_type: varchar
+              is_nullable: 0
+              size: 255
+          _columns_info_loaded: 0
+          _ordered_columns:
+            - forumid
+            - name
+          _primaries: &2
+            - forumid
+          _relationships:
+            threads:
+              attrs:
+                accessor: multi
+                cascade_copy: 1
+                cascade_delete: 1
+                join_type: LEFT
+              class: PerlFu::Schema::Result::Post
+              cond:
+                foreign.forumid: self.forumid
+              source: PerlFu::Schema::Result::Post
+          _unique_constraints:
+            forums_name:
+              - name
+            primary: *2
+          name: forums
+          result_class: PerlFu::Schema::Result::Forum
+          resultset_attributes: {}
+          resultset_class: DBIx::Class::ResultSet
+          schema: *1
+          source_name: Forum
+        Post: !!perl/hash:DBIx::Class::ResultSource::Table
+          _columns:
+            author:
+              _inflate_info:
+                deflate: !!perl/code '{ "DUMMY" }'
+                inflate: !!perl/code '{ "DUMMY" }'
+              data_type: integer
+              is_nullable: 0
+            body:
+              data_type: text
+              is_nullable: 0
+            created_at:
+              _ic_dt_method: datetime
+              _inflate_info:
+                deflate: !!perl/code '{ "DUMMY" }'
+                inflate: !!perl/code '{ "DUMMY" }'
+              data_type: datetime
+              dynamic_default_on_create: get_timestamp
+              is_nullable: 0
+            forumid:
+              data_type: integer
+              is_nullable: 0
+            parent:
+              _inflate_info:
+                deflate: !!perl/code '{ "DUMMY" }'
+                inflate: !!perl/code '{ "DUMMY" }'
+              data_type: integer
+              is_nullable: 1
+            path:
+              data_type: varchar
+              is_nullable: 1
+              size: 255
+            postid:
+              data_type: integer
+              is_auto_increment: 1
+              is_nullable: 0
+              is_primary_key: 1
+            tags:
+              data_type: varchar
+              is_nullable: 1
+              size: 255
+            title:
+              data_type: varchar
+              is_nullable: 0
+              size: 200
+            updated_at:
+              _ic_dt_method: datetime
+              _inflate_info:
+                deflate: !!perl/code '{ "DUMMY" }'
+                inflate: !!perl/code '{ "DUMMY" }'
+              data_type: datetime
+              dynamic_default_on_create: get_timestamp
+              dynamic_default_on_update: get_timestamp
+              is_nullable: 1
+          _columns_info_loaded: 0
+          _ordered_columns:
+            - postid
+            - forumid
+            - title
+            - tags
+            - body
+            - author
+            - parent
+            - path
+            - created_at
+            - updated_at
+          _primaries: &3
+            - postid
+          _relationships:
+            author:
+              attrs:
+                accessor: filter
+                is_foreign_key_constraint: 1
+                undef_on_null_fk: 1
+              class: PerlFu::Schema::Result::User
+              cond:
+                foreign.userid: self.author
+              source: PerlFu::Schema::Result::User
+            children:
+              attrs:
+                accessor: multi
+                cascade_copy: 1
+                cascade_delete: 1
+                join_type: LEFT
+              class: PerlFu::Schema::Result::Post
+              cond:
+                foreign.parent: self.postid
+              source: PerlFu::Schema::Result::Post
+            forum:
+              attrs:
+                accessor: single
+                fk_columns:
+                  forumid: 1
+                is_foreign_key_constraint: 1
+                undef_on_null_fk: 1
+              class: PerlFu::Schema::Result::Forum
+              cond:
+                foreign.forumid: self.forumid
+              source: PerlFu::Schema::Result::Forum
+            parent:
+              attrs:
+                accessor: filter
+                is_foreign_key_constraint: 1
+                join_type: LEFT
+                undef_on_null_fk: 1
+              class: PerlFu::Schema::Result::Post
+              cond:
+                foreign.postid: self.parent
+              source: PerlFu::Schema::Result::Post
+          _unique_constraints:
+            posts_title:
+              - title
+            primary: *3
+          name: posts
+          result_class: PerlFu::Schema::Result::Post
+          resultset_attributes: {}
+          resultset_class: PerlFu::Schema::ResultSet::Post
+          schema: *1
+          source_name: Post
+        User: !!perl/hash:DBIx::Class::ResultSource::Table
+          _columns:
+            name:
+              data_type: varchar
+              is_nullable: 0
+              size: 255
+            userid:
+              data_type: integer
+              is_auto_increment: 1
+              is_nullable: 0
+              is_primary_key: 1
+          _columns_info_loaded: 0
+          _ordered_columns:
+            - userid
+            - name
+          _primaries: &4
+            - userid
+          _relationships:
+            posts:
+              attrs:
+                accessor: multi
+                cascade_copy: 1
+                cascade_delete: 1
+                join_type: LEFT
+              class: PerlFu::Schema::Result::Post
+              cond:
+                foreign.author: self.userid
+              source: PerlFu::Schema::Result::Post
+          _unique_constraints:
+            primary: *4
+            users_name:
+              - name
+          name: users
+          result_class: PerlFu::Schema::Result::User
+          resultset_attributes: {}
+          resultset_class: DBIx::Class::ResultSet
+          schema: *1
+          source_name: User
+        __VERSION: !!perl/hash:DBIx::Class::ResultSource::Table
+          _columns:
+            ddl:
+              data_type: text
+              is_nullable: 1
+            id:
+              data_type: int
+              is_auto_increment: 1
+            upgrade_sql:
+              data_type: text
+              is_nullable: 1
+            version:
+              data_type: varchar
+              size: 50
+          _columns_info_loaded: 0
+          _ordered_columns:
+            - id
+            - version
+            - ddl
+            - upgrade_sql
+          _primaries: &5
+            - id
+          _relationships: {}
+          _unique_constraints:
+            dbix_class_deploymenthandler_versions_version:
+              - version
+            primary: *5
+          name: dbix_class_deploymenthandler_versions
+          result_class: DBIx::Class::DeploymentHandler::VersionStorage::Standard::VersionResult
+          resultset_attributes: {}
+          resultset_class: DBIx::Class::DeploymentHandler::VersionStorage::Standard::VersionResultSet
+          schema: *1
+          source_name: __VERSION
+      storage: !!perl/hash:DBIx::Class::Storage::DBI::Pg
+        _conn_pid: 13486
+        _connect_info:
+          - AutoCommit: 1
+            dsn: dbi:Pg:dbname=perlfu_dev;host=10.9.8.1
+            password: lairdo
+            user: dhoss
+        _dbh: !!perl/hash:DBI::db {}
+        _dbh_autocommit: 1
+        _dbh_details:
+          info:
+            dbms_version: 09.00.0100
+            normalized_dbms_version: 9.000100
+        _dbh_gen: 0
+        _dbi_connect_info:
+          - dbi:Pg:dbname=perlfu_dev;host=10.9.8.1
+          - dhoss
+          - lairdo
+          - &6
+            AutoCommit: 1
+            PrintError: 0
+            RaiseError: 1
+            ShowErrorStatement: 1
+        _dbic_connect_attributes: *6
+        _driver_determined: 1
+        _in_do_block: 0
+        _sql_maker: !!perl/hash:DBIx::Class::SQLMaker
+          array_datatypes: 1
+          bindtype: columns
+          cmp: =
+          equality_op: !!perl/regexp (?^i:^(\=|is|(is\s+)?like)$)
+          inequality_op: !!perl/regexp (?^i:^(!=|<>|(is\s+)?not(\s+like)?)$)
+          injection_guard: !!perl/regexp |-
+            (?^mix:
+                \;
+                  |
+                ^ \s* go \s
+              )
+          limit_dialect: LimitOffset
+          logic: OR
+          name_sep: .
+          special_ops:
+            - handler: _where_field_BETWEEN
+              regex: !!perl/regexp '(?^ix:^ (?: not \s )? between $)'
+            - handler: _where_field_IN
+              regex: !!perl/regexp '(?^ix:^ (?: not \s )? in      $)'
+            - &7
+              handler: _where_op_IDENT
+              regex: !!perl/regexp (?^ix:^ ident $)
+            - &8
+              handler: _where_op_VALUE
+              regex: !!perl/regexp (?^ix:^ value $)
+          sqlfalse: 0=1
+          sqltrue: 1=1
+          unary_ops:
+            - handler: _where_op_ANDOR
+              regex: !!perl/regexp '(?^ix:^ and  (?: [_\s]? \d+ )? $)'
+            - handler: _where_op_ANDOR
+              regex: !!perl/regexp '(?^ix:^ or   (?: [_\s]? \d+ )? $)'
+            - handler: _where_op_NEST
+              regex: !!perl/regexp '(?^ix:^ nest (?: [_\s]? \d+ )? $)'
+            - handler: _where_op_BOOL
+              regex: !!perl/regexp '(?^ix:^ (?: not \s )? bool     $)'
+            - *7
+            - *8
+        _sql_maker_opts: {}
+        savepoints: []
+        schema: *1
+        transaction_depth: 0
+    sources:
+      - Post
+      - Forum
+      - User
+  parser_type: SQL::Translator::Parser::DBIx::Class
+  producer_args: {}
+  producer_type: SQL::Translator::Producer::YAML
+  show_warnings: 0
+  trace: 0
+  version: 0.11009
