@@ -25,7 +25,7 @@ sub update : Chained('load_user') PathPart('update') Args(0) {
   my ( $self, $c ) = @_;
   my $user   = $c->stash->{'user'};
   my $params = $c->req->params;
-  if ( defined $params ) {
+  if ( delete $params->{'submit'} ) {
     try {
       my $updated_user = $c->model('Database')->txn_do(
         sub {
@@ -43,7 +43,9 @@ sub update : Chained('load_user') PathPart('update') Args(0) {
 sub create : Chained('base') PathPart('new') Args(0) {
   my ( $self, $c ) = @_;
   my $params = $c->req->params;
-  if ( defined $params ) {
+  if ( delete $params->{'submit'} &&
+       exists $params->{'name'}   &&
+       exists $params->{'password'} ) {
     try {
       my $user = $c->model('Database')->txn_do(
         sub { 
@@ -53,8 +55,7 @@ sub create : Chained('base') PathPart('new') Args(0) {
       );
       $c->stash( user => $user );
     } catch {
-      $c->stash( errors => $_ );
-      $c->detach('/errors');
+      $c->error($_);
     };
   }
 }
