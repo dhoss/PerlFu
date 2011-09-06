@@ -9,6 +9,8 @@ in reply to <a href="[% c.uri_for_action('/forum/thread/view', [ forum.forumid, 
 <div>
 [% thread.body %]
 </div>
+[% USE Dumper %]
+[% Dumper.dump(thread.children.count) %]
 <p>[% thread.children.count %] replies | <a href="[% c.uri_for_action('/forum/thread/reply', [ forum.forumid, thread.postid ]) %]">reply</a></p>
 <div>
 <div>
