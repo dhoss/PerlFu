@@ -1,8 +1,8 @@
 package PerlFu::Schema::Result::User;
 
-use parent qw( DBIx::Class::Core EncodedColumn);
+use parent qw( DBIx::Class::Core );
 
-__PACKAGE__->load_components(qw( TimeStamp ));
+__PACKAGE__->load_components(qw( TimeStamp EncodedColumn ));
 __PACKAGE__->table('users');
 __PACKAGE__->add_columns(
   userid => {
@@ -16,7 +16,7 @@ __PACKAGE__->add_columns(
     is_nullable => 0,
   },
   password => {
-    data_type           => 'CHAR',
+    data_type           => 'char',
     size                => 59,
     encode_column       => 1,
     encode_class        => 'Crypt::Eksblowfish::Bcrypt',
