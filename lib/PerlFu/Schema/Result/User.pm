@@ -2,7 +2,7 @@ package PerlFu::Schema::Result::User;
 
 use parent qw( DBIx::Class::Core );
 
-__PACKAGE__->load_components(qw( TimeStamp EncodedColumn ));
+__PACKAGE__->load_components(qw( EncodedColumn TimeStamp ));
 __PACKAGE__->table('users');
 __PACKAGE__->add_columns(
   userid => {

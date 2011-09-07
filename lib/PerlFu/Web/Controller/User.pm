@@ -64,15 +64,19 @@ sub login : Chained('base') PathPart('login') Args(0) {
   my ( $self, $c ) = @_;
   my $params = $c->req->params;
   if ( $params->{'submit'} ) {
+   my $user = $c->model('Database::User')->find({ name => $params->{'username'} });
+   $c->log->debug("User password: " . $user->password);
+   $c->log->debug("Check password: " . $user->check_password($params->{'password'}));
    if ( $c->authenticate({
           name => $params->{'username'},
           password => $params->{'password'}
         }) ) {
+      $c->log->debug("got inside auth");
       $c->stash(
         success => 1
       );
       $c->res->redirect(
-        $c->uri_for_action('/user/read', [ $c->user->obj->user_id ])
+        $c->uri_for_action('/user/read', [ $c->user->obj->userid ])
       );
     } else {
       $c->error("Sorry, username/password is wrong");
