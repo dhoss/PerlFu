@@ -8,9 +8,10 @@ use base 'Catalyst::View::TT';
 __PACKAGE__->config(
     TEMPLATE_EXTENSION => '.tt',
     INCLUDE_PATH       => [ PerlFu::Web->path_to( 'root', 'site' ), ],
-    WRAPPER            => 'wrapper.tt',
+    WRAPPER            => 'wrapper',
     render_die         => 1,
     RECURSION          => 1,
+    CATALYST_VAR       => 'c'
 );
 
 =head1 NAME
