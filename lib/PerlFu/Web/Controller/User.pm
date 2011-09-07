@@ -72,9 +72,6 @@ sub login : Chained('base') PathPart('login') Args(0) {
           name => $params->{'username'},
           password => $params->{'password'}
         }) ) {
-      $c->stash(
-        success => 1
-      );
       $c->res->redirect(
         $c->uri_for_action('/user/read', [ $c->user->obj->userid ])
       );
