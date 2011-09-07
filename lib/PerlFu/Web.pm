@@ -21,6 +21,8 @@ use Catalyst qw/
     ConfigLoader
     Static::Simple
     Authentication
+    Session::Store::File
+    Session::State::Cookie
 /;
 
 extends 'Catalyst';
