@@ -68,8 +68,6 @@ sub login : Chained('base') PathPart('login') Args(0) {
   }
   if ( $params->{'submit'} ) {
    my $user = $c->model('Database::User')->find({ name => $params->{'username'} });
-   $c->log->debug("User password: " . $user->password);
-   $c->log->debug("Check password: " . $user->check_password($params->{'password'}));
    if ( $c->authenticate({
           name => $params->{'username'},
           password => $params->{'password'}
