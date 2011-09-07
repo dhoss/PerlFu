@@ -72,7 +72,6 @@ sub login : Chained('base') PathPart('login') Args(0) {
           name => $params->{'username'},
           password => $params->{'password'}
         }) ) {
-      $c->log->debug("got inside auth");
       $c->stash(
         success => 1
       );
