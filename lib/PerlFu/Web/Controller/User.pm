@@ -63,6 +63,9 @@ sub create : Chained('base') PathPart('new') Args(0) {
 sub login : Chained('base') PathPart('login') Args(0) {
   my ( $self, $c ) = @_;
   my $params = $c->req->params;
+  if ( $c->user_exists ) {
+    $c->res->redirect( $c->uri_for_action('/user/read', $c->user->obj->userid) );
+  }
   if ( $params->{'submit'} ) {
    my $user = $c->model('Database::User')->find({ name => $params->{'username'} });
    $c->log->debug("User password: " . $user->password);
