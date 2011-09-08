@@ -10,9 +10,19 @@ sub front_page_posts {
   },
   {
     order_by => { -desc => 'created_at' },
+    rows     => 50
   });
 }
 
+sub parent_threads {
+  my ($self) = @_;
+  return $self->search(
+    {
+      parent => undef,
+    },
+  );
+}
+  
 
 
 1;

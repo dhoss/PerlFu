@@ -41,7 +41,7 @@ sub index : Chained('base') PathPart('') : Args(0) {
   my $forum = $c->stash->{'forum'};
   $c->log->debug( "*** GETTING ALL THREADS IN FORUM " . $forum->name );
   my @threads =
-    $forum->threads->search( undef, { prefetch => ['children'] } )->all;
+    $forum->threads->parent_threads;
   $c->stash( threads => \@threads );
 
 }
