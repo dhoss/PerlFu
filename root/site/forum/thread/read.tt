@@ -1,19 +1,19 @@
 <h2>[% thread.title %]</h2>
 <p>by [% thread.author.name %]
-[% UNLESS thread.is_root %] 
-in reply to <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, parent.postid ]) %]">
-[% parent.title %]
+[% IF thread.parent %] 
+in reply to <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, thread.parent.postid ]) %]">
+[% thread.parent.title %]
 </a>
 [% END %]
 </p>
 <div>
 [% thread.body %]
 </div>
-<p>[% thread.children.count %] replies | <a href="[% c.uri_for_action('/forum/thread/reply', [ forum.forumid, thread.postid ]) %]">reply</a></p>
+<p>[% thread.grandchildren.size || 0 %] replies | <a href="[% c.uri_for_action('/forum/thread/reply', [ forum.forumid, thread.postid ]) %]">reply</a></p>
 <div>
 <div>
 <ul>
-[% FOR reply IN thread.descendants %]
+[% FOR reply IN thread.grandchildren %]
 <li>[% PROCESS 'forum/thread/read.tt' thread=reply %]</li>
 [% END %]
 </ul>
