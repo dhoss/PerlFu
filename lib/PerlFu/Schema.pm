@@ -1,6 +1,6 @@
 package PerlFu::Schema;
 use base qw/DBIx::Class::Schema/;
-our $VERSION = 6;
+our $VERSION = 7;
 __PACKAGE__->load_namespaces();
 
 1;
