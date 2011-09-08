@@ -6,9 +6,23 @@
 <div id="top-nav">
 [% UNLESS c.user_exists %]<a href="[% c.uri_for_action('/user/login')%]">login</a>
 [% ELSE %]
-logout
+<a href="[% c.uri_for_action('/user/logout') %]">logout</a>
 [% END %]
 
+</div>
+<div id="message">
+<ul>
+[% FOR message IN messages %]
+<li>[% message %]</li>
+[% END %]
+</ul> 
+</div>
+<div id="error">
+<ul>
+[% FOR error IN errors %]
+<li>[% error %]</li>
+[% END %]
+</ul>
 </div>
 [% content %]
 </body>

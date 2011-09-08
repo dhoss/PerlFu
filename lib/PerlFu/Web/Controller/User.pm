@@ -81,6 +81,15 @@ sub login : Chained('base') PathPart('login') Args(0) {
   }
 }
 
+sub logout : Chained('base') PathPart('logout') Args(0) {
+  my ($self, $c) = @_;
+  $c->logout;
+  push @{$c->flash->{messages}}, "You've been logged out.";
+  $c->res->redirect(
+    $c->uri_for('/')
+  );
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;
