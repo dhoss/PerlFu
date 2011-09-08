@@ -27,8 +27,11 @@ The root page (/)
 =cut
 
 sub index :Path :Args(0) {
-    my ( $self, $c ) = @_;
-
+  my ( $self, $c ) = @_;
+  my @front_page_posts = $c->model('Database::Post')->front_page_posts->all;
+  $c->stash(
+     posts => \@front_page_posts
+   );
 }
 
 =head2 default
