@@ -38,6 +38,7 @@ sub read : Chained('thread') PathPart('') Args(0) {
   my ($self, $c) = @_;
   my $forum = $c->stash->{'forum'};
   my @threads = $forum->threads->parent_threads;
+  
   $c->stash( threads => \@threads );
 }
 
