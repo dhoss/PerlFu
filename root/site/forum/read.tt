@@ -7,7 +7,7 @@
   <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, thread.postid ]) %]">
   [% thread.title %]
   </a> by [% thread.author.name %]
-  [% thread.children.count || 0 %] replies
+  [% thread.grandchildren.size || 0 %] replies
 </li>
 [% END %]
 </ul>
