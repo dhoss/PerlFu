@@ -18,7 +18,7 @@ Catalyst Controller.
 
 =cut
 
-sub base : Chained('.') PathPart('thread') CaptureArgs(1) {
+sub load_thread : Chained('base') PathPart('thread') CaptureArgs(1) {
   my ( $self, $c, $threadid ) = @_;
   $c->log->debug("*** GETTING POST ***");
   my $schema = $c->model('Database')->schema;
@@ -27,7 +27,7 @@ sub base : Chained('.') PathPart('thread') CaptureArgs(1) {
   $c->stash( thread => $thread );
 }
 
-sub base_plural : Chained('.') PathPart('threads') CaptureArgs(0) {
+sub base : Chained('.') PathPart('') CaptureArgs(0) {
   my ( $self, $c ) = @_;
 }
 
@@ -35,7 +35,7 @@ sub base_plural : Chained('.') PathPart('threads') CaptureArgs(0) {
 
 =cut
 
-sub index : Chained('base_plural') PathPart('') : Args(0) {
+sub index : Chained('base') PathPart('') : Args(0) {
   my ( $self, $c ) = @_;
 
   my $forum = $c->stash->{'forum'};
@@ -46,7 +46,7 @@ sub index : Chained('base_plural') PathPart('') : Args(0) {
 
 }
 
-sub view : Chained('base') Pathpart('') Args(0) {
+sub read : Chained('load_thread') PathPart('') Args(0) {
   my ( $self, $c ) = @_;
 }
 
@@ -55,7 +55,7 @@ sub thread_not_found : Private {
   $c->error("No such thread");
 }
 
-sub create : Chained('base_plural') PathPart('new') Args(0) {
+sub create : Chained('base') PathPart('new') Args(0) {
   my ( $self, $c ) = @_;
   my $forum = $c->stash->{'forum'};
   if ( $c->req->param ) {
@@ -72,18 +72,19 @@ sub create : Chained('base_plural') PathPart('new') Args(0) {
   }
 }
 
-sub reply : Chained('base') PathPart('reply') Args(0) {
+sub reply : Chained('load_thread') PathPart('reply') Args(0) {
   my ( $self, $c ) = @_;
   my $forum  = $c->stash->{'forum'};
   my $thread = $c->stash->{'thread'};
   if ( $c->req->param ) {
     $c->log->debug( "*** CREATING REPLY TO " . $thread->title );
-    my $reply = $thread->add_to_children(
+    my $reply = $c->model('Database::Post')->create( 
       {
         author  => { name => $c->req->param('author') },
         body    => $c->req->param('body'),
-        title   => 'RE:' . $thread->title,
+        title   => $c->req->param('title'),
         forumid => $forum->forumid,
+        parent  => $thread
       }
     );
     $c->stash( reply => $reply );

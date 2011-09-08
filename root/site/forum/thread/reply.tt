@@ -1,6 +1,6 @@
 <h2>Replying to [% thread.title %] in [% forum.name %]</h2>
 [% IF reply %]
-<p>reply created: <a href="[% c.uri_for_action('/forum/thread/view', [ forum.forumid, reply.postid ]) %]">[% reply.title %]</a></p>
+<p>reply created: <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, reply.postid ]) %]">[% reply.title %]</a></p>
 [% END %]
 <form action="[% c.uri_for_action('/forum/thread/reply', [ forum.forumid, thread.postid ]) %]" method="POST">
 <p>Author: <input type="text" name="author" /></p>
