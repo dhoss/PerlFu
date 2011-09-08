@@ -1,0 +1,7 @@
+<h2>Oops</h2>
+<p>The following errors have been found:</p>
+<ul>
+[% FOR error IN errors %]
+<li>[% error %]</li>
+[% END %]
+</ul>

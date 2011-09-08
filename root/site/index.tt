@@ -1,0 +1,12 @@
+<h2>PerlFu</>
+<div id="login">
+[% INCLUDE 'user/login.tt' %]
+</div>
+<div id="sign-up">
+<a href="[% c.uri_for_action('/user/create') %]">sign up</a>
+</div>
+<div id="front-page-posts">
+<h2>Newest Posts</h2>
+[% FOR post IN posts %]
+<div class="post-title"><a href="[% c.uri_for_action('/forum/thread/read', [ post.forum.forumid, post.postid ] ) %]">[% post.title %]</a></div>
+[% END %]
