@@ -23,6 +23,7 @@ sub load_thread : Chained('base') PathPart('thread') CaptureArgs(1) {
   $c->log->debug("*** GETTING POST ***");
   my $schema = $c->model('Database')->schema;
   my $thread = $c->model('Database::Post')->find($threadid);
+
   $c->detach('thread_not_found') unless defined $thread;
   $c->stash( thread => $thread );
 }
