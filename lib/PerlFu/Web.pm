@@ -21,7 +21,8 @@ use Catalyst qw/
     ConfigLoader
     Static::Simple
     Authentication
-    Session::Store::File
+    Authentication::Roles
+    Session::Store::DBIx::Class
     Session::State::Cookie
 /;
 

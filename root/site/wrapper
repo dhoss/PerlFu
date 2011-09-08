@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>PerlFu</title>
+</head>
+<body>
+<div id="top-nav">
+[% UNLESS c.user_exists %]<a href="[% c.uri_for_action('/user/login')%]">login</a>
+[% ELSE %]
+logout
+[% END %]
+
+</div>
+[% content %]
+</body>
+</html>
