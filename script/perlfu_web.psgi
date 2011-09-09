@@ -3,6 +3,5 @@ use strict;
 use warnings;
 use PerlFu::Web;
 
-PerlFu::Web->setup_engine('PSGI');
-my $app = sub { PerlFu::Web->run(@_) };
+my $app = PerlFu::Web->psgi_app(@_);
 
