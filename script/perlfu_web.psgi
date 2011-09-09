@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
+use Plack::Builder;
 use PerlFu::Web;
 
 builder {
