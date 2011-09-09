@@ -8,7 +8,7 @@ BEGIN { extends 'Catalyst::Controller' }
 # Sets the actions in this controller to be registered with no prefix
 # so they function identically to actions created in MyApp.pm
 #
-__PACKAGE__->config(namespace => '');
+__PACKAGE__->config( namespace => '' );
 
 =head1 NAME
 
@@ -26,12 +26,10 @@ The root page (/)
 
 =cut
 
-sub index :Path :Args(0) {
+sub index : Path : Args(0) {
   my ( $self, $c ) = @_;
   my @front_page_posts = $c->model('Database::Post')->front_page_posts->all;
-  $c->stash(
-     posts => \@front_page_posts
-   );
+  $c->stash( posts => \@front_page_posts );
 }
 
 =head2 default
@@ -40,10 +38,10 @@ Standard 404 error page
 
 =cut
 
-sub default :Path {
-    my ( $self, $c ) = @_;
-    $c->response->body( 'Page not found' );
-    $c->response->status(404);
+sub default : Path {
+  my ( $self, $c ) = @_;
+  $c->response->body('Page not found');
+  $c->response->status(404);
 }
 
 =head2 end
@@ -52,7 +50,28 @@ Attempt to render a view, if needed.
 
 =cut
 
-sub end : ActionClass('RenderView') {}
+sub end : Private {
+  my ( $self, $c ) = @_;
+
+  if ( scalar @{ $c->error } ) {
+    $c->stash->{errors} = $c->error;
+    for my $error ( @{ $c->error } ) {
+      $c->log->error($error);
+    }
+    $c->stash->{template} = 'errors.tt';
+    $c->forward('PerlFu::Web::View::HTML');
+    $c->clear_errors;
+  }
+
+  return 1 if $c->response->status =~ /^3\d\d$/;
+  return 1 if $c->response->body;
+
+  unless ( $c->response->content_type ) {
+    $c->response->content_type('text/html; charset=utf-8');
+  }
+
+  $c->forward('PerlFu::Web::View::HTML');
+}
 
 =head1 AUTHOR
 

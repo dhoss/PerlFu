@@ -14,14 +14,14 @@
 <div id="message">
 <ul>
 [% FOR message IN messages %]
-<li>[% message %]</li>
+<li>[% message.text %]</li>
 [% END %]
 </ul> 
 </div>
 <div id="error">
 <ul>
 [% FOR error IN errors %]
-<li>[% error %]</li>
+<li>[% c.loc(error.msgid) || error.text %]</li>
 [% END %]
 </ul>
 </div>

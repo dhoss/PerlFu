@@ -24,6 +24,8 @@ use Catalyst qw/
     Session
     Session::Store::DBIC
     Session::State::Cookie
+    I18N
+    +PerlFu::Web::Messages
 /;
 
 extends 'Catalyst';
