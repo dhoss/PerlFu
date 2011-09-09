@@ -1,6 +1,6 @@
 <h2>Creating a new thread in [% forum.name %]</h2>
 [% IF thread %]
-<p>Thread created: <a href="[% c.uri_for_action('/forum/thread/view', [ forum.forumid, thread.postid ]) %]">[% thread.title %]</a></p>
+<p>Thread created: <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, thread.postid ]) %]">[% thread.title %]</a></p>
 [% END %]
 <form action="[% c.uri_for_action('/forum/thread/create', [ forum.forumid ]) %]" method="POST">
 <p>Author: <input type="text" name="author" /></p>

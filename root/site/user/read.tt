@@ -1,2 +1,2 @@
-<h2>[% c.user.obj.name  %]'s profile </h2>
+<h2>[% IF c.user_exists; c.user.obj.name; ELSE user.name; END  %]'s profile </h2>
 <p>bunch of shit goes here regarding user and account/stats</p>
