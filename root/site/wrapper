@@ -21,7 +21,9 @@
 <div id="error">
 <ul>
 [% FOR error IN errors %]
-<li>[% c.loc(error.msgid) || error.text %] [% USE Dumper %] [% Dumper.dump(error) %]</li>
+  [% FOR message IN error.messages %]
+    <li>[% c.loc(message.msgid) %]</li>
+  [% END %]
 [% END %]
 </ul>
 </div>
