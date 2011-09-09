@@ -36,5 +36,11 @@ sub _build_profile {
   return {}
 }
 
+sub results {
+  my ( $self, $c ) = @_;
+  my $results = $self->dm->get_results($c->action->name);
+  return $results;
+}
+
 __PACKAGE__->meta->make_immutable;
 1;

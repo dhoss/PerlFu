@@ -43,7 +43,7 @@ sub create : Chained('base') PathPart('new') Args(0) {
       my $forum = $c->model('Database')->txn_do(sub {
         try {
           my $f = $c->model('Database::Forum')->create({
-            name => $results->param('name')
+            name => $results->get_value('name')
           }) or die $!;
         } catch { 
           $c->error($_);
