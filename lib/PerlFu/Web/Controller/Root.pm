@@ -55,10 +55,10 @@ sub end : Private {
 
   if ( scalar @{ $c->error } ) {
     $c->stash->{errors} = $c->error;
-    use Data::Dumper;
-    $c->log->debug("ERRORS: " . Dumper $c->error);
     for my $error ( @{ $c->error } ) {
-      $c->log->error(Dumper $error->messages);
+      for my $msg ( @{ $error->messages } ){
+        $c->log->error($c->localize($msg->msgid));
+      }
     }
     $c->forward('PerlFu::Web::View::HTML');
     $c->clear_errors;
