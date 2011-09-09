@@ -1,13 +1,13 @@
-<h2>[% thread.title %]</h2>
+<h2>[% thread.title | html_scrubber%]</h2>
 <p>by [% thread.author.name %]
 [% IF thread.parent %] 
 in reply to <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, thread.parent.postid ]) %]">
-[% thread.parent.title %]
+[% thread.parent.title | html_scrubber %]
 </a>
 [% END %]
 </p>
 <div>
-[% thread.body %]
+[% thread.body | html_scrubber %]
 </div>
 <p>[% thread.grandchildren.size || 0 %] replies | <a href="[% c.uri_for_action('/forum/thread/reply', [ forum.forumid, thread.postid ]) %]">reply</a></p>
 <div>

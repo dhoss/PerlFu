@@ -1,3 +1,4 @@
+[% USE Filter.HTMLScrubber %]
 <html>
 <head>
 <title>PerlFu</title>
