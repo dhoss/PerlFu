@@ -1,0 +1,5 @@
+<h2>Creating a Forum</h2>
+<form method="POST" action="[% c.uri_for_action('/forum/create') %]"> 
+<p>Name: <input type="text" name="name" /></p>
+<p><input type="submit" name="submit" value="Create" /></p>
+</form>

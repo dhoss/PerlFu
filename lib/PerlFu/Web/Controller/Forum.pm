@@ -34,6 +34,27 @@ sub index :Path('/forums') :Args(0) {
 
 }
 
+sub create : Chained('base') PathPart('new') Args(0) {
+  my ($self, $c) = @_;
+  my $params = $c->req->params;
+  if ( delete $params->{'submit'} ) {
+    my $results = $c->model('Validator::Forum')->results($params);
+    if ( $results->success ) { 
+      my $forum = $c->model('Database')->txn_do(sub {
+        try {
+          my $f = $c->model('Database::Forum')->create({
+            name => $results->param('name')
+          }) or die $!;
+        } catch { 
+          $c->error($_);
+        };
+      });
+    } else {
+      $c->error($results->errors);
+    }
+  }
+}
+
 sub read : Chained('thread') PathPart('') Args(0) {
   my ($self, $c) = @_;
   my $forum = $c->stash->{'forum'};
