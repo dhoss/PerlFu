@@ -34,23 +34,23 @@ sub index :Path('/forums') :Args(0) {
 
 }
 
-sub create : Chained('base') PathPart('new') Args(0) {
+sub create : Chained('/') PathPart('forum/new') Args(0) {
   my ($self, $c) = @_;
   my $params = $c->req->params;
   if ( delete $params->{'submit'} ) {
-    my $results = $c->model('Validator::Forum')->results($params);
-    if ( $results->success ) { 
+    my $validator = $c->model('Validator::Forum')->validate($params);
+    if ( $validator->results->success ) { 
       my $forum = $c->model('Database')->txn_do(sub {
         try {
           my $f = $c->model('Database::Forum')->create({
-            name => $results->get_value('name')
+            name => $validator->results->get_value('name')
           }) or die $!;
         } catch { 
           $c->error($_);
         };
       });
     } else {
-      $c->error($results->errors);
+      $c->error($validator->messages);
     }
   }
 }

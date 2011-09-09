@@ -17,7 +17,7 @@ has 'scrubber_opts' => (
   lazy => 1,
   default => sub {
     {
-      allow => [ qw[ p b i u hr br ]
+      allow => [ qw[ p b i u hr br ] ]
     }
   },
 );
