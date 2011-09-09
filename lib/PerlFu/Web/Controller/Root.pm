@@ -52,7 +52,6 @@ Attempt to render a view, if needed.
 
 sub end : Private {
   my ( $self, $c ) = @_;
-
   if ( scalar @{ $c->error } ) {
     $c->stash->{errors} = $c->error;
     for my $error ( @{ $c->error } ) {

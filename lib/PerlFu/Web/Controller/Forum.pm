@@ -1,6 +1,7 @@
 package PerlFu::Web::Controller::Forum;
 use Moose;
 use namespace::autoclean;
+use Try::Tiny;
 
 BEGIN {extends 'Catalyst::Controller'; }
 
@@ -45,9 +46,10 @@ sub create : Chained('/') PathPart('forum/new') Args(0) {
           my $f = $c->model('Database::Forum')->create({
             name => $validator->results->get_value('name')
           }) or die $!;
-          $c->message("Created forum " . $f->forumid);
+          $c->messages("Created forum " . $f->forumid);
         } catch { 
-          $c->error($c->message($_, 'error'));
+          $c->log->debug("ERROR: $_");
+          $c->error($c->messages($_, 'error'));
         };
       });
     } else {
