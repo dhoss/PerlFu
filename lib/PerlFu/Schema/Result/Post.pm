@@ -82,4 +82,20 @@ __PACKAGE__->has_many(
   { "foreign.parent" => "self.postid" },
 );
 
+sub sqlt_deploy_hook {
+  my ($self, $sqlt_table) = @_;
+  $sqlt_table->add_index(
+    name => 'path_postid_idx',
+    fields => ['path', 'postid']
+  );
+  $sqlt_table->add_index(
+    name => 'post_author_idx',
+    fields => ['postid', 'author']
+  );
+  $sqlt_table->add_index(
+    name => 'path_idx',
+    fields => ['path']
+  );
+}
+
 1;
