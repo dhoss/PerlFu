@@ -22,7 +22,7 @@
 <ul>
 [% FOR error IN errors %]
   [% FOR message IN error.messages %]
-    <li>[% c.loc(message.msgid) %]</li>
+    <li>[% c.localize(message.msgid) %]</li>
   [% END %]
 [% END %]
 </ul>
