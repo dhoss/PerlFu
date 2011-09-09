@@ -1,10 +1,12 @@
 <h2>PerlFu</>
+[% UNLESS c.user_exists %]
 <div id="login">
 [% INCLUDE 'user/login.tt' %]
 </div>
 <div id="sign-up">
 <a href="[% c.uri_for_action('/user/create') %]">sign up</a>
 </div>
+[% END %]
 <div id="front-page-posts">
 <h2>Newest Posts</h2>
 [% FOR post IN posts %]
