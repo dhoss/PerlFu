@@ -1,3 +1,5 @@
+[% USE Filter.HTMLScrubber %]
+
 <h2>[% thread.title | html_scrubber%]</h2>
 <p>by [% thread.author.name %]
 [% IF thread.parent %] 

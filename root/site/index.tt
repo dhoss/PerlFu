@@ -1,3 +1,4 @@
+[% USE Filter.HTMLScrubber %]
 <h2>PerlFu</>
 [% UNLESS c.user_exists %]
 <div id="login">
