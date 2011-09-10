@@ -14,8 +14,6 @@
 <div id="message">
 <ul>
 [% FOR message IN messages %]
-[% USE Data::Dumper %]
-[% Dumper.dump(message%]
 <li>[% message.text %]</li>
 [% END %]
 </ul> 

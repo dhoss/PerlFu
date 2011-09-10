@@ -13,12 +13,13 @@ has '_stack' => (
 sub messages {
   my ( $self, $message, $level, $msgid ) = @_;
 
-  $self->_stack->add( Message::Stack::Message->new(
-      msgid     => $msgid || "",
-      level     => $level || "",
-      text      => $message
-    ) 
-  ) if $message;
+  $self->_stack->add({ 
+    msgid     => $msgid || "",
+    level     => $level || "",
+    text      => $message
+  }) if $message;
+  $self->stash( messages => $self->_stack->messages )
+    unless $level eq 'error';
   return $self->_stack->messages
 
 }

@@ -54,6 +54,8 @@ sub end : Private {
   my ( $self, $c ) = @_;
   if ( scalar @{ $c->error } ) {
     $c->stash->{errors} = $c->error;
+    use Data::Dumper;
+    $c->log->debug("ERROR " . Dumper $c->error);
     for my $error ( @{ $c->error } ) {
       for my $msg ( @{ $error->messages } ){
         $c->log->error($c->localize($msg->msgid));
