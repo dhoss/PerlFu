@@ -13,7 +13,7 @@
 </div>
 <div id="message">
 <ul>
-[% FOR message IN messages.for_level('notify') %]
+[% FOR message IN messages %]
 <li>[% message.text %]</li>
 [% END %]
 </ul> 

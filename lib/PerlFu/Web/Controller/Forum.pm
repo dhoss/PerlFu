@@ -49,12 +49,13 @@ sub create : Chained('/') PathPart('forum/new') Args(0) {
           my $f = $c->model('Database::Forum')->create({
             name => $validator->results->get_value('name')
           });
-          $c->messages("Created forum " . $f->forumid);
+          $f;
         } catch { 
           $c->log->debug($_);
           $c->error($c->messages($_, 'error'));
         };
       });
+      $c->message("Created forum " . $forum->forumid);
     } else {
       $c->error($validator->messages);
     }
