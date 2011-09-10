@@ -1,0 +1,2 @@
+msgid "missing_name"
+msgstr "Name required"
