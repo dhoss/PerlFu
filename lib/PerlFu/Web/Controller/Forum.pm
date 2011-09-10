@@ -44,7 +44,7 @@ sub create : Chained('/') PathPart('forum/new') Args(0) {
       my $forum = $c->model('Database')->txn_do(sub {
         try {
           if ( $c->model('Database::Forum')->find({ name => $validator->results->get_value('name') }) ) {
-            $c->error($c->message("Forum name exists" , 'error'));
+            die $c->message("Forum name exists" , 'error');
           }
           my $f = $c->model('Database::Forum')->create({
             name => $validator->results->get_value('name')
