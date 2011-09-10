@@ -43,12 +43,15 @@ sub create : Chained('/') PathPart('forum/new') Args(0) {
     if ( $validator->results->success ) { 
       my $forum = $c->model('Database')->txn_do(sub {
         try {
+          if ( $c->model('Database::Forum')->find({ name => $validator->results->get_value('name') }) ) {
+            $c->error($c->message("Forum name exists" , 'error'));
+          }
           my $f = $c->model('Database::Forum')->create({
             name => $validator->results->get_value('name')
-          }) or die $!;
+          });
           $c->messages("Created forum " . $f->forumid);
         } catch { 
-          $c->log->debug("ERROR: $_");
+          $c->log->debug($_);
           $c->error($c->messages($_, 'error'));
         };
       });

@@ -13,7 +13,7 @@
 </div>
 <div id="message">
 <ul>
-[% FOR message IN messages %]
+[% FOR message IN messages.for_level('notify') %]
 <li>[% message.text %]</li>
 [% END %]
 </ul> 
@@ -21,9 +21,7 @@
 <div id="error">
 <ul>
 [% FOR error IN errors %]
-  [% FOR message IN error.messages %]
-    <li>[% c.localize(message.msgid) %]</li>
-  [% END %]
+  <li>[% c.localize(error.msgid) || error.text %]</li>
 [% END %]
 </ul>
 </div>

@@ -62,7 +62,7 @@ sub validate {
   my $dm = $self->dm;
   $dm->verify($c->action->name, $params);
   $self->results($dm->get_results($c->action->name));
-  $self->messages($dm->messages_for_scope($c->action->name));
+  $self->messages($dm->messages_for_scope($c->action->name)->messages);
   return $self;
 }
 

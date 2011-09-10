@@ -8,19 +8,23 @@ has '_stack' => (
   lazy => 1,
   default => sub { Message::Stack->new },
   required => 1,
+  handles => {
+    messages => 'messages',
+    add      => 'add',
+  }
 );
 
-sub messages {
+sub message {
   my ( $self, $message, $level, $msgid ) = @_;
 
-  $self->_stack->add({ 
+  $self->add({ 
     msgid     => $msgid || "",
-    level     => $level || "",
+    level     => $level || "notify",
     text      => $message
   }) if $message;
-  $self->stash( messages => $self->_stack->messages )
+  $self->stash( messages => $self->messages )
     unless $level eq 'error';
-  return $self->_stack->messages
+  return $self->messages
 
 }
 
