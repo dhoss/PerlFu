@@ -54,8 +54,6 @@ sub end : Private {
   my ( $self, $c ) = @_;
   if ( scalar @{ $c->error } ) {
     $c->stash->{errors} = $c->error;
-    use Data::Dumper;
-    $c->log->debug("ERROR " . Dumper $c->error);
     $c->forward('PerlFu::Web::View::HTML');
     $c->clear_errors;
   }
