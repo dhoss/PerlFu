@@ -41,6 +41,7 @@ sub create : Chained('/') PathPart('forum/new') Args(0) {
   if ( delete $params->{'submit'} ) {
     my $validator = $c->model('Validator::Forum')->validate($params);
     if ( $validator->results->success ) { 
+      # put me in the resultsource class
       my $forum = $c->model('Database')->txn_do(sub {
         try {
           if ( $c->model('Database::Forum')->find({ name => $validator->results->get_value('name') }) ) {
