@@ -2,4 +2,22 @@ msgid "missing_name"
 msgstr "Name required"
 
 msgid "invalid_name"
-msgstr "Invalid name"
+msgstr "Invalid Name"
+
+msgid "missing_title"
+msgstr "Title is required"
+
+msgid "invalid_tags"
+msgstr "Tags must be less than 1024 characters"
+
+msgid "missing_body"
+msgstr "Message body is required"
+
+msgid "missing_author"
+msgstr "Author ID is required"
+
+msgid "invalid_parent"
+msgstr "Parent ID must be an integer"
+
+msgid "invalid_path"
+msgstr "Invalid post materialized path"

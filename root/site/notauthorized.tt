@@ -1,0 +1,3 @@
+<h2>Sorry</h2>
+<p>You don't have permission to view that page or perform that action</p>
+[% INCLUDE 'user/login.tt' %]

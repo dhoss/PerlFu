@@ -44,6 +44,10 @@ sub default : Path {
   $c->response->status(404);
 }
 
+sub notauthorized :Path {
+  my ( $self, $c ) = @_;
+}
+
 =head2 end
 
 Attempt to render a view, if needed.

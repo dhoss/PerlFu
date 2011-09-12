@@ -41,8 +41,7 @@ sub index : Chained('base') PathPart('') : Args(0) {
 
   my $forum = $c->stash->{'forum'};
   $c->log->debug( "*** GETTING ALL THREADS IN FORUM " . $forum->name );
-  my @threads =
-    $forum->threads->parent_threads;
+  my @threads = $forum->threads->parent_threads;
   $c->stash( threads => \@threads );
 
 }
@@ -56,20 +55,32 @@ sub thread_not_found : Private {
   $c->error("No such thread");
 }
 
-sub create : Chained('base') PathPart('new') Args(0) {
+sub create : Chained('base') PathPart('thread/new') Args(0) {
   my ( $self, $c ) = @_;
-  my $forum = $c->stash->{'forum'};
-  if ( $c->req->param ) {
-    $c->log->debug( "*** CREATING THREAD " . $c->req->param('title') );
-    my $thread = $forum->add_to_threads(
-      {
-        author => { name => $c->req->param('author') },
-        title  => $c->req->param('title'),
-        body   => $c->req->param('body'),
-      }
-    ) or die "can't create thread $!";
-    $c->stash( thread => $thread );
-    return;
+  $c->res->redirect(
+    $c->uri_for('/notauthorized'))
+    unless $c->user_exists;
+  my $forum  = $c->stash->{'forum'};
+  my $params = $c->req->params;
+  if ( delete $params->{'submit'} ) {
+    $params->{'author'} = $c->user->obj->userid;
+    my $validator = $c->model('Validator::Post')->validate($params);
+    if ( $validator->results->success ) {
+      $c->log->debug( "*** CREATING THREAD " . $c->req->param('title') );
+      my $thread = $forum->add_to_threads(
+        {
+          author => $c->user->obj->userid,
+          title  => $c->req->param('title'),
+          body   => $c->req->param('body'),
+        }
+      ) or die "can't create thread $!";
+      $c->message("Created thread " . $thread->threadid);
+      $c->stash( thread => $thread );
+      return;
+    } else {
+      $c->error($validator->messages);
+      return;
+    }
   }
 }
 
@@ -79,7 +90,7 @@ sub reply : Chained('load_thread') PathPart('reply') Args(0) {
   my $thread = $c->stash->{'thread'};
   if ( $c->req->param ) {
     $c->log->debug( "*** CREATING REPLY TO " . $thread->title );
-    my $reply = $c->model('Database::Post')->create( 
+    my $reply = $c->model('Database::Post')->create(
       {
         author  => { name => $c->req->param('author') },
         body    => $c->req->param('body'),
