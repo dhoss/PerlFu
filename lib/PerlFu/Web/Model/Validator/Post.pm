@@ -1,4 +1,4 @@
-package PerlFu::Web::Model::Validator::Forum;
+package PerlFu::Web::Model::Validator::Post;
 
 use Moose;
 use namespace::autoclean;
