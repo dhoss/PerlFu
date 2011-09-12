@@ -14,10 +14,6 @@ sub _build_profile {
         type       => 'Str',
         max_length => 255,
         min_length => 1,
-        post_check => sub {
-          my $r = shift;
-          $self->scrub( $r->get_value('name') );
-        },
       },
     }
   };

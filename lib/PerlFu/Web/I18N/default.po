@@ -1,6 +1,6 @@
 msgid "missing_name"
 msgstr "Name required"
 
-msgid 'invalid_name'
+msgid "invalid_name"
 msgstr "Name fucked up"
 

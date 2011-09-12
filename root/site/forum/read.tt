@@ -1,12 +1,13 @@
-<h2>Viewing forum [% forum_name %]</h2>
+[% USE Filter.HTMLScrubber %] 
+<h2>Viewing forum [% forum_name | html %]</h2>
 <p><a href="[% c.uri_for_action('/forum/thread/create', [ forum.forumid ]) %]">new thread</a>
 <p>Threads:</p>
 <ul>
 [% FOR thread IN threads %]
 <li>
   <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, thread.postid ]) %]">
-  [% thread.title %]
-  </a> by [% thread.author.name %]
+  [% thread.title |html %]
+  </a> by [% thread.author.name |html %]
   [% thread.grandchildren.size || 0 %] replies
 </li>
 [% END %]

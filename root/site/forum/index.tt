@@ -1,6 +1,7 @@
+[% USE Filter.HTMLScrubber %]
 <h2>Forums</h2>
 <ul>
 [% FOR forum IN forums %]
-<li><a href="[% c.uri_for_action('/forum/read', [forum.forumid]) %]">[% forum.name %]</a></li>
+<li><a href="[% c.uri_for_action('/forum/read', [forum.forumid]) %]">[% forum.name | html %]</a></li>
 [% END %]
 </ul>

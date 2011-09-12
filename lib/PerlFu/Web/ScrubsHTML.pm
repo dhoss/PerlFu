@@ -1,13 +1,13 @@
 package PerlFu::Web::ScrubsHTML;
 use Moose::Role;
-use HTML::Scrubber;
+use HTML::StripScripts::Parser;
 
 has 'scrubber' => (
   is => 'ro',
   required => 1,
   lazy => 1,
   default => sub { 
-    HTML::Scrubber->new(%{shift->scrubber_opts})
+    HTML::StripScripts::Parser->new(%{shift->scrubber_opts})
   },
 );
 
@@ -17,14 +17,16 @@ has 'scrubber_opts' => (
   lazy => 1,
   default => sub {
     {
-      allow => [ qw[ p b i u hr br ] ]
+      BanAllBut  => [qw(p div span)],
     }
   },
 );
 
 sub scrub {
   my ($self, $dirty) = @_;
-  return $self->scrubber->scrub($dirty);
+  my $html = $self->scrubber->filter_html($dirty); 
+  warn "HTML $html";
+  return $html
 }
 
 1;
