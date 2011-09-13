@@ -70,7 +70,6 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
         "*** CREATING THREAD " . $validator->results->get_value('title') );
       my $thread = $c->model('Database')->txn_do(sub {
           try {
-          $c->log->debug("BEFORE ADD");
           my $t = $forum->add_to_threads(
             {
               author => $c->user->obj->userid,
@@ -78,19 +77,13 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
               body   => $validator->results->get_value('body'),
             }
           );
-          $c->log->debug("THREAD" . $t->postid);
-          $c->log->debug("RETURNING");
           $t;
         } catch {
-          $c->log->debug("CAUGHT EXCEPT $_");
           $c->error($c->messages($_, 'error'));
         };
       });
-      $c->log->debug("BEFORE MESSAGE");
-      $c->log->debug("THREAD: " . $thread->postid);
       $c->message( "Created thread " . $thread->postid );
-      $c->log->debug("AFTER MESSAGE: STASH: " . Dumper $c->stash->{messages});
-#      $c->stash( thread => $thread );
+      $c->stash( thread => $thread );
     } else {
       $c->error( $validator->messages );
     }
