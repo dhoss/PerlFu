@@ -25,4 +25,14 @@ __PACKAGE__->has_many('threads' => 'PerlFu::Schema::Result::Post',
   }
 );
 
+sub sqlt_deploy_hook {
+  my ($self, $sqlt_table) = @_;
+  $sqlt_table->add_index(
+    name => 'forum_name_idx',
+    fields => ['forumid', 'name']
+  );
+}
+
+
+
 1;

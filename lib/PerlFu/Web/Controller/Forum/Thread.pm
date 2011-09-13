@@ -21,10 +21,8 @@ Catalyst Controller.
 
 sub load_thread : Chained('base') PathPart('thread') CaptureArgs(1) {
   my ( $self, $c, $threadid ) = @_;
-  $c->log->debug("*** GETTING POST ***");
   my $schema = $c->model('Database')->schema;
   my $thread = $c->model('Database::Post')->find($threadid);
-
   $c->detach('thread_not_found') unless defined $thread;
   $c->stash( thread => $thread );
 }
@@ -41,7 +39,6 @@ sub index : Chained('base') PathPart('') : Args(0) {
   my ( $self, $c ) = @_;
 
   my $forum = $c->stash->{'forum'};
-  $c->log->debug( "*** GETTING ALL THREADS IN FORUM " . $forum->name );
   my @threads = $forum->threads->parent_threads;
   $c->stash( threads => \@threads );
 
@@ -58,7 +55,7 @@ sub thread_not_found : Private {
 
 sub create : Chained('base') PathPart('thread/new') Args(0) {
   my ( $self, $c ) = @_;
-  $c->res->redirect( $c->uri_for('/notauthorized') )
+  $c->detach('notauthorized')
     unless $c->user_exists;
   my $forum  = $c->stash->{'forum'};
   my $params = $c->req->params;
@@ -66,22 +63,23 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
     $params->{'author'} = $c->user->obj->userid;
     my $validator = $c->model('Validator::Post')->validate($params);
     if ( $validator->results->success ) {
-      $c->log->debug(
-        "*** CREATING THREAD " . $validator->results->get_value('title') );
-      my $thread = $c->model('Database')->txn_do(sub {
+      my $thread = $c->model('Database')->txn_do(
+        sub {
           try {
-          my $t = $forum->add_to_threads(
-            {
-              author => $c->user->obj->userid,
-              title  => $validator->results->get_value('title'),
-              body   => $validator->results->get_value('body'),
-            }
-          );
-          $t;
-        } catch {
-          $c->error($c->messages($_, 'error'));
-        };
-      });
+            my $t = $forum->add_to_threads(
+              {
+                author => $c->user->obj->userid,
+                title  => $validator->results->get_value('title'),
+                body   => $validator->results->get_value('body'),
+              }
+            );
+            $t;
+          }
+          catch {
+            $c->error( $c->messages( $_, 'error' ) );
+          };
+        }
+      );
       $c->message( "Created thread " . $thread->postid );
       $c->stash( thread => $thread );
     } else {
@@ -95,7 +93,6 @@ sub reply : Chained('load_thread') PathPart('reply') Args(0) {
   my $forum  = $c->stash->{'forum'};
   my $thread = $c->stash->{'thread'};
   if ( $c->req->param ) {
-    $c->log->debug( "*** CREATING REPLY TO " . $thread->title );
     my $reply = $c->model('Database::Post')->create(
       {
         author  => { name => $c->req->param('author') },
@@ -106,7 +103,6 @@ sub reply : Chained('load_thread') PathPart('reply') Args(0) {
       }
     );
     $c->stash( reply => $reply );
-    return;
   }
 }
 
