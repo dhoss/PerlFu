@@ -1,4 +1,5 @@
-<h2>Creating a new thread in [% forum.name %]</h2>
+[% USE Filter.HTMLScrubber %]
+<h2>Creating a new thread in [% forum.name |html %]</h2>
 [% IF thread %]
 <p>Thread created: <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, thread.postid ]) %]">[% thread.title %]</a></p>
 [% END %]

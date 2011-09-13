@@ -4,6 +4,7 @@ use namespace::autoclean;
 use DBIx::Class::QueryLog;
 use DBIx::Class::QueryLog::Analyzer;
 use Data::Dumper;
+use Try::Tiny;
 BEGIN { extends 'PerlFu::Web::Controller::Forum'; }
 
 =head1 NAME
@@ -57,8 +58,7 @@ sub thread_not_found : Private {
 
 sub create : Chained('base') PathPart('thread/new') Args(0) {
   my ( $self, $c ) = @_;
-  $c->res->redirect(
-    $c->uri_for('/notauthorized'))
+  $c->res->redirect( $c->uri_for('/notauthorized') )
     unless $c->user_exists;
   my $forum  = $c->stash->{'forum'};
   my $params = $c->req->params;
@@ -66,20 +66,33 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
     $params->{'author'} = $c->user->obj->userid;
     my $validator = $c->model('Validator::Post')->validate($params);
     if ( $validator->results->success ) {
-      $c->log->debug( "*** CREATING THREAD " . $c->req->param('title') );
-      my $thread = $forum->add_to_threads(
-        {
-          author => $c->user->obj->userid,
-          title  => $c->req->param('title'),
-          body   => $c->req->param('body'),
-        }
-      ) or die "can't create thread $!";
-      $c->message("Created thread " . $thread->threadid);
-      $c->stash( thread => $thread );
-      return;
+      $c->log->debug(
+        "*** CREATING THREAD " . $validator->results->get_value('title') );
+      my $thread = $c->model('Database')->txn_do(sub {
+          try {
+          $c->log->debug("BEFORE ADD");
+          my $t = $forum->add_to_threads(
+            {
+              author => $c->user->obj->userid,
+              title  => $validator->results->get_value('title'),
+              body   => $validator->results->get_value('body'),
+            }
+          );
+          $c->log->debug("THREAD" . $t->postid);
+          $c->log->debug("RETURNING");
+          $t;
+        } catch {
+          $c->log->debug("CAUGHT EXCEPT $_");
+          $c->error($c->messages($_, 'error'));
+        };
+      });
+      $c->log->debug("BEFORE MESSAGE");
+      $c->log->debug("THREAD: " . $thread->postid);
+      $c->message( "Created thread " . $thread->postid );
+      $c->log->debug("AFTER MESSAGE: STASH: " . Dumper $c->stash->{messages});
+#      $c->stash( thread => $thread );
     } else {
-      $c->error($validator->messages);
-      return;
+      $c->error( $validator->messages );
     }
   }
 }

@@ -2,6 +2,7 @@ package PerlFu::Web::Messages;
 use Moose::Role;
 use Message::Stack;
 use Data::Dumper;
+use Params::Validate;
 
 has '_stack' => (
   is => 'rw',
@@ -14,17 +15,31 @@ has '_stack' => (
   }
 );
 
-sub message {
-  my ( $self, $message, $level, $msgid ) = @_;
+has 'levels' => (
+  is => 'rw',
+  isa => 'HashRef',
+  lazy => 1,
+  required => 1,
+  default => sub {
+    {
+      notify => 'messages',
+      fatal  => 'errors',
+      error  => 'errors',
+    },
+  },
+);
 
+sub message {
+  my @p = validate_pos( @_, 1, 1, 0, { default => 'notify' },  0);
+  my ( $self, $message, $level, $msgid ) = @p;
   $self->add({ 
     msgid     => $msgid || "",
-    level     => $level || "notify",
+    level     => $level,
     text      => $message
-  }) if $message;
-  $self->stash( messages => $self->messages )
-    unless $level eq 'error';
-  return $self->messages
+  });
+  warn "MESSAGES" . Dumper $self->messages; 
+  $self->stash( $self->levels->{$level}  => $self->messages );
+  #return $self->messages
 
 }
 
