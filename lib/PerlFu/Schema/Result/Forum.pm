@@ -25,6 +25,20 @@ __PACKAGE__->has_many('threads' => 'PerlFu::Schema::Result::Post',
   }
 );
 
+sub create_post {
+  my ( $self, $params ) = @_;
+  my $post;
+  try {
+    $post = $self->result_source->schema->txn_do( sub {
+      $self->add_to_threads($params)
+    });
+  } catch {
+    die "Can't create thread: $_" 
+      if ( $_ =~ /Rollback failed/ );
+  }
+  return $post;
+}
+
 sub sqlt_deploy_hook {
   my ($self, $sqlt_table) = @_;
   $sqlt_table->add_index(
@@ -32,6 +46,7 @@ sub sqlt_deploy_hook {
     fields => ['forumid', 'name']
   );
 }
+
 
 
 

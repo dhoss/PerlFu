@@ -5,6 +5,7 @@ use DBIx::Class::QueryLog;
 use DBIx::Class::QueryLog::Analyzer;
 use Data::Dumper;
 use Try::Tiny;
+use Carp::Always;
 BEGIN { extends 'PerlFu::Web::Controller::Forum'; }
 
 =head1 NAME
@@ -63,23 +64,18 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
     $params->{'author'} = $c->user->obj->userid;
     my $validator = $c->model('Validator::Post')->validate($params);
     if ( $validator->results->success ) {
-      my $thread = $c->model('Database')->txn_do(
-        sub {
-          try {
-            my $t = $forum->add_to_threads(
-              {
-                author => $c->user->obj->userid,
-                title  => $validator->results->get_value('title'),
-                body   => $validator->results->get_value('body'),
-              }
-            );
-            $t;
+      $c->log->debug("SUCCESS RESULTS");
+      my $thread = $forum->create_post({
+        title => $validator->results->get_value('title'),
+        author => $validator->results->get_value('author'),
+        body => $validator->results->get_value('body'),
+      });
+      if ( !defined( $thread ) ){ 
+          $c->log->debug("FUCK");
+#      $c->log->debug("THREAD" . defined $thread);
+          #     $c->error( $c->messages( $thread, 'error' ) ) 
+            # unless defined $thread;
           }
-          catch {
-            $c->error( $c->messages( $_, 'error' ) );
-          };
-        }
-      );
       $c->message( "Created thread " . $thread->postid );
       $c->stash( thread => $thread );
     } else {
