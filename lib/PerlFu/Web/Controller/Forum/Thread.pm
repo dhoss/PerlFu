@@ -56,7 +56,7 @@ sub thread_not_found : Private {
 
 sub create : Chained('base') PathPart('thread/new') Args(0) {
   my ( $self, $c ) = @_;
-  $c->detach('notauthorized')
+  $c->detach(qw( PerlFu::Web::Controller::User not_authorized ))
     unless $c->user_exists;
   my $forum  = $c->stash->{'forum'};
   my $params = $c->req->params;

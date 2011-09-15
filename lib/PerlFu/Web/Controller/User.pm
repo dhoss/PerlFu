@@ -35,7 +35,6 @@ sub update : Chained('load_user') PathPart('update') Args(0) {
       $c->stash( updated => $updated_user );
     } catch {
       $c->stash( errors => $_ );
-      $c->detach('/errors');
     };
   }
 }
@@ -87,6 +86,13 @@ sub logout : Chained('base') PathPart('logout') Args(0) {
   push @{$c->flash->{messages}}, "You've been logged out.";
   $c->res->redirect(
     $c->uri_for('/')
+  );
+}
+
+sub not_authorized : Path('/notauthorized') Args(0) {
+  my ( $self, $c ) = @_;
+  $c->stash( 
+    template => 'notauthorized.tt'
   );
 }
 

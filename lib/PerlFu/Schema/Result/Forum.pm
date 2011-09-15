@@ -1,6 +1,7 @@
 package PerlFu::Schema::Result::Forum;
 
 use parent qw( DBIx::Class::Core );
+use Try::Tiny;
 
 __PACKAGE__->load_components(qw( TimeStamp ));
 __PACKAGE__->table('forums');
@@ -46,8 +47,6 @@ sub sqlt_deploy_hook {
     fields => ['forumid', 'name']
   );
 }
-
-
 
 
 1;
