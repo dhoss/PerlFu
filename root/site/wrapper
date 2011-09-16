@@ -18,10 +18,14 @@
 [% END %]
 </ul> 
 </div>
+[% USE Dumper %]
+[% Dumper.dump(errors) %]
 <div id="error">
 <ul>
 [% FOR error IN errors %]
-  <li>[% c.localize(error.msgid) || error.text %]</li>
+  <li>
+        [% c.localize(error.msgid) %] 
+  </li>
 [% END %]
 </ul>
 </div>

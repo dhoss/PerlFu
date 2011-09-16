@@ -5,7 +5,6 @@ use DBIx::Class::QueryLog;
 use DBIx::Class::QueryLog::Analyzer;
 use Data::Dumper;
 use Try::Tiny;
-use Carp::Always;
 BEGIN { extends 'PerlFu::Web::Controller::Forum'; }
 
 =head1 NAME
@@ -70,15 +69,16 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
         author => $validator->results->get_value('author'),
         body => $validator->results->get_value('body'),
       });
-      if ( !defined( $thread ) ){ 
-          $c->log->debug("FUCK");
-#      $c->log->debug("THREAD" . defined $thread);
-          #     $c->error( $c->messages( $thread, 'error' ) ) 
-            # unless defined $thread;
-          }
+    #die "THREAD $thread";;
+      if ( $thread =~ /duplicate key value violates unique constraint "posts_title"/ ) {
+        $c->log->debug("Stash: " . Dumper $c->stash->{'errors'});
+        $c->error( $c->message( "", "error", "post_title_exists" ) ); 
+        $c->detach;
+      }
       $c->message( "Created thread " . $thread->postid );
       $c->stash( thread => $thread );
     } else {
+      $c->log->debug("messages " . Dumper $validator->messages);
       $c->error( $validator->messages );
     }
   }

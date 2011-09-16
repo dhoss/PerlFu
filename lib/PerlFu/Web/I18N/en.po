@@ -21,3 +21,6 @@ msgstr "Parent ID must be an integer"
 
 msgid "invalid_path"
 msgstr "Invalid post materialized path"
+
+msgid "post_title_exists"
+msgstr "A post with that title already exists"

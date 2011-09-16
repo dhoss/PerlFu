@@ -1,7 +1,9 @@
 package PerlFu::Schema::Result::Forum;
 
+use strictures 1;
 use parent qw( DBIx::Class::Core );
 use Try::Tiny;
+
 
 __PACKAGE__->load_components(qw( TimeStamp ));
 __PACKAGE__->table('forums');
@@ -29,14 +31,18 @@ __PACKAGE__->has_many('threads' => 'PerlFu::Schema::Result::Post',
 sub create_post {
   my ( $self, $params ) = @_;
   my $post;
+  my $exception;
   try {
     $post = $self->result_source->schema->txn_do( sub {
       $self->add_to_threads($params)
     });
   } catch {
-    die "Can't create thread: $_" 
-      if ( $_ =~ /Rollback failed/ );
-  }
+    $exception =  $_;
+    #  if ( $_ =~ /Rollback failed/ );
+     };
+  warn "EXCEPTION DEFINED " . defined $exception ? "yes" : "no";
+  warn "EXCEPTION $exception";
+  return $exception if defined $exception;
   return $post;
 }
 
