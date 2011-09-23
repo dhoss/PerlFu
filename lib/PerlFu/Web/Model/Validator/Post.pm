@@ -4,11 +4,11 @@ use Moose;
 use namespace::autoclean;
 extends 'PerlFu::Web::Model::Validator';
 
-sub _build_profile {
+sub _build_profiles {
   my $self = shift;
   return {
-    profile => {
-     title => {
+    create_thread => {
+      title => {
         required   => 1,
         type       => 'Str',
         max_length => 255,

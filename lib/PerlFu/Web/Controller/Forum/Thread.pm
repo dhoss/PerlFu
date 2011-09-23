@@ -61,26 +61,28 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
   my $params = $c->req->params;
   if ( delete $params->{'submit'} ) {
     $params->{'author'} = $c->user->obj->userid;
-    my $validator = $c->model('Validator::Post')->validate($params);
-    if ( $validator->results->success ) {
-      $c->log->debug("SUCCESS RESULTS");
-      my $thread = $forum->create_post({
-        title => $validator->results->get_value('title'),
-        author => $validator->results->get_value('author'),
-        body => $validator->results->get_value('body'),
+    my $validator = $c->model('Validator::Post')->verify('create_thread', $params);
+    unless ( $validator->success ) {
+      $c->message({
+        type => 'error',
+        message => 'Error creating thread'
       });
-    #die "THREAD $thread";;
-      if ( $thread =~ /duplicate key value violates unique constraint "posts_title"/ ) {
-        $c->log->debug("Stash: " . Dumper $c->stash->{'errors'});
-        $c->error( $c->message( "", "error", "post_title_exists" ) ); 
-        $c->detach;
-      }
-      $c->message( "Created thread " . $thread->postid );
-      $c->stash( thread => $thread );
-    } else {
-      $c->log->debug("messages " . Dumper $validator->messages);
-      $c->error( $validator->messages );
+      $c->detach();
     }
+    $c->log->debug("SUCCESS RESULTS");
+    my $thread = $forum->create_post({
+      title => $validator->get_value('title'),
+      author => $validator->get_value('author'),
+      body => $validator->get_value('body'),
+    });
+    #die "THREAD $thread";;
+    if ( $thread =~ /duplicate key value violates unique constraint "posts_title"/ ) {
+      $c->log->debug("Stash: " . Dumper $c->stash->{'errors'});
+      $c->error( $c->message({ type => "error", msgid => "post_title_exists" }) ); 
+      $c->detach;
+    }
+    $c->message( "Created thread " . $thread->postid );
+    $c->stash( thread => $thread );
   }
 }
 

@@ -13,18 +13,18 @@
 </div>
 <div id="message">
 <ul>
-[% FOR message IN messages %]
+[% FOR message IN messages.for_leve('notice') %]
 <li>[% message.text %]</li>
 [% END %]
 </ul> 
 </div>
 [% USE Dumper %]
-[% Dumper.dump(errors) %]
+[% Dumper.dump(messages.for_level('error')) %]
 <div id="error">
 <ul>
-[% FOR error IN errors %]
+[% FOR error IN messages.for_level('error')%]
   <li>
-        [% c.localize(error.msgid) %] 
+        [% c.localize(error.msgid) || error.msgid %] 
   </li>
 [% END %]
 </ul>
