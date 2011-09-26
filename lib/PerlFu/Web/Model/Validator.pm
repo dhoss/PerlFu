@@ -41,9 +41,7 @@ sub build_per_context_instance {
 }
 
 sub _build_profiles {
-  return {
-    profile => {}
-  };
+  return {};
 }
 
 __PACKAGE__->meta->make_immutable;

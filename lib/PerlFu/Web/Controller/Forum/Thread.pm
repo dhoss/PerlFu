@@ -64,9 +64,11 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
     my $validator = $c->model('Validator::Post')->verify('create_thread', $params);
     unless ( $validator->success ) {
       $c->message({
+        scope => 'create_post',
         type => 'error',
-        message => 'Error creating thread'
+        message => 'errors_in_post'
       });
+      $c->log->debug("ERRORS: " . Dumper $c->stash->{'messages'});
       $c->detach();
     }
     $c->log->debug("SUCCESS RESULTS");
@@ -75,7 +77,6 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
       author => $validator->get_value('author'),
       body => $validator->get_value('body'),
     });
-    #die "THREAD $thread";;
     if ( $thread =~ /duplicate key value violates unique constraint "posts_title"/ ) {
       $c->log->debug("Stash: " . Dumper $c->stash->{'errors'});
       $c->error( $c->message({ type => "error", msgid => "post_title_exists" }) ); 

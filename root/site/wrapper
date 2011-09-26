@@ -9,22 +9,21 @@
 [% ELSE %]
 <a href="[% c.uri_for_action('/user/logout') %]">logout</a>
 [% END %]
-
 </div>
 <div id="message">
 <ul>
-[% FOR message IN messages.for_leve('notice') %]
-<li>[% message.text %]</li>
+[% SET notices = messages.for_level('notice') %]
+[% FOR message IN notices.messages %]
+<li>[% message.msgid %] [% message.text %]</li>
 [% END %]
 </ul> 
 </div>
-[% USE Dumper %]
-[% Dumper.dump(messages.for_level('error')) %]
 <div id="error">
 <ul>
-[% FOR error IN messages.for_level('error')%]
-  <li>
-        [% c.localize(error.msgid) || error.msgid %] 
+[% SET errors = messages.for_level('error') %]
+[% FOR error IN errors.messages %] 
+<li>
+  [% c.localize(error.msgid) %] 
   </li>
 [% END %]
 </ul>
