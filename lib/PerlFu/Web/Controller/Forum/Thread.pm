@@ -69,6 +69,7 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
   if ( delete $params->{'submit'} ) {
     $params->{'author'} = $c->user->obj->userid;
     my $validator = $c->model('Validator')->verify('create_thread', $params);
+
     unless ( $validator->success ) {
       # Catalyst::Plugin::MessageStach integrates with our Data::Manager model
       # and automatically merges the messages
@@ -78,20 +79,22 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
       });
       $c->detach();
     }
+
     my $thread = $forum->create_post({
       title => $validator->get_value('title'),
       author => $validator->get_value('author'),
       body => $validator->get_value('body'),
     });
+
     if ( $thread =~ /duplicate key value violates unique constraint "posts_title"/ ) {
-      $c->log->debug("Stash: " . Dumper $c->stash->{'errors'});
-      $c->message({ type => "error", msgid => "post_title_exists" }); 
+      $c->log->debug("THREAD: " . $thread);
+      $c->message({ type => "error", message => "post_title_exists" }); 
       $c->detach;
     }
+    $c->log->debug("CREATED THREAD");
     $c->message( "Created thread " . $thread->postid );
-    $c->log->debug("DEBUG MESSAGES" . Dumper $c->stash->{'messages'}->messages->for_scope('notice'));
+#    $c->log->debug("DEBUG MESSAGES" . Dumper $c->stash->{'messages'}->messages->for_scope('notice'));
     $c->stash( thread => $thread );
-    return;
   }
 }
 

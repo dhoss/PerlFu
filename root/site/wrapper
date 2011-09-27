@@ -10,8 +10,10 @@
 <a href="[% c.uri_for_action('/user/logout') %]">logout</a>
 [% END %]
 </div>
+[% IF c.debug %]
 [% USE Dumper %]
 [% Dumper.dump(messages) %]
+[% END %]
 <div id="message">
 <ul>
 [% SET notices = messages.for_level('notice') %]
