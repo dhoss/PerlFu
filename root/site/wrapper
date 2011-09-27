@@ -10,11 +10,13 @@
 <a href="[% c.uri_for_action('/user/logout') %]">logout</a>
 [% END %]
 </div>
+[% USE Dumper %]
+[% Dumper.dump(messages) %]
 <div id="message">
 <ul>
 [% SET notices = messages.for_level('notice') %]
 [% FOR message IN notices.messages %]
-<li>[% message.msgid %] [% message.text %]</li>
+<li>[% message.msgid %]</li>
 [% END %]
 </ul> 
 </div>

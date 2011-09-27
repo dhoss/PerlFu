@@ -25,5 +25,5 @@ msgstr "Invalid post materialized path"
 msgid "post_title_exists"
 msgstr "A post with that title already exists"
 
-msgid "errors_in_post"
-msgstr "You have errors in your post"
+msgid "fix_errors"
+msgstr "Please fix the errors in your form submission"

@@ -7,6 +7,13 @@ use Data::Dumper;
 use Try::Tiny;
 BEGIN { extends 'PerlFu::Web::Controller::Forum'; }
 
+__PACKAGE__->config({
+    'Plugin::MessageStack' => {
+      'model' => 'Validator::Post'
+    }
+  }
+);
+
 =head1 NAME
 
 PerlFu::Web::Controller::Forum::Thread - Catalyst Controller
@@ -61,17 +68,16 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
   my $params = $c->req->params;
   if ( delete $params->{'submit'} ) {
     $params->{'author'} = $c->user->obj->userid;
-    my $validator = $c->model('Validator::Post')->verify('create_thread', $params);
+    my $validator = $c->model('Validator')->verify('create_thread', $params);
     unless ( $validator->success ) {
+      # Catalyst::Plugin::MessageStach integrates with our Data::Manager model
+      # and automatically merges the messages
       $c->message({
-        scope => 'create_post',
-        type => 'error',
-        message => 'errors_in_post'
+        type => "error",
+        message => "fix_errors",
       });
-      $c->log->debug("ERRORS: " . Dumper $c->stash->{'messages'});
       $c->detach();
     }
-    $c->log->debug("SUCCESS RESULTS");
     my $thread = $forum->create_post({
       title => $validator->get_value('title'),
       author => $validator->get_value('author'),
@@ -79,11 +85,13 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
     });
     if ( $thread =~ /duplicate key value violates unique constraint "posts_title"/ ) {
       $c->log->debug("Stash: " . Dumper $c->stash->{'errors'});
-      $c->error( $c->message({ type => "error", msgid => "post_title_exists" }) ); 
+      $c->message({ type => "error", msgid => "post_title_exists" }); 
       $c->detach;
     }
     $c->message( "Created thread " . $thread->postid );
+    $c->log->debug("DEBUG MESSAGES" . Dumper $c->stash->{'messages'}->messages->for_scope('notice'));
     $c->stash( thread => $thread );
+    return;
   }
 }
 
