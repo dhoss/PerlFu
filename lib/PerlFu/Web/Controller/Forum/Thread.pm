@@ -87,13 +87,10 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
     });
 
     if ( $thread =~ /duplicate key value violates unique constraint "posts_title"/ ) {
-      $c->log->debug("THREAD: " . $thread);
       $c->message({ type => "error", message => "post_title_exists" }); 
       $c->detach;
     }
-    $c->log->debug("CREATED THREAD");
     $c->message( "Created thread " . $thread->postid );
-#    $c->log->debug("DEBUG MESSAGES" . Dumper $c->stash->{'messages'}->messages->for_scope('notice'));
     $c->stash( thread => $thread );
   }
 }
