@@ -1,0 +1,4 @@
+9-27-2011
+ - set up a sane deployment solution
+  - this includes building a tag, pushing that to staging, unrolling and installing everything needed, restarting the server instance, testing, pushing to prod, etc.
+    - Carton maybe?
