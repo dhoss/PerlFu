@@ -61,6 +61,10 @@ sub create : Chained('base') PathPart('new') Args(0) {
 
 sub login : Chained('base') PathPart('login') Args(0) {
   my ( $self, $c ) = @_;
+  my $referer = $c->req->referer;
+  $c->session->{'previous_page'} = $referer
+    unless $referer eq $c->uri_for_action('/user/logout');
+  $c->log->debug("REFERER: " . $c->session->{'previous_page'});
   my $params = $c->req->params;
   if ( $c->user_exists ) {
     $c->res->redirect( $c->uri_for_action('/user/read', $c->user->obj->userid) );
@@ -71,8 +75,11 @@ sub login : Chained('base') PathPart('login') Args(0) {
           name => $params->{'username'},
           password => $params->{'password'}
         }) ) {
+      if ( $c->session->{'previous_page'} eq $c->uri_for_action('/index') ) {
+        $c->session->{'previous_page'} = $c->uri_for_action('/user/read', [ $c->user->obj->userid ]);
+      }
       $c->res->redirect(
-        $c->uri_for_action('/user/read', [ $c->user->obj->userid ])
+        $c->session->{'previous_page'}
       );
     } else {
       $c->error("Sorry, username/password is wrong");
