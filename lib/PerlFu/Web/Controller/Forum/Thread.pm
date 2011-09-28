@@ -126,8 +126,7 @@ sub reply : Chained('load_thread') PathPart('reply') Args(0) {
         forumid => $forum->forumid,
         parent  => $thread
       }
-    )
-    ;
+    );
     if ( $reply =~
       /duplicate key value violates unique constraint "posts_title"/ )
     {
@@ -136,6 +135,40 @@ sub reply : Chained('load_thread') PathPart('reply') Args(0) {
     }
 
     $c->stash( reply => $reply );
+  }
+}
+
+sub update : Chained('load_thread') PathPart('edit') Args(0) {
+  my ( $self, $c ) = @_;
+  $c->detach(qw( PerlFu::Web::Controller::User not_authorized ))
+    unless $c->user_exists;
+  my $thread = $c->stash->{'thread'};
+  my $params = $c->req->params;
+  my $user = $c->user->obj;
+  if ( delete $params->{'submit'} ) {
+    $params->{'author'} = $c->user->obj->userid;
+    my $results = $c->model('Validator')->verify('create_thread', $params);
+    unless ( $results->success ) {
+      $c->message({
+        type => 'error',
+        message => "fix_errors"
+      });
+      $c->detach();
+    }
+    my $updated_thread = $thread->update_post({
+      title => $results->get_value('title'),
+      body  => $results->get_value('body'),
+      tags  => $results->get_value('tags'),
+    });
+    $c->log->debug("THREAD : " .$updated_thread);
+    if ( $updated_thread =~
+      /duplicate key value violates unique constraint "posts_title"/ )
+    {
+      $c->message( { type => "error", message => "post_title_exists" } );
+      $c->detach;
+    }
+
+    $c->stash( thread => $updated_thread, success => 1 );
   }
 }
 

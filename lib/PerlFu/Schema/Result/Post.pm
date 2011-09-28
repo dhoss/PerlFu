@@ -1,6 +1,7 @@
 package PerlFu::Schema::Result::Post;
 
 use parent qw( DBIx::Class::Core );
+use Try::Tiny;
 
 __PACKAGE__->load_components(qw( TimeStamp +DBICx::MaterializedPath ));
 __PACKAGE__->table('posts');
@@ -85,6 +86,25 @@ __PACKAGE__->has_many(
 sub reply_count {
   my $self = shift;
   return $self->children->count;
+}
+
+sub update_post {
+  my ( $self, $params ) = @_;
+  my $post;
+  my $exception;
+  try {
+    $post = $self->result_source->schema->txn_do(
+      sub {
+        $self->update($params);
+      }
+    );
+  } catch {
+    $exception = $_;
+
+    #  if ( $_ =~ /Rollback failed/ );
+  };
+  return $exception if $exception;
+  return $post;
 }
 
 sub sqlt_deploy_hook {
