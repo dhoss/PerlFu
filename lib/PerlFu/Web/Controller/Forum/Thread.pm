@@ -126,7 +126,15 @@ sub reply : Chained('load_thread') PathPart('reply') Args(0) {
         forumid => $forum->forumid,
         parent  => $thread
       }
-    );
+    )
+    ;
+    if ( $reply =~
+      /duplicate key value violates unique constraint "posts_title"/ )
+    {
+      $c->message( { type => "error", message => "post_title_exists" } );
+      $c->detach;
+    }
+
     $c->stash( reply => $reply );
   }
 }
