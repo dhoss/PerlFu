@@ -1,7 +1,9 @@
 [% USE Filter.HTMLScrubber %]
 
-<h2>[% thread.title | html_scrubber%]</h2>
-<p>by [% thread.author.name %]
+<h2><a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, thread.postid ]) %]">
+[% thread.title | html_scrubber%]
+</a></h2>
+<p>by <a href="[% c.uri_for_action('/user/read', [thread.author.userid]) %]">[%thread.author.name %]</a>
 [% IF thread.parent %] 
 in reply to <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, thread.parent.postid ]) %]">
 [% thread.parent.title | html_scrubber %]
