@@ -91,7 +91,6 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
       $c->message({ type => "error", message => "post_title_exists" }); 
       $c->detach;
     }
-    $c->message( "Created thread " . $thread->postid );
     $c->stash( thread => $thread );
   }
 }

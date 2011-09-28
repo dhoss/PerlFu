@@ -1,7 +1,12 @@
 [% USE Filter.HTMLScrubber %]
 <h2>Creating a new thread in [% forum.name |html %]</h2>
 [% IF thread %]
-<p>Thread created: <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, thread.postid ]) %]">[% thread.title %]</a></p>
+<div class="ui-widget">
+    <div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
+          <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+    Thread created: <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, thread.postid ]) %]">[% thread.title %]</a></p>
+    </div>
+</div>
 [% END %]
 <form action="[% c.uri_for_action('/forum/thread/create', [ forum.forumid ]) %]" method="POST">
 <p>Title: <input type="text" name="title" /></p>
