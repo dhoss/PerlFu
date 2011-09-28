@@ -41,7 +41,7 @@ STATUSFILE=$STATUSDIR/${NAME}.status
 LIBDIR="$BASEDIR/lib"
 
 # daemon command
-DAEMON=/home/devin/perl5/perlbrew/perls/perl-5.14.0/bin/start_server
+DAEMON=`which start_server`
 DAEMONARGS="--port=$PORT --pid-file $PIDFILE --status-file $STATUSFILE --interval=2 --log-file $DAEMONLOG"
 SERVERARGS="starman --workers=$WORKERS --app $PSGI -I$LIBDIR"
 
