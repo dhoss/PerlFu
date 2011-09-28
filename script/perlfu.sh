@@ -17,14 +17,14 @@
 
 # variables from puppet definition
 NAME=perlfu
-BASEDIR=/home/devin/web-devel/PerlFu
+BASEDIR=$1 #/home/devin/web-devel/PerlFu
 PORT=3000
 PSGI="$BASEDIR/script/perlfu_web.psgi"
 WORKERS=4
 MODULE=PerlFu::Web
-SERVER=localhost
-USER=devin
-GROUP=devin
+SERVER=computron
+USER=perlfu
+GROUP=perlfu
 
 # start_server startup errors go here
 DAEMONLOG="$BASEDIR/server_starter.log"
@@ -169,7 +169,7 @@ status() {
 
 
 # See how we were called.
-case "$1" in
+case "$2" in
     start)
         start
         ;;
