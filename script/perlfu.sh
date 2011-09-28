@@ -14,17 +14,19 @@
 ### END INIT INFO
 
 . /lib/lsb/init-functions
+. /home/dhoss/perl5/perlbrew/etc/bashrc
+
 
 # variables from puppet definition
 NAME=perlfu
 BASEDIR=$1 #/home/devin/web-devel/PerlFu
-PORT=3000
+PORT=4500
 PSGI="$BASEDIR/script/perlfu_web.psgi"
 WORKERS=4
 MODULE=PerlFu::Web
 SERVER=computron
-USER=perlfu
-GROUP=perlfu
+USER=dhoss
+GROUP=dhoss
 
 # start_server startup errors go here
 DAEMONLOG="$BASEDIR/server_starter.log"
@@ -41,7 +43,7 @@ STATUSFILE=$STATUSDIR/${NAME}.status
 LIBDIR="$BASEDIR/lib"
 
 # daemon command
-DAEMON=`which start_server`
+DAEMON=/home/dhoss/perl5/perlbrew/perls/perl-5.12.1/bin/start_server
 DAEMONARGS="--port=$PORT --pid-file $PIDFILE --status-file $STATUSFILE --interval=2 --log-file $DAEMONLOG"
 SERVERARGS="starman --workers=$WORKERS --app $PSGI -I$LIBDIR"
 
