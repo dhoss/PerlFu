@@ -1,9 +1,13 @@
 <h2>Replying to [% thread.title %] in [% forum.name %]</h2>
 [% IF reply %]
-<p>reply created: <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, reply.postid ]) %]">[% reply.title %]</a></p>
+<div class="ui-widget">
+    <div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
+          <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+Reply created: <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, reply.postid ]) %]">[% reply.title %]</a></p>
+    </div>
+</div>
 [% END %]
 <form action="[% c.uri_for_action('/forum/thread/reply', [ forum.forumid, thread.postid ]) %]" method="POST">
-<p>Author: <input type="text" name="author" /></p>
 <p>Title: <input type="text" name="title" /></p>
 <p>Body:</p>
 <div><textarea rows=10 cols=45 name="body"></textarea></div>

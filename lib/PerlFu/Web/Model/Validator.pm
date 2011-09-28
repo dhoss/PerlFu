@@ -73,8 +73,39 @@ sub _build_profile {
         min_length => 1,
       },
     },
+    create_reply => {
+      title => {
+        required   => 1,
+        type       => 'Str',
+        max_length => 255,
+        min_length => 1
+      },
+      tags => {
+        required   => 0,
+        type       => 'Str',
+        max_length => 1024,
+        min_length => 1,
+      },
+      body => {
+        required   => 1,
+        type       => 'Str',
+        min_length => 1,
+      },
+      author => {
+        required => 1,
+        type     => 'Int',
+      },
+      parent => {
+        required => 1,
+        type     => 'Int',
+      },
+      path => {
+        required   => 0,
+        type       => 'Str',
+        min_length => 1,
+      },
+    }
   };
 }
-
 __PACKAGE__->meta->make_immutable;
 1;

@@ -7,12 +7,8 @@ use Data::Dumper;
 use Try::Tiny;
 BEGIN { extends 'PerlFu::Web::Controller::Forum'; }
 
-__PACKAGE__->config({
-    'Plugin::MessageStack' => {
-      'model' => 'Validator::Post'
-    }
-  }
-);
+__PACKAGE__->config(
+  { 'Plugin::MessageStack' => { 'model' => 'Validator::Post' } } );
 
 =head1 NAME
 
@@ -46,7 +42,7 @@ sub base : Chained('.') PathPart('') CaptureArgs(0) {
 sub index : Chained('base') PathPart('') : Args(0) {
   my ( $self, $c ) = @_;
 
-  my $forum = $c->stash->{'forum'};
+  my $forum   = $c->stash->{'forum'};
   my @threads = $forum->threads->parent_threads;
   $c->stash( threads => \@threads );
 
@@ -69,26 +65,33 @@ sub create : Chained('base') PathPart('thread/new') Args(0) {
   my $params = $c->req->params;
   if ( delete $params->{'submit'} ) {
     $params->{'author'} = $c->user->obj->userid;
-    my $validator = $c->model('Validator')->verify('create_thread', $params);
+    my $validator = $c->model('Validator')->verify( 'create_thread', $params );
 
     unless ( $validator->success ) {
+
       # Catalyst::Plugin::MessageStach integrates with our Data::Manager model
       # and automatically merges the messages
-      $c->message({
-        type => "error",
-        message => "fix_errors",
-      });
+      $c->message(
+        {
+          type    => "error",
+          message => "fix_errors",
+        }
+      );
       $c->detach();
     }
 
-    my $thread = $forum->create_post({
-      title => $validator->get_value('title'),
-      author => $validator->get_value('author'),
-      body => $validator->get_value('body'),
-    });
+    my $thread = $forum->create_post(
+      {
+        title  => $validator->get_value('title'),
+        author => $validator->get_value('author'),
+        body   => $validator->get_value('body'),
+      }
+    );
 
-    if ( $thread =~ /duplicate key value violates unique constraint "posts_title"/ ) {
-      $c->message({ type => "error", message => "post_title_exists" }); 
+    if ( $thread =~
+      /duplicate key value violates unique constraint "posts_title"/ )
+    {
+      $c->message( { type => "error", message => "post_title_exists" } );
       $c->detach;
     }
     $c->stash( thread => $thread );
@@ -99,12 +102,27 @@ sub reply : Chained('load_thread') PathPart('reply') Args(0) {
   my ( $self, $c ) = @_;
   my $forum  = $c->stash->{'forum'};
   my $thread = $c->stash->{'thread'};
-  if ( $c->req->param ) {
-    my $reply = $c->model('Database::Post')->create(
+  my $params = $c->req->params;
+  $c->detach(qw( PerlFu::Web::Controller::User not_authorized ))
+    unless $c->user_exists;
+  if ( delete $params->{'submit'} ) {
+    $params->{'parent'} = $thread->postid;
+    $params->{'author'} = $c->user->obj->userid;
+    my $results = $c->model('Validator')->verify( 'create_reply', $params );
+    unless ( $results->success ) {
+      $c->message(
+        {
+          type    => 'error',
+          message => 'fix_errors'
+        }
+      );
+      $c->detach();
+    }
+    my $reply = $forum->create_post(
       {
-        author  => { name => $c->req->param('author') },
-        body    => $c->req->param('body'),
-        title   => $c->req->param('title'),
+        author  => { name => $c->user->obj->name },
+        body    => $results->get_value('body'),
+        title   => $results->get_value('title'),
         forumid => $forum->forumid,
         parent  => $thread
       }

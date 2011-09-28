@@ -27,3 +27,9 @@ msgstr "A post with that title already exists"
 
 msgid "fix_errors"
 msgstr "Please fix the errors in your form submission"
+
+msgid "not_logged_in"
+msgstr "You must be logged in to view this page"
+
+msgid "missing_parent"
+msgstr "The parent thread was not specified"
