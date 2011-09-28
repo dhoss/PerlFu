@@ -1,0 +1,19 @@
+<h2>Editing thread [% thread.title %]</h2>
+[% IF success %]
+<div class="ui-widget">
+    <div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
+          <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+    Thread updated: <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, thread.postid ]) %]">[% thread.title %]</a></p>
+    </div>
+</div>
+[% END %]
+
+<form method="POST" action="[% c.uri_for_action('/forum/thread/update', [ thread.forum.forumid, thread.postid ]) %]">
+<p>Title: <input type="text" name="title" value="[% thread.title %]" /></p>
+<p>Body:</p>
+<div>
+<textarea name="body" cols=45 rows=10>[% thread.body %]</textarea>
+</div>
+<p>Tags: <input name="tags" type="text" value="[% thread.tags %]" /></p>
+<p><input type="submit" name="submit"  /></p>
+</form>

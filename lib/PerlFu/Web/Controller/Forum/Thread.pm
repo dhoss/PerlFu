@@ -172,6 +172,22 @@ sub update : Chained('load_thread') PathPart('edit') Args(0) {
   }
 }
 
+sub delete : Chained('load_thread') PathPart('delete') Args(0) {
+  my ($self, $c) = @_;
+  $c->detach(qw( PerlFu::Web::Controller::User not_authorized ))
+    unless $c->user_exists;
+  my $thread = $c->stash->{'thread'};
+  my $params = $c->req->params;
+  my $user = $c->user->obj;
+  
+  if ( $params->{'really_delete'} ) {
+    $thread->delete;
+    $c->stash( deleted => 1 );
+  }
+
+
+}
+
 =head1 AUTHOR
 
 Devin Austin

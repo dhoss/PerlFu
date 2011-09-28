@@ -1,0 +1,14 @@
+<h2>Deleting thread [% thread.title %] </h2>
+[% IF deleted %]
+<div class="ui-widget">
+    <div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
+          <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+    Thread deleted</p>
+    </div>
+</div>
+[% ELSE %]
+<form method="POST" action="[% c.uri_for_action('/forum/thread/delete', [ thread.forum.forumid, thread.postid ]) %]">
+<b>CHECK THIS BOX IF YOU REALLY WANT TO DELETE THIS POST:<input type="checkbox" name="really_delete" /></p>
+<p><input type="submit" name="delete" value="Delete" /></p>
+</form>
+[% END %]
