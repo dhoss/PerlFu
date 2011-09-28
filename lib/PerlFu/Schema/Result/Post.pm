@@ -82,6 +82,11 @@ __PACKAGE__->has_many(
   { "foreign.parent" => "self.postid" },
 );
 
+sub reply_count {
+  my $self = shift;
+  return $self->children->count;
+}
+
 sub sqlt_deploy_hook {
   my ($self, $sqlt_table) = @_;
   $sqlt_table->add_index(

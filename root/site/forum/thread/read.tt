@@ -11,11 +11,11 @@ in reply to <a href="[% c.uri_for_action('/forum/thread/read', [ forum.forumid, 
 <div>
 [% thread.body | html_scrubber %]
 </div>
-<p>[% thread.grandchildren.size || 0 %] replies | <a href="[% c.uri_for_action('/forum/thread/reply', [ forum.forumid, thread.postid ]) %]">reply</a></p>
+<p>[% thread.reply_count %] replies | <a href="[% c.uri_for_action('/forum/thread/reply', [ forum.forumid, thread.postid ]) %]">reply</a></p>
 <div>
 <div>
 <ul>
-[% FOR reply IN thread.grandchildren %]
+[% FOR reply IN thread.children %]
 <li>[% PROCESS 'forum/thread/read.tt' thread=reply %]</li>
 [% END %]
 </ul>
