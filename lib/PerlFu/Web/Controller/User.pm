@@ -21,6 +21,25 @@ sub read : Chained('load_user') PathPart('') Args(0) {
   my ( $self, $c ) = @_;
 }
 
+sub dashboard : Chained('load_user') PathPart('dashboard') Args(0) {
+  my ( $self, $c ) = @_;
+  $c->detach('not_authorized')
+    unless $c->user_exists;
+  my $user = $c->user->obj;
+  my $post_rs = $user->posts;
+  $c->stash( 
+    posts      => [ $post_rs->search({ parent => undef }) ],
+    replies    => [ $post_rs->search({ parent => { "!=", undef } }) ],
+    replies_to => [ $c->model('Database::Post')->search({
+          parent => 
+          { 
+            -in => $post_rs->get_column('parent')->as_query 
+          }
+        }
+    ) ],
+  ); 
+}
+
 sub update : Chained('load_user') PathPart('update') Args(0) {
   my ( $self, $c ) = @_;
   my $user   = $c->stash->{'user'};

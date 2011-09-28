@@ -136,10 +136,13 @@
 </head>
 <body>
 <div id="top-nav">
-[% UNLESS c.user_exists %]<a href="[% c.uri_for_action('/user/login')%]">login</a>
+[% UNLESS c.user_exists %]
+<a href="[% c.uri_for_action('/user/login')%]">login</a> |
 [% ELSE %]
 <a href="[% c.uri_for_action('/user/logout') %]">logout</a>
+<a href="[% c.uri_for_action('/user/dashboard', [ c.user.obj.userid ] ) %]">dashboard</a>
 [% END %]
+<a href="[% c.uri_for_action('/forum/index') %]">forums</a>
 </div>
 
 <div class="ui-widget">

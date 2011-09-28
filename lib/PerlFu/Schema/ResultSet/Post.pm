@@ -34,7 +34,7 @@ sub grandchildren {
         $path_column => { 'like', $like_not_root },
       ]
     },
-    { order_by => \"LENGTH($path_column)" },
+    { order_by => { length => $path_column } },
   )->all;
 }
 
