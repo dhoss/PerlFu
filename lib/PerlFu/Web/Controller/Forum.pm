@@ -3,7 +3,7 @@ use Moose;
 use namespace::autoclean;
 use Try::Tiny;
 
-BEGIN {extends 'Catalyst::Controller'; }
+BEGIN {extends 'Catalyst::Controller::REST'; }
 
 =head1 NAME
 
