@@ -17,25 +17,32 @@ Catalyst Controller.
 
 =cut
 
-sub thread : Chained('/') PathPart('forum') CaptureArgs(1) {
-  my ($self, $c, $forumid) = @_;
-  my $forum = $c->model('Database::Forum')->find($forumid);
-  $c->detach('forum_not_found') unless defined $forum;
-  $c->stash( forum => $forum );
-}
 
 =head2 index
 
 =cut
 
-sub index :Path('/forums') :Args(0) {
+sub base : Chained('/') PathPart('') CaptureArgs(0) {}
+
+sub object_with_id : Chained('base') PathPart('') CaptureArgs(1) {
+  my ( $self, $c, $forumid ) = @_;
+  my $forum = $c->model('Database::Forum')->find($forumid);
+  $c->stash( forum => $forum );
+}
+
+sub object_without_id : Chained('base') PathPart('') CaptureArgs(0) {
+  my ( $self, $c ) = @_;
+  my $forums = $c->model('Database::Forum')->all;
+  $c->stash( forums => $forums );
+}
+
+
+sub list : Chained('object_without_id') PathPart('forums') Args(0) {
     my ( $self, $c ) = @_;
-    my @forums = $c->model('Database::Forum')->all;
-    $c->stash( forums => \@forums );
 
 }
 
-sub create : Chained('/') PathPart('forum/new') Args(0) {
+sub create : Chained('object_without_id') PathPart('forum/new') Args(0) {
   my ($self, $c) = @_;
   my $params = $c->req->params;
   if ( delete $params->{'submit'} ) {
@@ -63,7 +70,7 @@ sub create : Chained('/') PathPart('forum/new') Args(0) {
   }
 }
 
-sub read : Chained('thread') PathPart('') Args(0) {
+sub read : Chained('object_with_id') PathPart('forum') Args(0) {
   my ($self, $c) = @_;
   my $forum = $c->stash->{'forum'};
   my @threads = $forum->threads->parent_threads;
