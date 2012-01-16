@@ -22,7 +22,7 @@ has 'id' => (
 has next_id => (
   is      => 'rw',
   lazy    => 1,
-  builder => '_build_next_id',
+  default => 1,
 );
 
 has 'ticker_url' => (
@@ -59,21 +59,18 @@ sub _build_queue {
   Net::Kestrel->new;
 }
 
-sub _build_next_id {
-  my ($self, $id)     = @_;
-  return $id
-}
-
 sub _build_document {
   my $self = shift;
+  my $ua         = $self->ua;
+  my $ticker_url = $self->ticker_url . ";id=" . $self->next_id;
+  my $res        = $ua->request( GET $ticker_url );
+  return $res->content;
 
 }
 
 sub execute {
   my ($self) = @_;
-  my $ua       = $self->ua;
-  my $res      = $ua->request( GET $self->ticker_url . ";id=1" );
-  my $contents = $res->content;
+  my $contents = $self->document; 
   my $reader   = XML::LibXML::Reader->new( string => $contents )
     || die "can't read file $!";
   my @nodes     = $self->build_xml_tree($reader);
