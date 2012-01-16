@@ -4,19 +4,19 @@ use Moose;
 use namespace::autoclean;
 use Net::Kestrel;
 
-has 'queue' => (
+has 'kestrel' => (
   is       => 'ro',
   isa      => 'Net::Kestrel',
   required => 1,
   lazy     => 1,
-  builder  => '_build_queue',
+  builder  => '_build_kestrel',
   handler  => qr/.*/,
 );
 
-
-sub _build_queue {
+sub _build_kestrel {
   Net::Kestrel->new
 }
+
 
 __PACKAGE__->meta->make_immutable;
 1;
