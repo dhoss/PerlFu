@@ -10,7 +10,7 @@ has 'kestrel' => (
   required => 1,
   lazy     => 1,
   builder  => '_build_kestrel',
-  handler  => qr/.*/,
+  handles  => qr/.*/,
 );
 
 sub _build_kestrel {
