@@ -1,0 +1,37 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_parent {
+	label="parent";
+	"parent::BEGIN@25";
+	"parent::BEGIN@2";
+	"parent::CORE:subst";
+	"parent::import";
+	"parent::BEGIN@3";
+}
+subgraph cluster_Params_Classify {
+	label="Params::Classify";
+	"Params::Classify::BEGIN@83";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_Module_Runtime {
+	label="Module::Runtime";
+	"Module::Runtime::BEGIN@55";
+}
+"parent::BEGIN@25" -> "strict::unimport";
+"parent::BEGIN@3" -> "vars::import";
+"parent::BEGIN@2" -> "strict::import";
+"Params::Classify::BEGIN@83" -> "parent::import";
+"Module::Runtime::BEGIN@55" -> "parent::import";
+"Params::Classify::BEGIN@83" -> "parent::BEGIN@25";
+"parent::import" -> "parent::CORE:subst";
+"Params::Classify::BEGIN@83" -> "parent::BEGIN@2";
+"Params::Classify::BEGIN@83" -> "parent::BEGIN@3";
+}

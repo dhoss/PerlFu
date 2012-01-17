@@ -1,0 +1,128 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::unimport";
+	"warnings::import";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_Sub_Identify {
+	label="Sub::Identify";
+	"Sub::Identify::BEGIN@3";
+	"Sub::Identify::sub_fullname";
+	"Sub::Identify::BEGIN@6";
+	"Sub::Identify::BEGIN@4";
+}
+subgraph cluster_Package_Stash_XS {
+	label="Package::Stash::XS";
+	"Package::Stash::XS::get_symbol";
+	"Package::Stash::XS::has_symbol";
+	"Package::Stash::XS::list_all_symbols";
+	"Package::Stash::XS::add_symbol";
+	"Package::Stash::XS::name";
+	"Package::Stash::XS::namespace";
+	"Package::Stash::XS::new";
+	"Package::Stash::XS::remove_glob";
+}
+subgraph cluster_namespace_autoclean {
+	label="namespace::autoclean";
+	"namespace::autoclean::__ANON__[namespace/autoclean.pm:57]";
+	"namespace::autoclean::BEGIN@16";
+}
+subgraph cluster_B_Hooks_EndOfScope {
+	label="B::Hooks::EndOfScope";
+	"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+	"B::Hooks::EndOfScope::on_scope_end";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::VERSION";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::BEGIN@11";
+	"namespace::clean::__ANON__[namespace/clean.pm:59]";
+	"namespace::clean::BEGIN@14";
+	"namespace::clean::get_functions";
+	"namespace::clean::__ANON__[namespace/clean.pm:117]";
+	"namespace::clean::BEGIN@13";
+	"namespace::clean::BEGIN@16";
+	"namespace::clean::BEGIN@10";
+	"namespace::clean::BEGIN@166";
+	"namespace::clean::BEGIN@2";
+	"namespace::clean::BEGIN@5";
+	"namespace::clean::clean_subroutines";
+	"namespace::clean::get_class_store";
+	"namespace::clean::BEGIN@17";
+	"namespace::clean::BEGIN@15";
+	"namespace::clean::import";
+}
+subgraph cluster_Sub_Exporter {
+	label="Sub::Exporter";
+	"Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Package_DeprecationManager {
+	label="Package::DeprecationManager";
+	"Package::DeprecationManager::__ANON__[Package/DeprecationManager.pm:61]";
+}
+"namespace::clean::BEGIN@17" -> "Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+"namespace::autoclean::BEGIN@16" -> "namespace::clean::BEGIN@2";
+"namespace::clean::__ANON__[namespace/clean.pm:59]" -> "Sub::Identify::sub_fullname";
+"namespace::clean::BEGIN@15" -> "Exporter::import";
+"namespace::clean::BEGIN@14" -> "Exporter::import";
+"namespace::clean::__ANON__[namespace/clean.pm:59]" -> "Package::Stash::XS::remove_glob";
+"namespace::autoclean::__ANON__[namespace/autoclean.pm:57]" -> "namespace::clean::clean_subroutines";
+"namespace::autoclean::BEGIN@16" -> "namespace::clean::BEGIN@15";
+"namespace::clean::__ANON__[namespace/clean.pm:59]" -> "Package::Stash::XS::has_symbol";
+"namespace::clean::import" -> "Package::Stash::XS::has_symbol";
+"namespace::clean::get_class_store" -> "Package::Stash::XS::has_symbol";
+"namespace::clean::clean_subroutines" -> "namespace::clean::__ANON__[namespace/clean.pm:59]";
+"namespace::clean::__ANON__[namespace/clean.pm:117]" -> "namespace::clean::__ANON__[namespace/clean.pm:59]";
+"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]" -> "namespace::clean::__ANON__[namespace/clean.pm:117]";
+"namespace::clean::__ANON__[namespace/clean.pm:59]" -> "Package::Stash::XS::get_symbol";
+"namespace::clean::get_class_store" -> "Package::Stash::XS::get_symbol";
+"namespace::clean::get_functions" -> "Package::Stash::XS::get_symbol";
+"namespace::clean::get_functions" -> "Package::Stash::XS::list_all_symbols";
+"namespace::autoclean::BEGIN@16" -> "namespace::clean::BEGIN@11";
+"namespace::autoclean::BEGIN@16" -> "namespace::clean::BEGIN@14";
+"namespace::clean::BEGIN@10" -> "warnings::import";
+"namespace::clean::BEGIN@13" -> "vars::import";
+"namespace::clean::__ANON__[namespace/clean.pm:59]" -> "Package::Stash::XS::new";
+"namespace::clean::import" -> "Package::Stash::XS::new";
+"namespace::clean::get_class_store" -> "Package::Stash::XS::new";
+"namespace::clean::get_functions" -> "Package::Stash::XS::new";
+"namespace::autoclean::BEGIN@16" -> "namespace::clean::import";
+"namespace::clean::BEGIN@14" -> "UNIVERSAL::VERSION";
+"namespace::clean::BEGIN@16" -> "UNIVERSAL::VERSION";
+"namespace::clean::BEGIN@17" -> "UNIVERSAL::VERSION";
+"namespace::clean::BEGIN@15" -> "UNIVERSAL::VERSION";
+"namespace::clean::BEGIN@11" -> "strict::import";
+"namespace::autoclean::BEGIN@16" -> "namespace::clean::BEGIN@13";
+"namespace::clean::BEGIN@166" -> "warnings::unimport";
+"namespace::clean::BEGIN@15" -> "Sub::Identify::BEGIN@6";
+"namespace::autoclean::BEGIN@16" -> "namespace::clean::BEGIN@16";
+"namespace::clean::import" -> "namespace::clean::get_class_store";
+"namespace::clean::import" -> "B::Hooks::EndOfScope::on_scope_end";
+"namespace::clean::BEGIN@16" -> "Package::DeprecationManager::__ANON__[Package/DeprecationManager.pm:61]";
+"namespace::clean::__ANON__[namespace/clean.pm:59]" -> "Package::Stash::XS::namespace";
+"namespace::autoclean::BEGIN@16" -> "namespace::clean::BEGIN@17";
+"namespace::clean::BEGIN@15" -> "Sub::Identify::BEGIN@3";
+"namespace::clean::__ANON__[namespace/clean.pm:59]" -> "Package::Stash::XS::name";
+"namespace::autoclean::BEGIN@16" -> "namespace::clean::BEGIN@10";
+"namespace::autoclean::BEGIN@16" -> "namespace::clean::BEGIN@166";
+"namespace::autoclean::BEGIN@16" -> "namespace::clean::BEGIN@5";
+"namespace::clean::get_class_store" -> "Package::Stash::XS::add_symbol";
+"namespace::clean::import" -> "namespace::clean::get_functions";
+"namespace::clean::BEGIN@15" -> "Sub::Identify::BEGIN@4";
+}

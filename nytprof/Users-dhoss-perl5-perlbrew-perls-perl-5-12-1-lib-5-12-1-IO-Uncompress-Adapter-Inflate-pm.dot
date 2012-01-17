@@ -1,0 +1,47 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_bytes {
+	label="bytes";
+	"bytes::import";
+}
+subgraph cluster_IO_Uncompress_Adapter_Inflate {
+	label="IO::Uncompress::Adapter::Inflate";
+	"IO::Uncompress::Adapter::Inflate::BEGIN@3";
+	"IO::Uncompress::Adapter::Inflate::BEGIN@5";
+	"IO::Uncompress::Adapter::Inflate::BEGIN@4";
+	"IO::Uncompress::Adapter::Inflate::BEGIN@7";
+	"IO::Uncompress::Adapter::Inflate::BEGIN@8";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::VERSION";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_IO_Uncompress_RawInflate {
+	label="IO::Uncompress::RawInflate";
+	"IO::Uncompress::RawInflate::BEGIN@12";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+"IO::Uncompress::RawInflate::BEGIN@12" -> "IO::Uncompress::Adapter::Inflate::BEGIN@8";
+"IO::Uncompress::Adapter::Inflate::BEGIN@8" -> "Exporter::import";
+"IO::Uncompress::Adapter::Inflate::BEGIN@7" -> "Exporter::import";
+"IO::Uncompress::RawInflate::BEGIN@12" -> "IO::Uncompress::Adapter::Inflate::BEGIN@5";
+"IO::Uncompress::RawInflate::BEGIN@12" -> "IO::Uncompress::Adapter::Inflate::BEGIN@7";
+"IO::Uncompress::RawInflate::BEGIN@12" -> "IO::Uncompress::Adapter::Inflate::BEGIN@3";
+"IO::Uncompress::Adapter::Inflate::BEGIN@4" -> "warnings::import";
+"IO::Uncompress::Adapter::Inflate::BEGIN@7" -> "UNIVERSAL::VERSION";
+"IO::Uncompress::Adapter::Inflate::BEGIN@8" -> "UNIVERSAL::VERSION";
+"IO::Uncompress::Adapter::Inflate::BEGIN@3" -> "strict::import";
+"IO::Uncompress::Adapter::Inflate::BEGIN@5" -> "bytes::import";
+"IO::Uncompress::RawInflate::BEGIN@12" -> "IO::Uncompress::Adapter::Inflate::BEGIN@4";
+}

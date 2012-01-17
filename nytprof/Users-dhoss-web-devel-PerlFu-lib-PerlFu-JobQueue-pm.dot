@@ -1,0 +1,74 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Moose_Exporter {
+	label="Moose::Exporter";
+	"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+}
+subgraph cluster_Moose {
+	label="Moose";
+	"Moose::has";
+}
+subgraph cluster_MooseX_Storage_Format_JSON {
+	label="MooseX::Storage::Format::JSON";
+	"MooseX::Storage::Format::JSON::thaw";
+	"MooseX::Storage::Format::JSON::freeze";
+}
+subgraph cluster_namespace_autoclean {
+	label="namespace::autoclean";
+	"namespace::autoclean::import";
+}
+subgraph cluster_PerlFu_JobQueue {
+	label="PerlFu::JobQueue";
+	"PerlFu::JobQueue::name";
+	"PerlFu::JobQueue::enqueue";
+	"PerlFu::JobQueue::BEGIN@5";
+	"PerlFu::JobQueue::dequeue";
+	"PerlFu::JobQueue::BEGIN@3";
+	"PerlFu::JobQueue::BEGIN@4";
+	"PerlFu::JobQueue::_build_kestrel";
+	"PerlFu::JobQueue::BEGIN@6";
+	"PerlFu::JobQueue::kestrel";
+}
+subgraph cluster_Net_Kestrel {
+	label="Net::Kestrel";
+	"Net::Kestrel::BEGIN@5";
+	"Net::Kestrel::BEGIN@7";
+	"Net::Kestrel::put";
+	"Net::Kestrel::get";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Moose_Object {
+	label="Moose::Object";
+	"Moose::Object::new";
+}
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@4";
+	"main::RUNTIME";
+}
+"PerlFu::JobQueue::BEGIN@6" -> "Exporter::import";
+"main::BEGIN@4" -> "PerlFu::JobQueue::BEGIN@6";
+"PerlFu::JobQueue::dequeue" -> "MooseX::Storage::Format::JSON::thaw";
+"main::RUNTIME" -> "PerlFu::JobQueue::enqueue";
+"main::BEGIN@4" -> "PerlFu::JobQueue::BEGIN@4";
+"PerlFu::JobQueue::dequeue" -> "Net::Kestrel::get";
+"PerlFu::JobQueue::enqueue" -> "MooseX::Storage::Format::JSON::freeze";
+"PerlFu::JobQueue::BEGIN@5" -> "Net::Kestrel::BEGIN@5";
+"PerlFu::JobQueue::_build_kestrel" -> "Moose::Object::new";
+"main::BEGIN@4" -> "PerlFu::JobQueue::BEGIN@5";
+"PerlFu::JobQueue::BEGIN@5" -> "Net::Kestrel::BEGIN@7";
+"PerlFu::JobQueue::enqueue" -> "PerlFu::JobQueue::name";
+"PerlFu::JobQueue::dequeue" -> "PerlFu::JobQueue::name";
+"PerlFu::JobQueue::BEGIN@5" -> "Moose::has";
+"main::RUNTIME" -> "PerlFu::JobQueue::dequeue";
+"PerlFu::JobQueue::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"PerlFu::JobQueue::BEGIN@4" -> "namespace::autoclean::import";
+"PerlFu::JobQueue::kestrel" -> "PerlFu::JobQueue::_build_kestrel";
+"PerlFu::JobQueue::enqueue" -> "Net::Kestrel::put";
+"PerlFu::JobQueue::dequeue" -> "PerlFu::JobQueue::kestrel";
+"PerlFu::JobQueue::enqueue" -> "PerlFu::JobQueue::kestrel";
+"main::BEGIN@4" -> "PerlFu::JobQueue::BEGIN@3";
+}

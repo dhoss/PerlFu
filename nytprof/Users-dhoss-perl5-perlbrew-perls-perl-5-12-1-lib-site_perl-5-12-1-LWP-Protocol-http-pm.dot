@@ -1,0 +1,167 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_IO_Socket_INET {
+	label="IO::Socket::INET";
+	"IO::Socket::INET::peerport";
+	"IO::Socket::INET::peerhost";
+}
+subgraph cluster_Storable {
+	label="Storable";
+	"Storable::dclone";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_IO_Handle {
+	label="IO::Handle";
+	"IO::Handle::syswrite";
+}
+subgraph cluster_LWP_UserAgent {
+	label="LWP::UserAgent";
+	"LWP::UserAgent::send_request";
+}
+subgraph cluster_URI__generic {
+	label="URI::_generic";
+	"URI::_generic::path_query";
+	"URI::_generic::authority";
+}
+subgraph cluster_URI__server {
+	label="URI::_server";
+	"URI::_server::host";
+	"URI::_server::port";
+}
+subgraph cluster_HTTP_Response {
+	label="HTTP::Response";
+	"HTTP::Response::new";
+	"HTTP::Response::request";
+}
+subgraph cluster_LWP_Protocol {
+	label="LWP::Protocol";
+	"LWP::Protocol::collect";
+	"LWP::Protocol::implementor";
+}
+subgraph cluster_LWP_Protocol_http_Socket {
+	label="LWP::Protocol::http::Socket";
+	"LWP::Protocol::http::Socket::BEGIN@479";
+}
+subgraph cluster_HTTP_Headers {
+	label="HTTP::Headers";
+	"HTTP::Headers::header";
+	"HTTP::Headers::scan";
+	"HTTP::Headers::init_header";
+}
+subgraph cluster_HTTP_Message {
+	label="HTTP::Message";
+	"HTTP::Message::content_ref";
+	"HTTP::Message::AUTOLOAD";
+	"HTTP::Message::protocol";
+	"HTTP::Message::headers";
+	"HTTP::Message::__ANON__[HTTP/Message.pm:649]";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_HTTP_Request {
+	label="HTTP::Request";
+	"HTTP::Request::uri";
+	"HTTP::Request::method";
+}
+subgraph cluster_Net_HTTP {
+	label="Net::HTTP";
+	"Net::HTTP::new";
+}
+subgraph cluster_LWP_Protocol_http_SocketMethods {
+	label="LWP::Protocol::http::SocketMethods";
+	"LWP::Protocol::http::SocketMethods::CORE:sselect";
+	"LWP::Protocol::http::SocketMethods::sysread";
+	"LWP::Protocol::http::SocketMethods::CORE:sysread";
+	"LWP::Protocol::http::SocketMethods::can_read";
+	"LWP::Protocol::http::SocketMethods::increment_response_count";
+}
+subgraph cluster_IO_Socket {
+	label="IO::Socket";
+	"IO::Socket::blocking";
+}
+subgraph cluster_LWP_Protocol_http {
+	label="LWP::Protocol::http";
+	"LWP::Protocol::http::_check_sock";
+	"LWP::Protocol::http::_extra_sock_opts";
+	"LWP::Protocol::http::__ANON__[LWP/Protocol/http.pm:401]";
+	"LWP::Protocol::http::_new_socket";
+	"LWP::Protocol::http::CORE:subst";
+	"LWP::Protocol::http::request";
+	"LWP::Protocol::http::__ANON__[LWP/Protocol/http.pm:174]";
+	"LWP::Protocol::http::_fixup_header";
+	"LWP::Protocol::http::BEGIN@3";
+	"LWP::Protocol::http::BEGIN@9";
+	"LWP::Protocol::http::_get_sock_info";
+	"LWP::Protocol::http::CORE:match";
+	"LWP::Protocol::http::socket_class";
+}
+subgraph cluster_Net_HTTP_Methods {
+	label="Net::HTTP::Methods";
+	"Net::HTTP::Methods::read_entity_body";
+	"Net::HTTP::Methods::my_read";
+	"Net::HTTP::Methods::my_readline";
+	"Net::HTTP::Methods::read_response_headers";
+	"Net::HTTP::Methods::format_request";
+	"Net::HTTP::Methods::get_trailers";
+	"Net::HTTP::Methods::__ANON__[Net/HTTP/Methods.pm:104]";
+}
+"LWP::Protocol::http::_new_socket" -> "Net::HTTP::new";
+"LWP::Protocol::http::request" -> "LWP::Protocol::collect";
+"LWP::Protocol::http::request" -> "Net::HTTP::Methods::__ANON__[Net/HTTP/Methods.pm:104]";
+"LWP::Protocol::http::request" -> "HTTP::Message::headers";
+"LWP::Protocol::http::request" -> "IO::Handle::syswrite";
+"LWP::UserAgent::send_request" -> "LWP::Protocol::http::request";
+"LWP::Protocol::http::__ANON__[LWP/Protocol/http.pm:401]" -> "Net::HTTP::Methods::read_entity_body";
+"LWP::Protocol::http::request" -> "HTTP::Request::uri";
+"LWP::Protocol::implementor" -> "LWP::Protocol::http::Socket::BEGIN@479";
+"LWP::Protocol::http::request" -> "HTTP::Request::method";
+"LWP::Protocol::http::_new_socket" -> "LWP::Protocol::http::socket_class";
+"LWP::Protocol::http::_fixup_header" -> "HTTP::Headers::init_header";
+"LWP::Protocol::http::request" -> "HTTP::Headers::scan";
+"LWP::Protocol::http::request" -> "HTTP::Headers::header";
+"LWP::Protocol::http::request" -> "HTTP::Message::protocol";
+"LWP::Protocol::http::request" -> "Net::HTTP::Methods::get_trailers";
+"LWP::Protocol::http::Socket::BEGIN@479" -> "vars::import";
+"LWP::Protocol::http::BEGIN@9" -> "vars::import";
+"LWP::Protocol::http::request" -> "Net::HTTP::Methods::format_request";
+"LWP::Protocol::http::request" -> "LWP::Protocol::http::_new_socket";
+"LWP::Protocol::http::SocketMethods::sysread" -> "LWP::Protocol::http::SocketMethods::CORE:sysread";
+"LWP::Protocol::implementor" -> "LWP::Protocol::http::BEGIN@9";
+"LWP::Protocol::http::request" -> "LWP::Protocol::http::_get_sock_info";
+"Net::HTTP::Methods::my_read" -> "LWP::Protocol::http::SocketMethods::sysread";
+"Net::HTTP::Methods::my_readline" -> "LWP::Protocol::http::SocketMethods::sysread";
+"LWP::Protocol::http::BEGIN@3" -> "strict::import";
+"LWP::Protocol::http::_new_socket" -> "IO::Socket::blocking";
+"LWP::Protocol::http::request" -> "LWP::Protocol::http::SocketMethods::increment_response_count";
+"LWP::Protocol::http::request" -> "URI::_server::port";
+"LWP::Protocol::http::request" -> "LWP::Protocol::http::_fixup_header";
+"LWP::Protocol::implementor" -> "LWP::Protocol::http::BEGIN@3";
+"HTTP::Headers::scan" -> "LWP::Protocol::http::__ANON__[LWP/Protocol/http.pm:174]";
+"LWP::Protocol::http::request" -> "URI::_generic::path_query";
+"LWP::Protocol::http::request" -> "HTTP::Response::request";
+"LWP::Protocol::http::_get_sock_info" -> "IO::Socket::INET::peerport";
+"LWP::Protocol::http::_get_sock_info" -> "HTTP::Message::AUTOLOAD";
+"LWP::Protocol::http::request" -> "HTTP::Message::AUTOLOAD";
+"LWP::Protocol::http::__ANON__[LWP/Protocol/http.pm:174]" -> "LWP::Protocol::http::CORE:subst";
+"LWP::Protocol::http::_fixup_header" -> "LWP::Protocol::http::CORE:subst";
+"LWP::Protocol::http::request" -> "URI::_server::host";
+"LWP::Protocol::http::_get_sock_info" -> "IO::Socket::INET::peerhost";
+"LWP::Protocol::http::_get_sock_info" -> "HTTP::Message::__ANON__[HTTP/Message.pm:649]";
+"LWP::Protocol::http::request" -> "HTTP::Message::__ANON__[HTTP/Message.pm:649]";
+"LWP::Protocol::http::SocketMethods::can_read" -> "LWP::Protocol::http::SocketMethods::CORE:sselect";
+"LWP::Protocol::http::request" -> "LWP::Protocol::http::_check_sock";
+"LWP::Protocol::http::request" -> "HTTP::Message::content_ref";
+"LWP::Protocol::collect" -> "LWP::Protocol::http::__ANON__[LWP/Protocol/http.pm:401]";
+"LWP::Protocol::http::request" -> "LWP::Protocol::http::CORE:match";
+"LWP::Protocol::http::request" -> "Storable::dclone";
+"LWP::Protocol::http::_new_socket" -> "LWP::Protocol::http::_extra_sock_opts";
+"LWP::Protocol::http::request" -> "HTTP::Response::new";
+"LWP::Protocol::http::_fixup_header" -> "URI::_generic::authority";
+"LWP::Protocol::http::SocketMethods::sysread" -> "LWP::Protocol::http::SocketMethods::can_read";
+"LWP::Protocol::http::request" -> "Net::HTTP::Methods::read_response_headers";
+}

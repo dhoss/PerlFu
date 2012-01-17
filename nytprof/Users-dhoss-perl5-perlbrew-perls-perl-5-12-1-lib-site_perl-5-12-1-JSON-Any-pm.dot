@@ -1,0 +1,98 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_XSLoader {
+	label="XSLoader";
+	"XSLoader::load";
+}
+subgraph cluster_JSON_XS_Boolean {
+	label="JSON::XS::Boolean";
+	"JSON::XS::Boolean::BEGIN@1477";
+}
+subgraph cluster_MooseX_Storage_Format_JSON {
+	label="MooseX::Storage::Format::JSON";
+	"MooseX::Storage::Format::JSON::BEGIN@7";
+	"MooseX::Storage::Format::JSON::thaw";
+	"MooseX::Storage::Format::JSON::freeze";
+}
+subgraph cluster_JSON_Any {
+	label="JSON::Any";
+	"JSON::Any::CORE:match";
+	"JSON::Any::BEGIN@4";
+	"JSON::Any::BEGIN@24";
+	"JSON::Any::BEGIN@25";
+	"JSON::Any::import";
+	"JSON::Any::objToJson";
+	"JSON::Any::BEGIN@22";
+	"JSON::Any::BEGIN@3";
+	"JSON::Any::_try_loading";
+	"JSON::Any::BEGIN@27";
+	"JSON::Any::jsonToObj";
+	"JSON::Any::BEGIN@23";
+	"JSON::Any::BEGIN@219";
+	"JSON::Any::CORE:subst";
+	"JSON::Any::BEGIN@5";
+	"JSON::Any::_make_key";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::can";
+}
+subgraph cluster_JSON_XS {
+	label="JSON::XS";
+	"JSON::XS::BEGIN@104";
+	"JSON::XS::encode_json";
+	"JSON::XS::BEGIN@121";
+	"JSON::XS::decode_json";
+	"JSON::XS::BEGIN@122";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::import";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+"MooseX::Storage::Format::JSON::BEGIN@7" -> "JSON::Any::import";
+"JSON::Any::jsonToObj" -> "JSON::XS::decode_json";
+"JSON::Any::BEGIN@5" -> "Exporter::import";
+"JSON::Any::_try_loading" -> "JSON::Any::_make_key";
+"MooseX::Storage::Format::JSON::BEGIN@7" -> "JSON::Any::BEGIN@22";
+"MooseX::Storage::Format::JSON::BEGIN@7" -> "JSON::Any::BEGIN@219";
+"JSON::Any::jsonToObj" -> "UNIVERSAL::can";
+"JSON::Any::objToJson" -> "UNIVERSAL::can";
+"JSON::Any::BEGIN@22" -> "constant::import";
+"JSON::Any::BEGIN@24" -> "constant::import";
+"JSON::Any::BEGIN@25" -> "constant::import";
+"JSON::Any::BEGIN@23" -> "constant::import";
+"JSON::Any::BEGIN@219" -> "strict::unimport";
+"JSON::Any::_try_loading" -> "JSON::XS::BEGIN@121";
+"MooseX::Storage::Format::JSON::BEGIN@7" -> "JSON::Any::BEGIN@3";
+"JSON::Any::BEGIN@3" -> "warnings::import";
+"MooseX::Storage::Format::JSON::BEGIN@7" -> "JSON::Any::BEGIN@27";
+"MooseX::Storage::Format::JSON::thaw" -> "JSON::Any::jsonToObj";
+"JSON::Any::_try_loading" -> "JSON::XS::Boolean::BEGIN@1477";
+"MooseX::Storage::Format::JSON::BEGIN@7" -> "JSON::Any::BEGIN@25";
+"JSON::Any::BEGIN@4" -> "strict::import";
+"JSON::Any::_try_loading" -> "JSON::XS::BEGIN@104";
+"JSON::Any::jsonToObj" -> "JSON::Any::CORE:match";
+"MooseX::Storage::Format::JSON::freeze" -> "JSON::Any::objToJson";
+"JSON::Any::_try_loading" -> "JSON::XS::BEGIN@122";
+"JSON::Any::_make_key" -> "JSON::Any::CORE:subst";
+"JSON::Any::_try_loading" -> "XSLoader::load";
+"JSON::Any::import" -> "JSON::Any::_try_loading";
+"MooseX::Storage::Format::JSON::BEGIN@7" -> "JSON::Any::BEGIN@5";
+"JSON::Any::objToJson" -> "JSON::XS::encode_json";
+"MooseX::Storage::Format::JSON::BEGIN@7" -> "JSON::Any::BEGIN@24";
+"MooseX::Storage::Format::JSON::BEGIN@7" -> "JSON::Any::BEGIN@4";
+"MooseX::Storage::Format::JSON::BEGIN@7" -> "JSON::Any::BEGIN@23";
+}

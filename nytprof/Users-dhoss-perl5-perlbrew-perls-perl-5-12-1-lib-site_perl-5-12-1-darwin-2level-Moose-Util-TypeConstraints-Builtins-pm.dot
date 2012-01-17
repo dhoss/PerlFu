@@ -1,0 +1,137 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_Moose_Util_TypeConstraints {
+	label="Moose::Util::TypeConstraints";
+	"Moose::Util::TypeConstraints::where";
+	"Moose::Util::TypeConstraints::subtype";
+	"Moose::Util::TypeConstraints::as";
+	"Moose::Util::TypeConstraints::inline_as";
+	"Moose::Util::TypeConstraints::find_type_constraint";
+	"Moose::Util::TypeConstraints::type";
+}
+subgraph cluster_Moose_Util_TypeConstraints_Builtins {
+	label="Moose::Util::TypeConstraints::Builtins";
+	"Moose::Util::TypeConstraints::Builtins::BEGIN@10";
+	"Moose::Util::TypeConstraints::Builtins::BEGIN@13";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:113]";
+	"Moose::Util::TypeConstraints::Builtins::where";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:72]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:204]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:272]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:176]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:28]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:83]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:157]";
+	"Moose::Util::TypeConstraints::Builtins::inline_as";
+	"Moose::Util::TypeConstraints::Builtins::BEGIN@12";
+	"Moose::Util::TypeConstraints::Builtins::type";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:66]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:118]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:39]";
+	"Moose::Util::TypeConstraints::Builtins::BEGIN@9";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:133]";
+	"Moose::Util::TypeConstraints::Builtins::define_builtins";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:106]";
+	"Moose::Util::TypeConstraints::Builtins::BEGIN@14";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:93]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:238]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:46]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:253]";
+	"Moose::Util::TypeConstraints::Builtins::subtype";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:101]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:138]";
+	"Moose::Util::TypeConstraints::Builtins::BEGIN@2";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:239]";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:58]";
+	"Moose::Util::TypeConstraints::Builtins::as";
+	"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:144]";
+}
+subgraph cluster_Moose_Meta_TypeConstraint_Registry {
+	label="Moose::Meta::TypeConstraint::Registry";
+	"Moose::Meta::TypeConstraint::Registry::add_type_constraint";
+}
+subgraph cluster_Moose_Meta_TypeConstraint_Parameterizable {
+	label="Moose::Meta::TypeConstraint::Parameterizable";
+	"Moose::Meta::TypeConstraint::Parameterizable::generate_inline_for";
+	"Moose::Meta::TypeConstraint::Parameterizable::generate_constraint_for";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Moose_Meta_Attribute {
+	label="Moose::Meta::Attribute";
+	"Moose::Meta::Attribute::BEGIN@24";
+}
+subgraph cluster_Moose_Meta_TypeConstraint {
+	label="Moose::Meta::TypeConstraint";
+	"Moose::Meta::TypeConstraint::_compiled_type_constraint";
+	"Moose::Meta::TypeConstraint::_inline_check";
+	"Moose::Meta::TypeConstraint::parent";
+	"Moose::Meta::TypeConstraint::new";
+}
+"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:101]" -> "Moose::Meta::TypeConstraint::_inline_check";
+"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:83]" -> "Moose::Meta::TypeConstraint::_inline_check";
+"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:157]" -> "Moose::Meta::TypeConstraint::_inline_check";
+"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:66]" -> "Moose::Meta::TypeConstraint::_inline_check";
+"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:93]" -> "Moose::Meta::TypeConstraint::_inline_check";
+"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:253]" -> "Moose::Meta::TypeConstraint::_inline_check";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Util::TypeConstraints::Builtins::where";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Util::TypeConstraints::Builtins::inline_as";
+"Moose::Util::TypeConstraints::Builtins::BEGIN@14" -> "Exporter::import";
+"Moose::Util::TypeConstraints::Builtins::BEGIN@12" -> "Exporter::import";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Util::TypeConstraints::where";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Util::TypeConstraints::find_type_constraint";
+"Moose::Meta::Attribute::BEGIN@24" -> "Moose::Util::TypeConstraints::Builtins::BEGIN@14";
+"Moose::Meta::Attribute::BEGIN@24" -> "Moose::Util::TypeConstraints::Builtins::BEGIN@2";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:72]";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:157]";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Util::TypeConstraints::as";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Util::TypeConstraints::Builtins::type";
+"Moose::Meta::Attribute::BEGIN@24" -> "Moose::Util::TypeConstraints::Builtins::define_builtins";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:144]";
+"Moose::Meta::Attribute::BEGIN@24" -> "Moose::Util::TypeConstraints::Builtins::BEGIN@13";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Util::TypeConstraints::subtype";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:176]";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Util::TypeConstraints::type";
+"Moose::Util::TypeConstraints::Builtins::BEGIN@10" -> "warnings::import";
+"Moose::Meta::Attribute::BEGIN@24" -> "Moose::Util::TypeConstraints::Builtins::BEGIN@12";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:39]";
+"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:238]" -> "Moose::Meta::TypeConstraint::_compiled_type_constraint";
+"Moose::Util::TypeConstraints::Builtins::BEGIN@9" -> "strict::import";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Util::TypeConstraints::Builtins::as";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:58]";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:113]";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Util::TypeConstraints::inline_as";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:204]";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Meta::TypeConstraint::new";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:118]";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:66]";
+"Moose::Meta::Attribute::BEGIN@24" -> "Moose::Util::TypeConstraints::Builtins::BEGIN@9";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:106]";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:101]";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:239]";
+"Moose::Meta::Attribute::BEGIN@24" -> "Moose::Util::TypeConstraints::Builtins::BEGIN@10";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:272]";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Meta::TypeConstraint::Registry::add_type_constraint";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:93]";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:46]";
+"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:83]" -> "Moose::Meta::TypeConstraint::parent";
+"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:157]" -> "Moose::Meta::TypeConstraint::parent";
+"Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:66]" -> "Moose::Meta::TypeConstraint::parent";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:83]";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:28]";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:133]";
+"Moose::Meta::TypeConstraint::Parameterizable::generate_constraint_for" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:238]";
+"Moose::Meta::TypeConstraint::Parameterizable::generate_inline_for" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:253]";
+"Moose::Util::TypeConstraints::Builtins::define_builtins" -> "Moose::Util::TypeConstraints::Builtins::subtype";
+"Moose::Meta::TypeConstraint::_inline_check" -> "Moose::Util::TypeConstraints::Builtins::__ANON__[Moose/Util/TypeConstraints/Builtins.pm:138]";
+}

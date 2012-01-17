@@ -1,0 +1,100 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_IO_Socket_INET {
+	label="IO::Socket::INET";
+	"IO::Socket::INET::BEGIN@14";
+	"IO::Socket::INET::BEGIN@11";
+	"IO::Socket::INET::new";
+	"IO::Socket::INET::BEGIN@13";
+	"IO::Socket::INET::BEGIN@9";
+	"IO::Socket::INET::BEGIN@15";
+	"IO::Socket::INET::BEGIN@12";
+}
+subgraph cluster_Moose_Exporter {
+	label="Moose::Exporter";
+	"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+}
+subgraph cluster_IO_Socket_UNIX {
+	label="IO::Socket::UNIX";
+	"IO::Socket::UNIX::BEGIN@11";
+	"IO::Socket::UNIX::BEGIN@9";
+	"IO::Socket::UNIX::BEGIN@12";
+}
+subgraph cluster_PerlFu_JobQueue {
+	label="PerlFu::JobQueue";
+	"PerlFu::JobQueue::enqueue";
+	"PerlFu::JobQueue::dequeue";
+	"PerlFu::JobQueue::BEGIN@5";
+}
+subgraph cluster_Net_Kestrel {
+	label="Net::Kestrel";
+	"Net::Kestrel::_connection";
+	"Net::Kestrel::_write_and_read";
+	"Net::Kestrel::confirm";
+	"Net::Kestrel::is_debug";
+	"Net::Kestrel::CORE:match";
+	"Net::Kestrel::CORE:readline";
+	"Net::Kestrel::get";
+	"Net::Kestrel::port";
+	"Net::Kestrel::host";
+	"Net::Kestrel::BEGIN@5";
+	"Net::Kestrel::BEGIN@7";
+	"Net::Kestrel::timeout";
+	"Net::Kestrel::put";
+	"Net::Kestrel::_build__connection";
+}
+subgraph cluster_Class_MOP_Class_ {
+	label="Class::MOP::Class:";
+	"Class::MOP::Class:::around";
+}
+subgraph cluster_IO_Socket {
+	label="IO::Socket";
+	"IO::Socket::BEGIN@12";
+	"IO::Socket::BEGIN@17";
+	"IO::Socket::CORE:pack";
+	"IO::Socket::BEGIN@11";
+	"IO::Socket::send";
+	"IO::Socket::BEGIN@13";
+	"IO::Socket::import";
+	"IO::Socket::register_domain";
+	"IO::Socket::BEGIN@16";
+	"IO::Socket::BEGIN@14";
+}
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@12";
+"Net::Kestrel::_build__connection" -> "IO::Socket::INET::new";
+"Net::Kestrel::confirm" -> "Net::Kestrel::_write_and_read";
+"Net::Kestrel::get" -> "Net::Kestrel::_write_and_read";
+"Net::Kestrel::put" -> "Net::Kestrel::_write_and_read";
+"Net::Kestrel::_write_and_read" -> "IO::Socket::send";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::INET::BEGIN@11";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@16";
+"Net::Kestrel::_write_and_read" -> "Net::Kestrel::CORE:match";
+"Net::Kestrel::_build__connection" -> "Net::Kestrel::host";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::UNIX::BEGIN@9";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::CORE:pack";
+"PerlFu::JobQueue::dequeue" -> "Net::Kestrel::get";
+"Net::Kestrel::_build__connection" -> "Net::Kestrel::port";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::INET::BEGIN@13";
+"PerlFu::JobQueue::BEGIN@5" -> "Net::Kestrel::BEGIN@5";
+"Net::Kestrel::_write_and_read" -> "Net::Kestrel::CORE:readline";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::INET::BEGIN@14";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::INET::BEGIN@12";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@14";
+"Net::Kestrel::_write_and_read" -> "Net::Kestrel::is_debug";
+"PerlFu::JobQueue::BEGIN@5" -> "Net::Kestrel::BEGIN@7";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@13";
+"Net::Kestrel::_connection" -> "Net::Kestrel::_build__connection";
+"Net::Kestrel::_write_and_read" -> "Net::Kestrel::_connection";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::UNIX::BEGIN@11";
+"Class::MOP::Class:::around" -> "Net::Kestrel::confirm";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::INET::BEGIN@9";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::import";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::INET::BEGIN@15";
+"Net::Kestrel::_build__connection" -> "Net::Kestrel::timeout";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::register_domain";
+"Net::Kestrel::BEGIN@5" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@11";
+"PerlFu::JobQueue::enqueue" -> "Net::Kestrel::put";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@17";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::UNIX::BEGIN@12";
+}

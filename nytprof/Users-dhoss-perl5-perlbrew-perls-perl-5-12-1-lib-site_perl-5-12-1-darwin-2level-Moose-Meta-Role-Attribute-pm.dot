@@ -1,0 +1,93 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_Moose_Meta_Role {
+	label="Moose::Meta::Role";
+	"Moose::Meta::Role::BEGIN@19";
+	"Moose::Meta::Role::applied_attribute_metaclass";
+	"Moose::Meta::Role::_attach_attribute";
+}
+subgraph cluster_Moose_Meta_Role_Attribute {
+	label="Moose::Meta::Role::Attribute";
+	"Moose::Meta::Role::Attribute::BEGIN@16";
+	"Moose::Meta::Role::Attribute::original_role";
+	"Moose::Meta::Role::Attribute::associated_role";
+	"Moose::Meta::Role::Attribute::BEGIN@10";
+	"Moose::Meta::Role::Attribute::attribute_for_class";
+	"Moose::Meta::Role::Attribute::BEGIN@2";
+	"Moose::Meta::Role::Attribute::BEGIN@12";
+	"Moose::Meta::Role::Attribute::new";
+	"Moose::Meta::Role::Attribute::original_options";
+	"Moose::Meta::Role::Attribute::attach_to_role";
+	"Moose::Meta::Role::Attribute::BEGIN@14";
+	"Moose::Meta::Role::Attribute::BEGIN@9";
+	"Moose::Meta::Role::Attribute::_original_role";
+	"Moose::Meta::Role::Attribute::BEGIN@13";
+}
+subgraph cluster_Scalar_Util {
+	label="Scalar::Util";
+	"Scalar::Util::blessed";
+	"Scalar::Util::weaken";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::isa";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Class_MOP_Mixin_AttributeCore {
+	label="Class::MOP::Mixin::AttributeCore";
+	"Class::MOP::Mixin::AttributeCore::name";
+}
+subgraph cluster_Moose_Meta_Attribute {
+	label="Moose::Meta::Attribute";
+	"Moose::Meta::Attribute::interpolate_class_and_new";
+}
+subgraph cluster_Class_MOP_Mixin_HasAttributes {
+	label="Class::MOP::Mixin::HasAttributes";
+	"Class::MOP::Mixin::HasAttributes::add_attribute";
+}
+subgraph cluster_Moose_Meta_Role_Application_ToClass {
+	label="Moose::Meta::Role::Application::ToClass";
+	"Moose::Meta::Role::Application::ToClass::apply_attributes";
+}
+"Moose::Meta::Role::BEGIN@19" -> "Moose::Meta::Role::Attribute::BEGIN@12";
+"Moose::Meta::Role::Application::ToClass::apply_attributes" -> "Moose::Meta::Role::Attribute::attribute_for_class";
+"Moose::Meta::Role::Attribute::BEGIN@12" -> "Exporter::import";
+"Moose::Meta::Role::Attribute::BEGIN@14" -> "Exporter::import";
+"Moose::Meta::Role::Attribute::BEGIN@13" -> "Exporter::import";
+"Moose::Meta::Role::Attribute::attribute_for_class" -> "Moose::Meta::Attribute::interpolate_class_and_new";
+"Moose::Meta::Role::Attribute::attach_to_role" -> "Scalar::Util::blessed";
+"Moose::Meta::Role::Attribute::attribute_for_class" -> "Moose::Meta::Role::applied_attribute_metaclass";
+"Moose::Meta::Role::BEGIN@19" -> "Moose::Meta::Role::Attribute::BEGIN@16";
+"Moose::Meta::Role::Attribute::BEGIN@16" -> "base::import";
+"Moose::Meta::Role::Attribute::original_role" -> "Moose::Meta::Role::Attribute::_original_role";
+"Moose::Meta::Role::Attribute::BEGIN@10" -> "warnings::import";
+"Moose::Meta::Role::_attach_attribute" -> "Moose::Meta::Role::Attribute::attach_to_role";
+"Moose::Meta::Role::Attribute::BEGIN@9" -> "strict::import";
+"Moose::Meta::Role::BEGIN@19" -> "Moose::Meta::Role::Attribute::BEGIN@13";
+"Moose::Meta::Role::BEGIN@19" -> "Moose::Meta::Role::Attribute::BEGIN@10";
+"Moose::Meta::Role::BEGIN@19" -> "Moose::Meta::Role::Attribute::BEGIN@14";
+"Moose::Meta::Role::Attribute::original_role" -> "Moose::Meta::Role::Attribute::associated_role";
+"Class::MOP::Mixin::HasAttributes::add_attribute" -> "Moose::Meta::Role::Attribute::new";
+"Moose::Meta::Role::Attribute::attribute_for_class" -> "Moose::Meta::Role::Attribute::original_role";
+"Moose::Meta::Role::Attribute::attach_to_role" -> "Scalar::Util::weaken";
+"Moose::Meta::Role::Attribute::attach_to_role" -> "UNIVERSAL::isa";
+"Moose::Meta::Role::Attribute::attribute_for_class" -> "Class::MOP::Mixin::AttributeCore::name";
+"Moose::Meta::Role::BEGIN@19" -> "Moose::Meta::Role::Attribute::BEGIN@9";
+"Moose::Meta::Role::BEGIN@19" -> "Moose::Meta::Role::Attribute::BEGIN@2";
+"Moose::Meta::Role::Attribute::attribute_for_class" -> "Moose::Meta::Role::Attribute::original_options";
+}

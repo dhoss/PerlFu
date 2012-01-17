@@ -1,0 +1,79 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Symbol {
+	label="Symbol";
+	"Symbol::BEGIN@81";
+}
+subgraph cluster_IO_Seekable {
+	label="IO::Seekable";
+	"IO::Seekable::BEGIN@98";
+	"IO::Seekable::BEGIN@99";
+	"IO::Seekable::BEGIN@97";
+	"IO::Seekable::BEGIN@104";
+	"IO::Seekable::BEGIN@101";
+}
+subgraph cluster_IO_File {
+	label="IO::File";
+	"IO::File::BEGIN@128";
+	"IO::File::BEGIN@133";
+	"IO::File::BEGIN@130";
+	"IO::File::BEGIN@131";
+	"IO::File::CORE:match";
+	"IO::File::BEGIN@134";
+	"IO::File::BEGIN@132";
+	"IO::File::BEGIN@127";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_MooseX_Storage_Engine_IO_File {
+	label="MooseX::Storage::Engine::IO::File";
+	"MooseX::Storage::Engine::IO::File::BEGIN@6";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_SelectSaver {
+	label="SelectSaver";
+	"SelectSaver::BEGIN@38";
+	"SelectSaver::BEGIN@39";
+}
+subgraph cluster_File_Spec_Unix {
+	label="File::Spec::Unix";
+	"File::Spec::Unix::BEGIN@4";
+	"File::Spec::Unix::BEGIN@3";
+	"File::Spec::Unix::BEGIN@149";
+}
+subgraph cluster_File_Spec {
+	label="File::Spec";
+	"File::Spec::BEGIN@4";
+	"File::Spec::BEGIN@3";
+}
+"IO::File::BEGIN@134" -> "File::Spec::Unix::BEGIN@149";
+"IO::File::BEGIN@131" -> "Exporter::import";
+"IO::File::BEGIN@130" -> "Exporter::import";
+"IO::File::BEGIN@133" -> "Exporter::import";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@131";
+"IO::File::BEGIN@134" -> "File::Spec::Unix::BEGIN@3";
+"IO::File::BEGIN@134" -> "File::Spec::BEGIN@4";
+"IO::File::BEGIN@132" -> "SelectSaver::BEGIN@39";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@132";
+"IO::File::BEGIN@131" -> "Symbol::BEGIN@81";
+"IO::File::BEGIN@133" -> "IO::Seekable::BEGIN@98";
+"IO::File::BEGIN@133" -> "IO::Seekable::BEGIN@97";
+"IO::File::BEGIN@133" -> "IO::Seekable::BEGIN@104";
+"IO::File::BEGIN@133" -> "IO::Seekable::BEGIN@101";
+"IO::File::BEGIN@128" -> "strict::import";
+"IO::File::BEGIN@134" -> "File::Spec::Unix::BEGIN@4";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@134";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@127";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@130";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@128";
+"IO::File::BEGIN@132" -> "SelectSaver::BEGIN@38";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@133";
+"IO::File::BEGIN@134" -> "File::Spec::BEGIN@3";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::CORE:match";
+"IO::File::BEGIN@133" -> "IO::Seekable::BEGIN@99";
+}

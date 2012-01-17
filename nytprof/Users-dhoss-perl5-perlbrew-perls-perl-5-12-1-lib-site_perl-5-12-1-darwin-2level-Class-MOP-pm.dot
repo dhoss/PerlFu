@@ -1,0 +1,374 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Moose_Meta_Role_Composite {
+	label="Moose::Meta::Role::Composite";
+	"Moose::Meta::Role::Composite::_new";
+}
+subgraph cluster_Moose_Meta_Role_Application_ToInstance {
+	label="Moose::Meta::Role::Application::ToInstance";
+	"Moose::Meta::Role::Application::ToInstance::apply";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_Moose_Exporter {
+	label="Moose::Exporter";
+	"Moose::Exporter::_make_sub_exporter_params";
+	"Moose::Exporter::__ANON__[Moose/Exporter.pm:38]";
+	"Moose::Exporter::BEGIN@13";
+}
+subgraph cluster_Class_MOP_Mixin_HasMethods {
+	label="Class::MOP::Mixin::HasMethods";
+	"Class::MOP::Mixin::HasMethods::_code_is_mine";
+	"Class::MOP::Mixin::HasMethods::BEGIN@9";
+	"Class::MOP::Mixin::HasMethods::BEGIN@14";
+	"Class::MOP::Mixin::HasMethods::add_method";
+	"Class::MOP::Mixin::HasMethods::BEGIN@18";
+	"Class::MOP::Mixin::HasMethods::BEGIN@15";
+	"Class::MOP::Mixin::HasMethods::BEGIN@16";
+	"Class::MOP::Mixin::HasMethods::BEGIN@2";
+	"Class::MOP::Mixin::HasMethods::BEGIN@12";
+	"Class::MOP::Mixin::HasMethods::BEGIN@10";
+}
+subgraph cluster_Moose_Meta_Role {
+	label="Moose::Meta::Role";
+	"Moose::Meta::Role::BEGIN@22";
+	"Moose::Meta::Role::BEGIN@21";
+	"Moose::Meta::Role::_new";
+	"Moose::Meta::Role::BEGIN@19";
+	"Moose::Meta::Role::initialize";
+}
+subgraph cluster_Moose_Util_TypeConstraints {
+	label="Moose::Util::TypeConstraints";
+	"Moose::Util::TypeConstraints::BEGIN@42";
+	"Moose::Util::TypeConstraints::BEGIN@39";
+	"Moose::Util::TypeConstraints::BEGIN@34";
+	"Moose::Util::TypeConstraints::BEGIN@33";
+	"Moose::Util::TypeConstraints::BEGIN@37";
+	"Moose::Util::TypeConstraints::BEGIN@38";
+	"Moose::Util::TypeConstraints::BEGIN@36";
+}
+subgraph cluster_Moose {
+	label="Moose";
+	"Moose::init_meta";
+	"Moose::BEGIN@38";
+	"Moose::BEGIN@29";
+	"Moose::BEGIN@30";
+	"Moose::BEGIN@40";
+	"Moose::BEGIN@39";
+	"Moose::BEGIN@37";
+	"Moose::BEGIN@36";
+	"Moose::BEGIN@28";
+	"Moose::BEGIN@42";
+}
+subgraph cluster_Sub_Install {
+	label="Sub::Install";
+	"Sub::Install::__ANON__[Sub/Install.pm:284]";
+}
+subgraph cluster_Moose_Meta_TypeConstraint_Parameterized {
+	label="Moose::Meta::TypeConstraint::Parameterized";
+	"Moose::Meta::TypeConstraint::Parameterized::BEGIN@15";
+}
+subgraph cluster_Scalar_Util {
+	label="Scalar::Util";
+	"Scalar::Util::isweak";
+	"Scalar::Util::blessed";
+}
+subgraph cluster_Moose_Meta_Class {
+	label="Moose::Meta::Class";
+	"Moose::Meta::Class::excludes_role";
+	"Moose::Meta::Class::initialize";
+	"Moose::Meta::Class::calculate_all_roles_with_inheritance";
+	"Moose::Meta::Class::superclasses";
+}
+subgraph cluster_MRO_Compat {
+	label="MRO::Compat";
+	"MRO::Compat::BEGIN@2";
+	"MRO::Compat::BEGIN@225";
+	"MRO::Compat::BEGIN@116";
+	"MRO::Compat::BEGIN@39";
+	"MRO::Compat::BEGIN@256";
+	"MRO::Compat::BEGIN@3";
+	"MRO::Compat::BEGIN@10";
+	"MRO::Compat::BEGIN@226";
+}
+subgraph cluster_Class_MOP_Object {
+	label="Class::MOP::Object";
+	"Class::MOP::Object::_new";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_Moose_Util {
+	label="Moose::Util";
+	"Moose::Util::find_meta";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Class_MOP_Class {
+	label="Class::MOP::Class";
+	"Class::MOP::Class::BEGIN@14";
+	"Class::MOP::Class::BEGIN@22";
+	"Class::MOP::Class::class_precedence_list";
+	"Class::MOP::Class::BEGIN@15";
+	"Class::MOP::Class::initialize";
+	"Class::MOP::Class::BEGIN@24";
+	"Class::MOP::Class::BEGIN@16";
+	"Class::MOP::Class::_construct_class_instance";
+	"Class::MOP::Class::rebless_instance";
+	"Class::MOP::Class::BEGIN@23";
+	"Class::MOP::Class::BEGIN@17";
+	"Class::MOP::Class::BEGIN@13";
+	"Class::MOP::Class::_construct_instance";
+	"Class::MOP::Class::BEGIN@19";
+	"Class::MOP::Class::_single_metaclass_is_compatible";
+	"Class::MOP::Class::BEGIN@10";
+	"Class::MOP::Class::_inline_preserve_weak_metaclasses";
+	"Class::MOP::Class::_force_rebless_instance";
+	"Class::MOP::Class::BEGIN@26";
+	"Class::MOP::Class::_class_metaclass_is_compatible";
+	"Class::MOP::Class::_superclasses_updated";
+	"Class::MOP::Class::BEGIN@3";
+	"Class::MOP::Class::BEGIN@20";
+	"Class::MOP::Class::BEGIN@11";
+	"Class::MOP::Class::BEGIN@21";
+}
+subgraph cluster_Class_MOP {
+	label="Class::MOP";
+	"Class::MOP::BEGIN@30";
+	"Class::MOP::__ANON__[Class/MOP.pm:132]";
+	"Class::MOP::__ANON__[Class/MOP.pm:249]";
+	"Class::MOP::BEGIN@24";
+	"Class::MOP::BEGIN@17";
+	"Class::MOP::get_metaclass_by_name";
+	"Class::MOP::__ANON__[Class/MOP.pm:286]";
+	"Class::MOP::BEGIN@3";
+	"Class::MOP::class_of";
+	"Class::MOP::BEGIN@23";
+	"Class::MOP::BEGIN@26";
+	"Class::MOP::BEGIN@18";
+	"Class::MOP::BEGIN@27";
+	"Class::MOP::BEGIN@19";
+	"Class::MOP::load_class";
+	"Class::MOP::BEGIN@21";
+	"Class::MOP::BEGIN@15";
+	"Class::MOP::store_metaclass_by_name";
+	"Class::MOP::BEGIN@28";
+	"Class::MOP::__ANON__";
+	"Class::MOP::BEGIN@20";
+	"Class::MOP::__ANON__[Class/MOP.pm:478]";
+	"Class::MOP::_definition_context";
+	"Class::MOP::metaclass_is_weak";
+	"Class::MOP::BEGIN@10";
+	"Class::MOP::BEGIN@25";
+	"Class::MOP::BEGIN@13";
+	"Class::MOP::BEGIN@11";
+	"Class::MOP::__ANON__[Class/MOP.pm:269]";
+	"Class::MOP::__ANON__[Class/MOP.pm:177]";
+	"Class::MOP::__ANON__[Class/MOP.pm:222]";
+	"Class::MOP::get_code_info";
+}
+subgraph cluster_MooseX_Storage {
+	label="MooseX::Storage";
+	"MooseX::Storage::_expand_role";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Class_MOP_Attribute {
+	label="Class::MOP::Attribute";
+	"Class::MOP::Attribute::BEGIN@11";
+	"Class::MOP::Attribute::BEGIN@16";
+	"Class::MOP::Attribute::BEGIN@17";
+	"Class::MOP::Attribute::BEGIN@10";
+	"Class::MOP::Attribute::BEGIN@13";
+	"Class::MOP::Attribute::BEGIN@19";
+	"Class::MOP::Attribute::BEGIN@3";
+	"Class::MOP::Attribute::BEGIN@15";
+}
+subgraph cluster_Moose_Role {
+	label="Moose::Role";
+	"Moose::Role::init_meta";
+}
+subgraph cluster_Class_MOP_Package {
+	label="Class::MOP::Package";
+	"Class::MOP::Package::initialize";
+}
+subgraph cluster_Moose_Meta_Attribute {
+	label="Moose::Meta::Attribute";
+	"Moose::Meta::Attribute::_new";
+	"Moose::Meta::Attribute::BEGIN@24";
+}
+subgraph cluster_Class_MOP_Mixin_AttributeCore {
+	label="Class::MOP::Mixin::AttributeCore";
+	"Class::MOP::Mixin::AttributeCore::BEGIN@12";
+	"Class::MOP::Mixin::AttributeCore::default";
+	"Class::MOP::Mixin::AttributeCore::BEGIN@2";
+	"Class::MOP::Mixin::AttributeCore::BEGIN@14";
+	"Class::MOP::Mixin::AttributeCore::BEGIN@9";
+	"Class::MOP::Mixin::AttributeCore::BEGIN@10";
+}
+subgraph cluster_Class_MOP_Mixin_HasAttributes {
+	label="Class::MOP::Mixin::HasAttributes";
+	"Class::MOP::Mixin::HasAttributes::BEGIN@12";
+	"Class::MOP::Mixin::HasAttributes::BEGIN@13";
+	"Class::MOP::Mixin::HasAttributes::BEGIN@9";
+	"Class::MOP::Mixin::HasAttributes::BEGIN@15";
+	"Class::MOP::Mixin::HasAttributes::BEGIN@10";
+	"Class::MOP::Mixin::HasAttributes::BEGIN@2";
+}
+subgraph cluster_Moose_Meta_TypeCoercion {
+	label="Moose::Meta::TypeCoercion";
+	"Moose::Meta::TypeCoercion::BEGIN@14";
+}
+"Class::MOP::BEGIN@25" -> "Class::MOP::Mixin::HasMethods::BEGIN@14";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@17";
+"Class::MOP::BEGIN@27" -> "Class::MOP::Attribute::BEGIN@19";
+"Class::MOP::BEGIN@25" -> "Class::MOP::Mixin::HasMethods::BEGIN@2";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@24";
+"Class::MOP::BEGIN@27" -> "Class::MOP::Attribute::BEGIN@10";
+"Class::MOP::BEGIN@27" -> "Class::MOP::Attribute::BEGIN@11";
+"Class::MOP::BEGIN@17" -> "Exporter::import";
+"Class::MOP::BEGIN@19" -> "Exporter::import";
+"Class::MOP::BEGIN@21" -> "Exporter::import";
+"Class::MOP::BEGIN@15" -> "MRO::Compat::BEGIN@10";
+"Class::MOP::Mixin::AttributeCore::default" -> "Class::MOP::__ANON__[Class/MOP.pm:132]";
+"Moose::Meta::Role::_new" -> "Class::MOP::__ANON__[Class/MOP.pm:132]";
+"Class::MOP::Mixin::AttributeCore::default" -> "Class::MOP::__ANON__[Class/MOP.pm:249]";
+"Moose::Meta::Role::_new" -> "Class::MOP::__ANON__[Class/MOP.pm:249]";
+"Moose::Meta::Role::Composite::_new" -> "Class::MOP::__ANON__[Class/MOP.pm:249]";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@10";
+"Class::MOP::BEGIN@25" -> "Class::MOP::Mixin::HasMethods::BEGIN@18";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@10";
+"Class::MOP::BEGIN@25" -> "Class::MOP::Mixin::HasMethods::BEGIN@9";
+"Class::MOP::class_of" -> "Scalar::Util::blessed";
+"Class::MOP::Class::class_precedence_list" -> "Class::MOP::__ANON__";
+"Class::MOP::BEGIN@24" -> "Class::MOP::Mixin::HasAttributes::BEGIN@2";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@25";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@20";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@15";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@21";
+"Class::MOP::BEGIN@15" -> "MRO::Compat::BEGIN@116";
+"Class::MOP::Object::_new" -> "Class::MOP::class_of";
+"Class::MOP::Class::_force_rebless_instance" -> "Class::MOP::class_of";
+"Moose::Meta::Class::excludes_role" -> "Class::MOP::class_of";
+"Class::MOP::Class::_superclasses_updated" -> "Class::MOP::class_of";
+"Moose::Meta::Attribute::BEGIN@24" -> "Class::MOP::class_of";
+"Moose::Meta::Class::calculate_all_roles_with_inheritance" -> "Class::MOP::class_of";
+"Moose::Meta::Class::superclasses" -> "Class::MOP::class_of";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:38]" -> "Class::MOP::class_of";
+"Class::MOP::Class::rebless_instance" -> "Class::MOP::class_of";
+"Moose::Util::find_meta" -> "Class::MOP::class_of";
+"Moose::Meta::Role::Application::ToInstance::apply" -> "Class::MOP::class_of";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@17";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@13";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@24";
+"Class::MOP::metaclass_is_weak" -> "Scalar::Util::isweak";
+"Class::MOP::BEGIN@23" -> "Class::MOP::Mixin::AttributeCore::BEGIN@10";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@26";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@27";
+"Class::MOP::BEGIN@11" -> "warnings::import";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@11";
+"Class::MOP::Mixin::AttributeCore::default" -> "Class::MOP::__ANON__[Class/MOP.pm:177]";
+"Moose::Meta::Role::_new" -> "Class::MOP::__ANON__[Class/MOP.pm:177]";
+"Moose::Meta::Role::Composite::_new" -> "Class::MOP::__ANON__[Class/MOP.pm:177]";
+"Class::MOP::BEGIN@25" -> "Class::MOP::Mixin::HasMethods::BEGIN@16";
+"Class::MOP::BEGIN@24" -> "Class::MOP::Mixin::HasAttributes::BEGIN@10";
+"Class::MOP::BEGIN@27" -> "Class::MOP::Attribute::BEGIN@15";
+"Class::MOP::BEGIN@23" -> "Class::MOP::Mixin::AttributeCore::BEGIN@14";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@21";
+"Class::MOP::Mixin::AttributeCore::default" -> "Class::MOP::__ANON__[Class/MOP.pm:286]";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@16";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@20";
+"Moose::Util::TypeConstraints::BEGIN@39" -> "Class::MOP::_definition_context";
+"Moose::Util::TypeConstraints::BEGIN@38" -> "Class::MOP::_definition_context";
+"Moose::Meta::Role::BEGIN@21" -> "Class::MOP::_definition_context";
+"base::import" -> "Class::MOP::_definition_context";
+"Moose::BEGIN@29" -> "Class::MOP::_definition_context";
+"Moose::Util::TypeConstraints::BEGIN@42" -> "Class::MOP::_definition_context";
+"Moose::Meta::TypeCoercion::BEGIN@14" -> "Class::MOP::_definition_context";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@15" -> "Class::MOP::_definition_context";
+"Moose::BEGIN@39" -> "Class::MOP::_definition_context";
+"Moose::BEGIN@37" -> "Class::MOP::_definition_context";
+"Moose::BEGIN@36" -> "Class::MOP::_definition_context";
+"Moose::BEGIN@28" -> "Class::MOP::_definition_context";
+"Moose::BEGIN@42" -> "Class::MOP::_definition_context";
+"Moose::Util::TypeConstraints::BEGIN@33" -> "Class::MOP::_definition_context";
+"Moose::Util::TypeConstraints::BEGIN@36" -> "Class::MOP::_definition_context";
+"Moose::Meta::Role::BEGIN@22" -> "Class::MOP::_definition_context";
+"Moose::Meta::Role::BEGIN@19" -> "Class::MOP::_definition_context";
+"Moose::BEGIN@38" -> "Class::MOP::_definition_context";
+"Moose::Util::TypeConstraints::BEGIN@34" -> "Class::MOP::_definition_context";
+"Moose::BEGIN@30" -> "Class::MOP::_definition_context";
+"Moose::BEGIN@40" -> "Class::MOP::_definition_context";
+"Moose::Util::TypeConstraints::BEGIN@37" -> "Class::MOP::_definition_context";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::_definition_context";
+"Class::MOP::BEGIN@10" -> "strict::import";
+"Class::MOP::Mixin::HasMethods::_code_is_mine" -> "Class::MOP::get_code_info";
+"Class::MOP::Mixin::HasMethods::add_method" -> "Class::MOP::get_code_info";
+"Moose::Exporter::_make_sub_exporter_params" -> "Class::MOP::get_code_info";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@14";
+"MooseX::Storage::_expand_role" -> "Class::MOP::load_class";
+"Class::MOP::BEGIN@27" -> "Class::MOP::Attribute::BEGIN@13";
+"Class::MOP::BEGIN@25" -> "Class::MOP::Mixin::HasMethods::BEGIN@12";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@3";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@23";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@19";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@28";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@26";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@3";
+"Class::MOP::Mixin::AttributeCore::default" -> "Class::MOP::__ANON__[Class/MOP.pm:269]";
+"Moose::Meta::Role::_new" -> "Class::MOP::__ANON__[Class/MOP.pm:269]";
+"Moose::Meta::Role::Composite::_new" -> "Class::MOP::__ANON__[Class/MOP.pm:269]";
+"Class::MOP::BEGIN@23" -> "Class::MOP::Mixin::AttributeCore::BEGIN@9";
+"Class::MOP::Mixin::AttributeCore::default" -> "Class::MOP::__ANON__[Class/MOP.pm:222]";
+"Moose::Meta::Role::_new" -> "Class::MOP::__ANON__[Class/MOP.pm:222]";
+"Moose::Meta::Role::Composite::_new" -> "Class::MOP::__ANON__[Class/MOP.pm:222]";
+"Class::MOP::BEGIN@15" -> "MRO::Compat::BEGIN@226";
+"Class::MOP::Package::initialize" -> "Class::MOP::store_metaclass_by_name";
+"Class::MOP::Class::_construct_class_instance" -> "Class::MOP::store_metaclass_by_name";
+"Class::MOP::BEGIN@20" -> "Sub::Install::__ANON__[Sub/Install.pm:284]";
+"Class::MOP::BEGIN@15" -> "MRO::Compat::BEGIN@3";
+"Class::MOP::BEGIN@23" -> "Class::MOP::Mixin::AttributeCore::BEGIN@2";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@30";
+"Class::MOP::BEGIN@27" -> "Class::MOP::Attribute::BEGIN@16";
+"Class::MOP::BEGIN@24" -> "Class::MOP::Mixin::HasAttributes::BEGIN@13";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@15";
+"Class::MOP::Mixin::AttributeCore::default" -> "Class::MOP::__ANON__[Class/MOP.pm:478]";
+"Moose::Meta::Attribute::_new" -> "Class::MOP::__ANON__[Class/MOP.pm:478]";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@13";
+"Class::MOP::BEGIN@25" -> "Class::MOP::Mixin::HasMethods::BEGIN@15";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@22";
+"Class::MOP::BEGIN@15" -> "MRO::Compat::BEGIN@256";
+"Class::MOP::BEGIN@27" -> "Class::MOP::Attribute::BEGIN@17";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@18";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@19";
+"Class::MOP::BEGIN@15" -> "MRO::Compat::BEGIN@225";
+"Class::MOP::Class::_inline_preserve_weak_metaclasses" -> "Class::MOP::metaclass_is_weak";
+"Class::MOP::Class::_force_rebless_instance" -> "Class::MOP::metaclass_is_weak";
+"Class::MOP::Class::_construct_instance" -> "Class::MOP::metaclass_is_weak";
+"Class::MOP::BEGIN@24" -> "Class::MOP::Mixin::HasAttributes::BEGIN@9";
+"Class::MOP::BEGIN@15" -> "MRO::Compat::BEGIN@2";
+"Class::MOP::Package::initialize" -> "Class::MOP::get_metaclass_by_name";
+"Class::MOP::Class::_single_metaclass_is_compatible" -> "Class::MOP::get_metaclass_by_name";
+"Class::MOP::Class::_construct_class_instance" -> "Class::MOP::get_metaclass_by_name";
+"Moose::init_meta" -> "Class::MOP::get_metaclass_by_name";
+"Class::MOP::Class::_class_metaclass_is_compatible" -> "Class::MOP::get_metaclass_by_name";
+"Moose::Meta::Class::initialize" -> "Class::MOP::get_metaclass_by_name";
+"Class::MOP::Class::initialize" -> "Class::MOP::get_metaclass_by_name";
+"Moose::Role::init_meta" -> "Class::MOP::get_metaclass_by_name";
+"Moose::Meta::Role::initialize" -> "Class::MOP::get_metaclass_by_name";
+"Class::MOP::BEGIN@15" -> "MRO::Compat::BEGIN@39";
+"Class::MOP::BEGIN@23" -> "Class::MOP::Mixin::AttributeCore::BEGIN@12";
+"Class::MOP::BEGIN@25" -> "Class::MOP::Mixin::HasMethods::BEGIN@10";
+"Class::MOP::BEGIN@24" -> "Class::MOP::Mixin::HasAttributes::BEGIN@12";
+"Class::MOP::BEGIN@24" -> "Class::MOP::Mixin::HasAttributes::BEGIN@15";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@23";
+"Class::MOP::BEGIN@27" -> "Class::MOP::Attribute::BEGIN@3";
+"Class::MOP::BEGIN@26" -> "Class::MOP::Class::BEGIN@11";
+}

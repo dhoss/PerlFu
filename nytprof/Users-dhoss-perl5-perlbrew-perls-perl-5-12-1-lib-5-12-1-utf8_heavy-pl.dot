@@ -1,0 +1,65 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::unimport";
+	"warnings::import";
+}
+subgraph cluster_Package_Stash_XS {
+	label="Package::Stash::XS";
+	"Package::Stash::XS::new";
+}
+subgraph cluster_MooseX_Storage_Format_JSON {
+	label="MooseX::Storage::Format::JSON";
+	"MooseX::Storage::Format::JSON::thaw";
+	"MooseX::Storage::Format::JSON::freeze";
+}
+subgraph cluster_utf8 {
+	label="utf8";
+	"utf8::is_utf8";
+	"utf8::AUTOLOAD";
+	"utf8::CORE:match";
+	"utf8::CORE:sort";
+	"utf8::BEGIN@2";
+	"utf8::BEGIN@383";
+	"utf8::SWASHNEW";
+	"utf8::BEGIN@3";
+	"utf8::downgrade";
+	"utf8::BEGIN@325";
+	"utf8::BEGIN@89";
+	"utf8::decode";
+	"utf8::valid";
+}
+subgraph cluster_HTTP_Message {
+	label="HTTP::Message";
+	"HTTP::Message::__ANON__[HTTP/Message.pm:18]";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_Net_HTTP_Methods {
+	label="Net::HTTP::Methods";
+	"Net::HTTP::Methods::__ANON__[Net/HTTP/Methods.pm:19]";
+}
+"Net::HTTP::Methods::__ANON__[Net/HTTP/Methods.pm:19]" -> "utf8::downgrade";
+"HTTP::Message::__ANON__[HTTP/Message.pm:18]" -> "utf8::downgrade";
+"MooseX::Storage::Format::JSON::freeze" -> "utf8::decode";
+"utf8::SWASHNEW" -> "utf8::CORE:sort";
+"MooseX::Storage::Format::JSON::freeze" -> "utf8::valid";
+"utf8::AUTOLOAD" -> "utf8::BEGIN@3";
+"utf8::AUTOLOAD" -> "utf8::BEGIN@89";
+"utf8::AUTOLOAD" -> "utf8::BEGIN@383";
+"utf8::BEGIN@325" -> "strict::unimport";
+"utf8::BEGIN@89" -> "strict::unimport";
+"utf8::BEGIN@3" -> "warnings::import";
+"MooseX::Storage::Format::JSON::thaw" -> "utf8::is_utf8";
+"MooseX::Storage::Format::JSON::freeze" -> "utf8::is_utf8";
+"utf8::AUTOLOAD" -> "utf8::BEGIN@2";
+"utf8::AUTOLOAD" -> "utf8::BEGIN@325";
+"utf8::BEGIN@2" -> "strict::import";
+"utf8::BEGIN@383" -> "warnings::unimport";
+"utf8::SWASHNEW" -> "utf8::CORE:match";
+"Package::Stash::XS::new" -> "utf8::SWASHNEW";
+}

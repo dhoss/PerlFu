@@ -1,0 +1,389 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DynaLoader {
+	label="DynaLoader";
+	"DynaLoader::bootstrap";
+}
+subgraph cluster_List_MoreUtils {
+	label="List::MoreUtils";
+	"List::MoreUtils::uniq";
+	"List::MoreUtils::firstidx";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::unimport";
+	"warnings::import";
+}
+subgraph cluster_MooseX_Storage_Meta_Attribute_DoNotSerialize {
+	label="MooseX::Storage::Meta::Attribute::DoNotSerialize";
+	"MooseX::Storage::Meta::Attribute::DoNotSerialize::BEGIN@3";
+}
+subgraph cluster_Moose_Exporter {
+	label="Moose::Exporter";
+	"Moose::Exporter::import";
+	"Moose::Exporter::_strip_metaclass";
+	"Moose::Exporter::_parse_trait_aliases";
+	"Moose::Exporter::BEGIN@129";
+	"Moose::Exporter::BEGIN@9";
+	"Moose::Exporter::BEGIN@15";
+	"Moose::Exporter::_make_import_sub";
+	"Moose::Exporter::__ANON__[Moose/Exporter.pm:570]";
+	"Moose::Exporter::setup_import_methods";
+	"Moose::Exporter::BEGIN@580";
+	"Moose::Exporter::BEGIN@128";
+	"Moose::Exporter::_sub_from_package";
+	"Moose::Exporter::BEGIN@12";
+	"Moose::Exporter::BEGIN@16";
+	"Moose::Exporter::_flag_as_reexport";
+	"Moose::Exporter::_follow_also";
+	"Moose::Exporter::_make_exporter";
+	"Moose::Exporter::__ANON__[Moose/Exporter.pm:269]";
+	"Moose::Exporter::BEGIN@13";
+	"Moose::Exporter::_export_is_flagged";
+	"Moose::Exporter::BEGIN@590";
+	"Moose::Exporter::BEGIN@18";
+	"Moose::Exporter::_late_curry_wrapper";
+	"Moose::Exporter::_make_wrapped_sub_with_meta";
+	"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+	"Moose::Exporter::_remove_keywords";
+	"Moose::Exporter::BEGIN@2";
+	"Moose::Exporter::BEGIN@14";
+	"Moose::Exporter::__ANON__[Moose/Exporter.pm:340]";
+	"Moose::Exporter::BEGIN@17";
+	"Moose::Exporter::__ANON__[Moose/Exporter.pm:133]";
+	"Moose::Exporter::_make_unimport_sub";
+	"Moose::Exporter::BEGIN@282";
+	"Moose::Exporter::_make_sub_exporter_params";
+	"Moose::Exporter::_get_caller";
+	"Moose::Exporter::_follow_also_real";
+	"Moose::Exporter::build_import_methods";
+	"Moose::Exporter::_make_init_meta";
+	"Moose::Exporter::_strip_meta_name";
+	"Moose::Exporter::BEGIN@10";
+	"Moose::Exporter::__ANON__[Moose/Exporter.pm:38]";
+	"Moose::Exporter::_strip_traits";
+}
+subgraph cluster_XSLoader {
+	label="XSLoader";
+	"XSLoader::load";
+}
+subgraph cluster_Class_MOP_Mixin_HasMethods {
+	label="Class::MOP::Mixin::HasMethods";
+	"Class::MOP::Mixin::HasMethods::add_method";
+	"Class::MOP::Mixin::HasMethods::_add_meta_method";
+}
+subgraph cluster_Moose_Util_TypeConstraints {
+	label="Moose::Util::TypeConstraints";
+	"Moose::Util::TypeConstraints::BEGIN@13";
+}
+subgraph cluster_Moose {
+	label="Moose";
+	"Moose::with";
+	"Moose::BEGIN@44";
+	"Moose::BEGIN@19";
+	"Moose::init_meta";
+	"Moose::around";
+	"Moose::has";
+	"Moose::extends";
+}
+subgraph cluster_MooseX_Storage_Format_JSON {
+	label="MooseX::Storage::Format::JSON";
+	"MooseX::Storage::Format::JSON::BEGIN@29";
+	"MooseX::Storage::Format::JSON::BEGIN@3";
+}
+subgraph cluster_Moose_Util_MetaRole {
+	label="Moose::Util::MetaRole";
+	"Moose::Util::MetaRole::BEGIN@15";
+	"Moose::Util::MetaRole::BEGIN@11";
+	"Moose::Util::MetaRole::BEGIN@16";
+	"Moose::Util::MetaRole::BEGIN@10";
+	"Moose::Util::MetaRole::BEGIN@14";
+	"Moose::Util::MetaRole::BEGIN@17";
+	"Moose::Util::MetaRole::BEGIN@13";
+	"Moose::Util::MetaRole::BEGIN@9";
+	"Moose::Util::MetaRole::BEGIN@2";
+}
+subgraph cluster_Sub_Name {
+	label="Sub::Name";
+	"Sub::Name::subname";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::VERSION";
+	"UNIVERSAL::can";
+}
+subgraph cluster_MooseX_Storage_IO_File {
+	label="MooseX::Storage::IO::File";
+	"MooseX::Storage::IO::File::BEGIN@22";
+	"MooseX::Storage::IO::File::BEGIN@2";
+}
+subgraph cluster_PerlFu_JobQueue {
+	label="PerlFu::JobQueue";
+	"PerlFu::JobQueue::BEGIN@3";
+}
+subgraph cluster_MooseX_Storage_Engine {
+	label="MooseX::Storage::Engine";
+	"MooseX::Storage::Engine::BEGIN@363";
+	"MooseX::Storage::Engine::BEGIN@3";
+}
+subgraph cluster_Net_Kestrel {
+	label="Net::Kestrel";
+	"Net::Kestrel::BEGIN@5";
+}
+subgraph cluster_PerlFu_Job {
+	label="PerlFu::Job";
+	"PerlFu::Job::BEGIN@3";
+}
+subgraph cluster_PerlFu_Job_ProcessXML {
+	label="PerlFu::Job::ProcessXML";
+	"PerlFu::Job::ProcessXML::BEGIN@3";
+}
+subgraph cluster_Class_MOP_Mixin {
+	label="Class::MOP::Mixin";
+	"Class::MOP::Mixin::meta";
+}
+subgraph cluster_Sub_Exporter {
+	label="Sub::Exporter";
+	"Sub::Exporter::default_generator";
+	"Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+	"Sub::Exporter::build_exporter";
+	"Sub::Exporter::default_installer";
+	"Sub::Exporter::_do_import";
+}
+subgraph cluster_Class_MOP_Object {
+	label="Class::MOP::Object";
+	"Class::MOP::Object::meta";
+}
+subgraph cluster_Class_MOP_Deprecated {
+	label="Class::MOP::Deprecated";
+	"Class::MOP::Deprecated::BEGIN@9";
+	"Class::MOP::Deprecated::BEGIN@2";
+	"Class::MOP::Deprecated::BEGIN@10";
+	"Class::MOP::Deprecated::BEGIN@12";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_Class_MOP_Class {
+	label="Class::MOP::Class";
+	"Class::MOP::Class::make_immutable";
+	"Class::MOP::Class::get_meta_instance";
+}
+subgraph cluster_Class_MOP {
+	label="Class::MOP";
+	"Class::MOP::BEGIN@30";
+	"Class::MOP::BEGIN@24";
+	"Class::MOP::BEGIN@17";
+	"Class::MOP::BEGIN@3";
+	"Class::MOP::class_of";
+	"Class::MOP::BEGIN@23";
+	"Class::MOP::BEGIN@26";
+	"Class::MOP::BEGIN@18";
+	"Class::MOP::BEGIN@27";
+	"Class::MOP::BEGIN@19";
+	"Class::MOP::BEGIN@21";
+	"Class::MOP::BEGIN@15";
+	"Class::MOP::BEGIN@28";
+	"Class::MOP::BEGIN@20";
+	"Class::MOP::_definition_context";
+	"Class::MOP::BEGIN@10";
+	"Class::MOP::BEGIN@25";
+	"Class::MOP::BEGIN@13";
+	"Class::MOP::BEGIN@11";
+	"Class::MOP::get_code_info";
+}
+subgraph cluster_MooseX_Storage {
+	label="MooseX::Storage";
+	"MooseX::Storage::BEGIN@3";
+}
+subgraph cluster_MooseX_Storage_Engine_IO_File {
+	label="MooseX::Storage::Engine::IO::File";
+	"MooseX::Storage::Engine::IO::File::BEGIN@3";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Class_MOP_Attribute {
+	label="Class::MOP::Attribute";
+	"Class::MOP::Attribute::new";
+}
+subgraph cluster_Moose_Role {
+	label="Moose::Role";
+	"Moose::Role::BEGIN@22";
+	"Moose::Role::before";
+	"Moose::Role::has";
+	"Moose::Role::BEGIN@20";
+	"Moose::Role::requires";
+	"Moose::Role::init_meta";
+}
+subgraph cluster_MooseX_Storage_Basic {
+	label="MooseX::Storage::Basic";
+	"MooseX::Storage::Basic::BEGIN@2";
+	"MooseX::Storage::Basic::BEGIN@58";
+}
+subgraph cluster_Class_MOP_Package {
+	label="Class::MOP::Package";
+	"Class::MOP::Package::add_package_symbol";
+	"Class::MOP::Package::initialize";
+	"Class::MOP::Package::has_package_symbol";
+}
+subgraph cluster_Moose_Meta_Attribute {
+	label="Moose::Meta::Attribute";
+	"Moose::Meta::Attribute::BEGIN@24";
+}
+subgraph cluster_Class_MOP_Mixin_HasAttributes {
+	label="Class::MOP::Mixin::HasAttributes";
+	"Class::MOP::Mixin::HasAttributes::add_attribute";
+}
+subgraph cluster_MooseX_Storage_Meta_Attribute_Trait_DoNotSerialize {
+	label="MooseX::Storage::Meta::Attribute::Trait::DoNotSerialize";
+	"MooseX::Storage::Meta::Attribute::Trait::DoNotSerialize::BEGIN@3";
+}
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]" -> "Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+"Moose::Exporter::BEGIN@17" -> "Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@17";
+"Moose::Util::TypeConstraints::BEGIN@13" -> "Moose::Exporter::import";
+"Moose::BEGIN@19" -> "Moose::Exporter::import";
+"Moose::Role::BEGIN@20" -> "Moose::Exporter::import";
+"Moose::Exporter::_make_sub_exporter_params" -> "Moose::Exporter::_parse_trait_aliases";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@9";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@15";
+"Moose::Exporter::build_import_methods" -> "Moose::Exporter::_make_import_sub";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:133]" -> "Sub::Exporter::default_installer";
+"Moose::Exporter::BEGIN@14" -> "Exporter::import";
+"Moose::Exporter::BEGIN@12" -> "Exporter::import";
+"Moose::Exporter::BEGIN@16" -> "Exporter::import";
+"Moose::Exporter::BEGIN@18" -> "Exporter::import";
+"Moose::Exporter::BEGIN@15" -> "Moose::Util::MetaRole::BEGIN@14";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@17";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@10";
+"Moose::Exporter::_follow_also" -> "Moose::Exporter::_follow_also_real";
+"Moose::Exporter::setup_import_methods" -> "Moose::Exporter::build_import_methods";
+"Moose::Exporter::build_import_methods" -> "Moose::Exporter::_make_init_meta";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]" -> "Moose::Exporter::_strip_meta_name";
+"Moose::with" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:38]";
+"Moose::extends" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:38]";
+"Moose::Role::before" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:38]";
+"Moose::Role::has" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:38]";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:133]" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:38]";
+"Moose::Role::requires" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:38]";
+"Moose::has" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:38]";
+"Moose::around" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:38]";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@128";
+"Moose::Exporter::BEGIN@15" -> "Moose::Util::MetaRole::BEGIN@10";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@25";
+"Moose::Exporter::build_import_methods" -> "Moose::Exporter::_make_exporter";
+"Sub::Exporter::default_generator" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:269]";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Object::meta";
+"Moose::Exporter::BEGIN@15" -> "Moose::Util::MetaRole::BEGIN@17";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@21";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Deprecated::BEGIN@12";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:38]" -> "Class::MOP::class_of";
+"MooseX::Storage::Meta::Attribute::Trait::DoNotSerialize::BEGIN@3" -> "Moose::Exporter::setup_import_methods";
+"PerlFu::Job::BEGIN@3" -> "Moose::Exporter::setup_import_methods";
+"Moose::Meta::Attribute::BEGIN@24" -> "Moose::Exporter::setup_import_methods";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:133]" -> "Class::MOP::Package::has_package_symbol";
+"Moose::Exporter::build_import_methods" -> "Class::MOP::Package::has_package_symbol";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]" -> "UNIVERSAL::can";
+"Moose::Exporter::_remove_keywords" -> "Moose::Exporter::_export_is_flagged";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@18";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@24";
+"Moose::Exporter::BEGIN@580" -> "strict::unimport";
+"Moose::Exporter::BEGIN@128" -> "strict::unimport";
+"Moose::Exporter::BEGIN@590" -> "strict::unimport";
+"Moose::Exporter::BEGIN@282" -> "strict::unimport";
+"Moose::Exporter::_make_sub_exporter_params" -> "Moose::Exporter::_make_wrapped_sub_with_meta";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@2";
+"Moose::Exporter::_follow_also" -> "List::MoreUtils::uniq";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@26";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@27";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]" -> "Moose::Exporter::_get_caller";
+"Moose::Exporter::import" -> "warnings::import";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]" -> "warnings::import";
+"Moose::Exporter::BEGIN@10" -> "warnings::import";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@11";
+"Moose::Exporter::_strip_meta_name" -> "List::MoreUtils::firstidx";
+"Moose::Exporter::_strip_traits" -> "List::MoreUtils::firstidx";
+"Moose::Exporter::_strip_metaclass" -> "List::MoreUtils::firstidx";
+"Moose::Exporter::BEGIN@15" -> "Moose::Util::MetaRole::BEGIN@9";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]" -> "Moose::Exporter::_strip_metaclass";
+"Moose::Exporter::BEGIN@15" -> "Moose::Util::MetaRole::BEGIN@13";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@580";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@13";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@590";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Class::get_meta_instance";
+"Sub::Exporter::_do_import" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:133]";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@20";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::_definition_context";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@10";
+"Moose::Exporter::BEGIN@17" -> "UNIVERSAL::VERSION";
+"Moose::Exporter::import" -> "strict::import";
+"Moose::Exporter::BEGIN@9" -> "strict::import";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]" -> "strict::import";
+"Moose::Exporter::_make_sub_exporter_params" -> "Class::MOP::get_code_info";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@129";
+"Moose::Exporter::BEGIN@15" -> "Moose::Util::MetaRole::BEGIN@16";
+"Moose::Exporter::BEGIN@129" -> "warnings::unimport";
+"Moose::Exporter::build_import_methods" -> "Moose::Exporter::_follow_also";
+"Moose::Exporter::BEGIN@13" -> "DynaLoader::bootstrap";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@3";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@23";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@19";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@28";
+"Moose::Exporter::build_import_methods" -> "Moose::Exporter::_make_sub_exporter_params";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]" -> "Moose::Exporter::_strip_traits";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]" -> "Moose::init_meta";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:340]" -> "Sub::Name::subname";
+"MooseX::Storage::Engine::BEGIN@363" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:570]";
+"MooseX::Storage::IO::File::BEGIN@22" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:570]";
+"MooseX::Storage::Format::JSON::BEGIN@29" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:570]";
+"MooseX::Storage::Basic::BEGIN@58" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:570]";
+"Moose::Exporter::_make_sub_exporter_params" -> "Moose::Exporter::_sub_from_package";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:133]" -> "Moose::Exporter::_flag_as_reexport";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Deprecated::BEGIN@10";
+"Moose::Exporter::BEGIN@15" -> "Moose::Util::MetaRole::BEGIN@2";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@30";
+"Moose::Exporter::build_import_methods" -> "Class::MOP::Package::initialize";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@14";
+"Moose::Exporter::BEGIN@13" -> "XSLoader::load";
+"Moose::Exporter::build_import_methods" -> "Moose::Exporter::_make_unimport_sub";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@15";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@13";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Mixin::HasAttributes::add_attribute";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Class::make_immutable";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Mixin::HasMethods::_add_meta_method";
+"Moose::Exporter::BEGIN@15" -> "Moose::Util::MetaRole::BEGIN@15";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@16";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@12";
+"Moose::Exporter::build_import_methods" -> "Class::MOP::Package::add_package_symbol";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Mixin::meta";
+"Moose::Role::BEGIN@22" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"MooseX::Storage::Meta::Attribute::DoNotSerialize::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"Moose::BEGIN@44" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"MooseX::Storage::Format::JSON::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"MooseX::Storage::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"Net::Kestrel::BEGIN@5" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"MooseX::Storage::Engine::IO::File::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"MooseX::Storage::Engine::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"PerlFu::JobQueue::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"MooseX::Storage::Meta::Attribute::Trait::DoNotSerialize::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"MooseX::Storage::Basic::BEGIN@2" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"PerlFu::Job::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"PerlFu::Job::ProcessXML::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"MooseX::Storage::IO::File::BEGIN@2" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:570]" -> "Moose::Exporter::_remove_keywords";
+"Moose::Exporter::_make_exporter" -> "Sub::Exporter::build_exporter";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::BEGIN@18";
+"Sub::Exporter::default_generator" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:340]";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]" -> "Moose::Role::init_meta";
+"Moose::BEGIN@19" -> "Moose::Exporter::BEGIN@282";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Mixin::HasMethods::add_method";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Attribute::new";
+"Moose::Exporter::__ANON__[Moose/Exporter.pm:340]" -> "Moose::Exporter::_late_curry_wrapper";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Deprecated::BEGIN@2";
+"Moose::Exporter::BEGIN@13" -> "Class::MOP::Deprecated::BEGIN@9";
+"Moose::Exporter::BEGIN@15" -> "Moose::Util::MetaRole::BEGIN@11";
+}

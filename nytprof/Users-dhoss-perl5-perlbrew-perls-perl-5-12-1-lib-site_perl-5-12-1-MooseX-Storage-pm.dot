@@ -1,0 +1,106 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_MooseX_Storage_Meta_Attribute_DoNotSerialize {
+	label="MooseX::Storage::Meta::Attribute::DoNotSerialize";
+	"MooseX::Storage::Meta::Attribute::DoNotSerialize::BEGIN@3";
+}
+subgraph cluster_Moose_Exporter {
+	label="Moose::Exporter";
+	"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+}
+subgraph cluster_Class_MOP_Mixin_HasMethods {
+	label="Class::MOP::Mixin::HasMethods";
+	"Class::MOP::Mixin::HasMethods::add_method";
+}
+subgraph cluster_Moose {
+	label="Moose";
+	"Moose::with";
+	"Moose::extends";
+}
+subgraph cluster_MooseX_Storage_Format_JSON {
+	label="MooseX::Storage::Format::JSON";
+	"MooseX::Storage::Format::JSON::meta";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::isa";
+	"UNIVERSAL::can";
+}
+subgraph cluster_MooseX_Storage_IO_File {
+	label="MooseX::Storage::IO::File";
+	"MooseX::Storage::IO::File::meta";
+}
+subgraph cluster_String_RewritePrefix {
+	label="String::RewritePrefix";
+	"String::RewritePrefix::BEGIN@4";
+	"String::RewritePrefix::rewrite";
+	"String::RewritePrefix::BEGIN@11";
+	"String::RewritePrefix::BEGIN@7";
+}
+subgraph cluster_Class_Load {
+	label="Class::Load";
+	"Class::Load::load_class";
+}
+subgraph cluster_PerlFu_Job {
+	label="PerlFu::Job";
+	"PerlFu::Job::meta";
+	"PerlFu::Job::BEGIN@5";
+}
+subgraph cluster_Class_MOP_Class {
+	label="Class::MOP::Class";
+	"Class::MOP::Class::find_method_by_name";
+}
+subgraph cluster_Class_MOP {
+	label="Class::MOP";
+	"Class::MOP::load_class";
+}
+subgraph cluster_MooseX_Storage {
+	label="MooseX::Storage";
+	"MooseX::Storage::BEGIN@2";
+	"MooseX::Storage::BEGIN@5";
+	"MooseX::Storage::_expand_role";
+	"MooseX::Storage::_injected_storage_role_generator";
+	"MooseX::Storage::BEGIN@3";
+	"MooseX::Storage::BEGIN@1";
+	"MooseX::Storage::meta";
+	"MooseX::Storage::BEGIN@6";
+	"MooseX::Storage::_rewrite_role_name";
+	"MooseX::Storage::import";
+}
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@3";
+}
+subgraph cluster_MooseX_Storage_Basic {
+	label="MooseX::Storage::Basic";
+	"MooseX::Storage::Basic::meta";
+}
+"MooseX::Storage::_expand_role" -> "Class::Load::load_class";
+"MooseX::Storage::_expand_role" -> "MooseX::Storage::Format::JSON::meta";
+"PerlFu::Job::BEGIN@5" -> "MooseX::Storage::BEGIN@6";
+"MooseX::Storage::BEGIN@5" -> "Moose::extends";
+"MooseX::Storage::BEGIN@6" -> "String::RewritePrefix::BEGIN@7";
+"PerlFu::Job::BEGIN@5" -> "MooseX::Storage::import";
+"MooseX::Storage::_rewrite_role_name" -> "String::RewritePrefix::rewrite";
+"MooseX::Storage::import" -> "UNIVERSAL::can";
+"MooseX::Storage::_expand_role" -> "MooseX::Storage::Basic::meta";
+"MooseX::Storage::BEGIN@6" -> "String::RewritePrefix::BEGIN@11";
+"PerlFu::Job::BEGIN@5" -> "MooseX::Storage::BEGIN@5";
+"PerlFu::Job::BEGIN@5" -> "MooseX::Storage::BEGIN@3";
+"MooseX::Storage::BEGIN@5" -> "MooseX::Storage::Meta::Attribute::DoNotSerialize::BEGIN@3";
+"MooseX::Storage::_expand_role" -> "Class::MOP::load_class";
+"MooseX::Storage::import" -> "PerlFu::Job::meta";
+"main::BEGIN@3" -> "MooseX::Storage::_injected_storage_role_generator";
+"MooseX::Storage::_expand_role" -> "MooseX::Storage::_rewrite_role_name";
+"MooseX::Storage::BEGIN@5" -> "Moose::with";
+"MooseX::Storage::import" -> "MooseX::Storage::meta";
+"MooseX::Storage::_injected_storage_role_generator" -> "MooseX::Storage::_expand_role";
+"MooseX::Storage::import" -> "Class::MOP::Class::find_method_by_name";
+"MooseX::Storage::BEGIN@6" -> "String::RewritePrefix::BEGIN@4";
+"MooseX::Storage::BEGIN@6" -> "MooseX::Storage::BEGIN@2";
+"MooseX::Storage::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"MooseX::Storage::_expand_role" -> "UNIVERSAL::isa";
+"MooseX::Storage::BEGIN@6" -> "MooseX::Storage::BEGIN@1";
+"MooseX::Storage::import" -> "Class::MOP::Mixin::HasMethods::add_method";
+"MooseX::Storage::_expand_role" -> "MooseX::Storage::IO::File::meta";
+}

@@ -1,0 +1,42 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_LWP_UserAgent {
+	label="LWP::UserAgent";
+	"LWP::UserAgent::request";
+}
+subgraph cluster_HTTP_Response {
+	label="HTTP::Response";
+	"HTTP::Response::BEGIN@8";
+}
+subgraph cluster_HTTP_Status {
+	label="HTTP::Status";
+	"HTTP::Status::HTTP_PROXY_AUTHENTICATION_REQUIRED";
+	"HTTP::Status::HTTP_FOUND";
+	"HTTP::Status::BEGIN@3";
+	"HTTP::Status::HTTP_TEMPORARY_REDIRECT";
+	"HTTP::Status::HTTP_UNAUTHORIZED";
+	"HTTP::Status::CORE:match";
+	"HTTP::Status::HTTP_MOVED_PERMANENTLY";
+	"HTTP::Status::HTTP_SEE_OTHER";
+	"HTTP::Status::BEGIN@6";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+"LWP::UserAgent::request" -> "HTTP::Status::HTTP_MOVED_PERMANENTLY";
+"LWP::UserAgent::request" -> "HTTP::Status::HTTP_PROXY_AUTHENTICATION_REQUIRED";
+"HTTP::Status::BEGIN@6" -> "vars::import";
+"LWP::UserAgent::request" -> "HTTP::Status::HTTP_SEE_OTHER";
+"HTTP::Status::BEGIN@3" -> "strict::import";
+"HTTP::Response::BEGIN@8" -> "HTTP::Status::BEGIN@3";
+"LWP::UserAgent::request" -> "HTTP::Status::HTTP_UNAUTHORIZED";
+"HTTP::Response::BEGIN@8" -> "HTTP::Status::CORE:match";
+"HTTP::Response::BEGIN@8" -> "HTTP::Status::BEGIN@6";
+"LWP::UserAgent::request" -> "HTTP::Status::HTTP_FOUND";
+"LWP::UserAgent::request" -> "HTTP::Status::HTTP_TEMPORARY_REDIRECT";
+}

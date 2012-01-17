@@ -1,0 +1,77 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Data_OptList {
+	label="Data::OptList";
+	"Data::OptList::BEGIN@10";
+}
+subgraph cluster_XML_LibXML_Boolean {
+	label="XML::LibXML::Boolean";
+	"XML::LibXML::Boolean::BEGIN@21";
+}
+subgraph cluster_XML_LibXML_Literal {
+	label="XML::LibXML::Literal";
+	"XML::LibXML::Literal::BEGIN@19";
+}
+subgraph cluster_JSON_XS_Boolean {
+	label="JSON::XS::Boolean";
+	"JSON::XS::Boolean::BEGIN@1477";
+}
+subgraph cluster_XML_LibXML_Number {
+	label="XML::LibXML::Number";
+	"XML::LibXML::Number::BEGIN@19";
+}
+subgraph cluster_warnings_register {
+	label="warnings::register";
+	"warnings::register::import";
+}
+subgraph cluster_URI {
+	label="URI";
+	"URI::BEGIN@24";
+}
+subgraph cluster_XML_LibXML_NodeList {
+	label="XML::LibXML::NodeList";
+	"XML::LibXML::NodeList::BEGIN@20";
+}
+subgraph cluster_XML_LibXML_Error {
+	label="XML::LibXML::Error";
+	"XML::LibXML::Error::BEGIN@15";
+}
+subgraph cluster_overload {
+	label="overload";
+	"overload::OVERLOAD";
+	"overload::BEGIN@145";
+	"overload::import";
+	"overload::CORE:match";
+}
+subgraph cluster_Moose_Meta_Role_Method_Required {
+	label="Moose::Meta::Role::Method::Required";
+	"Moose::Meta::Role::Method::Required::BEGIN@14";
+}
+subgraph cluster_Class_MOP_Method {
+	label="Class::MOP::Method";
+	"Class::MOP::Method::BEGIN@21";
+}
+subgraph cluster_Moose_Meta_TypeConstraint {
+	label="Moose::Meta::TypeConstraint";
+	"Moose::Meta::TypeConstraint::BEGIN@14";
+}
+subgraph cluster_XML_SAX_Exception {
+	label="XML::SAX::Exception";
+	"XML::SAX::Exception::BEGIN@5";
+}
+"overload::BEGIN@145" -> "warnings::register::import";
+"overload::import" -> "overload::OVERLOAD";
+"Class::MOP::Method::BEGIN@21" -> "overload::import";
+"XML::LibXML::NodeList::BEGIN@20" -> "overload::import";
+"Moose::Meta::Role::Method::Required::BEGIN@14" -> "overload::import";
+"XML::LibXML::Boolean::BEGIN@21" -> "overload::import";
+"XML::LibXML::Error::BEGIN@15" -> "overload::import";
+"XML::SAX::Exception::BEGIN@5" -> "overload::import";
+"Moose::Meta::TypeConstraint::BEGIN@14" -> "overload::import";
+"XML::LibXML::Literal::BEGIN@19" -> "overload::import";
+"URI::BEGIN@24" -> "overload::import";
+"XML::LibXML::Number::BEGIN@19" -> "overload::import";
+"JSON::XS::Boolean::BEGIN@1477" -> "overload::import";
+"Data::OptList::BEGIN@10" -> "overload::BEGIN@145";
+"overload::OVERLOAD" -> "overload::CORE:match";
+}

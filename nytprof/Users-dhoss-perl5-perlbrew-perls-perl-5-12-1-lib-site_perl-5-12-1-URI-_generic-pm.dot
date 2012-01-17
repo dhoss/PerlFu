@@ -1,0 +1,57 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_URI_http {
+	label="URI::http";
+	"URI::http::canonical";
+}
+subgraph cluster_URI__generic {
+	label="URI::_generic";
+	"URI::_generic::BEGIN@6";
+	"URI::_generic::CORE:subst";
+	"URI::_generic::CORE:match";
+	"URI::_generic::path_query";
+	"URI::_generic::BEGIN@8";
+	"URI::_generic::path";
+	"URI::_generic::CORE:regcomp";
+	"URI::_generic::authority";
+	"URI::_generic::BEGIN@7";
+}
+subgraph cluster_URI__server {
+	label="URI::_server";
+	"URI::_server::_port";
+	"URI::_server::host";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_URI {
+	label="URI";
+	"URI::implementor";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_LWP_Protocol_http {
+	label="LWP::Protocol::http";
+	"LWP::Protocol::http::_fixup_header";
+	"LWP::Protocol::http::request";
+}
+"URI::_generic::path_query" -> "URI::_generic::CORE:match";
+"URI::_generic::path" -> "URI::_generic::CORE:match";
+"URI::_generic::authority" -> "URI::_generic::CORE:match";
+"URI::implementor" -> "URI::_generic::CORE:subst";
+"URI::_generic::BEGIN@7" -> "Exporter::import";
+"URI::http::canonical" -> "URI::_generic::path";
+"URI::implementor" -> "URI::_generic::BEGIN@6";
+"URI::_generic::BEGIN@6" -> "strict::import";
+"URI::_generic::authority" -> "URI::_generic::CORE:regcomp";
+"LWP::Protocol::http::request" -> "URI::_generic::path_query";
+"URI::implementor" -> "URI::_generic::BEGIN@7";
+"URI::implementor" -> "URI::_generic::BEGIN@8";
+"LWP::Protocol::http::_fixup_header" -> "URI::_generic::authority";
+"URI::_server::_port" -> "URI::_generic::authority";
+"URI::_server::host" -> "URI::_generic::authority";
+"URI::http::canonical" -> "URI::_generic::authority";
+}

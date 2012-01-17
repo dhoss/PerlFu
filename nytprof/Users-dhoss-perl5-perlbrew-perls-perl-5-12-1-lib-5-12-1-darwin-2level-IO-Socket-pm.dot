@@ -1,0 +1,162 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_IO_Socket_INET {
+	label="IO::Socket::INET";
+	"IO::Socket::INET::BEGIN@11";
+	"IO::Socket::INET::new";
+	"IO::Socket::INET::configure";
+	"IO::Socket::INET::peerport";
+	"IO::Socket::INET::connect";
+	"IO::Socket::INET::peeraddr";
+}
+subgraph cluster_Config {
+	label="Config";
+	"Config::FETCH";
+}
+subgraph cluster_XSLoader {
+	label="XSLoader";
+	"XSLoader::load";
+}
+subgraph cluster_IO_Handle {
+	label="IO::Handle";
+	"IO::Handle::autoflush";
+	"IO::Handle::blocking";
+	"IO::Handle::new";
+}
+subgraph cluster_Socket {
+	label="Socket";
+	"Socket::BEGIN@198";
+	"Socket::BEGIN@197";
+	"Socket::BEGIN@201";
+	"Socket::BEGIN@387";
+}
+subgraph cluster_IO_Socket_UNIX {
+	label="IO::Socket::UNIX";
+	"IO::Socket::UNIX::BEGIN@11";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::VERSION";
+}
+subgraph cluster_Net_Kestrel {
+	label="Net::Kestrel";
+	"Net::Kestrel::_write_and_read";
+	"Net::Kestrel::BEGIN@7";
+}
+subgraph cluster_Errno {
+	label="Errno";
+	"Errno::BEGIN@162";
+	"Errno::BEGIN@9";
+	"Errno::BEGIN@8";
+	"Errno::TIEHASH";
+	"Errno::BEGIN@7";
+	"Errno::FETCH";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Net_HTTP {
+	label="Net::HTTP";
+	"Net::HTTP::configure";
+}
+subgraph cluster_Exporter_Heavy {
+	label="Exporter::Heavy";
+	"Exporter::Heavy::heavy_export";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+	"Exporter::export";
+}
+subgraph cluster_IO_Select {
+	label="IO::Select";
+	"IO::Select::can_write";
+	"IO::Select::BEGIN@9";
+	"IO::Select::BEGIN@10";
+	"IO::Select::new";
+	"IO::Select::BEGIN@11";
+}
+subgraph cluster_IO_Socket {
+	label="IO::Socket";
+	"IO::Socket::BEGIN@12";
+	"IO::Socket::BEGIN@17";
+	"IO::Socket::CORE:pack";
+	"IO::Socket::connect";
+	"IO::Socket::CORE:getpeername";
+	"IO::Socket::send";
+	"IO::Socket::CORE:send";
+	"IO::Socket::CORE:connect";
+	"IO::Socket::BEGIN@13";
+	"IO::Socket::register_domain";
+	"IO::Socket::import";
+	"IO::Socket::BEGIN@16";
+	"IO::Socket::BEGIN@14";
+	"IO::Socket::CORE:socket";
+	"IO::Socket::new";
+	"IO::Socket::BEGIN@11";
+	"IO::Socket::socket";
+	"IO::Socket::blocking";
+	"IO::Socket::peername";
+}
+subgraph cluster_LWP_Protocol_http {
+	label="LWP::Protocol::http";
+	"LWP::Protocol::http::_new_socket";
+}
+"IO::Socket::BEGIN@17" -> "Errno::BEGIN@8";
+"IO::Socket::send" -> "IO::Socket::CORE:send";
+"IO::Socket::BEGIN@12" -> "Exporter::import";
+"IO::Socket::BEGIN@13" -> "Exporter::import";
+"IO::Socket::BEGIN@16" -> "Exporter::import";
+"IO::Socket::BEGIN@11" -> "Exporter::import";
+"IO::Socket::BEGIN@17" -> "Exporter::import";
+"IO::Socket::connect" -> "IO::Select::BEGIN@11";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@12";
+"IO::Socket::connect" -> "IO::Select::new";
+"IO::Socket::connect" -> "Errno::FETCH";
+"IO::Socket::BEGIN@17" -> "Errno::BEGIN@7";
+"IO::Socket::BEGIN@17" -> "Errno::BEGIN@162";
+"IO::Socket::BEGIN@12" -> "Socket::BEGIN@387";
+"Net::Kestrel::_write_and_read" -> "IO::Socket::send";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@16";
+"IO::Socket::connect" -> "IO::Socket::CORE:connect";
+"IO::Socket::BEGIN@12" -> "Socket::BEGIN@198";
+"IO::Socket::connect" -> "IO::Select::BEGIN@10";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::CORE:pack";
+"IO::Socket::BEGIN@12" -> "Socket::BEGIN@201";
+"IO::Socket::import" -> "Exporter::Heavy::heavy_export";
+"IO::Socket::BEGIN@17" -> "Config::FETCH";
+"IO::Socket::BEGIN@12" -> "UNIVERSAL::VERSION";
+"IO::Socket::BEGIN@14" -> "strict::import";
+"LWP::Protocol::http::_new_socket" -> "IO::Socket::blocking";
+"IO::Socket::connect" -> "IO::Socket::blocking";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@14";
+"IO::Socket::connect" -> "IO::Select::BEGIN@9";
+"IO::Socket::INET::new" -> "IO::Socket::new";
+"IO::Socket::INET::configure" -> "IO::Socket::socket";
+"IO::Socket::BEGIN@12" -> "Socket::BEGIN@197";
+"IO::Socket::new" -> "IO::Handle::autoflush";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@13";
+"IO::Socket::blocking" -> "IO::Handle::blocking";
+"IO::Socket::UNIX::BEGIN@11" -> "IO::Socket::import";
+"IO::Socket::INET::BEGIN@11" -> "IO::Socket::import";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::import";
+"IO::Socket::BEGIN@12" -> "XSLoader::load";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::register_domain";
+"IO::Socket::socket" -> "IO::Socket::CORE:socket";
+"IO::Socket::BEGIN@17" -> "Errno::BEGIN@9";
+"IO::Socket::import" -> "Exporter::export";
+"IO::Socket::new" -> "IO::Socket::INET::configure";
+"IO::Socket::new" -> "IO::Handle::new";
+"IO::Socket::BEGIN@17" -> "Errno::TIEHASH";
+"IO::Socket::new" -> "Net::HTTP::configure";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@11";
+"IO::Socket::send" -> "IO::Socket::peername";
+"IO::Socket::INET::peerport" -> "IO::Socket::peername";
+"IO::Socket::INET::peeraddr" -> "IO::Socket::peername";
+"Net::Kestrel::BEGIN@7" -> "IO::Socket::BEGIN@17";
+"IO::Socket::INET::connect" -> "IO::Socket::connect";
+"IO::Socket::send" -> "IO::Socket::CORE:getpeername";
+"IO::Socket::peername" -> "IO::Socket::CORE:getpeername";
+"IO::Socket::connect" -> "IO::Select::can_write";
+}

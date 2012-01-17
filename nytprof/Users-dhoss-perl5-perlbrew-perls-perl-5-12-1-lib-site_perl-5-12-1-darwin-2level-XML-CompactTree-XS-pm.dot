@@ -1,0 +1,197 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_XML_CompactTree_XS {
+	label="XML::CompactTree::XS";
+	"XML::CompactTree::XS::BEGIN@5";
+	"XML::CompactTree::XS::BEGIN@3";
+	"XML::CompactTree::XS::BEGIN@23";
+	"XML::CompactTree::XS::_readSubtreeToPerl";
+	"XML::CompactTree::XS::BEGIN@21";
+	"XML::CompactTree::XS::BEGIN@43";
+	"XML::CompactTree::XS::readSubtreeToPerl";
+	"XML::CompactTree::XS::BEGIN@20";
+	"XML::CompactTree::XS::BEGIN@4";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_XML_LibXML {
+	label="XML::LibXML";
+	"XML::LibXML::BEGIN@21";
+	"XML::LibXML::BEGIN@178";
+	"XML::LibXML::BEGIN@20";
+	"XML::LibXML::BEGIN@170";
+	"XML::LibXML::BEGIN@166";
+	"XML::LibXML::BEGIN@169";
+	"XML::LibXML::BEGIN@13";
+	"XML::LibXML::BEGIN@164";
+	"XML::LibXML::BEGIN@165";
+	"XML::LibXML::BEGIN@160";
+	"XML::LibXML::BEGIN@176";
+	"XML::LibXML::BEGIN@23";
+	"XML::LibXML::BEGIN@162";
+	"XML::LibXML::BEGIN@163";
+	"XML::LibXML::BEGIN@171";
+	"XML::LibXML::BEGIN@159";
+	"XML::LibXML::BEGIN@175";
+	"XML::LibXML::BEGIN@172";
+	"XML::LibXML::LIBXML_VERSION";
+	"XML::LibXML::BEGIN@168";
+	"XML::LibXML::BEGIN@35";
+	"XML::LibXML::BEGIN@14";
+	"XML::LibXML::BEGIN@24";
+	"XML::LibXML::import";
+	"XML::LibXML::CORE:match";
+	"XML::LibXML::BEGIN@234";
+	"XML::LibXML::BEGIN@161";
+	"XML::LibXML::BEGIN@25";
+	"XML::LibXML::LIBXML_RUNTIME_VERSION";
+	"XML::LibXML::BEGIN@28";
+	"XML::LibXML::BEGIN@26";
+	"XML::LibXML::BEGIN@173";
+	"XML::LibXML::BEGIN@177";
+	"XML::LibXML::BEGIN@259";
+	"XML::LibXML::BEGIN@174";
+	"XML::LibXML::BEGIN@167";
+	"XML::LibXML::BEGIN@18";
+}
+subgraph cluster_XML_LibXML_Attr {
+	label="XML::LibXML::Attr";
+	"XML::LibXML::Attr::BEGIN@1732";
+}
+subgraph cluster_XML_LibXML_Text {
+	label="XML::LibXML::Text";
+	"XML::LibXML::Text::BEGIN@1663";
+}
+subgraph cluster_XML_LibXML_InputCallback {
+	label="XML::LibXML::InputCallback";
+	"XML::LibXML::InputCallback::BEGIN@2077";
+	"XML::LibXML::InputCallback::BEGIN@2079";
+}
+subgraph cluster_XML_LibXML_Dtd {
+	label="XML::LibXML::Dtd";
+	"XML::LibXML::Dtd::BEGIN@1754";
+}
+subgraph cluster_XML_LibXML_DocumentFragment {
+	label="XML::LibXML::DocumentFragment";
+	"XML::LibXML::DocumentFragment::BEGIN@1455";
+}
+subgraph cluster_PerlFu_Job_ProcessXML {
+	label="PerlFu::Job::ProcessXML";
+	"PerlFu::Job::ProcessXML::build_xml_tree";
+	"PerlFu::Job::ProcessXML::BEGIN@5";
+}
+subgraph cluster_XML_LibXML_PI {
+	label="XML::LibXML::PI";
+	"XML::LibXML::PI::BEGIN@1765";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_XML_LibXML_Element {
+	label="XML::LibXML::Element";
+	"XML::LibXML::Element::BEGIN@1480";
+	"XML::LibXML::Element::BEGIN@1478";
+	"XML::LibXML::Element::BEGIN@1481";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::import";
+}
+subgraph cluster_XML_LibXML__SAXParser {
+	label="XML::LibXML::_SAXParser";
+	"XML::LibXML::_SAXParser::BEGIN@1933";
+}
+subgraph cluster_XML_LibXML_CDATASection {
+	label="XML::LibXML::CDATASection";
+	"XML::LibXML::CDATASection::BEGIN@1723";
+}
+subgraph cluster_XML_LibXML_NamedNodeMap {
+	label="XML::LibXML::NamedNodeMap";
+	"XML::LibXML::NamedNodeMap::BEGIN@1831";
+}
+subgraph cluster_XML_LibXML_Comment {
+	label="XML::LibXML::Comment";
+	"XML::LibXML::Comment::BEGIN@1716";
+}
+subgraph cluster_XML_LibXML_Document {
+	label="XML::LibXML::Document";
+	"XML::LibXML::Document::BEGIN@1359";
+}
+"PerlFu::Job::ProcessXML::BEGIN@5" -> "XML::CompactTree::XS::BEGIN@20";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@176";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::PI::BEGIN@1765";
+"PerlFu::Job::ProcessXML::BEGIN@5" -> "XML::CompactTree::XS::BEGIN@4";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@24";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::NamedNodeMap::BEGIN@1831";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::Element::BEGIN@1478";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@18";
+"PerlFu::Job::ProcessXML::BEGIN@5" -> "XML::CompactTree::XS::BEGIN@23";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::Comment::BEGIN@1716";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@171";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@175";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@35";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@26";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::Document::BEGIN@1359";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::CDATASection::BEGIN@1723";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@259";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@167";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@178";
+"PerlFu::Job::ProcessXML::BEGIN@5" -> "XML::CompactTree::XS::BEGIN@21";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@169";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@165";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@23";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@163";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@159";
+"XML::CompactTree::XS::BEGIN@23" -> "constant::import";
+"XML::CompactTree::XS::BEGIN@20" -> "base::import";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::import";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::InputCallback::BEGIN@2077";
+"XML::CompactTree::XS::BEGIN@3" -> "warnings::import";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::_SAXParser::BEGIN@1933";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@170";
+"XML::CompactTree::XS::readSubtreeToPerl" -> "XML::CompactTree::XS::_readSubtreeToPerl";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@166";
+"XML::CompactTree::XS::BEGIN@21" -> "vars::import";
+"PerlFu::Job::ProcessXML::BEGIN@5" -> "XML::CompactTree::XS::BEGIN@43";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@172";
+"PerlFu::Job::ProcessXML::BEGIN@5" -> "XML::CompactTree::XS::BEGIN@3";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@14";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::LIBXML_RUNTIME_VERSION";
+"XML::CompactTree::XS::BEGIN@4" -> "strict::import";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@21";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::Text::BEGIN@1663";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@164";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@162";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::InputCallback::BEGIN@2079";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::Dtd::BEGIN@1754";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::CORE:match";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@174";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@13";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@160";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::Attr::BEGIN@1732";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@28";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@173";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@177";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::LIBXML_VERSION";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@168";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@161";
+"PerlFu::Job::ProcessXML::BEGIN@5" -> "XML::CompactTree::XS::BEGIN@5";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::Element::BEGIN@1480";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::Element::BEGIN@1481";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@20";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::DocumentFragment::BEGIN@1455";
+"PerlFu::Job::ProcessXML::build_xml_tree" -> "XML::CompactTree::XS::readSubtreeToPerl";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@234";
+"XML::CompactTree::XS::BEGIN@5" -> "XML::LibXML::BEGIN@25";
+}

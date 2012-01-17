@@ -1,0 +1,45 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Moose_Exporter {
+	label="Moose::Exporter";
+	"Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+}
+subgraph cluster_MooseX_Storage_IO_File {
+	label="MooseX::Storage::IO::File";
+	"MooseX::Storage::IO::File::BEGIN@4";
+}
+subgraph cluster_IO_File {
+	label="IO::File";
+	"IO::File::BEGIN@128";
+	"IO::File::BEGIN@133";
+	"IO::File::BEGIN@130";
+	"IO::File::BEGIN@131";
+	"IO::File::CORE:match";
+	"IO::File::BEGIN@134";
+	"IO::File::BEGIN@132";
+	"IO::File::BEGIN@127";
+}
+subgraph cluster_MooseX_Storage_Engine_IO_File {
+	label="MooseX::Storage::Engine::IO::File";
+	"MooseX::Storage::Engine::IO::File::BEGIN@6";
+	"MooseX::Storage::Engine::IO::File::BEGIN@3";
+	"MooseX::Storage::Engine::IO::File::BEGIN@5";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "Exporter::import";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@131";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@132";
+"MooseX::Storage::IO::File::BEGIN@4" -> "MooseX::Storage::Engine::IO::File::BEGIN@5";
+"MooseX::Storage::IO::File::BEGIN@4" -> "MooseX::Storage::Engine::IO::File::BEGIN@6";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@134";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@127";
+"MooseX::Storage::Engine::IO::File::BEGIN@3" -> "Moose::Exporter::__ANON__[Moose/Exporter.pm:468]";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@130";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@128";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::BEGIN@133";
+"MooseX::Storage::Engine::IO::File::BEGIN@6" -> "IO::File::CORE:match";
+"MooseX::Storage::IO::File::BEGIN@4" -> "MooseX::Storage::Engine::IO::File::BEGIN@3";
+}

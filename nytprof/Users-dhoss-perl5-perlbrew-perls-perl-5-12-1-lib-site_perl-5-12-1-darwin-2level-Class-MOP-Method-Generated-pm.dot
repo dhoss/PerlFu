@@ -1,0 +1,104 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::can";
+}
+subgraph cluster_Moose_Meta_Method_Destructor {
+	label="Moose::Meta::Method::Destructor";
+	"Moose::Meta::Method::Destructor::__ANON__[Moose/Meta/Method/Destructor.pm:99]";
+}
+subgraph cluster_Class_MOP_Method_Accessor {
+	label="Class::MOP::Method::Accessor";
+	"Class::MOP::Method::Accessor::__ANON__[Class/MOP/Method/Accessor.pm:154]";
+	"Class::MOP::Method::Accessor::__ANON__[Class/MOP/Method/Accessor.pm:184]";
+	"Class::MOP::Method::Accessor::__ANON__[Class/MOP/Method/Accessor.pm:209]";
+	"Class::MOP::Method::Accessor::__ANON__[Class/MOP/Method/Accessor.pm:120]";
+}
+subgraph cluster_Sub_Exporter {
+	label="Sub::Exporter";
+	"Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_Eval_Closure {
+	label="Eval::Closure";
+	"Eval::Closure::BEGIN@16";
+	"Eval::Closure::BEGIN@13";
+	"Eval::Closure::BEGIN@6";
+	"Eval::Closure::BEGIN@2";
+	"Eval::Closure::eval_closure";
+	"Eval::Closure::BEGIN@7";
+	"Eval::Closure::BEGIN@15";
+	"Eval::Closure::BEGIN@5";
+	"Eval::Closure::BEGIN@14";
+}
+subgraph cluster_Class_MOP_Method_Generated {
+	label="Class::MOP::Method::Generated";
+	"Class::MOP::Method::Generated::BEGIN@3";
+	"Class::MOP::Method::Generated::BEGIN@10";
+	"Class::MOP::Method::Generated::BEGIN@11";
+	"Class::MOP::Method::Generated::BEGIN@16";
+	"Class::MOP::Method::Generated::_generate_description";
+	"Class::MOP::Method::Generated::definition_context";
+	"Class::MOP::Method::Generated::_compile_code";
+	"Class::MOP::Method::Generated::BEGIN@13";
+	"Class::MOP::Method::Generated::BEGIN@14";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Class_MOP_Method_Constructor {
+	label="Class::MOP::Method::Constructor";
+	"Class::MOP::Method::Constructor::_eval_environment";
+	"Class::MOP::Method::Constructor::__ANON__[Class/MOP/Method/Constructor.pm:111]";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Moose_Meta_Method_Accessor {
+	label="Moose::Meta::Method::Accessor";
+	"Moose::Meta::Method::Accessor::__ANON__[Moose/Meta/Method/Accessor.pm:39]";
+	"Moose::Meta::Method::Accessor::_eval_environment";
+}
+"Class::MOP::Method::Generated::BEGIN@14" -> "Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+"base::import" -> "Class::MOP::Method::Generated::BEGIN@14";
+"Class::MOP::Method::Generated::BEGIN@13" -> "Exporter::import";
+"Class::MOP::Method::Generated::BEGIN@14" -> "Eval::Closure::BEGIN@13";
+"Class::MOP::Method::Generated::_compile_code" -> "Eval::Closure::eval_closure";
+"Class::MOP::Method::Generated::BEGIN@14" -> "Eval::Closure::BEGIN@16";
+"base::import" -> "Class::MOP::Method::Generated::BEGIN@11";
+"Class::MOP::Method::Generated::_compile_code" -> "UNIVERSAL::can";
+"base::import" -> "Class::MOP::Method::Generated::BEGIN@10";
+"Class::MOP::Method::Generated::BEGIN@16" -> "base::import";
+"Class::MOP::Method::Generated::BEGIN@11" -> "warnings::import";
+"Class::MOP::Method::Generated::BEGIN@14" -> "Eval::Closure::BEGIN@15";
+"Class::MOP::Method::Generated::_generate_description" -> "Class::MOP::Method::Generated::definition_context";
+"Class::MOP::Method::Generated::BEGIN@10" -> "strict::import";
+"base::import" -> "Class::MOP::Method::Generated::BEGIN@16";
+"Class::MOP::Method::Generated::_compile_code" -> "Moose::Meta::Method::Accessor::_eval_environment";
+"Class::MOP::Method::Generated::BEGIN@14" -> "Eval::Closure::BEGIN@5";
+"Class::MOP::Method::Generated::BEGIN@14" -> "Eval::Closure::BEGIN@14";
+"Class::MOP::Method::Generated::BEGIN@14" -> "Eval::Closure::BEGIN@6";
+"base::import" -> "Class::MOP::Method::Generated::BEGIN@13";
+"Class::MOP::Method::Generated::_compile_code" -> "Class::MOP::Method::Generated::_generate_description";
+"Class::MOP::Method::Generated::_compile_code" -> "Class::MOP::Method::Constructor::_eval_environment";
+"base::import" -> "Class::MOP::Method::Generated::BEGIN@3";
+"Class::MOP::Method::Generated::BEGIN@14" -> "Eval::Closure::BEGIN@7";
+"Class::MOP::Method::Generated::BEGIN@14" -> "Eval::Closure::BEGIN@2";
+"Moose::Meta::Method::Accessor::__ANON__[Moose/Meta/Method/Accessor.pm:39]" -> "Class::MOP::Method::Generated::_compile_code";
+"Class::MOP::Method::Accessor::__ANON__[Class/MOP/Method/Accessor.pm:154]" -> "Class::MOP::Method::Generated::_compile_code";
+"Moose::Meta::Method::Destructor::__ANON__[Moose/Meta/Method/Destructor.pm:99]" -> "Class::MOP::Method::Generated::_compile_code";
+"Class::MOP::Method::Constructor::__ANON__[Class/MOP/Method/Constructor.pm:111]" -> "Class::MOP::Method::Generated::_compile_code";
+"Class::MOP::Method::Accessor::__ANON__[Class/MOP/Method/Accessor.pm:184]" -> "Class::MOP::Method::Generated::_compile_code";
+"Class::MOP::Method::Accessor::__ANON__[Class/MOP/Method/Accessor.pm:209]" -> "Class::MOP::Method::Generated::_compile_code";
+"Class::MOP::Method::Accessor::__ANON__[Class/MOP/Method/Accessor.pm:120]" -> "Class::MOP::Method::Generated::_compile_code";
+}

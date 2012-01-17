@@ -1,0 +1,100 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_Variable_Magic {
+	label="Variable::Magic";
+	"Variable::Magic::BEGIN@5";
+	"Variable::Magic::BEGIN@3";
+	"Variable::Magic::BEGIN@6";
+	"Variable::Magic::BEGIN@19";
+	"Variable::Magic::BEGIN@578";
+	"Variable::Magic::getdata";
+	"Variable::Magic::cast";
+	"Variable::Magic::BEGIN@202";
+}
+subgraph cluster_namespace_autoclean {
+	label="namespace::autoclean";
+	"namespace::autoclean::BEGIN@1";
+	"namespace::autoclean::BEGIN@14";
+	"namespace::autoclean::BEGIN@2";
+	"namespace::autoclean::import";
+	"namespace::autoclean::__ANON__[namespace/autoclean.pm:57]";
+}
+subgraph cluster_B_Hooks_EndOfScope {
+	label="B::Hooks::EndOfScope";
+	"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+	"B::Hooks::EndOfScope::BEGIN@16";
+	"B::Hooks::EndOfScope::BEGIN@8";
+	"B::Hooks::EndOfScope::BEGIN@14";
+	"B::Hooks::EndOfScope::on_scope_end";
+	"B::Hooks::EndOfScope::BEGIN@13";
+	"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:25]";
+	"B::Hooks::EndOfScope::BEGIN@5";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::VERSION";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::import";
+	"namespace::clean::__ANON__[namespace/clean.pm:117]";
+}
+subgraph cluster_PerlFu_Job {
+	label="PerlFu::Job";
+	"PerlFu::Job::BEGIN@4";
+}
+subgraph cluster_Sub_Exporter {
+	label="Sub::Exporter";
+	"Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Module_Runtime {
+	label="Module::Runtime";
+	"Module::Runtime::require_module";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@4";
+	"main::BEGIN@3";
+}
+"B::Hooks::EndOfScope::BEGIN@16" -> "Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@5";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Exporter::import";
+"B::Hooks::EndOfScope::on_scope_end" -> "Variable::Magic::getdata";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@3";
+"namespace::autoclean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@13";
+"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]" -> "namespace::clean::__ANON__[namespace/clean.pm:117]";
+"namespace::autoclean::BEGIN@14" -> "namespace::autoclean::BEGIN@1";
+"B::Hooks::EndOfScope::on_scope_end" -> "Variable::Magic::cast";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@6";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@19";
+"namespace::autoclean::BEGIN@2" -> "warnings::import";
+"namespace::autoclean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@16";
+"namespace::autoclean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@5";
+"Variable::Magic::cast" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:25]";
+"B::Hooks::EndOfScope::BEGIN@14" -> "UNIVERSAL::VERSION";
+"namespace::autoclean::BEGIN@1" -> "strict::import";
+"namespace::autoclean::BEGIN@14" -> "namespace::autoclean::BEGIN@2";
+"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]" -> "namespace::autoclean::__ANON__[namespace/autoclean.pm:57]";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@202";
+"namespace::autoclean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@8";
+"namespace::clean::import" -> "B::Hooks::EndOfScope::on_scope_end";
+"namespace::autoclean::import" -> "B::Hooks::EndOfScope::on_scope_end";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@578";
+"PerlFu::Job::BEGIN@4" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"Module::Runtime::require_module" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"main::BEGIN@4" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"main::BEGIN@3" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"namespace::autoclean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@14";
+}

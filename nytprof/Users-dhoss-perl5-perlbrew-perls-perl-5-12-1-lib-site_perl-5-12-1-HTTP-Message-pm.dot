@@ -1,0 +1,121 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_utf8 {
+	label="utf8";
+	"utf8::downgrade";
+}
+subgraph cluster_LWP_UserAgent {
+	label="LWP::UserAgent";
+	"LWP::UserAgent::send_request";
+	"LWP::UserAgent::prepare_request";
+	"LWP::UserAgent::BEGIN@10";
+}
+subgraph cluster_HTTP_Response {
+	label="HTTP::Response";
+	"HTTP::Response::new";
+	"HTTP::Response::request";
+	"HTTP::Response::code";
+	"HTTP::Response::previous";
+	"HTTP::Response::message";
+}
+subgraph cluster_LWP_Protocol {
+	label="LWP::Protocol";
+	"LWP::Protocol::collect";
+	"LWP::Protocol::__ANON__[LWP/Protocol.pm:139]";
+}
+subgraph cluster_PerlFu_Job_ProcessXML {
+	label="PerlFu::Job::ProcessXML";
+	"PerlFu::Job::ProcessXML::_build_document";
+}
+subgraph cluster_HTTP_Headers {
+	label="HTTP::Headers";
+	"HTTP::Headers::content_length";
+	"HTTP::Headers::push_header";
+	"HTTP::Headers::new";
+	"HTTP::Headers::header";
+	"HTTP::Headers::content_type";
+	"HTTP::Headers::remove_header";
+	"HTTP::Headers::init_header";
+	"HTTP::Headers::content_is_html";
+}
+subgraph cluster_HTTP_Message {
+	label="HTTP::Message";
+	"HTTP::Message::content";
+	"HTTP::Message::BEGIN@648";
+	"HTTP::Message::content_ref";
+	"HTTP::Message::AUTOLOAD";
+	"HTTP::Message::protocol";
+	"HTTP::Message::BEGIN@3";
+	"HTTP::Message::__ANON__[HTTP/Message.pm:18]";
+	"HTTP::Message::BEGIN@4";
+	"HTTP::Message::add_content";
+	"HTTP::Message::headers";
+	"HTTP::Message::new";
+	"HTTP::Message::_elem";
+	"HTTP::Message::__ANON__[HTTP/Message.pm:649]";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_HTTP_Request {
+	label="HTTP::Request";
+	"HTTP::Request::new";
+	"HTTP::Request::method";
+}
+subgraph cluster_HTTP_Config {
+	label="HTTP::Config";
+	"HTTP::Config::__ANON__[HTTP/Config.pm:152]";
+}
+subgraph cluster_LWP_Protocol_http {
+	label="LWP::Protocol::http";
+	"LWP::Protocol::http::_get_sock_info";
+	"LWP::Protocol::http::request";
+}
+"LWP::UserAgent::BEGIN@10" -> "HTTP::Message::BEGIN@3";
+"HTTP::Message::__ANON__[HTTP/Message.pm:18]" -> "utf8::downgrade";
+"LWP::Protocol::__ANON__[LWP/Protocol.pm:139]" -> "HTTP::Message::add_content";
+"LWP::Protocol::http::request" -> "HTTP::Message::headers";
+"HTTP::Message::__ANON__[HTTP/Message.pm:649]" -> "HTTP::Message::headers";
+"HTTP::Message::__ANON__[HTTP/Message.pm:649]" -> "HTTP::Headers::content_length";
+"HTTP::Message::__ANON__[HTTP/Message.pm:649]" -> "HTTP::Headers::content_is_html";
+"HTTP::Message::__ANON__[HTTP/Message.pm:649]" -> "HTTP::Headers::init_header";
+"HTTP::Message::__ANON__[HTTP/Message.pm:649]" -> "HTTP::Headers::header";
+"LWP::Protocol::http::request" -> "HTTP::Message::protocol";
+"HTTP::Message::BEGIN@648" -> "strict::unimport";
+"HTTP::Message::BEGIN@4" -> "vars::import";
+"HTTP::Message::BEGIN@3" -> "strict::import";
+"HTTP::Message::__ANON__[HTTP/Message.pm:649]" -> "HTTP::Headers::content_type";
+"LWP::UserAgent::BEGIN@10" -> "HTTP::Message::BEGIN@648";
+"HTTP::Response::request" -> "HTTP::Message::_elem";
+"HTTP::Message::protocol" -> "HTTP::Message::_elem";
+"HTTP::Response::code" -> "HTTP::Message::_elem";
+"HTTP::Response::previous" -> "HTTP::Message::_elem";
+"HTTP::Response::message" -> "HTTP::Message::_elem";
+"HTTP::Request::method" -> "HTTP::Message::_elem";
+"HTTP::Message::add_content" -> "HTTP::Message::__ANON__[HTTP/Message.pm:18]";
+"HTTP::Response::new" -> "HTTP::Message::new";
+"HTTP::Request::new" -> "HTTP::Message::new";
+"HTTP::Config::__ANON__[HTTP/Config.pm:152]" -> "HTTP::Message::AUTOLOAD";
+"LWP::Protocol::collect" -> "HTTP::Message::AUTOLOAD";
+"LWP::Protocol::http::_get_sock_info" -> "HTTP::Message::AUTOLOAD";
+"LWP::Protocol::http::request" -> "HTTP::Message::AUTOLOAD";
+"LWP::UserAgent::prepare_request" -> "HTTP::Message::AUTOLOAD";
+"HTTP::Config::__ANON__[HTTP/Config.pm:152]" -> "HTTP::Message::__ANON__[HTTP/Message.pm:649]";
+"LWP::Protocol::collect" -> "HTTP::Message::__ANON__[HTTP/Message.pm:649]";
+"LWP::Protocol::http::_get_sock_info" -> "HTTP::Message::__ANON__[HTTP/Message.pm:649]";
+"LWP::UserAgent::send_request" -> "HTTP::Message::__ANON__[HTTP/Message.pm:649]";
+"LWP::Protocol::http::request" -> "HTTP::Message::__ANON__[HTTP/Message.pm:649]";
+"LWP::UserAgent::prepare_request" -> "HTTP::Message::__ANON__[HTTP/Message.pm:649]";
+"HTTP::Message::new" -> "HTTP::Headers::new";
+"LWP::UserAgent::BEGIN@10" -> "HTTP::Message::BEGIN@4";
+"LWP::Protocol::http::request" -> "HTTP::Message::content_ref";
+"PerlFu::Job::ProcessXML::_build_document" -> "HTTP::Message::content";
+"HTTP::Message::__ANON__[HTTP/Message.pm:649]" -> "HTTP::Headers::push_header";
+"HTTP::Message::__ANON__[HTTP/Message.pm:649]" -> "HTTP::Headers::remove_header";
+}

@@ -1,0 +1,36 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Symbol {
+	label="Symbol";
+	"Symbol::qualify";
+}
+subgraph cluster_IO_Handle {
+	label="IO::Handle";
+	"IO::Handle::autoflush";
+}
+subgraph cluster_IO_File {
+	label="IO::File";
+	"IO::File::BEGIN@132";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_SelectSaver {
+	label="SelectSaver";
+	"SelectSaver::CORE:select";
+	"SelectSaver::DESTROY";
+	"SelectSaver::BEGIN@38";
+	"SelectSaver::new";
+	"SelectSaver::BEGIN@39";
+}
+"SelectSaver::BEGIN@39" -> "Exporter::import";
+"SelectSaver::BEGIN@38" -> "Exporter::import";
+"SelectSaver::new" -> "Symbol::qualify";
+"IO::File::BEGIN@132" -> "SelectSaver::BEGIN@39";
+"IO::Handle::autoflush" -> "SelectSaver::new";
+"IO::Handle::autoflush" -> "SelectSaver::DESTROY";
+"IO::File::BEGIN@132" -> "SelectSaver::BEGIN@38";
+"SelectSaver::DESTROY" -> "SelectSaver::CORE:select";
+"SelectSaver::new" -> "SelectSaver::CORE:select";
+}

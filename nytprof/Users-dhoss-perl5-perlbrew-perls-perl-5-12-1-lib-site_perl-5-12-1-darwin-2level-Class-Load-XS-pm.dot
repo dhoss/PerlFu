@@ -1,0 +1,54 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_Moose {
+	label="Moose";
+	"Moose::init_meta";
+}
+subgraph cluster_Class_Load {
+	label="Class::Load";
+	"Class::Load::try_load_class";
+	"Class::Load::load_first_existing_class";
+}
+subgraph cluster_Class_Load_XS {
+	label="Class::Load::XS";
+	"Class::Load::XS::is_class_loaded";
+	"Class::Load::XS::BEGIN@6";
+	"Class::Load::XS::BEGIN@7";
+	"Class::Load::XS::BEGIN@9";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Class_MOP_Class {
+	label="Class::MOP::Class";
+	"Class::MOP::Class::_immutable_metaclass";
+}
+subgraph cluster_Module_Runtime {
+	label="Module::Runtime";
+	"Module::Runtime::require_module";
+}
+subgraph cluster_Moose_Role {
+	label="Moose::Role";
+	"Moose::Role::init_meta";
+}
+subgraph cluster_Moose_Meta_Attribute {
+	label="Moose::Meta::Attribute";
+	"Moose::Meta::Attribute::_find_delegate_metaclass";
+}
+"Class::Load::load_first_existing_class" -> "Class::Load::XS::is_class_loaded";
+"Class::Load::try_load_class" -> "Class::Load::XS::is_class_loaded";
+"Class::MOP::Class::_immutable_metaclass" -> "Class::Load::XS::is_class_loaded";
+"Moose::init_meta" -> "Class::Load::XS::is_class_loaded";
+"Moose::Meta::Attribute::_find_delegate_metaclass" -> "Class::Load::XS::is_class_loaded";
+"Moose::Role::init_meta" -> "Class::Load::XS::is_class_loaded";
+"Class::Load::XS::BEGIN@7" -> "warnings::import";
+"Module::Runtime::require_module" -> "Class::Load::XS::BEGIN@7";
+"Class::Load::XS::BEGIN@6" -> "strict::import";
+"Module::Runtime::require_module" -> "Class::Load::XS::BEGIN@6";
+"Module::Runtime::require_module" -> "Class::Load::XS::BEGIN@9";
+}

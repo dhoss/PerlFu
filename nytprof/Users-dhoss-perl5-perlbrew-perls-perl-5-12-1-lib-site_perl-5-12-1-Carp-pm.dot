@@ -1,0 +1,49 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::unimport";
+	"warnings::import";
+}
+subgraph cluster_Moose {
+	label="Moose";
+	"Moose::BEGIN@14";
+}
+subgraph cluster_Carp {
+	label="Carp";
+	"Carp::BEGIN@387";
+	"Carp::BEGIN@105";
+	"Carp::BEGIN@4";
+	"Carp::BEGIN@18";
+	"Carp::BEGIN@388";
+	"Carp::BEGIN@8";
+	"Carp::BEGIN@5";
+	"Carp::BEGIN@17";
+	"Carp::BEGIN@7";
+	"Carp::BEGIN@67";
+	"Carp::BEGIN@3";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+"Moose::BEGIN@14" -> "Carp::BEGIN@7";
+"Moose::BEGIN@14" -> "Carp::BEGIN@18";
+"Moose::BEGIN@14" -> "Carp::BEGIN@4";
+"Carp::BEGIN@18" -> "strict::unimport";
+"Carp::BEGIN@387" -> "strict::unimport";
+"Carp::BEGIN@67" -> "strict::unimport";
+"Carp::BEGIN@8" -> "strict::unimport";
+"Carp::BEGIN@5" -> "warnings::import";
+"Moose::BEGIN@14" -> "Carp::BEGIN@8";
+"Carp::BEGIN@4" -> "strict::import";
+"Moose::BEGIN@14" -> "Carp::BEGIN@388";
+"Carp::BEGIN@388" -> "warnings::unimport";
+"Moose::BEGIN@14" -> "Carp::BEGIN@5";
+"Moose::BEGIN@14" -> "Carp::BEGIN@17";
+"Moose::BEGIN@14" -> "Carp::BEGIN@387";
+"Moose::BEGIN@14" -> "Carp::BEGIN@67";
+"Moose::BEGIN@14" -> "Carp::BEGIN@105";
+"Moose::BEGIN@14" -> "Carp::BEGIN@3";
+}

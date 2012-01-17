@@ -1,0 +1,95 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_Class_MOP_Mixin_HasMethods {
+	label="Class::MOP::Mixin::HasMethods";
+	"Class::MOP::Mixin::HasMethods::BEGIN@12";
+	"Class::MOP::Mixin::HasMethods::_add_meta_method";
+}
+subgraph cluster_Moose_Meta_Role {
+	label="Moose::Meta::Role";
+	"Moose::Meta::Role::meta";
+}
+subgraph cluster_Moose_Meta_Method_Meta {
+	label="Moose::Meta::Method::Meta";
+	"Moose::Meta::Method::Meta::wrap";
+}
+subgraph cluster_Class_MOP_Object {
+	label="Class::MOP::Object";
+	"Class::MOP::Object::meta";
+}
+subgraph cluster_Class_MOP_Method_Meta {
+	label="Class::MOP::Method::Meta";
+	"Class::MOP::Method::Meta::BEGIN@3";
+	"Class::MOP::Method::Meta::BEGIN@18";
+	"Class::MOP::Method::Meta::BEGIN@11";
+	"Class::MOP::Method::Meta::wrap";
+	"Class::MOP::Method::Meta::BEGIN@10";
+	"Class::MOP::Method::Meta::BEGIN@14";
+	"Class::MOP::Method::Meta::BEGIN@16";
+	"Class::MOP::Method::Meta::BEGIN@13";
+	"Class::MOP::Method::Meta::_generate_meta_method";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::import";
+	"constant::BEGIN@4";
+	"constant::BEGIN@3";
+	"constant::BEGIN@114";
+	"constant::BEGIN@25";
+	"constant::BEGIN@29";
+	"constant::BEGIN@52";
+	"constant::CORE:regcomp";
+	"constant::CORE:qr";
+	"constant::BEGIN@2";
+	"constant::BEGIN@6";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Class_MOP_Method {
+	label="Class::MOP::Method";
+	"Class::MOP::Method::wrap";
+}
+"Class::MOP::Mixin::HasMethods::BEGIN@12" -> "Class::MOP::Method::Meta::BEGIN@13";
+"Class::MOP::Method::Meta::wrap" -> "Class::MOP::Method::wrap";
+"Class::MOP::Method::Meta::BEGIN@13" -> "Exporter::import";
+"Class::MOP::Method::Meta::BEGIN@14" -> "Exporter::import";
+"Class::MOP::Mixin::HasMethods::BEGIN@12" -> "Class::MOP::Method::Meta::BEGIN@14";
+"Class::MOP::Method::Meta::BEGIN@16" -> "constant::BEGIN@25";
+"Class::MOP::Method::Meta::wrap" -> "Class::MOP::Object::meta";
+"Class::MOP::Method::Meta::BEGIN@16" -> "constant::BEGIN@114";
+"Class::MOP::Method::Meta::BEGIN@16" -> "constant::BEGIN@29";
+"Class::MOP::Method::Meta::BEGIN@16" -> "constant::BEGIN@4";
+"Class::MOP::Mixin::HasMethods::BEGIN@12" -> "Class::MOP::Method::Meta::BEGIN@16";
+"Class::MOP::Method::Meta::BEGIN@16" -> "constant::import";
+"Class::MOP::Mixin::HasMethods::BEGIN@12" -> "Class::MOP::Method::Meta::BEGIN@3";
+"Class::MOP::Method::Meta::BEGIN@18" -> "base::import";
+"Class::MOP::Method::Meta::BEGIN@11" -> "warnings::import";
+"Class::MOP::Method::Meta::BEGIN@16" -> "constant::BEGIN@3";
+"Class::MOP::Method::Meta::wrap" -> "Class::MOP::Method::Meta::_generate_meta_method";
+"Class::MOP::Method::Meta::BEGIN@10" -> "strict::import";
+"Class::MOP::Mixin::HasMethods::BEGIN@12" -> "Class::MOP::Method::Meta::BEGIN@10";
+"Class::MOP::Method::Meta::BEGIN@16" -> "constant::CORE:regcomp";
+"Class::MOP::Method::Meta::wrap" -> "Moose::Meta::Role::meta";
+"Class::MOP::Method::Meta::BEGIN@16" -> "constant::BEGIN@52";
+"Class::MOP::Mixin::HasMethods::BEGIN@12" -> "Class::MOP::Method::Meta::BEGIN@11";
+"Class::MOP::Method::Meta::BEGIN@16" -> "constant::BEGIN@2";
+"Class::MOP::Mixin::HasMethods::BEGIN@12" -> "Class::MOP::Method::Meta::BEGIN@18";
+"Class::MOP::Method::Meta::BEGIN@16" -> "constant::BEGIN@6";
+"Moose::Meta::Method::Meta::wrap" -> "Class::MOP::Method::Meta::wrap";
+"Class::MOP::Mixin::HasMethods::_add_meta_method" -> "Class::MOP::Method::Meta::wrap";
+"Class::MOP::Method::Meta::BEGIN@16" -> "constant::CORE:qr";
+}

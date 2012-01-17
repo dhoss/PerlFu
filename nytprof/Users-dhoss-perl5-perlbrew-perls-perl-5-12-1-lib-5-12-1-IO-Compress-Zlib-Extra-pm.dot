@@ -1,0 +1,43 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_IO_Compress_Zlib_Extra {
+	label="IO::Compress::Zlib::Extra";
+	"IO::Compress::Zlib::Extra::BEGIN@6";
+	"IO::Compress::Zlib::Extra::BEGIN@13";
+	"IO::Compress::Zlib::Extra::BEGIN@5";
+	"IO::Compress::Zlib::Extra::BEGIN@7";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_bytes {
+	label="bytes";
+	"bytes::import";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::VERSION";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_IO_Uncompress_Gunzip {
+	label="IO::Uncompress::Gunzip";
+	"IO::Uncompress::Gunzip::BEGIN@17";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+"IO::Compress::Zlib::Extra::BEGIN@13" -> "Exporter::import";
+"IO::Uncompress::Gunzip::BEGIN@17" -> "IO::Compress::Zlib::Extra::BEGIN@5";
+"IO::Uncompress::Gunzip::BEGIN@17" -> "IO::Compress::Zlib::Extra::BEGIN@13";
+"IO::Compress::Zlib::Extra::BEGIN@6" -> "warnings::import";
+"IO::Uncompress::Gunzip::BEGIN@17" -> "IO::Compress::Zlib::Extra::BEGIN@7";
+"IO::Uncompress::Gunzip::BEGIN@17" -> "IO::Compress::Zlib::Extra::BEGIN@6";
+"IO::Compress::Zlib::Extra::BEGIN@13" -> "UNIVERSAL::VERSION";
+"IO::Compress::Zlib::Extra::BEGIN@5" -> "strict::import";
+"IO::Compress::Zlib::Extra::BEGIN@7" -> "bytes::import";
+}

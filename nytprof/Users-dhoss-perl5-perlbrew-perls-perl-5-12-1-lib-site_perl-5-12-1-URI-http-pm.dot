@@ -1,0 +1,38 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_URI_http {
+	label="URI::http";
+	"URI::http::BEGIN@6";
+	"URI::http::default_port";
+	"URI::http::canonical";
+}
+subgraph cluster_URI__generic {
+	label="URI::_generic";
+	"URI::_generic::path";
+	"URI::_generic::authority";
+}
+subgraph cluster_URI__server {
+	label="URI::_server";
+	"URI::_server::port";
+	"URI::_server::canonical";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_HTTP_Request {
+	label="HTTP::Request";
+	"HTTP::Request::uri_canonical";
+}
+subgraph cluster_URI {
+	label="URI";
+	"URI::implementor";
+}
+"URI::http::canonical" -> "URI::_generic::path";
+"URI::_server::port" -> "URI::http::default_port";
+"URI::implementor" -> "URI::http::BEGIN@6";
+"URI::http::BEGIN@6" -> "strict::import";
+"URI::http::canonical" -> "URI::_server::canonical";
+"HTTP::Request::uri_canonical" -> "URI::http::canonical";
+"URI::http::canonical" -> "URI::_generic::authority";
+}

@@ -1,0 +1,160 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_IO_Compress_Zlib_Extra {
+	label="IO::Compress::Zlib::Extra";
+	"IO::Compress::Zlib::Extra::BEGIN@6";
+	"IO::Compress::Zlib::Extra::BEGIN@13";
+	"IO::Compress::Zlib::Extra::BEGIN@5";
+	"IO::Compress::Zlib::Extra::BEGIN@7";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_bytes {
+	label="bytes";
+	"bytes::import";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::VERSION";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_IO_Uncompress_RawInflate {
+	label="IO::Uncompress::RawInflate";
+	"IO::Uncompress::RawInflate::BEGIN@11";
+	"IO::Uncompress::RawInflate::BEGIN@8";
+	"IO::Uncompress::RawInflate::BEGIN@12";
+	"IO::Uncompress::RawInflate::BEGIN@4";
+	"IO::Uncompress::RawInflate::BEGIN@5";
+	"IO::Uncompress::RawInflate::BEGIN@9";
+	"IO::Uncompress::RawInflate::BEGIN@6";
+}
+subgraph cluster_Exporter_Heavy {
+	label="Exporter::Heavy";
+	"Exporter::Heavy::heavy_export_ok_tags";
+}
+subgraph cluster_IO_Uncompress_Gunzip {
+	label="IO::Uncompress::Gunzip";
+	"IO::Uncompress::Gunzip::BEGIN@14";
+	"IO::Uncompress::Gunzip::BEGIN@9";
+	"IO::Uncompress::Gunzip::BEGIN@15";
+	"IO::Uncompress::Gunzip::BEGIN@50";
+	"IO::Uncompress::Gunzip::BEGIN@17";
+	"IO::Uncompress::Gunzip::BEGIN@10";
+	"IO::Uncompress::Gunzip::BEGIN@12";
+	"IO::Uncompress::Gunzip::BEGIN@16";
+	"IO::Uncompress::Gunzip::BEGIN@8";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+	"Exporter::export_ok_tags";
+}
+subgraph cluster_IO_Compress_Gzip_Constants {
+	label="IO::Compress::Gzip::Constants";
+	"IO::Compress::Gzip::Constants::BEGIN@66";
+	"IO::Compress::Gzip::Constants::BEGIN@84";
+	"IO::Compress::Gzip::Constants::BEGIN@75";
+	"IO::Compress::Gzip::Constants::BEGIN@111";
+	"IO::Compress::Gzip::Constants::BEGIN@74";
+	"IO::Compress::Gzip::Constants::BEGIN@70";
+	"IO::Compress::Gzip::Constants::BEGIN@69";
+	"IO::Compress::Gzip::Constants::BEGIN@109";
+	"IO::Compress::Gzip::Constants::BEGIN@87";
+	"IO::Compress::Gzip::Constants::BEGIN@80";
+	"IO::Compress::Gzip::Constants::BEGIN@89";
+	"IO::Compress::Gzip::Constants::BEGIN@82";
+	"IO::Compress::Gzip::Constants::BEGIN@76";
+	"IO::Compress::Gzip::Constants::BEGIN@115";
+	"IO::Compress::Gzip::Constants::BEGIN@4";
+	"IO::Compress::Gzip::Constants::BEGIN@5";
+	"IO::Compress::Gzip::Constants::BEGIN@65";
+	"IO::Compress::Gzip::Constants::BEGIN@78";
+	"IO::Compress::Gzip::Constants::BEGIN@114";
+	"IO::Compress::Gzip::Constants::BEGIN@77";
+	"IO::Compress::Gzip::Constants::BEGIN@3";
+	"IO::Compress::Gzip::Constants::BEGIN@143";
+	"IO::Compress::Gzip::Constants::BEGIN@113";
+	"IO::Compress::Gzip::Constants::BEGIN@67";
+	"IO::Compress::Gzip::Constants::BEGIN@90";
+	"IO::Compress::Gzip::Constants::BEGIN@73";
+	"IO::Compress::Gzip::Constants::BEGIN@92";
+	"IO::Compress::Gzip::Constants::BEGIN@119";
+	"IO::Compress::Gzip::Constants::BEGIN@88";
+	"IO::Compress::Gzip::Constants::BEGIN@86";
+}
+subgraph cluster_Net_HTTP_Methods {
+	label="Net::HTTP::Methods";
+	"Net::HTTP::Methods::gunzip_ok";
+}
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@78";
+"IO::Uncompress::Gunzip::BEGIN@50" -> "Exporter::import";
+"IO::Uncompress::Gunzip::BEGIN@15" -> "Exporter::import";
+"IO::Uncompress::Gunzip::BEGIN@12" -> "Exporter::import";
+"IO::Uncompress::Gunzip::BEGIN@14" -> "Exporter::import";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "Exporter::import";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@88";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@115";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@90";
+"IO::Uncompress::Gunzip::BEGIN@12" -> "Exporter::export_ok_tags";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@114";
+"Net::HTTP::Methods::gunzip_ok" -> "IO::Uncompress::Gunzip::BEGIN@50";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@84";
+"IO::Uncompress::Gunzip::BEGIN@17" -> "IO::Compress::Zlib::Extra::BEGIN@5";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@74";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@143";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@67";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@73";
+"IO::Uncompress::Gunzip::BEGIN@12" -> "IO::Uncompress::RawInflate::BEGIN@6";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@111";
+"Net::HTTP::Methods::gunzip_ok" -> "IO::Uncompress::Gunzip::BEGIN@17";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@80";
+"IO::Uncompress::Gunzip::BEGIN@17" -> "IO::Compress::Zlib::Extra::BEGIN@13";
+"IO::Uncompress::Gunzip::BEGIN@9" -> "warnings::import";
+"IO::Uncompress::Gunzip::BEGIN@17" -> "IO::Compress::Zlib::Extra::BEGIN@7";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@77";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@92";
+"Net::HTTP::Methods::gunzip_ok" -> "IO::Uncompress::Gunzip::BEGIN@16";
+"IO::Uncompress::Gunzip::BEGIN@17" -> "IO::Compress::Zlib::Extra::BEGIN@6";
+"IO::Uncompress::Gunzip::BEGIN@14" -> "UNIVERSAL::VERSION";
+"IO::Uncompress::Gunzip::BEGIN@17" -> "UNIVERSAL::VERSION";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "UNIVERSAL::VERSION";
+"IO::Uncompress::Gunzip::BEGIN@15" -> "UNIVERSAL::VERSION";
+"IO::Uncompress::Gunzip::BEGIN@50" -> "UNIVERSAL::VERSION";
+"IO::Uncompress::Gunzip::BEGIN@12" -> "UNIVERSAL::VERSION";
+"IO::Uncompress::Gunzip::BEGIN@8" -> "strict::import";
+"IO::Uncompress::Gunzip::BEGIN@10" -> "bytes::import";
+"IO::Uncompress::Gunzip::BEGIN@12" -> "IO::Uncompress::RawInflate::BEGIN@9";
+"IO::Uncompress::Gunzip::BEGIN@12" -> "Exporter::Heavy::heavy_export_ok_tags";
+"IO::Uncompress::Gunzip::BEGIN@12" -> "IO::Uncompress::RawInflate::BEGIN@12";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@5";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@86";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@70";
+"IO::Uncompress::Gunzip::BEGIN@12" -> "IO::Uncompress::RawInflate::BEGIN@5";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@3";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@109";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@69";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@82";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@76";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@65";
+"Net::HTTP::Methods::gunzip_ok" -> "IO::Uncompress::Gunzip::BEGIN@8";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@66";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@87";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@89";
+"IO::Uncompress::Gunzip::BEGIN@12" -> "IO::Uncompress::RawInflate::BEGIN@11";
+"IO::Uncompress::Gunzip::BEGIN@12" -> "IO::Uncompress::RawInflate::BEGIN@8";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@113";
+"Net::HTTP::Methods::gunzip_ok" -> "IO::Uncompress::Gunzip::BEGIN@15";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@4";
+"Net::HTTP::Methods::gunzip_ok" -> "IO::Uncompress::Gunzip::BEGIN@10";
+"IO::Uncompress::Gunzip::BEGIN@12" -> "IO::Uncompress::RawInflate::BEGIN@4";
+"Net::HTTP::Methods::gunzip_ok" -> "IO::Uncompress::Gunzip::BEGIN@12";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@119";
+"Net::HTTP::Methods::gunzip_ok" -> "IO::Uncompress::Gunzip::BEGIN@14";
+"IO::Uncompress::Gunzip::BEGIN@16" -> "IO::Compress::Gzip::Constants::BEGIN@75";
+"Net::HTTP::Methods::gunzip_ok" -> "IO::Uncompress::Gunzip::BEGIN@9";
+}

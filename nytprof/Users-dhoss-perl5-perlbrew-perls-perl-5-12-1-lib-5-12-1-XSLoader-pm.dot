@@ -1,0 +1,105 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DynaLoader {
+	label="DynaLoader";
+	"DynaLoader::BEGIN@97";
+}
+subgraph cluster_Sub_Identify {
+	label="Sub::Identify";
+	"Sub::Identify::BEGIN@6";
+}
+subgraph cluster_Moose_Exporter {
+	label="Moose::Exporter";
+	"Moose::Exporter::BEGIN@13";
+}
+subgraph cluster_Variable_Magic {
+	label="Variable::Magic";
+	"Variable::Magic::BEGIN@202";
+}
+subgraph cluster_XSLoader {
+	label="XSLoader";
+	"XSLoader::load";
+}
+subgraph cluster_IO_Handle {
+	label="IO::Handle";
+	"IO::Handle::BEGIN@266";
+}
+subgraph cluster_Moose_Util_TypeConstraints {
+	label="Moose::Util::TypeConstraints";
+	"Moose::Util::TypeConstraints::BEGIN@608";
+}
+subgraph cluster_Moose {
+	label="Moose";
+	"Moose::BEGIN@13";
+}
+subgraph cluster_Package_Stash {
+	label="Package::Stash";
+	"Package::Stash::BEGIN@11";
+}
+subgraph cluster_File_GlobMapper {
+	label="File::GlobMapper";
+	"File::GlobMapper::BEGIN@10";
+}
+subgraph cluster_JSON_Any {
+	label="JSON::Any";
+	"JSON::Any::_try_loading";
+}
+subgraph cluster_Fcntl {
+	label="Fcntl";
+	"Fcntl::BEGIN@214";
+}
+subgraph cluster_MRO_Compat {
+	label="MRO::Compat";
+	"MRO::Compat::BEGIN@10";
+}
+subgraph cluster_PerlFu_Job {
+	label="PerlFu::Job";
+	"PerlFu::Job::BEGIN@7";
+}
+subgraph cluster_PerlFu_Job_ProcessXML {
+	label="PerlFu::Job::ProcessXML";
+	"PerlFu::Job::ProcessXML::BEGIN@5";
+}
+subgraph cluster_IO_Uncompress_RawInflate {
+	label="IO::Uncompress::RawInflate";
+	"IO::Uncompress::RawInflate::BEGIN@8";
+}
+subgraph cluster_Module_Runtime {
+	label="Module::Runtime";
+	"Module::Runtime::require_module";
+	"Module::Runtime::BEGIN@51";
+}
+subgraph cluster_IO_Socket {
+	label="IO::Socket";
+	"IO::Socket::BEGIN@12";
+}
+subgraph cluster_Class_MOP_Package {
+	label="Class::MOP::Package";
+	"Class::MOP::Package::BEGIN@15";
+}
+subgraph cluster_Moose_Meta_Attribute {
+	label="Moose::Meta::Attribute";
+	"Moose::Meta::Attribute::BEGIN@13";
+}
+"XSLoader::load" -> "DynaLoader::BEGIN@97";
+"IO::Socket::BEGIN@12" -> "XSLoader::load";
+"File::GlobMapper::BEGIN@10" -> "XSLoader::load";
+"Moose::Util::TypeConstraints::BEGIN@608" -> "XSLoader::load";
+"Module::Runtime::require_module" -> "XSLoader::load";
+"Moose::Meta::Attribute::BEGIN@13" -> "XSLoader::load";
+"Module::Runtime::BEGIN@51" -> "XSLoader::load";
+"DynaLoader::BEGIN@97" -> "XSLoader::load";
+"Fcntl::BEGIN@214" -> "XSLoader::load";
+"PerlFu::Job::BEGIN@7" -> "XSLoader::load";
+"Package::Stash::BEGIN@11" -> "XSLoader::load";
+"PerlFu::Job::ProcessXML::BEGIN@5" -> "XSLoader::load";
+"IO::Uncompress::RawInflate::BEGIN@8" -> "XSLoader::load";
+"IO::Handle::BEGIN@266" -> "XSLoader::load";
+"JSON::Any::_try_loading" -> "XSLoader::load";
+"MRO::Compat::BEGIN@10" -> "XSLoader::load";
+"Moose::BEGIN@13" -> "XSLoader::load";
+"Class::MOP::Package::BEGIN@15" -> "XSLoader::load";
+"Variable::Magic::BEGIN@202" -> "XSLoader::load";
+"Sub::Identify::BEGIN@6" -> "XSLoader::load";
+"Moose::Exporter::BEGIN@13" -> "XSLoader::load";
+}

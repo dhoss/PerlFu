@@ -1,0 +1,32 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_XSLoader {
+	label="XSLoader";
+	"XSLoader::load";
+}
+subgraph cluster_IO_Seekable {
+	label="IO::Seekable";
+	"IO::Seekable::BEGIN@104";
+}
+subgraph cluster_Fcntl {
+	label="Fcntl";
+	"Fcntl::BEGIN@62";
+	"Fcntl::BEGIN@214";
+	"Fcntl::BEGIN@58";
+	"Fcntl::BEGIN@64";
+	"Fcntl::BEGIN@239";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+"IO::Seekable::BEGIN@104" -> "Fcntl::BEGIN@214";
+"IO::Seekable::BEGIN@104" -> "Fcntl::BEGIN@64";
+"Fcntl::BEGIN@239" -> "strict::unimport";
+"Fcntl::BEGIN@58" -> "strict::import";
+"IO::Seekable::BEGIN@104" -> "Fcntl::BEGIN@58";
+"Fcntl::BEGIN@214" -> "XSLoader::load";
+"IO::Seekable::BEGIN@104" -> "Fcntl::BEGIN@239";
+"IO::Seekable::BEGIN@104" -> "Fcntl::BEGIN@62";
+}

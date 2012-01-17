@@ -1,0 +1,57 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Storable {
+	label="Storable";
+	"Storable::dclone";
+	"Storable::BEGIN@24";
+	"Storable::BEGIN@22";
+	"Storable::BEGIN@44";
+	"Storable::BEGIN@23";
+	"Storable::bootstrap";
+}
+subgraph cluster_DynaLoader {
+	label="DynaLoader";
+	"DynaLoader::bootstrap";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_FileHandle {
+	label="FileHandle";
+	"FileHandle::import";
+	"FileHandle::BEGIN@46";
+	"FileHandle::BEGIN@3";
+	"FileHandle::BEGIN@4";
+}
+subgraph cluster_LWP_UserAgent {
+	label="LWP::UserAgent";
+	"LWP::UserAgent::BEGIN@10";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_AutoLoader {
+	label="AutoLoader";
+	"AutoLoader::import";
+}
+subgraph cluster_LWP_Protocol_http {
+	label="LWP::Protocol::http";
+	"LWP::Protocol::http::request";
+}
+"Storable::BEGIN@23" -> "Exporter::import";
+"Storable::BEGIN@44" -> "Exporter::import";
+"Storable::BEGIN@23" -> "FileHandle::BEGIN@46";
+"LWP::UserAgent::BEGIN@10" -> "Storable::BEGIN@22";
+"Storable::BEGIN@22" -> "AutoLoader::import";
+"Storable::BEGIN@23" -> "FileHandle::BEGIN@4";
+"Storable::BEGIN@23" -> "FileHandle::BEGIN@3";
+"Storable::BEGIN@24" -> "vars::import";
+"LWP::UserAgent::BEGIN@10" -> "Storable::BEGIN@24";
+"LWP::UserAgent::BEGIN@10" -> "Storable::BEGIN@23";
+"DynaLoader::bootstrap" -> "Storable::bootstrap";
+"LWP::Protocol::http::request" -> "Storable::dclone";
+"LWP::UserAgent::BEGIN@10" -> "Storable::BEGIN@44";
+"Storable::BEGIN@23" -> "FileHandle::import";
+}

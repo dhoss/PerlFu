@@ -1,0 +1,12 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Moose_Error_Default {
+	label="Moose::Error::Default";
+	"Moose::Error::Default::BEGIN@12";
+}
+subgraph cluster_Carp_Heavy {
+	label="Carp::Heavy";
+	"Carp::Heavy::BEGIN@3";
+}
+"Moose::Error::Default::BEGIN@12" -> "Carp::Heavy::BEGIN@3";
+}
