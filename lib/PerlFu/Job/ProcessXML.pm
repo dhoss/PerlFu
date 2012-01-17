@@ -29,6 +29,7 @@ before run => sub{
   my $reader   = XML::LibXML::Reader->new( string => $contents )
     || die "can't read file $!";
   my @nodes     = $self->build_xml_tree($reader);
+  warn Dumper $nodes[0];
 };
 
 sub _build_document {
