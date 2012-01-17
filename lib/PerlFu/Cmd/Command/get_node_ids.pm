@@ -52,7 +52,7 @@ has 'ua' => (
 has 'document' => (
   is      => 'ro',
   lazy    => 1,
-  builder => '_build_docuent',
+  builder => '_build_document',
 );
 
 sub _build_queue {
