@@ -1,0 +1,1480 @@
+
+<?xml version="1.0" encoding="windows-1252"?>
+<NEWESTNODES>
+<INFO foruser_id="203787" sitename="PerlMonks" gentimeGMT="2012-01-18 22:13:03" style="" got_from="Sun Jan 15 17:13:03 2012" min_poll_seconds="30" lastchecked="20120115171303" req_from="Mon Sep  8 18:03:40 2008" site="http://perlmonks.org/" foruser="dhoss">
+Rendered by the Perlmonks Newest Nodes XML Generator</INFO>
+<NODE nodetype="monkdiscuss" author_user="890813" authortitle="cavac" createtime="20120117132814" node_id="948371">
+PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="monkdiscuss" author_user="918452" authortitle="ansh batra" createtime="20120117130514" node_id="948369">
+chatter box should show latest messages</NODE>
+<NODE nodetype="perlquestion" author_user="961" authortitle="Anonymous Monk" createtime="20120118170140" node_id="948631">
+Possible Match Problem</NODE>
+<NODE nodetype="perlquestion" author_user="931957" authortitle="kazak" createtime="20120118163556" node_id="948627">
+Perl watcher daemon</NODE>
+<NODE nodetype="perlquestion" author_user="426097" authortitle="hok_si_la" createtime="20120118163133" node_id="948626">
+Extracting information from file to Hash</NODE>
+<NODE nodetype="perlquestion" author_user="945105" authortitle="sharief" createtime="20120118122551" node_id="948595">
+Excel worksheet delete</NODE>
+<NODE nodetype="perlquestion" author_user="948571" authortitle="chirp84" createtime="20120118105228" node_id="948576">
+XLSX read and dump</NODE>
+<NODE nodetype="perlquestion" author_user="906449" authortitle="pashanoid" createtime="20120118105226" node_id="948575">
+Stop mouse wheel from moving charts up/down Tk::Scrolled</NODE>
+<NODE nodetype="perlquestion" author_user="945105" authortitle="sharief" createtime="20120118103756" node_id="948570">
+Perl/tk coversion to exe error</NODE>
+<NODE nodetype="perlquestion" author_user="947874" authortitle="aslewis" createtime="20120118101216" node_id="948566">
+Homogenous gtk2::table cell size</NODE>
+<NODE nodetype="perlquestion" author_user="623254" authortitle="muizelaar" createtime="20120118092320" node_id="948558">
+Archive Zip</NODE>
+<NODE nodetype="perlquestion" author_user="911740" authortitle="bimleshsharma" createtime="20120118082601" node_id="948545">
+Ctime/Mtime compare with string date</NODE>
+<NODE nodetype="perlquestion" author_user="948512" authortitle="BlackForrest" createtime="20120118080157" node_id="948541">
+transfer a array to a hash</NODE>
+<NODE nodetype="perlquestion" author_user="779500" authortitle="kikuchiyo" createtime="20120118065202" node_id="948530">
+Golf: Seven segment display</NODE>
+<NODE nodetype="perlquestion" author_user="961" authortitle="Anonymous Monk" createtime="20120118062538" node_id="948520">
+What data structure is this and how to access?</NODE>
+<NODE nodetype="perlquestion" author_user="827765" authortitle="AWallBuilder" createtime="20120118053324" node_id="948518">
+help with loop</NODE>
+<NODE nodetype="perlquestion" author_user="948465" authortitle="samta" createtime="20120117214549" node_id="948468">
+How to add file version to a executable made from Perl script ?</NODE>
+<NODE nodetype="perlquestion" author_user="942427" authortitle="bbfan" createtime="20120117203618" node_id="948453">
+use of "use X"</NODE>
+<NODE nodetype="perlquestion" author_user="948447" authortitle="arwillia" createtime="20120117194801" node_id="948449">
+Bangging head against desk</NODE>
+<NODE nodetype="perlquestion" author_user="961" authortitle="Anonymous Monk" createtime="20120117171930" node_id="948434">
+Finding a string not containing a string</NODE>
+<NODE nodetype="perlquestion" author_user="961" authortitle="Anonymous Monk" createtime="20120117160617" node_id="948417">
+Perl Regex Repeating Patterns</NODE>
+<NODE nodetype="perlquestion" author_user="948376" authortitle="begin_101" createtime="20120117150647" node_id="948397">
+Help in building Regular expression</NODE>
+<NODE nodetype="perlquestion" author_user="946953" authortitle="Thakur" createtime="20120117144708" node_id="948392">
+Keyword last for loops</NODE>
+<NODE nodetype="perlquestion" author_user="590334" authortitle="iaw4" createtime="20120117144637" node_id="948391">
+Multiple Perl Files, Each With 1 Sub?</NODE>
+<NODE nodetype="perlquestion" author_user="948380" authortitle="tantalor" createtime="20120117140531" node_id="948384">
+scalar value of list assignment</NODE>
+<NODE nodetype="perlquestion" author_user="185157" authortitle="jpl" createtime="20120117125701" node_id="948367">
+Mixing C and perl</NODE>
+<NODE nodetype="perlquestion" author_user="706043" authortitle="sapphirecat" createtime="20120117123953" node_id="948363">
+Encoding/charset Aware MIME Email Generation</NODE>
+<NODE nodetype="perlquestion" author_user="947652" authortitle="jaldama" createtime="20120117113505" node_id="948350">
+Comparing an array against another array</NODE>
+<NODE nodetype="perlquestion" author_user="931824" authortitle="saranrsm" createtime="20120117090733" node_id="948323">
+Problem with pre-compiled regex</NODE>
+<NODE nodetype="perlquestion" author_user="492557" authortitle="mje" createtime="20120117083348" node_id="948315">
+Replacement for substr(Data::Dumper($x), 0, 4000)</NODE>
+<NODE nodetype="perlquestion" author_user="818413" authortitle="voj" createtime="20120117074455" node_id="948311">
+How to specify required XML::SAX features in Makefile.PL</NODE>
+<NODE nodetype="perlquestion" author_user="948299" authortitle="vlad_s" createtime="20120117065629" node_id="948304">
+Test scripts for POE</NODE>
+<NODE nodetype="perlquestion" author_user="961" authortitle="Anonymous Monk" createtime="20120117055520" node_id="948293">
+DBI and arrays</NODE>
+<NODE nodetype="perlquestion" author_user="961" authortitle="Anonymous Monk" createtime="20120117011426" node_id="948256">
+String Comparison Issue</NODE>
+<NODE nodetype="perlquestion" author_user="421114" authortitle="Tanktalus" createtime="20120117011421" node_id="948255">
+Using Term::ReadLine in an event loop other than Tk [SOLVED]</NODE>
+<NODE nodetype="perlquestion" author_user="937872" authortitle="odem5442" createtime="20120117005229" node_id="948251">
+CGI::FormBuilder - Resources</NODE>
+<NODE nodetype="perlquestion" author_user="373533" authortitle="jhourcle" createtime="20120116235549" node_id="948249">
+Installers that handle more than just modules and scripts?</NODE>
+<NODE nodetype="perlquestion" author_user="650868" authortitle="Nasrudin" createtime="20120116185511" node_id="948231">
+Moose: Adding methods to a class via attribute traits</NODE>
+<NODE nodetype="perlquestion" author_user="947681" authortitle="zlinkexchange" createtime="20120116180456" node_id="948226">
+mail script with attachment</NODE>
+<NODE nodetype="perlquestion" author_user="931957" authortitle="kazak" createtime="20120116173534" node_id="948225">
+[Resolved] LWP add_handler issue</NODE>
+<NODE nodetype="perlquestion" author_user="832509" authortitle="sudlo" createtime="20120116161153" node_id="948207">
+Active Perl</NODE>
+<NODE nodetype="perlquestion" author_user="911218" authortitle="viktor" createtime="20120116122814" node_id="948185">
+Printing the elements of array</NODE>
+<NODE nodetype="perlquestion" author_user="961" authortitle="Anonymous Monk" createtime="20120116103415" node_id="948164">
+How to print the backtrace in a "catch" block?</NODE>
+<NODE nodetype="perlquestion" author_user="733061" authortitle="flexvault" createtime="20120116102937" node_id="948162">
+RFC: Is this the correct use of Unicode::Collate?</NODE>
+<NODE nodetype="perlquestion" author_user="725580" authortitle="markseger" createtime="20120116101126" node_id="948159">
+Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="perlquestion" author_user="944616" authortitle="chessgui" createtime="20120116091152" node_id="948141">
+A silly reg exp question</NODE>
+<NODE nodetype="perlquestion" author_user="606015" authortitle="isync" createtime="20120116073710" node_id="948131">
+Unable to get filename with quotes after upload?</NODE>
+<NODE nodetype="perlquestion" author_user="415035" authortitle="szabgab" createtime="20120116071007" node_id="948127">
+memory usage</NODE>
+<NODE nodetype="perlquestion" author_user="948118" authortitle="Giorgio C" createtime="20120116070745" node_id="948126">
+Perl tk - open file and print content</NODE>
+<NODE nodetype="perlquestion" author_user="881330" authortitle="OlegG" createtime="20120116064605" node_id="948123">
+base class manipulation: Is there something similar on CPAN?</NODE>
+<NODE nodetype="perlquestion" author_user="961" authortitle="Anonymous Monk" createtime="20120116000859" node_id="948064">
+specify two events in Entry widget</NODE>
+<NODE nodetype="perlquestion" author_user="792038" authortitle="sbhalgat" createtime="20120115235131" node_id="948063">
+Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="perlquestion" author_user="939868" authortitle="Hacker1" createtime="20120115234955" node_id="948062">
+save Googlemap image to file</NODE>
+<NODE nodetype="perlquestion" author_user="667310" authortitle="Baffled" createtime="20120115192951" node_id="948038">
+Need to count the number of entries in a array</NODE>
+<NODE nodetype="perlmeditation" author_user="944729" authortitle="mrdurtal" createtime="20120117050923" node_id="948288">
+The Status of Agile Programming Among Perlmonks?</NODE>
+<NODE nodetype="perlmeditation" author_user="381608" authortitle="ikegami" createtime="20120116220345" node_id="948243">
+Jargon relating to Perl strings</NODE>
+<NODE nodetype="perlmeditation" author_user="698487" authortitle="raiph" createtime="20120116054833" node_id="948107">
+Hockey Sticks</NODE>
+<NODE nodetype="categorized answer" author_user="11732" authortitle="QandAEditors" createtime="20120117023837" node_id="948266" parent_node="2258">
+Answer: How do I remove whitespace at the beginning or end of my string?</NODE>
+<NODE nodetype="note" author_user="190859" authortitle="bart" createtime="20120118171117" node_id="948634" root_node="948626" parent_node="948630">
+Re^2: Extracting information from file to Hash</NODE>
+<NODE nodetype="note" author_user="931957" authortitle="kazak" createtime="20120118171113" node_id="948633" root_node="948627" parent_node="948629">
+Re^2: Perl watcher daemon</NODE>
+<NODE nodetype="note" author_user="190859" authortitle="bart" createtime="20120118170746" node_id="948632" root_node="948626" parent_node="948630">
+Re^2: Extracting information from file to Hash</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120118165256" node_id="948630" root_node="948626" parent_node="948626">
+Re: Extracting information from file to Hash</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120118165235" node_id="948629" root_node="948627" parent_node="948627">
+Re: Perl watcher daemon</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120118164758" node_id="948628" root_node="948626" parent_node="948626">
+Re: Extracting information from file to Hash</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120118163027" node_id="948625" root_node="948576" parent_node="948611">
+Re^6: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120118162821" node_id="948624" root_node="948453" parent_node="948607">
+Re^2: use of "use X"</NODE>
+<NODE nodetype="note" author_user="948571" authortitle="chirp84" createtime="20120118160213" node_id="948623" root_node="948576" parent_node="948621">
+Re^6: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="31503" authortitle="runrig" createtime="20120118153758" node_id="948622" root_node="948576" parent_node="948613">
+Re^5: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="31503" authortitle="runrig" createtime="20120118153630" node_id="948621" root_node="948576" parent_node="948604">
+Re^5: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="436161" authortitle="davies" createtime="20120118153459" node_id="948620" root_node="948595" parent_node="948595">
+Re: Excel worksheet delete</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120118153407" node_id="948619" root_node="948575" parent_node="948617">
+Re^4: Stop mouse wheel from moving charts up/down Tk::Scrolled</NODE>
+<NODE nodetype="note" author_user="131279" authortitle="talexb" createtime="20120118152857" node_id="948618" root_node="948576" parent_node="948615">
+Re^7: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="449608" authortitle="thundergnat" createtime="20120118151723" node_id="948617" root_node="948575" parent_node="948614">
+Re^3: Stop mouse wheel from moving charts up/down Tk::Scrolled</NODE>
+<NODE nodetype="note" author_user="706043" authortitle="sapphirecat" createtime="20120118151127" node_id="948616" root_node="948363" parent_node="948551">
+Re^2: Encoding/charset Aware MIME Email Generation</NODE>
+<NODE nodetype="note" author_user="948571" authortitle="chirp84" createtime="20120118151113" node_id="948615" root_node="948576" parent_node="948611">
+Re^6: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120118150945" node_id="948614" root_node="948575" parent_node="948610">
+Re^2: Stop mouse wheel from moving charts up/down Tk::Scrolled</NODE>
+<NODE nodetype="note" author_user="476900" authortitle="furry_marmot" createtime="20120118150542" node_id="948613" root_node="948576" parent_node="948600">
+Re^4: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120118145514" node_id="948612" root_node="948575" parent_node="948593">
+Re^3: Stop mouse wheel from moving charts up/down Tk::Scrolled</NODE>
+<NODE nodetype="note" author_user="131279" authortitle="talexb" createtime="20120118144812" node_id="948611" root_node="948576" parent_node="948604">
+Re^5: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="449608" authortitle="thundergnat" createtime="20120118144749" node_id="948610" root_node="948575" parent_node="948575">
+Re: Stop mouse wheel from moving charts up/down Tk::Scrolled</NODE>
+<NODE nodetype="note" author_user="200365" authortitle="Tux" createtime="20120118143658" node_id="948609" root_node="945799" parent_node="948602">
+Re^2: poll ideas quest 2012</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120118143126" node_id="948608" root_node="947166" parent_node="948394">
+Re^5: Perl/Tk code structure</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118142843" node_id="948607" root_node="948453" parent_node="948453">
+Re: use of "use X"</NODE>
+<NODE nodetype="note" author_user="948571" authortitle="chirp84" createtime="20120118141719" node_id="948606" root_node="948576" parent_node="948605">
+Re^6: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="622051" authortitle="toolic" createtime="20120118140725" node_id="948605" root_node="948576" parent_node="948604">
+Re^5: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="948571" authortitle="chirp84" createtime="20120118135237" node_id="948604" root_node="948576" parent_node="948600">
+Re^4: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="352046" authortitle="ww" createtime="20120118134941" node_id="948603" root_node="948541" parent_node="948541">
+Re: transfer a array to a hash</NODE>
+<NODE nodetype="note" author_user="890813" authortitle="cavac" createtime="20120118132028" node_id="948602" root_node="945799" parent_node="945799">
+Re: poll ideas quest 2012</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120118132017" node_id="948601" root_node="948371" parent_node="948591">
+Re^12: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="131279" authortitle="talexb" createtime="20120118125705" node_id="948600" root_node="948576" parent_node="948598">
+Re^3: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120118125645" node_id="948599" root_node="948570" parent_node="948570">
+Re: Perl/tk coversion to exe error</NODE>
+<NODE nodetype="note" author_user="948571" authortitle="chirp84" createtime="20120118124702" node_id="948598" root_node="948576" parent_node="948587">
+Re^2: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="532583" authortitle="samwyse" createtime="20120118123444" node_id="948597" root_node="944083" parent_node="944097">
+Re^3: Script to convert HBA WWNs to lowercase and add ":"</NODE>
+<NODE nodetype="note" author_user="533863" authortitle="roboticus" createtime="20120118122950" node_id="948596" root_node="948595" parent_node="948595">
+Re: Excel worksheet delete</NODE>
+<NODE nodetype="note" author_user="832495" authortitle="choroba" createtime="20120118122434" node_id="948594" root_node="948350" parent_node="948350">
+Re: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="906449" authortitle="pashanoid" createtime="20120118122403" node_id="948593" root_node="948575" parent_node="948583">
+Re^2: Stop mouse wheel from moving charts up/down Tk::Scrolled</NODE>
+<NODE nodetype="note" author_user="546129" authortitle="ruzam" createtime="20120118121903" node_id="948592" root_node="948371" parent_node="948564">
+Re^2: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="546129" authortitle="ruzam" createtime="20120118121110" node_id="948591" root_node="948371" parent_node="948531">
+Re^11: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="832495" authortitle="choroba" createtime="20120118120457" node_id="948590" root_node="948449" parent_node="948449">
+Re: Bangging head against desk</NODE>
+<NODE nodetype="note" author_user="947652" authortitle="jaldama" createtime="20120118115617" node_id="948589" root_node="948350" parent_node="948579">
+Re^3: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="948584" authortitle="perlson" createtime="20120118115301" node_id="948588" root_node="948391" parent_node="948391">
+Re: Multiple Perl Files, Each With 1 Sub?</NODE>
+<NODE nodetype="note" author_user="131279" authortitle="talexb" createtime="20120118115145" node_id="948587" root_node="948576" parent_node="948576">
+Re: XLSX read and dump</NODE>
+<NODE nodetype="note" author_user="131279" authortitle="talexb" createtime="20120118114412" node_id="948586" root_node="948288" parent_node="948288">
+Re: The Status of Agile Programming Among Perlmonks?</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120118112700" node_id="948583" root_node="948575" parent_node="948575">
+Re: Stop mouse wheel from moving charts up/down Tk::Scrolled</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120118111014" node_id="948582" root_node="948570" parent_node="948578">
+Re^2: Perl/tk coversion to exe error</NODE>
+<NODE nodetype="note" author_user="948118" authortitle="Giorgio C" createtime="20120118110339" node_id="948581" root_node="948126" parent_node="948157">
+Re^2: Perl tk - open file and print content</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118110131" node_id="948580" root_node="948453" parent_node="948453">
+Re: use of "use X"</NODE>
+<NODE nodetype="note" author_user="947652" authortitle="jaldama" createtime="20120118105740" node_id="948579" root_node="948350" parent_node="948577">
+Re^2: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118105535" node_id="948578" root_node="948570" parent_node="948570">
+Re: Perl/tk coversion to exe error</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118105233" node_id="948577" root_node="948350" parent_node="948350">
+Re: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120118104550" node_id="948574" root_node="948570" parent_node="948570">
+Re: Perl/tk coversion to exe error</NODE>
+<NODE nodetype="note" author_user="616540" authortitle="moritz" createtime="20120118104253" node_id="948573" root_node="948570" parent_node="948570">
+Re: Perl/tk coversion to exe error</NODE>
+<NODE nodetype="note" author_user="623254" authortitle="muizelaar" createtime="20120118102820" node_id="948569" root_node="948558" parent_node="948560">
+Re^2: Archive Zip</NODE>
+<NODE nodetype="note" author_user="922586" authortitle="Lotus1" createtime="20120118101852" node_id="948568" root_node="948558" parent_node="948558">
+Re: Archive Zip</NODE>
+<NODE nodetype="note" author_user="406189" authortitle="jethro" createtime="20120118101517" node_id="948567" root_node="948520" parent_node="948540">
+Re^3: What data structure is this and how to access?</NODE>
+<NODE nodetype="note" author_user="948118" authortitle="Giorgio C" createtime="20120118101006" node_id="948565" root_node="948126" parent_node="948160">
+Re^3: Perl tk - open file and print content</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120118100411" node_id="948564" root_node="948371" parent_node="948371">
+Re: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120118094828" node_id="948563" root_node="948541" parent_node="948541">
+Re: transfer a array to a hash</NODE>
+<NODE nodetype="note" author_user="907377" authortitle="i5513" createtime="20120118093747" node_id="948562" root_node="948541" parent_node="948541">
+Re: transfer a array to a hash</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118093114" node_id="948561" root_node="910605" parent_node="910605">
+Re: Implicetely deparse, change and replace perlcode in file</NODE>
+<NODE nodetype="note" author_user="5348" authortitle="Corion" createtime="20120118093042" node_id="948560" root_node="948558" parent_node="948558">
+Re: Archive Zip</NODE>
+<NODE nodetype="note" author_user="947652" authortitle="jaldama" createtime="20120118092532" node_id="948559" root_node="948350" parent_node="948364">
+Re^4: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="947811" authortitle="palaxos" createtime="20120118092154" node_id="948557" root_node="947817" parent_node="947838">
+Re^4: Problem Compiling under Solaris using DBI and DBD::DB2</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120118091919" node_id="948556" root_node="948545" parent_node="948548">
+Re^3: Ctime/Mtime compare with string date</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120118091025" node_id="948555" root_node="948520" parent_node="948520">
+Re: What data structure is this and how to access?</NODE>
+<NODE nodetype="note" author_user="47599" authortitle="mr.nick" createtime="20120118090403" node_id="948554" root_node="948545" parent_node="948545">
+Re: Ctime/Mtime compare with string date</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118090034" node_id="948553" root_node="947237" parent_node="948324">
+Re^4: RFC iEngine</NODE>
+<NODE nodetype="note" author_user="857302" authortitle="bulk88" createtime="20120118085524" node_id="948552" root_node="948159" parent_node="948203">
+Re^7: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="5348" authortitle="Corion" createtime="20120118085043" node_id="948551" root_node="948363" parent_node="948363">
+Re: Encoding/charset Aware MIME Email Generation</NODE>
+<NODE nodetype="note" author_user="888573" authortitle="Eliya" createtime="20120118084859" node_id="948550" root_node="948518" parent_node="948536">
+Re^3: help with loop</NODE>
+<NODE nodetype="note" author_user="47599" authortitle="mr.nick" createtime="20120118084253" node_id="948549" root_node="946643" parent_node="946655">
+Re^3: IO::Socket connect fails to block</NODE>
+<NODE nodetype="note" author_user="911740" authortitle="bimleshsharma" createtime="20120118084031" node_id="948548" root_node="948545" parent_node="948546">
+Re^2: Ctime/Mtime compare with string date</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118083907" node_id="948547" root_node="948545" parent_node="948545">
+Re: Ctime/Mtime compare with string date</NODE>
+<NODE nodetype="note" author_user="616540" authortitle="moritz" createtime="20120118083354" node_id="948546" root_node="948545" parent_node="948545">
+Re: Ctime/Mtime compare with string date</NODE>
+<NODE nodetype="note" author_user="533863" authortitle="roboticus" createtime="20120118081010" node_id="948544" root_node="948520" parent_node="948540">
+Re^3: What data structure is this and how to access?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118080418" node_id="948543" root_node="948371" parent_node="948542">
+Re^13: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120118080200" node_id="948542" root_node="948371" parent_node="948532">
+Re^12: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120118074843" node_id="948540" root_node="948520" parent_node="948522">
+Re^2: What data structure is this and how to access?</NODE>
+<NODE nodetype="note" author_user="779500" authortitle="kikuchiyo" createtime="20120118073821" node_id="948539" root_node="948530" parent_node="948530">
+Re: Golf: Seven segment display</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118073216" node_id="948538" root_node="948518" parent_node="948536">
+Re^3: help with loop</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118073049" node_id="948537" root_node="948371" parent_node="948535">
+Re^12: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="827765" authortitle="AWallBuilder" createtime="20120118073030" node_id="948536" root_node="948518" parent_node="948527">
+Re^2: help with loop</NODE>
+<NODE nodetype="note" author_user="812801" authortitle="luis.roca" createtime="20120118072543" node_id="948535" root_node="948371" parent_node="948531">
+Re^11: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118072520" node_id="948534" root_node="948530" parent_node="948530">
+Re: Golf: Seven segment display</NODE>
+<NODE nodetype="note" author_user="442602" authortitle="planetscape" createtime="20120118071443" node_id="948533" root_node="948520" parent_node="948520">
+Re: What data structure is this and how to access?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118070715" node_id="948532" root_node="948371" parent_node="948531">
+Re^11: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120118065557" node_id="948531" root_node="948371" parent_node="948501">
+Re^10: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="888573" authortitle="Eliya" createtime="20120118064616" node_id="948527" root_node="948518" parent_node="948518">
+Re: help with loop</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118064357" node_id="948526" root_node="948371" parent_node="948371">
+Re: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118064029" node_id="948525" root_node="948520" parent_node="948520">
+Re: What data structure is this and how to access?</NODE>
+<NODE nodetype="note" author_user="919638" authortitle="RichardK" createtime="20120118063921" node_id="948524" root_node="948518" parent_node="948518">
+Re: help with loop</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118063843" node_id="948523" root_node="948518" parent_node="948518">
+Re: help with loop</NODE>
+<NODE nodetype="note" author_user="533863" authortitle="roboticus" createtime="20120118063836" node_id="948522" root_node="948520" parent_node="948520">
+Re: What data structure is this and how to access?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118062624" node_id="948521" root_node="687283" parent_node="750824">
+Re^10: Use Getopt::Long even if you don't think you need to</NODE>
+<NODE nodetype="note" author_user="918452" authortitle="ansh batra" createtime="20120118054456" node_id="948519" root_node="948518" parent_node="948518">
+Re: help with loop</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120118050709" node_id="948517" root_node="948453" parent_node="948453">
+Re: use of "use X"</NODE>
+<NODE nodetype="note" author_user="698487" authortitle="raiph" createtime="20120118050659" node_id="948516" root_node="948107" parent_node="948482">
+Re^4: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120118044728" node_id="948515" root_node="948371" parent_node="948371">
+Re: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120118043109" node_id="948514" root_node="948371" parent_node="948413">
+Re^4: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120118042308" node_id="948509" root_node="948243" parent_node="948435">
+Re^3: Jargon relating to Perl strings</NODE>
+<NODE nodetype="note" author_user="442602" authortitle="planetscape" createtime="20120118040631" node_id="948508" root_node="948392" parent_node="948392">
+Re: Keyword last for loops</NODE>
+<NODE nodetype="note" author_user="442602" authortitle="planetscape" createtime="20120118035829" node_id="948507" root_node="948397" parent_node="948397">
+Re: Help in building Regular expression</NODE>
+<NODE nodetype="note" author_user="616540" authortitle="moritz" createtime="20120118034459" node_id="948506" root_node="948107" parent_node="948351">
+Re^4: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="616540" authortitle="moritz" createtime="20120118033859" node_id="948505" root_node="948107" parent_node="948503">
+Re^6: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="528646" authortitle="Khen1950fx" createtime="20120118032933" node_id="948504" root_node="948453" parent_node="948453">
+Re: use of "use X"</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120118032425" node_id="948503" root_node="948107" parent_node="948499">
+Re^5: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="5348" authortitle="Corion" createtime="20120118030159" node_id="948502" root_node="948417" parent_node="948423">
+Re^3: Perl Regex Repeating Patterns</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118030108" node_id="948501" root_node="948371" parent_node="948476">
+Re^9: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118025924" node_id="948500" root_node="948107" parent_node="948498">
+Re^5: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120118024612" node_id="948499" root_node="948107" parent_node="948482">
+Re^4: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120118024515" node_id="948498" root_node="948107" parent_node="948482">
+Re^4: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="274368" authortitle="dk" createtime="20120118024328" node_id="948495" root_node="946488" parent_node="947666">
+Re^22: ref to read-only alias ... why? (notabug)</NODE>
+<NODE nodetype="note" author_user="198160" authortitle="CountZero" createtime="20120118021631" node_id="948492" root_node="948350" parent_node="948386">
+Re^5: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120118021358" node_id="948491" root_node="948384" parent_node="948384">
+Re: scalar value of list assignment</NODE>
+<NODE nodetype="note" author_user="857302" authortitle="bulk88" createtime="20120118020945" node_id="948490" root_node="948367" parent_node="948367">
+Re: Mixing C and perl</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120118020355" node_id="948489" root_node="948323" parent_node="948335">
+Re^4: Problem with pre-compiled regexNODE>
+<NODE nodetype="note" author_user="576594" authortitle="quester" createtime="20120118015015" node_id="948488" root_node="948453" parent_node="948478">
+Re^2: use of "use X"</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120118014644" node_id="948487" root_node="948392" parent_node="948392">
+Re: Keyword last for loops</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120118013852" node_id="948486" root_node="948453" parent_node="948453">
+Re: use of "use X"</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120118013204" node_id="948483" root_node="948453" parent_node="948455">
+Re^2: use of "use X"</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120118012850" node_id="948482" root_node="948107" parent_node="948479">
+Re^3: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="698487" authortitle="raiph" createtime="20120118003528" node_id="948479" root_node="948107" parent_node="948441">
+Re^2: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="942427" authortitle="bbfan" createtime="20120117235206" node_id="948478" root_node="948453" parent_node="948453">
+Re: use of "use X"</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117225250" node_id="948477" root_node="948107" parent_node="948107">
+Re: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117225144" node_id="948476" root_node="948371" parent_node="948471">
+Re^8: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117224554" node_id="948475" root_node="948397" parent_node="948405">
+Re^2: Help in building Regular expression</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117224048" node_id="948474" root_node="948363" parent_node="948363">
+Re: Encoding/charset Aware MIME Email Generation</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117223209" node_id="948473" root_node="948468" parent_node="948468">
+Re: How to add file version to a executable made from Perl script ?</NODE>
+<NODE nodetype="note" author_user="155973" authortitle="grantm" createtime="20120117223113" node_id="948472" root_node="948311" parent_node="948311">
+Re: How to specify required XML::SAX features in Makefile.PL</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117222654" node_id="948471" root_node="948371" parent_node="948470">
+Re^7: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117220740" node_id="948470" root_node="948371" parent_node="948467">
+Re^6: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117215015" node_id="948469" root_node="948107" parent_node="948426">
+Re^5: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117213816" node_id="948467" root_node="948371" parent_node="948416">
+Re^5: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="622051" authortitle="toolic" createtime="20120117212804" node_id="948464" root_node="948453" parent_node="948453">
+Re: use of "use X"</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120117212225" node_id="948462" root_node="948243" parent_node="948422">
+Re^2: Jargon relating to Perl strings</NODE>
+<NODE nodetype="note" author_user="528646" authortitle="Khen1950fx" createtime="20120117212036" node_id="948461" root_node="948449" parent_node="948449">
+Re: Bangging head against desk</NODE>
+<NODE nodetype="note" author_user="144696" authortitle="TomDLux" createtime="20120117211957" node_id="948460" root_node="948392" parent_node="948392">
+Re: Keyword last for loops</NODE>
+<NODE nodetype="note" author_user="352046" authortitle="ww" createtime="20120117210003" node_id="948457" root_node="948434" parent_node="948434">
+Re: Finding a string not containing a string</NODE>
+<NODE nodetype="note" author_user="944729" authortitle="mrdurtal" createtime="20120117205930" node_id="948456" root_node="948288" parent_node="948288">
+Re: The Status of Agile Programming Among Perlmonks?</NODE>
+<NODE nodetype="note" author_user="144696" authortitle="TomDLux" createtime="20120117205723" node_id="948455" root_node="948453" parent_node="948453">
+Re: use of "use X"</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120117205308" node_id="948454" root_node="948453" parent_node="948453">
+Re: use of "use X"</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120117200212" node_id="948450" root_node="948207" parent_node="948207">
+Re: Active Perl</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120117190828" node_id="948446" root_node="948107" parent_node="948443">
+Re^9: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="634253" authortitle="AnomalousMonk" createtime="20120117190726" node_id="948445" root_node="948417" parent_node="948423">
+Re^3: Perl Regex Repeating Patterns</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120117185414" node_id="948444" root_node="948243" parent_node="948243">
+Re: Jargon relating to Perl strings</NODE>
+<NODE nodetype="note" author_user="698487" authortitle="raiph" createtime="20120117185412" node_id="948443" root_node="948107" parent_node="948427">
+Re^8: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="715258" authortitle="thenaz" createtime="20120117185350" node_id="948442" root_node="948434" parent_node="948434">
+Re: Finding a string not containing a string</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120117184128" node_id="948441" root_node="948107" parent_node="948107">
+Re: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="123137" authortitle="educated_foo" createtime="20120117182939" node_id="948440" root_node="948288" parent_node="948359">
+Re^2: The Status of Agile Programming Among Perlmonks?</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120117182337" node_id="948439" root_node="947166" parent_node="948394">
+Re^5: Perl/Tk code structure</NODE>
+<NODE nodetype="note" author_user="948376" authortitle="begin_101" createtime="20120117181152" node_id="948438" root_node="948397" parent_node="948405">
+Re^2: Help in building Regular expression</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120117174108" node_id="948437" root_node="948243" parent_node="948322">
+Re^2: Jargon relating to Perl strings</NODE>
+<NODE nodetype="note" author_user="712372" authortitle="kennethk" createtime="20120117173151" node_id="948436" root_node="948434" parent_node="948434">
+Re: Finding a string not containing a string</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120117172354" node_id="948435" root_node="948243" parent_node="948292">
+Re^2: Jargon relating to Perl strings</NODE>
+<NODE nodetype="note" author_user="948257" authortitle="About_a_perl" createtime="20120117171927" node_id="948433" root_node="948256" parent_node="948256">
+Re: String Comparison Issue</NODE>
+<NODE nodetype="note" author_user="947652" authortitle="jaldama" createtime="20120117171915" node_id="948432" root_node="948350" parent_node="948355">
+Re^3: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117171730" node_id="948431" root_node="948417" parent_node="948417">
+Re: Perl Regex Repeating Patterns</NODE>
+<NODE nodetype="note" author_user="446266" authortitle="salva" createtime="20120117171347" node_id="948430" root_node="948367" parent_node="948385">
+Re^4: Mixing C and perl</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120117171122" node_id="948427" root_node="948107" parent_node="948425">
+Re^7: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="698487" authortitle="raiph" createtime="20120117170957" node_id="948426" root_node="948107" parent_node="948272">
+Re^4: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="698487" authortitle="raiph" createtime="20120117170304" node_id="948425" root_node="948107" parent_node="948406">
+Re^6: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="650868" authortitle="Nasrudin" createtime="20120117165622" node_id="948424" root_node="948231" parent_node="948420">
+Re^3: Moose: Adding methods to a class via attribute traits</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117164311" node_id="948423" root_node="948417" parent_node="948419">
+Re^2: Perl Regex Repeating Patterns</NODE>
+<NODE nodetype="note" author_user="388437" authortitle="wrog" createtime="20120117163449" node_id="948422" root_node="948243" parent_node="948243">
+Re: Jargon relating to Perl strings</NODE>
+<NODE nodetype="note" author_user="421114" authortitle="Tanktalus" createtime="20120117163411" node_id="948421" root_node="947540" parent_node="947998">
+Re^6: Web::Magic 0.005</NODE>
+<NODE nodetype="note" author_user="650868" authortitle="Nasrudin" createtime="20120117162500" node_id="948420" root_node="948231" parent_node="948326">
+Re^2: Moose: Adding methods to a class via attribute traits</NODE>
+<NODE nodetype="note" author_user="5348" authortitle="Corion" createtime="20120117162105" node_id="948419" root_node="948417" parent_node="948417">
+Re: Perl Regex Repeating Patterns</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117160803" node_id="948418" root_node="948417" parent_node="948417">
+Re: Perl Regex Repeating Patterns</NODE>
+<NODE nodetype="note" author_user="812801" authortitle="luis.roca" createtime="20120117160616" node_id="948416" root_node="948371" parent_node="948409">
+Re^4: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="698487" authortitle="raiph" createtime="20120117160316" node_id="948415" root_node="948107" parent_node="948354">
+Re^5: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="248054" authortitle="Your Mother" createtime="20120117155223" node_id="948414" root_node="948371" parent_node="948409">
+Re^4: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="812801" authortitle="luis.roca" createtime="20120117155113" node_id="948413" root_node="948371" parent_node="948388">
+Re^3: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="698487" authortitle="raiph" createtime="20120117154728" node_id="948412" root_node="948107" parent_node="948347">
+Re^4: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="812801" authortitle="luis.roca" createtime="20120117154025" node_id="948411" root_node="948371" parent_node="948407">
+Re^2: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117154013" node_id="948410" root_node="948384" parent_node="948404">
+Re^3: scalar value of list assignment</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117153844" node_id="948409" root_node="948371" parent_node="948388">
+Re^3: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120117152917" node_id="948408" root_node="948391" parent_node="948391">
+Re: Multiple Perl Files, Each With 1 Sub?</NODE>
+<NODE nodetype="note" author_user="528646" authortitle="Khen1950fx" createtime="20120117152744" node_id="948407" root_node="948371" parent_node="948371">
+Re: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120117152511" node_id="948406" root_node="948107" parent_node="948399">
+Re^5: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120117152257" node_id="948405" root_node="948397" parent_node="948397">
+Re: Help in building Regular expression</NODE>
+<NODE nodetype="note" author_user="948380" authortitle="tantalor" createtime="20120117152235" node_id="948404" root_node="948384" parent_node="948401">
+Re^2: scalar value of list assignment</NODE>
+<NODE nodetype="note" author_user="352046" authortitle="ww" createtime="20120117152154" node_id="948403" root_node="948384" parent_node="948384">
+Re: scalar value of list assignment</NODE>
+<NODE nodetype="note" author_user="622051" authortitle="toolic" createtime="20120117151450" node_id="948402" root_node="948397" parent_node="948397">
+Re: Help in building Regular expression</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117151419" node_id="948401" root_node="948384" parent_node="948384">
+Re: scalar value of list assignment</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120117151133" node_id="948400" root_node="948384" parent_node="948384">
+Re: scalar value of list assignment</NODE>
+<NODE nodetype="note" author_user="698487" authortitle="raiph" createtime="20120117150950" node_id="948399" root_node="948107" parent_node="948282">
+Re^4: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="733061" authortitle="flexvault" createtime="20120117150648" node_id="948398" root_node="948162" parent_node="948382">
+Re^6: RFC: Is this the correct use of Unicode::Collate?</NODE>
+<NODE nodetype="note" author_user="528646" authortitle="Khen1950fx" createtime="20120117150449" node_id="948396" root_node="948311" parent_node="948311">
+Re: How to specify required XML::SAX features in Makefile.PL</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120117145835" node_id="948395" root_node="948384" parent_node="948384">
+Re: scalar value of list assignment</NODE>
+<NODE nodetype="note" author_user="846903" authortitle="elef" createtime="20120117145355" node_id="948394" root_node="947166" parent_node="947337">
+Re^4: Perl/Tk code structure</NODE>
+<NODE nodetype="note" author_user="622051" authortitle="toolic" createtime="20120117145224" node_id="948393" root_node="948392" parent_node="948392">
+Re: Keyword last for loops</NODE>
+<NODE nodetype="note" author_user="248054" authortitle="Your Mother" createtime="20120117144244" node_id="948390" root_node="948371" parent_node="948388">
+Re^3: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="812801" authortitle="luis.roca" createtime="20120117143614" node_id="948389" root_node="948371" parent_node="948371">
+Re: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="890813" authortitle="cavac" createtime="20120117142229" node_id="948388" root_node="948371" parent_node="948387">
+Re^2: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="248054" authortitle="Your Mother" createtime="20120117141244" node_id="948387" root_node="948371" parent_node="948371">
+Re: PM joins the SOPA Blackout?</NODE>
+<NODE nodetype="note" author_user="947652" authortitle="jaldama" createtime="20120117140647" node_id="948386" root_node="948350" parent_node="948364">
+Re^4: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="287302" authortitle="tsee" createtime="20120117140622" node_id="948385" root_node="948367" parent_node="948379">
+Re^3: Mixing C and perl</NODE>
+<NODE nodetype="note" author_user="733061" authortitle="flexvault" createtime="20120117140524" node_id="948383" root_node="948162" parent_node="948348">
+Re^4: RFC: Is this the correct use of Unicode::Collate?</NODE>
+<NODE nodetype="note" author_user="898544" authortitle="tchrist" createtime="20120117135319" node_id="948382" root_node="948162" parent_node="948345">
+Re^5: RFC: Is this the correct use of Unicode::Collate?</NODE>
+<NODE nodetype="note" author_user="185157" authortitle="jpl" createtime="20120117135139" node_id="948379" root_node="948367" parent_node="948373">
+Re^2: Mixing C and perl</NODE>
+<NODE nodetype="note" author_user="272364" authortitle="MidLifeXis" createtime="20120117134957" node_id="948378" root_node="948369" parent_node="948369">
+Re: chatter box should show latest messages</NODE>
+<NODE nodetype="note" author_user="373533" authortitle="jhourcle" createtime="20120117133717" node_id="948375" root_node="948249" parent_node="948321">
+Re^4: Installers that handle more than just modules and scripts?</NODE>
+<NODE nodetype="note" author_user="446266" authortitle="salva" createtime="20120117133530" node_id="948374" root_node="796111" parent_node="948372">
+Re^5: Net::OpenSSH multiple commands</NODE>
+<NODE nodetype="note" author_user="446266" authortitle="salva" createtime="20120117133211" node_id="948373" root_node="948367" parent_node="948367">
+Re: Mixing C and perl</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117133204" node_id="948372" root_node="796111" parent_node="796191">
+Re^4: Net::OpenSSH multiple commands</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117131314" node_id="948370" root_node="947612" parent_node="947623">
+Re^4: Can't call method "find" on an undefined value</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117130136" node_id="948368" root_node="947612" parent_node="948362">
+Re^9: Can't call method "find" on an undefined value</NODE>
+<NODE nodetype="note" author_user="918452" authortitle="ansh batra" createtime="20120117124848" node_id="948366" root_node="948350" parent_node="948365">
+Re^5: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120117124648" node_id="948365" root_node="948350" parent_node="948364">
+Re^4: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="918452" authortitle="ansh batra" createtime="20120117124234" node_id="948364" root_node="948350" parent_node="948361">
+Re^3: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120117123218" node_id="948362" root_node="947612" parent_node="948340">
+Re^8: Can't call method "find" on an undefined value</NODE>
+<NODE nodetype="note" author_user="832495" authortitle="choroba" createtime="20120117123014" node_id="948361" root_node="948350" parent_node="948360">
+Re^2: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120117122642" node_id="948360" root_node="948350" parent_node="948350">
+Re: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120117122316" node_id="948359" root_node="948288" parent_node="948288">
+Re: The Status of Agile Programming Among Perlmonks?</NODE>
+<NODE nodetype="note" author_user="948299" authortitle="vlad_s" createtime="20120117121800" node_id="948358" root_node="948304" parent_node="948316">
+Re^2: Test scripts for POE</NODE>
+<NODE nodetype="note" author_user="832495" authortitle="choroba" createtime="20120117121525" node_id="948357" root_node="948350" parent_node="948355">
+Re^3: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="918452" authortitle="ansh batra" createtime="20120117121201" node_id="948356" root_node="948350" parent_node="948355">
+Re^3: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="947652" authortitle="jaldama" createtime="20120117120756" node_id="948355" root_node="948350" parent_node="948353">
+Re^2: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117115641" node_id="948354" root_node="948107" parent_node="948351">
+Re^4: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117114742" node_id="948353" root_node="948350" parent_node="948350">
+Re: Comparing an array against another array</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117114524" node_id="948352" root_node="948323" parent_node="948329">
+Re^3: Problem with pre-compiled regex</NODE>
+<NODE nodetype="note" author_user="105128" authortitle="Jenda" createtime="20120117113637" node_id="948351" root_node="948107" parent_node="948254">
+Re^3: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117113452" node_id="948349" root_node="948323" parent_node="948334">
+Re^4: Problem with pre-compiled regex</NODE>
+<NODE nodetype="note" author_user="898544" authortitle="tchrist" createtime="20120117111949" node_id="948348" root_node="948162" parent_node="948336">
+Re^3: RFC: Is this the correct use of Unicode::Collate?</NODE>
+<NODE nodetype="note" author_user="647953" authortitle="sundialsvc4" createtime="20120117111648" node_id="948347" root_node="948107" parent_node="948254">
+Re^3: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="733061" authortitle="flexvault" createtime="20120117111617" node_id="948346" root_node="948315" parent_node="948344">
+Re^3: Replacement for substr(Data::Dumper($x), 0, 4000)</NODE>
+<NODE nodetype="note" author_user="733061" authortitle="flexvault" createtime="20120117111029" node_id="948345" root_node="948162" parent_node="948339">
+Re^4: RFC: Is this the correct use of Unicode::Collate?</NODE>
+<NODE nodetype="note" author_user="492557" authortitle="mje" createtime="20120117110313" node_id="948344" root_node="948315" parent_node="948327">
+Re^2: Replacement for substr(Data::Dumper($x), 0, 4000)</NODE>
+<NODE nodetype="note" author_user="647953" authortitle="sundialsvc4" createtime="20120117110101" node_id="948343" root_node="948288" parent_node="948288">
+Re: The Status of Agile Programming Among Perlmonks?</NODE>
+<NODE nodetype="note" author_user="832109" authortitle="tj_thompson" createtime="20120117105102" node_id="948342" root_node="946286" parent_node="946467">
+Re^2: Moose accessor odd return</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117105058" node_id="948341" root_node="948323" parent_node="948323">
+Re: Problem with pre-compiled regex</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117104117" node_id="948340" root_node="947612" parent_node="947651">
+Re^7: Can't call method "find" on an undefined value</NODE>
+<NODE nodetype="note" author_user="616540" authortitle="moritz" createtime="20120117103942" node_id="948339" root_node="948162" parent_node="948336">
+Re^3: RFC: Is this the correct use of Unicode::Collate?</NODE>
+<NODE nodetype="note" author_user="492557" authortitle="mje" createtime="20120117103807" node_id="948338" root_node="948315" parent_node="948333">
+Re^2: Replacement for substr(Data::Dumper($x), 0, 4000)</NODE>
+<NODE nodetype="note" author_user="200365" authortitle="Tux" createtime="20120117103437" node_id="948337" root_node="948315" parent_node="948333">
+Re^2: Replacement for substr(Data::Dumper($x), 0, 4000)</NODE>
+<NODE nodetype="note" author_user="733061" authortitle="flexvault" createtime="20120117103152" node_id="948336" root_node="948162" parent_node="948330">
+Re^2: RFC: Is this the correct use of Unicode::Collate?</NODE>
+<NODE nodetype="note" author_user="616540" authortitle="moritz" createtime="20120117103129" node_id="948335" root_node="948323" parent_node="948329">
+Re^3: Problem with pre-compiled regex</NODE>
+<NODE nodetype="note" author_user="708738" authortitle="LanX" createtime="20120117101412" node_id="948334" root_node="948323" parent_node="948329">
+Re^3: Problem with pre-compiled regex</NODE>
+<NODE nodetype="note" author_user="123137" authortitle="educated_foo" createtime="20120117101304" node_id="948333" root_node="948315" parent_node="948315">
+Re: Replacement for substr(Data::Dumper($x), 0, 4000)</NODE>
+<NODE nodetype="note" author_user="421114" authortitle="Tanktalus" createtime="20120117094957" node_id="948332" root_node="948255" parent_node="948306">
+Re^2: Using Term::ReadLine in an event loop other than Tk</NODE>
+<NODE nodetype="note" author_user="421114" authortitle="Tanktalus" createtime="20120117094557" node_id="948331" root_node="948255" parent_node="948298">
+Re^2: Using Term::ReadLine in an event loop other than Tk</NODE>
+<NODE nodetype="note" author_user="898544" authortitle="tchrist" createtime="20120117094512" node_id="948330" root_node="948162" parent_node="948162">
+Re: RFC: Is this the correct use of Unicode::Collate?</NODE>
+<NODE nodetype="note" author_user="931824" authortitle="saranrsm" createtime="20120117094247" node_id="948329" root_node="948323" parent_node="948325">
+Re^2: Problem with pre-compiled regex</NODE>
+<NODE nodetype="note" author_user="421114" authortitle="Tanktalus" createtime="20120117094104" node_id="948328" root_node="948255" parent_node="948267">
+Re^2: Using Term::ReadLine in an event loop other than Tk</NODE>
+<NODE nodetype="note" author_user="733061" authortitle="flexvault" createtime="20120117093710" node_id="948327" root_node="948315" parent_node="948315">
+Re: Replacement for substr(Data::Dumper($x), 0, 4000)</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120117091905" node_id="948326" root_node="948231" parent_node="948231">
+Re: Moose: Adding methods to a class via attribute traits</NODE>
+<NODE nodetype="note" author_user="616540" authortitle="moritz" createtime="20120117091605" node_id="948325" root_node="948323" parent_node="948323">
+Re: Problem with pre-compiled regex</NODE>
+<NODE nodetype="note" author_user="947179" authortitle="muscipula" createtime="20120117090947" node_id="948324" root_node="947237" parent_node="947703">
+Re^3: RFC iEngine</NODE>
+<NODE nodetype="note" author_user="898544" authortitle="tchrist" createtime="20120117090021" node_id="948322" root_node="948243" parent_node="948243">
+Re: Jargon relating to Perl strings</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117085900" node_id="948321" root_node="948249" parent_node="948318">
+Re^3: Installers that handle more than just modules and scripts?</NODE>
+<NODE nodetype="note" author_user="492557" authortitle="mje" createtime="20120117085554" node_id="948320" root_node="948315" parent_node="948319">
+Re^2: Replacement for substr(Data::Dumper($x), 0, 4000)</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120117085027" node_id="948319" root_node="948315" parent_node="948315">
+Re: Replacement for substr(Data::Dumper($x), 0, 4000)</NODE>
+<NODE nodetype="note" author_user="373533" authortitle="jhourcle" createtime="20120117084327" node_id="948318" root_node="948249" parent_node="948286">
+Re^2: Installers that handle more than just modules and scripts?</NODE>
+<NODE nodetype="note" author_user="832495" authortitle="choroba" createtime="20120117084255" node_id="948317" root_node="948256" parent_node="948294">
+Re^4: String Comparison Issue</NODE>
+<NODE nodetype="note" author_user="36709" authortitle="rcaputo" createtime="20120117083609" node_id="948316" root_node="948304" parent_node="948304">
+Re: Test scripts for POE</NODE>
+<NODE nodetype="note" author_user="444918" authortitle="tweetiepooh" createtime="20120117082751" node_id="948314" root_node="948293" parent_node="948305">
+Re^3: DBI and arrays</NODE>
+<NODE nodetype="note" author_user="948299" authortitle="vlad_s" createtime="20120117075403" node_id="948313" root_node="948304" parent_node="948304">
+Re: Test scripts for POE</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117074620" node_id="948312" root_node="948293" parent_node="948310">
+Re^4: DBI and arrays</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117073437" node_id="948310" root_node="948293" parent_node="948305">
+Re^3: DBI and arrays</NODE>
+<NODE nodetype="note" author_user="725580" authortitle="markseger" createtime="20120117072805" node_id="948309" root_node="948159" parent_node="948228">
+Re^2: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="131741" authortitle="zentara" createtime="20120117071325" node_id="948306" root_node="948255" parent_node="948255">
+Re: Using Term::ReadLine in an event loop other than Tk</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117065909" node_id="948305" root_node="948293" parent_node="948295">
+Re^2: DBI and arrays</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117064404" node_id="948301" root_node="948293" parent_node="948295">
+Re^2: DBI and arrays</NODE>
+<NODE nodetype="note" author_user="528646" authortitle="Khen1950fx" createtime="20120117064146" node_id="948298" root_node="948255" parent_node="948255">
+Re: Using Term::ReadLine in an event loop other than Tk</NODE>
+<NODE nodetype="note" author_user="298378" authortitle="Arunbear" createtime="20120117061745" node_id="948297" root_node="948249" parent_node="948249">
+Re: Installers that handle more than just modules and scripts?</NODE>
+<NODE nodetype="note" author_user="198160" authortitle="CountZero" createtime="20120117060543" node_id="948296" root_node="948063" parent_node="948241">
+Re^9: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="616540" authortitle="moritz" createtime="20120117060538" node_id="948295" root_node="948293" parent_node="948293">
+Re: DBI and arrays</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117055717" node_id="948294" root_node="948256" parent_node="948275">
+Re^3: String Comparison Issue</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117055333" node_id="948292" root_node="948243" parent_node="948243">
+Re: Jargon relating to Perl strings</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120117052828" node_id="948291" root_node="948021" parent_node="948021">
+Re: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="808947" authortitle="pklausner" createtime="20120117052742" node_id="948290" root_node="948249" parent_node="948249">
+Re: Installers that handle more than just modules and scripts?</NODE>
+<NODE nodetype="note" author_user="927094" authortitle="vsurend" createtime="20120117051649" node_id="948289" root_node="947725" parent_node="948122">
+Re^4: SQL in perl/tk</NODE>
+<NODE nodetype="note" author_user="683288" authortitle="rovf" createtime="20120117050649" node_id="948287" root_node="948207" parent_node="948207">
+Re: Active Perl</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117050545" node_id="948286" root_node="948249" parent_node="948249">
+Re: Installers that handle more than just modules and scripts?</NODE>
+<NODE nodetype="note" author_user="907377" authortitle="i5513" createtime="20120117045330" node_id="948285" root_node="948226" parent_node="948236">
+Re^3: mail script with attachment</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117044838" node_id="948284" root_node="570920" parent_node="704659">
+Re^2: My favorite web comic is: (dresden)</NODE>
+<NODE nodetype="note" author_user="645661" authortitle="tospo" createtime="20120117042838" node_id="948283" root_node="948021" parent_node="948044">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120117042313" node_id="948282" root_node="948107" parent_node="948270">
+Re^3: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120117042305" node_id="948281" root_node="948021" parent_node="948277">
+Re^6: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117041416" node_id="948278" root_node="948021" parent_node="948234">
+Re^4: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120117041029" node_id="948277" root_node="948021" parent_node="948242">
+Re^5: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120117034506" node_id="948276" root_node="947540" parent_node="948273">
+Re^5: Web::Magic 0.005</NODE>
+<NODE nodetype="note" author_user="832495" authortitle="choroba" createtime="20120117034126" node_id="948275" root_node="948256" parent_node="948260">
+Re^2: String Comparison Issue</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117033518" node_id="948274" root_node="947540" parent_node="948273">
+Re^5: Web::Magic 0.005</NODE>
+<NODE nodetype="note" author_user="200365" authortitle="Tux" createtime="20120117031700" node_id="948273" root_node="947540" parent_node="947954">
+Re^4: Web::Magic 0.005</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117030852" node_id="948272" root_node="948107" parent_node="948270">
+Re^3: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="190859" authortitle="bart" createtime="20120117030340" node_id="948271" root_node="948256" parent_node="948263">
+Re^2: String Comparison Issue</NODE>
+<NODE nodetype="note" author_user="698487" authortitle="raiph" createtime="20120117030338" node_id="948270" root_node="948107" parent_node="948240">
+Re^2: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117030040" node_id="948269" root_node="947908" parent_node="948262">
+Re^3: Alternatives to Module::Starter</NODE>
+<NODE nodetype="note" author_user="5348" authortitle="Corion" createtime="20120117024946" node_id="948268" root_node="948256" parent_node="948263">
+Re^2: String Comparison Issue</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117024648" node_id="948267" root_node="948255" parent_node="948255">
+Re: Using Term::ReadLine in an event loop other than Tk</NODE>
+<NODE nodetype="note" author_user="948257" authortitle="About_a_perl" createtime="20120117020154" node_id="948263" root_node="948256" parent_node="948256">
+Re: String Comparison Issue</NODE>
+<NODE nodetype="note" author_user="904273" authortitle="sedusedan" createtime="20120117015002" node_id="948262" root_node="947908" parent_node="947911">
+Re^2: Alternatives to Module::Starter</NODE>
+<NODE nodetype="note" author_user="937872" authortitle="odem5442" createtime="20120117014426" node_id="948261" root_node="948251" parent_node="948253">
+Re^2: CGI::FormBuilder - Resources</NODE>
+<NODE nodetype="note" author_user="948257" authortitle="About_a_perl" createtime="20120117014401" node_id="948260" root_node="948256" parent_node="948256">
+Re: String Comparison Issue</NODE>
+<NODE nodetype="note" author_user="616540" authortitle="moritz" createtime="20120117014319" node_id="948259" root_node="948256" parent_node="948256">
+Re: String Comparison Issue</NODE>
+<NODE nodetype="note" author_user="616540" authortitle="moritz" createtime="20120117011155" node_id="948254" root_node="948107" parent_node="948230">
+Re^2: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117005702" node_id="948253" root_node="948251" parent_node="948251">
+Re: CGI::FormBuilder - Resources</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120117005521" node_id="948252" root_node="948249" parent_node="948249">
+Re: Installers that handle more than just modules and scripts?</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120117005202" node_id="948250" root_node="948249" parent_node="948249">
+Re: Installers that handle more than just modules and scripts?</NODE>
+<NODE nodetype="note" author_user="647953" authortitle="sundialsvc4" createtime="20120116225951" node_id="948246" root_node="948207" parent_node="948207">
+Re: Active Perl</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120116210327" node_id="948242" root_node="948021" parent_node="948094">
+Re^4: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116201414" node_id="948241" root_node="948063" parent_node="948184">
+Re^8: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120116200602" node_id="948240" root_node="948107" parent_node="948107">
+Re: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="634253" authortitle="AnomalousMonk" createtime="20120116200520" node_id="948239" root_node="948141" parent_node="948206">
+Re^4: A silly reg exp question</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116200300" node_id="948238" root_node="947540" parent_node="947998">
+Re^6: Web::Magic 0.005</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116194547" node_id="948237" root_node="948021" parent_node="948176">
+Re^2: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="947681" authortitle="zlinkexchange" createtime="20120116194452" node_id="948236" root_node="948226" parent_node="948229">
+Re^2: mail script with attachment</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116194316" node_id="948235" root_node="948021" parent_node="948089">
+Re^4: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116193942" node_id="948234" root_node="948021" parent_node="948101">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116192857" node_id="948233" root_node="948225" parent_node="948225">
+Re: LWP add_handler issue</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116191743" node_id="948232" root_node="948207" parent_node="948207">
+Re: Active Perl</NODE>
+<NODE nodetype="note" author_user="647953" authortitle="sundialsvc4" createtime="20120116185354" node_id="948230" root_node="948107" parent_node="948107">
+Re: Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="70929" authortitle="atcroft" createtime="20120116185220" node_id="948229" root_node="948226" parent_node="948226">
+Re: mail script with attachment</NODE>
+<NODE nodetype="note" author_user="647953" authortitle="sundialsvc4" createtime="20120116185201" node_id="948228" root_node="948159" parent_node="948159">
+Re: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="438971" authortitle="ForgotPasswordAgain" createtime="20120116182748" node_id="948227" root_node="948021" parent_node="948035">
+Re^4: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="939635" authortitle="TJPride" createtime="20120116172355" node_id="948222" root_node="948141" parent_node="948141">
+Re: A silly reg exp question</NODE>
+<NODE nodetype="note" author_user="939635" authortitle="TJPride" createtime="20120116171718" node_id="948221" root_node="948207" parent_node="948207">
+Re: Active Perl</NODE>
+<NODE nodetype="note" author_user="890813" authortitle="cavac" createtime="20120116170439" node_id="948220" root_node="948207" parent_node="948213">
+Re^3: Active Perl</NODE>
+<NODE nodetype="note" author_user="528646" authortitle="Khen1950fx" createtime="20120116170254" node_id="948219" root_node="948207" parent_node="948207">
+Re: Active Perl</NODE>
+<NODE nodetype="note" author_user="890813" authortitle="cavac" createtime="20120116170229" node_id="948218" root_node="948207" parent_node="948215">
+Re^4: Active Perl</NODE>
+<NODE nodetype="note" author_user="52855" authortitle="NodeReaper" createtime="20120116164505" node_id="948215" root_node="948207" parent_node="948212">
+Reaped: Re^3: Active Perl</NODE>
+<NODE nodetype="note" author_user="324763" authortitle="marto" createtime="20120116163841" node_id="948214" root_node="948207" parent_node="948207">
+Re: Active Perl</NODE>
+<NODE nodetype="note" author_user="324763" authortitle="marto" createtime="20120116163626" node_id="948213" root_node="948207" parent_node="948210">
+Re^2: Active Perl</NODE>
+<NODE nodetype="note" author_user="890813" authortitle="cavac" createtime="20120116162759" node_id="948212" root_node="948207" parent_node="948209">
+Re^2: Active Perl</NODE>
+<NODE nodetype="note" author_user="665462" authortitle="repellent" createtime="20120116162145" node_id="948211" root_node="948021" parent_node="948101">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="890813" authortitle="cavac" createtime="20120116162143" node_id="948210" root_node="948207" parent_node="948207">
+Re: Active Perl</NODE>
+<NODE nodetype="note" author_user="52855" authortitle="NodeReaper" createtime="20120116161933" node_id="948209" root_node="948207" parent_node="948207">
+Reaped: Re: Active Perl</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120116161506" node_id="948208" root_node="948185" parent_node="948185">
+Re: Printing the elements of array</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120116155815" node_id="948206" root_node="948141" parent_node="948204">
+Re^3: A silly reg exp question</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120116155030" node_id="948205" root_node="948123" parent_node="948189">
+Re^3: base class manipulation: Is there something similar on CPAN?</NODE>
+<NODE nodetype="note" author_user="634253" authortitle="AnomalousMonk" createtime="20120116154251" node_id="948204" root_node="948141" parent_node="948148">
+Re^2: A silly reg exp question</NODE>
+<NODE nodetype="note" author_user="725580" authortitle="markseger" createtime="20120116151856" node_id="948203" root_node="948159" parent_node="948199">
+Re^6: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120116151749" node_id="948202" root_node="947833" parent_node="948201">
+Re^10: Is there any XML reader like this? (XML::Simple beats LibXML hands down in the speed stakes!)</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120116150616" node_id="948201" root_node="947833" parent_node="948111">
+Re^9: Is there any XML reader like this? (XML::Simple beats LibXML hands down in the speed stakes!)</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120116145811" node_id="948200" root_node="947833" parent_node="948095">
+Re^7: Is there any XML reader like this? (XML::Simple beats LibXML hands down in the speed stakes!)</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120116144651" node_id="948199" root_node="948159" parent_node="948198">
+Re^5: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="725580" authortitle="markseger" createtime="20120116143426" node_id="948198" root_node="948159" parent_node="948196">
+Re^4: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="947674" authortitle="SeanM" createtime="20120116142734" node_id="948197" root_node="947676" parent_node="947676">
+Re: Apache2::Log, please don't headerize my log messages</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120116141712" node_id="948196" root_node="948159" parent_node="948194">
+Re^3: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120116141102" node_id="948195" root_node="948159" parent_node="948194">
+Re^3: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="725580" authortitle="markseger" createtime="20120116140737" node_id="948194" root_node="948159" parent_node="948193">
+Re^2: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120116135924" node_id="948193" root_node="948159" parent_node="948159">
+Re: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="881330" authortitle="OlegG" createtime="20120116131409" node_id="948192" root_node="948123" parent_node="948123">
+Re: base class manipulation: Is there something similar on CPAN?</NODE>
+<NODE nodetype="note" author_user="725580" authortitle="markseger" createtime="20120116130709" node_id="948191" root_node="948159" parent_node="948165">
+Re^2: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="918452" authortitle="ansh batra" createtime="20120116124938" node_id="948190" root_node="948185" parent_node="948185">
+Re: Printing the elements of array</NODE>
+<NODE nodetype="note" author_user="881330" authortitle="OlegG" createtime="20120116124908" node_id="948189" root_node="948123" parent_node="948135">
+Re^2: base class manipulation: Is there something similar on CPAN?</NODE>
+<NODE nodetype="note" author_user="258724" authortitle="Not_a_Number" createtime="20120116124744" node_id="948188" root_node="948185" parent_node="948185">
+Re: Printing the elements of array</NODE>
+<NODE nodetype="note" author_user="911218" authortitle="viktor" createtime="20120116124438" node_id="948187" root_node="948185" parent_node="948186">
+Re^2: Printing the elements of array</NODE>
+<NODE nodetype="note" author_user="622051" authortitle="toolic" createtime="20120116123923" node_id="948186" root_node="948185" parent_node="948185">
+Re: Printing the elements of array</NODE>
+<NODE nodetype="note" author_user="198160" authortitle="CountZero" createtime="20120116122618" node_id="948184" root_node="948063" parent_node="948152">
+Re^7: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120116122547" node_id="948183" root_node="948164" parent_node="948180">
+Re^5: How to print the backtrace in a "catch" block?</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120116122017" node_id="948182" root_node="948164" parent_node="948173">
+Re^4: How to print the backtrace in a "catch" block?</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120116121736" node_id="948181" root_node="948127" parent_node="948127">
+Re: memory usage</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116121528" node_id="948180" root_node="948164" parent_node="948173">
+Re^4: How to print the backtrace in a "catch" block?</NODE>
+<NODE nodetype="note" author_user="881330" authortitle="OlegG" createtime="20120116121225" node_id="948179" root_node="948123" parent_node="948135">
+Re^2: base class manipulation: Is there something similar on CPAN?</NODE>
+<NODE nodetype="note" author_user="647953" authortitle="sundialsvc4" createtime="20120116120751" node_id="948178" root_node="948127" parent_node="948127">
+Re: memory usage</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116120744" node_id="948177" root_node="948164" parent_node="948175">
+Re^3: How to print the backtrace in a "catch" block?</NODE>
+<NODE nodetype="note" author_user="647953" authortitle="sundialsvc4" createtime="20120116120448" node_id="948176" root_node="948021" parent_node="948021">
+Re: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120116114132" node_id="948175" root_node="948164" parent_node="948166">
+Re^2: How to print the backtrace in a "catch" block?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116113140" node_id="948174" root_node="948164" parent_node="948173">
+Re^4: How to print the backtrace in a "catch" block?</NODE>
+<NODE nodetype="note" author_user="5348" authortitle="Corion" createtime="20120116111849" node_id="948173" root_node="948164" parent_node="948168">
+Re^3: How to print the backtrace in a "catch" block?</NODE>
+<NODE nodetype="note" author_user="606015" authortitle="isync" createtime="20120116105757" node_id="948170" root_node="948131" parent_node="948143">
+Re^2: Unable to get filename with quotes after upload?</NODE>
+<NODE nodetype="note" author_user="630086" authortitle="technojosh" createtime="20120116105100" node_id="948169" root_node="947629" parent_node="947826">
+Re^4: trouble installing CPAN module "Ruby"</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116104821" node_id="948168" root_node="948164" parent_node="948166">
+Re^2: How to print the backtrace in a "catch" block?</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120116104510" node_id="948167" root_node="948021" parent_node="948158">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="5348" authortitle="Corion" createtime="20120116103712" node_id="948166" root_node="948164" parent_node="948164">
+Re: How to print the backtrace in a "catch" block?</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120116103529" node_id="948165" root_node="948159" parent_node="948159">
+Re: Question about curious performance of if...elsif block</NODE>
+<NODE nodetype="note" author_user="545131" authortitle="mrguy123" createtime="20120116103107" node_id="948163" root_node="948021" parent_node="948158">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="944616" authortitle="chessgui" createtime="20120116101601" node_id="948161" root_node="948141" parent_node="948144">
+Re^2: A silly reg exp question</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116101330" node_id="948160" root_node="948126" parent_node="948157">
+Re^2: Perl tk - open file and print content</NODE>
+<NODE nodetype="note" author_user="869476" authortitle="chrestomanci" createtime="20120116100645" node_id="948158" root_node="948021" parent_node="948100">
+Re^2: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="131741" authortitle="zentara" createtime="20120116100523" node_id="948157" root_node="948126" parent_node="948126">
+Re: Perl tk - open file and print content</NODE>
+<NODE nodetype="note" author_user="790144" authortitle="wwe" createtime="20120116100520" node_id="948156" root_node="947510" parent_node="947704">
+Re^3: Continuously Monitor and Handle emails recieved from the 2007 exchange server</NODE>
+<NODE nodetype="note" author_user="944616" authortitle="chessgui" createtime="20120116100150" node_id="948153" root_node="948141" parent_node="948142">
+Re^2: A silly reg exp question</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116094906" node_id="948152" root_node="948063" parent_node="948137">
+Re^6: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="944616" authortitle="chessgui" createtime="20120116094833" node_id="948151" root_node="948141" parent_node="948148">
+Re^2: A silly reg exp question</NODE>
+<NODE nodetype="note" author_user="123137" authortitle="educated_foo" createtime="20120116094458" node_id="948150" root_node="948021" parent_node="948078">
+Re^5: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116093933" node_id="948149" root_node="948131" parent_node="948139">
+Re^2: Unable to get filename with quotes after upload?</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120116093729" node_id="948148" root_node="948141" parent_node="948141">
+Re: A silly reg exp question</NODE>
+<NODE nodetype="note" author_user="920017" authortitle="pvaldes" createtime="20120116092515" node_id="948145" root_node="948063" parent_node="948063">
+Re: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120116092437" node_id="948144" root_node="948141" parent_node="948141">
+Re: A silly reg exp question</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120116091957" node_id="948143" root_node="948131" parent_node="948131">
+Re: Unable to get filename with quotes after upload?</NODE>
+<NODE nodetype="note" author_user="5348" authortitle="Corion" createtime="20120116091342" node_id="948142" root_node="948141" parent_node="948141">
+Re: A silly reg exp question</NODE>
+<NODE nodetype="note" author_user="667364" authortitle="sam_bakki" createtime="20120116084646" node_id="948140" root_node="947705" parent_node="947705">
+Re: TclTk interface with Perl code, is it possible?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116083923" node_id="948139" root_node="948131" parent_node="948131">
+Re: Unable to get filename with quotes after upload?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116083645" node_id="948138" root_node="948131" parent_node="948134">
+Re^3: Invalid filehandle on filenames with quotes after upload?</NODE>
+<NODE nodetype="note" author_user="198160" authortitle="CountZero" createtime="20120116083016" node_id="948137" root_node="948063" parent_node="948124">
+Re^5: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="198160" authortitle="CountZero" createtime="20120116081728" node_id="948136" root_node="948127" parent_node="948127">
+Re: memory usage</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120116081553" node_id="948135" root_node="948123" parent_node="948123">
+Re: base class manipulation: Is there something similar on CPAN?</NODE>
+<NODE nodetype="note" author_user="606015" authortitle="isync" createtime="20120116080913" node_id="948134" root_node="948131" parent_node="948133">
+Re^2: Invalid filehandle on filenames with quotes after upload?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116075924" node_id="948133" root_node="948131" parent_node="948131">
+Re: Invalid filehandle on filenames with quotes after upload?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116074327" node_id="948132" root_node="948127" parent_node="948127">
+Re: memory usage</NODE>
+<NODE nodetype="note" author_user="881330" authortitle="OlegG" createtime="20120116072510" node_id="948130" root_node="948123" parent_node="948125">
+Re^2: base class manipulation: Is there something similar on CPAN?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116072441" node_id="948129" root_node="948126" parent_node="948126">
+Re: Perl tk - open file and print content</NODE>
+<NODE nodetype="note" author_user="105128" authortitle="Jenda" createtime="20120116071117" node_id="948128" root_node="947833" parent_node="948111">
+Re^9: Is there any XML reader like this? (XML::Simple beats LibXML hands down in the speed stakes!)</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120116070526" node_id="948125" root_node="948123" parent_node="948123">
+Re: base class manipulation: Is there something similar on CPAN?</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116070254" node_id="948124" root_node="948063" parent_node="948115">
+Re^4: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="934209" authortitle="chacham" createtime="20120116064503" node_id="948122" root_node="947725" parent_node="948067">
+Re^3: SQL in perl/tk</NODE>
+<NODE nodetype="note" author_user="131741" authortitle="zentara" createtime="20120116064250" node_id="948121" root_node="948064" parent_node="948064">
+Re: specify two events in Entry widget</NODE>
+<NODE nodetype="note" author_user="131741" authortitle="zentara" createtime="20120116063849" node_id="948120" root_node="947894" parent_node="948103">
+Re^3: Eliminate blinking cursor from text widget</NODE>
+<NODE nodetype="note" author_user="324763" authortitle="marto" createtime="20120116062429" node_id="948117" root_node="947725" parent_node="948113">
+Re^5: SQL in perl/tk</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116062144" node_id="948116" root_node="947725" parent_node="948113">
+Re^5: SQL in perl/tk</NODE>
+<NODE nodetype="note" author_user="198160" authortitle="CountZero" createtime="20120116061403" node_id="948115" root_node="948063" parent_node="948091">
+Re^3: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="756263" authortitle="masak" createtime="20120116061305" node_id="948114" root_node="948107" parent_node="948107">
+Re: Perl 6 Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="927094" authortitle="vsurend" createtime="20120116061232" node_id="948113" root_node="947725" parent_node="948106">
+Re^4: SQL in perl/tk</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116060804" node_id="948112" root_node="948107" parent_node="948107">
+Re: Perl 6 Hockey Sticks</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120116060022" node_id="948111" root_node="947833" parent_node="948102">
+Re^8: Is there any XML reader like this? (XML::Simple beats LibXML hands down in the speed stakes!)</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120116055423" node_id="948110" root_node="948038" parent_node="948072">
+Re^2: Need to count the number of entries in a array</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116055200" node_id="948109" root_node="948063" parent_node="948091">
+Re^3: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120116054924" node_id="948108" root_node="947795" parent_node="948066">
+Re^4: How do I cut single characters out of a string</NODE>
+<NODE nodetype="note" author_user="324763" authortitle="marto" createtime="20120116054344" node_id="948106" root_node="947725" parent_node="948067">
+Re^3: SQL in perl/tk</NODE>
+<NODE nodetype="note" author_user="461912" authortitle="GrandFather" createtime="20120116054052" node_id="948105" root_node="947795" parent_node="948066">
+Re^4: How do I cut single characters out of a string</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120116054042" node_id="948104" root_node="948021" parent_node="948098">
+Re^4: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="944616" authortitle="chessgui" createtime="20120116053125" node_id="948103" root_node="947894" parent_node="947981">
+Re^2: Eliminate blinking cursor from text widget</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120116052902" node_id="948102" root_node="947833" parent_node="948095">
+Re^7: Is there any XML reader like this? (XML::Simple beats LibXML hands down in the speed stakes!)</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120116050607" node_id="948101" root_node="948021" parent_node="948075">
+Re^2: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="545131" authortitle="mrguy123" createtime="20120116050049" node_id="948100" root_node="948021" parent_node="948021">
+Re: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120116045112" node_id="948099" root_node="948038" parent_node="948082">
+Re^5: Need to count the number of entries in a array</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120116043222" node_id="948098" root_node="948021" parent_node="948087">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120116042243" node_id="948097" root_node="948021" parent_node="948052">
+Re^5: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120116041542" node_id="948096" root_node="948021" parent_node="948080">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120116041437" node_id="948095" root_node="947833" parent_node="948085">
+Re^6: Is there any XML reader like this? (XML::Simple beats LibXML hands down in the speed stakes!)</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120116041345" node_id="948094" root_node="948021" parent_node="948030">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120116033945" node_id="948093" root_node="948021" parent_node="948044">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="784440" authortitle="aartist" createtime="20120116033233" node_id="948092" root_node="948021" parent_node="948021">
+Re: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="792038" authortitle="sbhalgat" createtime="20120116032242" node_id="948091" root_node="948063" parent_node="948069">
+Re^2: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="665462" authortitle="repellent" createtime="20120116031059" node_id="948089" root_node="948021" parent_node="948080">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="665462" authortitle="repellent" createtime="20120116031027" node_id="948088" root_node="948021" parent_node="948079">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="757127" authortitle="tobyink" createtime="20120116030413" node_id="948087" root_node="948021" parent_node="948029">
+Re^2: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120116025958" node_id="948086" root_node="948038" parent_node="948081">
+Re^4: Need to count the number of entries in a array</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120116025842" node_id="948085" root_node="947833" parent_node="947987">
+Re^5: Is there any XML reader like this? (XML::Simple beats LibXML hands down in the speed stakes!)</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116025621" node_id="948082" root_node="948038" parent_node="948081">
+Re^4: Need to count the number of entries in a array</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120116025043" node_id="948081" root_node="948038" parent_node="948065">
+Re^3: Need to count the number of entries in a array</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116022817" node_id="948080" root_node="948021" parent_node="948075">
+Re^2: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116022422" node_id="948079" root_node="948021" parent_node="948075">
+Re^2: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116022330" node_id="948078" root_node="948021" parent_node="948035">
+Re^4: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="665462" authortitle="repellent" createtime="20120116021344" node_id="948075" root_node="948021" parent_node="948021">
+Re: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="200365" authortitle="Tux" createtime="20120116021340" node_id="948074" root_node="948021" parent_node="948044">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116021039" node_id="948073" root_node="948064" parent_node="948064">
+Re: specify two events in Entry widget</NODE>
+<NODE nodetype="note" author_user="198160" authortitle="CountZero" createtime="20120116020911" node_id="948072" root_node="948038" parent_node="948038">
+Re: Need to count the number of entries in a array</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116020100" node_id="948071" root_node="948063" parent_node="948063">
+Re: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="381608" authortitle="ikegami" createtime="20120116015435" node_id="948070" root_node="947833" parent_node="947925">
+Re^7: Is there any XML reader like this?</NODE>
+<NODE nodetype="note" author_user="198160" authortitle="CountZero" createtime="20120116014935" node_id="948069" root_node="948063" parent_node="948063">
+Re: Getting problem while downloading large file(1.9GB)</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120116014817" node_id="948068" root_node="948062" parent_node="948062">
+Re: save Googlemap image to file</NODE>
+<NODE nodetype="note" author_user="927094" authortitle="vsurend" createtime="20120116013317" node_id="948067" root_node="947725" parent_node="947733">
+Re^2: SQL in perl/tk</NODE>
+<NODE nodetype="note" author_user="878720" authortitle="akechnie" createtime="20120116011256" node_id="948066" root_node="947795" parent_node="948049">
+Re^3: How do I cut single characters out of a string</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120116010134" node_id="948065" root_node="948038" parent_node="948061">
+Re^2: Need to count the number of entries in a array</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120115234622" node_id="948061" root_node="948038" parent_node="948038">
+Re: Need to count the number of entries in a array</NODE>
+<NODE nodetype="note" author_user="22609" authortitle="tye" createtime="20120115233214" node_id="948060" root_node="943895" parent_node="948036">
+Re^5: Surprised by Perl parse of ternary operator (bison)</NODE>
+<NODE nodetype="note" author_user="862316" authortitle="UVB" createtime="20120115223713" node_id="948057" root_node="935014" parent_node="935014">
+Re: Perl Build System File for sublime text editor</NODE>
+<NODE nodetype="note" author_user="812801" authortitle="luis.roca" createtime="20120115222934" node_id="948056" root_node="948021" parent_node="948051">
+Re^2: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="171588" authortitle="BrowserUk" createtime="20120115222109" node_id="948055" root_node="948021" parent_node="948046">
+Re^4: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="812801" authortitle="luis.roca" createtime="20120115220608" node_id="948054" root_node="948021" parent_node="948048">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120115215914" node_id="948053" root_node="948021" parent_node="948046">
+Re^4: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120115215500" node_id="948052" root_node="948021" parent_node="948035">
+Re^4: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="176576" authortitle="eyepopslikeamosquito" createtime="20120115214807" node_id="948051" root_node="948021" parent_node="948021">
+Re: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120115214717" node_id="948050" root_node="948021" parent_node="948021">
+Re: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="461912" authortitle="GrandFather" createtime="20120115214658" node_id="948049" root_node="947795" parent_node="948037">
+Re^2: How do I cut single characters out of a string</NODE>
+<NODE nodetype="note" author_user="533356" authortitle="qazwart" createtime="20120115214521" node_id="948048" root_node="948021" parent_node="948043">
+Re^2: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="832495" authortitle="choroba" createtime="20120115213654" node_id="948047" root_node="947833" parent_node="947833">
+Re: Is there any XML reader like this?</NODE>
+<NODE nodetype="note" author_user="533356" authortitle="qazwart" createtime="20120115213236" node_id="948046" root_node="948021" parent_node="948030">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="533356" authortitle="qazwart" createtime="20120115211947" node_id="948045" root_node="948021" parent_node="948028">
+Re^2: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="533356" authortitle="qazwart" createtime="20120115211804" node_id="948044" root_node="948021" parent_node="948029">
+Re^2: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="812801" authortitle="luis.roca" createtime="20120115211019" node_id="948043" root_node="948021" parent_node="948021">
+Re: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="732669" authortitle="Marshall" createtime="20120115194835" node_id="948040" root_node="947994" parent_node="947994">
+Re: System call to ssh stalling.</NODE>
+<NODE nodetype="note" author_user="540414" authortitle="jwkrahn" createtime="20120115193344" node_id="948039" root_node="948038" parent_node="948038">
+Re: Need to count the number of entries in a array</NODE>
+<NODE nodetype="note" author_user="878720" authortitle="akechnie" createtime="20120115192807" node_id="948037" root_node="947795" parent_node="947795">
+Re: How do I cut single characters out of a string</NODE>
+<NODE nodetype="note" author_user="388437" authortitle="wrog" createtime="20120115192742" node_id="948036" root_node="943895" parent_node="943955">
+Re^4: Surprised by Perl parse of ternary operator (parsing)</NODE>
+<NODE nodetype="note" author_user="123137" authortitle="educated_foo" createtime="20120115185452" node_id="948035" root_node="948021" parent_node="948030">
+Re^3: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="516687" authortitle="trwww" createtime="20120115184151" node_id="948034" root_node="947237" parent_node="947694">
+Re^2: RFC iEngine</NODE>
+<NODE nodetype="note" author_user="622051" authortitle="toolic" createtime="20120115183117" node_id="948033" root_node="947833" parent_node="947995">
+Re^3: Is there any XML reader like this?</NODE>
+<NODE nodetype="note" author_user="622051" authortitle="toolic" createtime="20120115182756" node_id="948032" root_node="948021" parent_node="948021">
+Re: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="947462" authortitle="tanktarta" createtime="20120115182737" node_id="948031" root_node="944438" parent_node="947531">
+Re^3: Net::DBus/Logitech G19 Meditator</NODE>
+<NODE nodetype="note" author_user="1382" authortitle="chromatic" createtime="20120115181839" node_id="948030" root_node="948021" parent_node="948029">
+Re^2: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="699288" authortitle="JavaFan" createtime="20120115172554" node_id="948029" root_node="948021" parent_node="948021">
+Re: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120115172233" node_id="948028" root_node="948021" parent_node="948021">
+Re: In Need of Mentoring</NODE>
+<NODE nodetype="note" author_user="961" authortitle="Anonymous Monk" createtime="20120115171743" node_id="948027" root_node="948008" parent_node="948015">
+Re^2: CGI Scrolling_List</NODE>
+<NODE nodetype="user" author_user="948584" authortitle="perlson" createtime="20120118114300" node_id="948584">
+perlson</NODE>
+<NODE nodetype="user" author_user="948571" authortitle="chirp84" createtime="20120118103818" node_id="948571">
+chirp84</NODE>
+<NODE nodetype="user" author_user="948528" authortitle="zakaryrim" createtime="20120118064922" node_id="948528">
+zakaryrim</NODE>
+<NODE nodetype="user" author_user="948512" authortitle="BlackForrest" createtime="20120118042739" node_id="948512">
+BlackForrest</NODE>
+<NODE nodetype="user" author_user="948510" authortitle="josiahivan" createtime="20120118042546" node_id="948510">
+josiahivan</NODE>
+<NODE nodetype="user" author_user="948496" authortitle="royerbison" createtime="20120118024411" node_id="948496">
+royerbison</NODE>
+<NODE nodetype="user" author_user="948493" authortitle="Christian_61" createtime="20120118023821" node_id="948493">
+Christian_61</NODE>
+<NODE nodetype="user" author_user="948484" authortitle="jovanydenzel" createtime="20120118013314" node_id="948484">
+jovanydenzel</NODE>
+<NODE nodetype="user" author_user="948480" authortitle="apssurg" createtime="20120118010112" node_id="948480">
+apssurg</NODE>
+<NODE nodetype="user" author_user="948465" authortitle="samta" createtime="20120117213728" node_id="948465">
+samta</NODE>
+<NODE nodetype="user" author_user="948458" authortitle="hkmca07" createtime="20120117211323" node_id="948458">
+hkmca07</NODE>
+<NODE nodetype="user" author_user="948451" authortitle="lexinerus" createtime="20120117201026" node_id="948451">
+lexinerus</NODE>
+<NODE nodetype="user" author_user="948447" authortitle="arwillia" createtime="20120117191923" node_id="948447">
+arwillia</NODE>
+<NODE nodetype="user" author_user="948428" authortitle="tzirbel" createtime="20120117171302" node_id="948428">
+tzirbel</NODE>
+<NODE nodetype="user" author_user="948380" authortitle="tantalor" createtime="20120117135303" node_id="948380">
+tantalor</NODE>
+<NODE nodetype="user" author_user="948376" authortitle="begin_101" createtime="20120117134738" node_id="948376">
+begin_101</NODE>
+<NODE nodetype="user" author_user="948307" authortitle="taeels" createtime="20120117071840" node_id="948307">
+taeels</NODE>
+<NODE nodetype="user" author_user="948302" authortitle="srvsatish" createtime="20120117065539" node_id="948302">
+srvsatish</NODE>
+<NODE nodetype="user" author_user="948299" authortitle="vlad_s" createtime="20120117064340" node_id="948299">
+vlad_s</NODE>
+<NODE nodetype="user" author_user="948279" authortitle="petergrampton" createtime="20120117041945" node_id="948279">
+petergrampton</NODE>
+<NODE nodetype="user" author_user="948264" authortitle="jettmoshe" createtime="20120117022323" node_id="948264">
+jettmoshe</NODE>
+<NODE nodetype="user" author_user="948257" authortitle="About_a_perl" createtime="20120117012234" node_id="948257">
+About_a_perl</NODE>
+<NODE nodetype="user" author_user="948247" authortitle="glwinsor" createtime="20120116231628" node_id="948247">
+glwinsor</NODE>
+<NODE nodetype="user" author_user="948244" authortitle="solachuddin" createtime="20120116224848" node_id="948244">
+solachuddin</NODE>
+<NODE nodetype="user" author_user="948223" authortitle="nathanjmi12" createtime="20120116172914" node_id="948223">
+nathanjmi12</NODE>
+<NODE nodetype="user" author_user="948216" authortitle="sgungi0707" createtime="20120116170027" node_id="948216">
+sgungi0707</NODE>
+<NODE nodetype="user" author_user="948171" authortitle="jasonjake88" createtime="20120116105816" node_id="948171">
+jasonjake88</NODE>
+<NODE nodetype="user" author_user="948154" authortitle="rockkhan" createtime="20120116100252" node_id="948154">
+rockkhan</NODE>
+<NODE nodetype="user" author_user="948146" authortitle="diego20" createtime="20120116093656" node_id="948146">
+diego20</NODE>
+<NODE nodetype="user" author_user="948118" authortitle="Giorgio C" createtime="20120116063555" node_id="948118">
+Giorgio C</NODE>
+<NODE nodetype="user" author_user="948083" authortitle="stunningdiamonds" createtime="20120116025817" node_id="948083">
+stunningdiamonds</NODE>
+<NODE nodetype="user" author_user="948076" authortitle="prakashmohan24" createtime="20120116022239" node_id="948076">
+prakashmohan24</NODE>
+<NODE nodetype="user" author_user="948058" authortitle="dmmuchai" createtime="20120115232414" node_id="948058">
+dmmuchai</NODE>
+<NODE nodetype="user" author_user="948041" authortitle="jhondavel2232" createtime="20120115210131" node_id="948041">
+jhondavel2232</NODE>
+<NODE nodetype="user" author_user="948025" authortitle="bwva" createtime="20120115171355" node_id="948025">
+bwva</NODE>
+<AUTHOR node_id="961">
+Anonymous Monk</AUTHOR>
+<AUTHOR node_id="1382">
+chromatic</AUTHOR>
+<AUTHOR node_id="5348">
+Corion</AUTHOR>
+<AUTHOR node_id="11732">
+QandAEditors</AUTHOR>
+<AUTHOR node_id="22609">
+tye</AUTHOR>
+<AUTHOR node_id="31503">
+runrig</AUTHOR>
+<AUTHOR node_id="36709">
+rcaputo</AUTHOR>
+<AUTHOR node_id="47599">
+mr.nick</AUTHOR>
+<AUTHOR node_id="52855">
+NodeReaper</AUTHOR>
+<AUTHOR node_id="70929">
+atcroft</AUTHOR>
+<AUTHOR node_id="105128">
+Jenda</AUTHOR>
+<AUTHOR node_id="123137">
+educated_foo</AUTHOR>
+<AUTHOR node_id="131279">
+talexb</AUTHOR>
+<AUTHOR node_id="131741">
+zentara</AUTHOR>
+<AUTHOR node_id="144696">
+TomDLux</AUTHOR>
+<AUTHOR node_id="155973">
+grantm</AUTHOR>
+<AUTHOR node_id="171588">
+BrowserUk</AUTHOR>
+<AUTHOR node_id="176576">
+eyepopslikeamosquito</AUTHOR>
+<AUTHOR node_id="185157">
+jpl</AUTHOR>
+<AUTHOR node_id="190859">
+bart</AUTHOR>
+<AUTHOR node_id="198160">
+CountZero</AUTHOR>
+<AUTHOR node_id="200365">
+Tux</AUTHOR>
+<AUTHOR node_id="248054">
+Your Mother</AUTHOR>
+<AUTHOR node_id="258724">
+Not_a_Number</AUTHOR>
+<AUTHOR node_id="272364">
+MidLifeXis</AUTHOR>
+<AUTHOR node_id="274368">
+dk</AUTHOR>
+<AUTHOR node_id="287302">
+tsee</AUTHOR>
+<AUTHOR node_id="298378">
+Arunbear</AUTHOR>
+<AUTHOR node_id="324763">
+marto</AUTHOR>
+<AUTHOR node_id="352046">
+ww</AUTHOR>
+<AUTHOR node_id="373533">
+jhourcle</AUTHOR>
+<AUTHOR node_id="381608">
+ikegami</AUTHOR>
+<AUTHOR node_id="388437">
+wrog</AUTHOR>
+<AUTHOR node_id="406189">
+jethro</AUTHOR>
+<AUTHOR node_id="415035">
+szabgab</AUTHOR>
+<AUTHOR node_id="421114">
+Tanktalus</AUTHOR>
+<AUTHOR node_id="426097">
+hok_si_la</AUTHOR>
+<AUTHOR node_id="436161">
+davies</AUTHOR>
+<AUTHOR node_id="438971">
+ForgotPasswordAgain</AUTHOR>
+<AUTHOR node_id="442602">
+planetscape</AUTHOR>
+<AUTHOR node_id="444918">
+tweetiepooh</AUTHOR>
+<AUTHOR node_id="446266">
+salva</AUTHOR>
+<AUTHOR node_id="449608">
+thundergnat</AUTHOR>
+<AUTHOR node_id="461912">
+GrandFather</AUTHOR>
+<AUTHOR node_id="476900">
+furry_marmot</AUTHOR>
+<AUTHOR node_id="492557">
+mje</AUTHOR>
+<AUTHOR node_id="516687">
+trwww</AUTHOR>
+<AUTHOR node_id="528646">
+Khen1950fx</AUTHOR>
+<AUTHOR node_id="532583">
+samwyse</AUTHOR>
+<AUTHOR node_id="533356">
+qazwart</AUTHOR>
+<AUTHOR node_id="533863">
+roboticus</AUTHOR>
+<AUTHOR node_id="540414">
+jwkrahn</AUTHOR>
+<AUTHOR node_id="545131">
+mrguy123</AUTHOR>
+<AUTHOR node_id="546129">
+ruzam</AUTHOR>
+<AUTHOR node_id="576594">
+quester</AUTHOR>
+<AUTHOR node_id="590334">
+iaw4</AUTHOR>
+<AUTHOR node_id="606015">
+isync</AUTHOR>
+<AUTHOR node_id="616540">
+moritz</AUTHOR>
+<AUTHOR node_id="622051">
+toolic</AUTHOR>
+<AUTHOR node_id="623254">
+muizelaar</AUTHOR>
+<AUTHOR node_id="630086">
+technojosh</AUTHOR>
+<AUTHOR node_id="634253">
+AnomalousMonk</AUTHOR>
+<AUTHOR node_id="645661">
+tospo</AUTHOR>
+<AUTHOR node_id="647953">
+sundialsvc4</AUTHOR>
+<AUTHOR node_id="650868">
+Nasrudin</AUTHOR>
+<AUTHOR node_id="665462">
+repellent</AUTHOR>
+<AUTHOR node_id="667310">
+Baffled</AUTHOR>
+<AUTHOR node_id="667364">
+sam_bakki</AUTHOR>
+<AUTHOR node_id="683288">
+rovf</AUTHOR>
+<AUTHOR node_id="698487">
+raiph</AUTHOR>
+<AUTHOR node_id="699288">
+JavaFan</AUTHOR>
+<AUTHOR node_id="706043">
+sapphirecat</AUTHOR>
+<AUTHOR node_id="708738">
+LanX</AUTHOR>
+<AUTHOR node_id="712372">
+kennethk</AUTHOR>
+<AUTHOR node_id="715258">
+thenaz</AUTHOR>
+<AUTHOR node_id="725580">
+markseger</AUTHOR>
+<AUTHOR node_id="732669">
+Marshall</AUTHOR>
+<AUTHOR node_id="733061">
+flexvault</AUTHOR>
+<AUTHOR node_id="756263">
+masak</AUTHOR>
+<AUTHOR node_id="757127">
+tobyink</AUTHOR>
+<AUTHOR node_id="779500">
+kikuchiyo</AUTHOR>
+<AUTHOR node_id="784440">
+aartist</AUTHOR>
+<AUTHOR node_id="790144">
+wwe</AUTHOR>
+<AUTHOR node_id="792038">
+sbhalgat</AUTHOR>
+<AUTHOR node_id="808947">
+pklausner</AUTHOR>
+<AUTHOR node_id="812801">
+luis.roca</AUTHOR>
+<AUTHOR node_id="818413">
+voj</AUTHOR>
+<AUTHOR node_id="827765">
+AWallBuilder</AUTHOR>
+<AUTHOR node_id="832109">
+tj_thompson</AUTHOR>
+<AUTHOR node_id="832495">
+choroba</AUTHOR>
+<AUTHOR node_id="832509">
+sudlo</AUTHOR>
+<AUTHOR node_id="846903">
+elef</AUTHOR>
+<AUTHOR node_id="857302">
+bulk88</AUTHOR>
+<AUTHOR node_id="862316">
+UVB</AUTHOR>
+<AUTHOR node_id="869476">
+chrestomanci</AUTHOR>
+<AUTHOR node_id="878720">
+akechnie</AUTHOR>
+<AUTHOR node_id="881330">
+OlegG</AUTHOR>
+<AUTHOR node_id="888573">
+Eliya</AUTHOR>
+<AUTHOR node_id="890813">
+cavac</AUTHOR>
+<AUTHOR node_id="898544">
+tchrist</AUTHOR>
+<AUTHOR node_id="904273">
+sedusedan</AUTHOR>
+<AUTHOR node_id="906449">
+pashanoid</AUTHOR>
+<AUTHOR node_id="907377">
+i5513</AUTHOR>
+<AUTHOR node_id="911218">
+viktor</AUTHOR>
+<AUTHOR node_id="911740">
+bimleshsharma</AUTHOR>
+<AUTHOR node_id="918452">
+ansh batra</AUTHOR>
+<AUTHOR node_id="919638">
+RichardK</AUTHOR>
+<AUTHOR node_id="920017">
+pvaldes</AUTHOR>
+<AUTHOR node_id="922586">
+Lotus1</AUTHOR>
+<AUTHOR node_id="927094">
+vsurend</AUTHOR>
+<AUTHOR node_id="931824">
+saranrsm</AUTHOR>
+<AUTHOR node_id="931957">
+kazak</AUTHOR>
+<AUTHOR node_id="934209">
+chacham</AUTHOR>
+<AUTHOR node_id="937872">
+odem5442</AUTHOR>
+<AUTHOR node_id="939635">
+TJPride</AUTHOR>
+<AUTHOR node_id="939868">
+Hacker1</AUTHOR>
+<AUTHOR node_id="942427">
+bbfan</AUTHOR>
+<AUTHOR node_id="944616">
+chessgui</AUTHOR>
+<AUTHOR node_id="944729">
+mrdurtal</AUTHOR>
+<AUTHOR node_id="945105">
+sharief</AUTHOR>
+<AUTHOR node_id="946953">
+Thakur</AUTHOR>
+<AUTHOR node_id="947179">
+muscipula</AUTHOR>
+<AUTHOR node_id="947462">
+tanktarta</AUTHOR>
+<AUTHOR node_id="947652">
+jaldama</AUTHOR>
+<AUTHOR node_id="947674">
+SeanM</AUTHOR>
+<AUTHOR node_id="947681">
+zlinkexchange</AUTHOR>
+<AUTHOR node_id="947811">
+palaxos</AUTHOR>
+<AUTHOR node_id="947874">
+aslewis</AUTHOR>
+<AUTHOR node_id="948025">
+bwva</AUTHOR>
+<AUTHOR node_id="948041">
+jhondavel2232</AUTHOR>
+<AUTHOR node_id="948058">
+dmmuchai</AUTHOR>
+<AUTHOR node_id="948076">
+prakashmohan24</AUTHOR>
+<AUTHOR node_id="948083">
+stunningdiamonds</AUTHOR>
+<AUTHOR node_id="948118">
+Giorgio C</AUTHOR>
+<AUTHOR node_id="948146">
+diego20</AUTHOR>
+<AUTHOR node_id="948154">
+rockkhan</AUTHOR>
+<AUTHOR node_id="948171">
+jasonjake88</AUTHOR>
+<AUTHOR node_id="948216">
+sgungi0707</AUTHOR>
+<AUTHOR node_id="948223">
+nathanjmi12</AUTHOR>
+<AUTHOR node_id="948244">
+solachuddin</AUTHOR>
+<AUTHOR node_id="948247">
+glwinsor</AUTHOR>
+<AUTHOR node_id="948257">
+About_a_perl</AUTHOR>
+<AUTHOR node_id="948264">
+jettmoshe</AUTHOR>
+<AUTHOR node_id="948279">
+petergrampton</AUTHOR>
+<AUTHOR node_id="948299">
+vlad_s</AUTHOR>
+<AUTHOR node_id="948302">
+srvsatish</AUTHOR>
+<AUTHOR node_id="948307">
+taeels</AUTHOR>
+<AUTHOR node_id="948376">
+begin_101</AUTHOR>
+<AUTHOR node_id="948380">
+tantalor</AUTHOR>
+<AUTHOR node_id="948428">
+tzirbel</AUTHOR>
+<AUTHOR node_id="948447">
+arwillia</AUTHOR>
+<AUTHOR node_id="948451">
+lexinerus</AUTHOR>
+<AUTHOR node_id="948458">
+hkmca07</AUTHOR>
+<AUTHOR node_id="948465">
+samta</AUTHOR>
+<AUTHOR node_id="948480">
+apssurg</AUTHOR>
+<AUTHOR node_id="948484">
+jovanydenzel</AUTHOR>
+<AUTHOR node_id="948493">
+Christian_61</AUTHOR>
+<AUTHOR node_id="948496">
+royerbison</AUTHOR>
+<AUTHOR node_id="948510">
+josiahivan</AUTHOR>
+<AUTHOR node_id="948512">
+BlackForrest</AUTHOR>
+<AUTHOR node_id="948528">
+zakaryrim</AUTHOR>
+<AUTHOR node_id="948571">
+chirp84</AUTHOR>
+<AUTHOR node_id="948584">
+perlson</AUTHOR>
+</NEWESTNODES>
+
+

@@ -1,11 +1,17 @@
-package PerlFu::Job::ProcessXML;
+package PerlFu::XML::Parse;
 
-use Moose::Role;
+use Moose;
 use namespace::autoclean;
 use XML::CompactTree::XS;
-use Data::Dumper;
 
-requires qw( run document build_hash source );
+
+=head1 build_xml_nodes
+
+Takes an L<XML::LibXML::Reader> object, parses XML using L<XML::CompactTree::XS>
+
+Returns an arrayref of hashrefs.
+
+=cut 
 
 sub build_xml_nodes {
   my ( $self, $reader ) = @_;
@@ -22,10 +28,5 @@ sub build_xml_nodes {
   return \@nodes;
 }
 
-before run => sub { 
-  my $self = shift;
-};
-
-
-
+__PACKAGE__->meta->make_immutable;
 1;
