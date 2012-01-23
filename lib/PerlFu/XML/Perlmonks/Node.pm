@@ -2,7 +2,7 @@ package PerlFu::XML::Perlmonks::Node;
 
 use Moose::Role;
 use namespace::autoclean;
-use XML::LibXML::Reader;
+use PerlFu::XML::Parser;
 use LWP::UserAgent;
 use HTTP::Request::Common;
 
@@ -26,9 +26,16 @@ has 'ua' => (
   default  => sub { LWP::UserAgent->new }
 );
 
+has 'parser' => (
+  is       => 'ro',
+  required => 1,
+  lazy     => 1,
+  default  => sub { PerlFu::XML::Parser->new }
+);
+
 sub _build_document {
   my $self   = shift;
-  my $ua         = $self->ua;
+  my $ua     = $self->ua;
   my $params = $self->params;
   my $node_url = $self->source .
                  "node_id="    . 
@@ -40,11 +47,7 @@ sub _build_document {
 sub build_hash {
   my $self = shift;
   my $contents = $self->document;
-  my $reader   = XML::LibXML::Reader->new( string => $contents )
-    || die "can't read file $!";
-  my @nodes     = $self->build_xml_nodes($reader);
-  my $tree;
-
+  my @nodes     = $self->build_xml_nodes($contents);
   my $tree;
   $tree->{'node_data'} = $nodes[0][2][0][3];
   $tree->{'author_id'} = $nodes[0][2][0][4][3][3]->{'id'};

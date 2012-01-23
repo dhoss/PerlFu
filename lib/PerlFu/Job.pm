@@ -43,14 +43,11 @@ around name => sub {
   return $name;
 };
 
-sub run {
-  my $self = shift;
-}
-
 sub BUILD {
   my $self = shift;
   my $name = $self->name;
   apply_all_roles($self, $name);
 }
+
 __PACKAGE__->meta->make_immutable;
 1;
