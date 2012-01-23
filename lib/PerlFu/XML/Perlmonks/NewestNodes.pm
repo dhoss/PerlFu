@@ -56,11 +56,15 @@ sub nodes {
   my $parser        = $self->parser;
   my $all_xml_nodes = $parser->build_xml_nodes($contents);
   my @nodes;
+  # up to this index in the array is a bunch of non-crucial data, 
+  # [4] is the beginning of the array of node data
   my $nodes = $all_xml_nodes->[0][2][0][4];
   for ( @{$nodes} ) {
-    next
-      if $_->[1] eq 'AUTHOR'
-        || $_->[1] !~ /\w+/;
+    # skip it if it's author data
+    # or whatever the non-word stuff is
+    next if $_->[1] eq 'AUTHOR' || 
+            $_->[1] !~ /\w+/;
+    # [3] is the actual node data
     push @nodes, $_->[3];
   }
   return \@nodes;
