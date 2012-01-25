@@ -49,5 +49,6 @@ sub BUILD {
   apply_all_roles($self, $name);
 }
 
+
 __PACKAGE__->meta->make_immutable;
 1;

@@ -7,7 +7,9 @@ my $job;
 my $queue;
 $job = PerlFu::Job->new(
   name   => 'ProcessXML',
-  params => { node_id => 948391 },
+  params => { 
+    type => "Perlmonks::NewestNodes",
+  },
   queue  => 'perlmonks'
 );
 
