@@ -1,5 +1,6 @@
 [% USE Filter.HTMLScrubber %]
 <h2>PerlFu</>
+[% INCLUDE 'search_box.tt' %]
 [% UNLESS c.user_exists %]
 <div id="login">
 [% INCLUDE 'user/login.tt' %]

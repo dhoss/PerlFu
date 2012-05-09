@@ -1,0 +1,5 @@
+<h2>Found [% results.size %] results for [% query %]:</h2>
+[% USE Dumper; #Dumper.dump(results.hits) %]
+[% FOR hit IN results %]
+   <div style="border-bottom: 1px solid #000">[% hit.article %] [% hit.comment %]</div>
+[% END %]
