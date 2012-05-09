@@ -62,6 +62,7 @@ for my $user ( $user_rs->all ) {
         commentid => $comment->cid,
         subject   => $comment->subject,
         comment   => $comment->comment,
+        storyid   => $comment->sid,
         owner     => $schema->resultset('User')->find($comment->uid)->nickname
       }
     );

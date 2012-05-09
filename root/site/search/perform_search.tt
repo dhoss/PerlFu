@@ -9,6 +9,10 @@
        <a href="http://up.perlfu.org/~[% hit.owner %]/journal/[% hit.journalid %]">
        [% hit.description %]
        </a>
+       [% ELSIF hit.commentid %]
+       <a href="http://up.perlfu.org/article.pl?sid=[% hit.storyid %]">
+       [% hit.subject %]
+       </a>
        [% END %]
      </div
      [% hit.article %] [% hit.comment %]

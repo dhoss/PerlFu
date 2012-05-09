@@ -29,7 +29,7 @@ sub perform_search : Path Args(0) {
   my $search = $c->model('Search');
   try {
     my $results = $search->searchqs(
-      index => 'perlfu',
+      index => $ENV{'ES_INDEX'} || 'perlfu',
       type  => ['user', 'article', 'journal', 'comment'],
       q     => $params->{'q'}
     );
