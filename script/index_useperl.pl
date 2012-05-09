@@ -10,11 +10,11 @@ my $schema = WWW::UsePerl::Server::Schema->connect('dbi:Pg:dbname=useperl', 'use
 my $user_rs    = $schema->resultset('User');
 
 my $es = ElasticSearch->new(trace_calls  => 'log_file');
-
+my $index = $ENV{'ES_INDEX'} || 'perlfu';
 for my $user ( $user_rs->all ) {
   print "Adding " . $user->nickname . " to the index\n";
   $es->index(
-    index => 'perlfu',
+    index => $index,
     type  => 'user',
     data  => {
       name   => $user->nickname,
@@ -26,13 +26,14 @@ for my $user ( $user_rs->all ) {
   print "Journals...\n";
   for my $journal ( $user->journals->all ) {
     $es->index(
-      index => 'perlfu',
+      index => $index,
       type  => 'journal',
       data  => {
         description => $journal->description,
         article     => $journal->article,
         introtext   => $journal->introtext,
-        journalid   => $user->id
+        journalid   => $journal->id,
+        owner       => $schema->resultset('User')->find($journal->uid)->nickname
       }
     );
   }
@@ -40,13 +41,14 @@ for my $user ( $user_rs->all ) {
   print "Stories...\n";
   for my $story ( $schema->resultset('Story')->all ) {
     $es->index(
-      index => 'perlfu',
+      index => $index,
       type  => 'story',
       data  => {
         storyid   => $story->stoid,
         title     => $story->title,
         introtext => $story->introtext,
-        bodytext  => $story->bodytext
+        bodytext  => $story->bodytext,
+        owner     => $schema->resultset('User')->find($story->uid)->nickname
       }
     );
   }
@@ -54,12 +56,13 @@ for my $user ( $user_rs->all ) {
   print "Comments...\n";
   for my $comment ( $schema->resultset('Comment')->all ) {
     $es->index(
-      index => 'perlfu',
+      index => $index,
       type  => 'comment',
       data  => {
         commentid => $comment->cid,
         subject   => $comment->subject,
         comment   => $comment->comment,
+        owner     => $schema->resultset('User')->find($comment->uid)->nickname
       }
     );
   }
