@@ -21,7 +21,6 @@ for my $user ( $user_rs->all ) {
       userid => $user->uid
     }
   );
-
   print "Adding user data...\n";
 
   print "Journals...\n";
@@ -37,7 +36,7 @@ for my $user ( $user_rs->all ) {
       }
     );
   }
-
+}
   print "Stories...\n";
   for my $story ( $schema->resultset('Story')->all ) {
     $es->index(
@@ -64,4 +63,3 @@ for my $user ( $user_rs->all ) {
       }
     );
   }
-}

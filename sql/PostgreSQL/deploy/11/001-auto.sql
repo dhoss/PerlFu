@@ -1,6 +1,6 @@
 -- 
 -- Created by SQL::Translator::Producer::PostgreSQL
--- Created on Wed May  9 10:26:16 2012
+-- Created on Wed May  9 10:43:29 2012
 -- 
 ;
 --
@@ -41,7 +41,7 @@ CREATE TABLE "sessions" (
 -- Table: users
 --
 CREATE TABLE "users" (
-  "userid" integer NOT NULL,
+  "userid" serial NOT NULL,
   "name" character varying(255) NOT NULL,
   "password" character(60) NOT NULL,
   PRIMARY KEY ("userid"),

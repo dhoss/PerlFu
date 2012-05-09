@@ -47,13 +47,14 @@ sub create : Chained('base') PathPart('new') Args(0) {
        exists $params->{'password'} ) {
     try {
       my $user = $c->model('Database')->txn_do(
-        sub { 
+        sub {
           my $u = $c->model('Database::User')->create($params)
             or die "Can't create user: $!";
         }
       );
       $c->stash( user => $user );
     } catch {
+      $c->log->debug("ERROR $_");
       $c->error($_);
     };
   }
@@ -71,6 +72,8 @@ sub login : Chained('base') PathPart('login') Args(0) {
   }
   if ( $params->{'submit'} ) {
    my $user = $c->model('Database::User')->find({ name => $params->{'username'} });
+   use Data::Dumper;
+   $c->log->debug("CONFIG SHIT " . Dumper $c->config->{'Plugin::Authentication'});
    if ( $c->authenticate({
           name => $params->{'username'},
           password => $params->{'password'}
@@ -98,7 +101,7 @@ sub logout : Chained('base') PathPart('logout') Args(0) {
 
 sub not_authorized : Path('/notauthorized') Args(0) {
   my ( $self, $c ) = @_;
-  $c->stash( 
+  $c->stash(
     template => 'notauthorized.tt'
   );
 }

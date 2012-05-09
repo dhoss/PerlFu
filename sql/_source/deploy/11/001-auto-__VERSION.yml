@@ -2,319 +2,7 @@
 schema:
   procedures: {}
   tables:
-    forums:
-      constraints:
-        - deferrable: 1
-          expression: ''
-          fields:
-            - forumid
-          match_type: ''
-          name: ''
-          on_delete: ''
-          on_update: ''
-          options: []
-          reference_fields: []
-          reference_table: ''
-          type: PRIMARY KEY
-        - deferrable: 1
-          expression: ''
-          fields:
-            - name
-          match_type: ''
-          name: forums_name
-          on_delete: ''
-          on_update: ''
-          options: []
-          reference_fields: []
-          reference_table: ''
-          type: UNIQUE
-      fields:
-        forumid:
-          data_type: integer
-          default_value: ~
-          is_auto_increment: 1
-          is_nullable: 0
-          is_primary_key: 1
-          is_unique: 0
-          name: forumid
-          order: 1
-          size:
-            - 0
-        name:
-          data_type: varchar
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 0
-          is_unique: 1
-          name: name
-          order: 2
-          size:
-            - 255
-      indices:
-        - fields:
-            - forumid
-            - name
-          name: forum_name_idx
-          options: []
-          type: NORMAL
-      name: forums
-      options: []
-      order: 1
-    posts:
-      constraints:
-        - deferrable: 1
-          expression: ''
-          fields:
-            - postid
-          match_type: ''
-          name: ''
-          on_delete: ''
-          on_update: ''
-          options: []
-          reference_fields: []
-          reference_table: ''
-          type: PRIMARY KEY
-        - deferrable: 1
-          expression: ''
-          fields:
-            - title
-          match_type: ''
-          name: posts_title
-          on_delete: ''
-          on_update: ''
-          options: []
-          reference_fields: []
-          reference_table: ''
-          type: UNIQUE
-        - deferrable: 1
-          expression: ''
-          fields:
-            - author
-          match_type: ''
-          name: posts_fk_author
-          on_delete: CASCADE
-          on_update: CASCADE
-          options: []
-          reference_fields:
-            - userid
-          reference_table: users
-          type: FOREIGN KEY
-        - deferrable: 1
-          expression: ''
-          fields:
-            - forumid
-          match_type: ''
-          name: posts_fk_forumid
-          on_delete: CASCADE
-          on_update: CASCADE
-          options: []
-          reference_fields:
-            - forumid
-          reference_table: forums
-          type: FOREIGN KEY
-        - deferrable: 1
-          expression: ''
-          fields:
-            - parent
-          match_type: ''
-          name: posts_fk_parent
-          on_delete: CASCADE
-          on_update: CASCADE
-          options: []
-          reference_fields:
-            - postid
-          reference_table: posts
-          type: FOREIGN KEY
-      fields:
-        author:
-          data_type: integer
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 0
-          is_unique: 0
-          name: author
-          order: 6
-          size:
-            - 0
-        body:
-          data_type: text
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 0
-          is_unique: 0
-          name: body
-          order: 5
-          size:
-            - 0
-        created_at:
-          data_type: datetime
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 0
-          is_unique: 0
-          name: created_at
-          order: 9
-          size:
-            - 0
-        forumid:
-          data_type: integer
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 0
-          is_unique: 0
-          name: forumid
-          order: 2
-          size:
-            - 0
-        parent:
-          data_type: integer
-          default_value: ~
-          is_nullable: 1
-          is_primary_key: 0
-          is_unique: 0
-          name: parent
-          order: 7
-          size:
-            - 0
-        path:
-          data_type: varchar
-          default_value: ~
-          is_nullable: 1
-          is_primary_key: 0
-          is_unique: 0
-          name: path
-          order: 8
-          size:
-            - 255
-        postid:
-          data_type: integer
-          default_value: ~
-          is_auto_increment: 1
-          is_nullable: 0
-          is_primary_key: 1
-          is_unique: 0
-          name: postid
-          order: 1
-          size:
-            - 0
-        tags:
-          data_type: varchar
-          default_value: ~
-          is_nullable: 1
-          is_primary_key: 0
-          is_unique: 0
-          name: tags
-          order: 4
-          size:
-            - 255
-        title:
-          data_type: varchar
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 0
-          is_unique: 1
-          name: title
-          order: 3
-          size:
-            - 200
-        updated_at:
-          data_type: datetime
-          default_value: ~
-          is_nullable: 1
-          is_primary_key: 0
-          is_unique: 0
-          name: updated_at
-          order: 10
-          size:
-            - 0
-      indices:
-        - fields:
-            - author
-          name: posts_idx_author
-          options: []
-          type: NORMAL
-        - fields:
-            - forumid
-          name: posts_idx_forumid
-          options: []
-          type: NORMAL
-        - fields:
-            - parent
-          name: posts_idx_parent
-          options: []
-          type: NORMAL
-        - fields:
-            - path
-            - postid
-          name: path_postid_idx
-          options: []
-          type: NORMAL
-        - fields:
-            - postid
-            - author
-          name: post_author_idx
-          options: []
-          type: NORMAL
-        - fields:
-            - path
-          name: path_idx
-          options: []
-          type: NORMAL
-      name: posts
-      options: []
-      order: 5
-    roles:
-      constraints:
-        - deferrable: 1
-          expression: ''
-          fields:
-            - roleid
-          match_type: ''
-          name: ''
-          on_delete: ''
-          on_update: ''
-          options: []
-          reference_fields: []
-          reference_table: ''
-          type: PRIMARY KEY
-        - deferrable: 1
-          expression: ''
-          fields:
-            - name
-          match_type: ''
-          name: roles_name
-          on_delete: ''
-          on_update: ''
-          options: []
-          reference_fields: []
-          reference_table: ''
-          type: UNIQUE
-      fields:
-        name:
-          data_type: varchar
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 0
-          is_unique: 1
-          name: name
-          order: 2
-          size:
-            - 255
-        roleid:
-          data_type: integer
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 1
-          is_unique: 0
-          name: roleid
-          order: 1
-          size:
-            - 0
-      indices: []
-      name: roles
-      options: []
-      order: 2
-    sessions:
+    dbix_class_deploymenthandler_versions:
       constraints:
         - deferrable: 1
           expression: ''
@@ -328,137 +16,12 @@ schema:
           reference_fields: []
           reference_table: ''
           type: PRIMARY KEY
-      fields:
-        expires:
-          data_type: integer
-          default_value: ~
-          is_nullable: 1
-          is_primary_key: 0
-          is_unique: 0
-          name: expires
-          order: 3
-          size:
-            - 0
-        id:
-          data_type: char
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 1
-          is_unique: 0
-          name: id
-          order: 1
-          size:
-            - 72
-        session_data:
-          data_type: text
-          default_value: ~
-          is_nullable: 1
-          is_primary_key: 0
-          is_unique: 0
-          name: session_data
-          order: 2
-          size:
-            - 0
-      indices: []
-      name: sessions
-      options: []
-      order: 3
-    user_roles:
-      constraints:
         - deferrable: 1
           expression: ''
           fields:
-            - roleid
-            - userid
+            - version
           match_type: ''
-          name: ''
-          on_delete: ''
-          on_update: ''
-          options: []
-          reference_fields: []
-          reference_table: ''
-          type: PRIMARY KEY
-        - deferrable: 1
-          expression: ''
-          fields:
-            - roleid
-          match_type: ''
-          name: user_roles_fk_roleid
-          on_delete: CASCADE
-          on_update: CASCADE
-          options: []
-          reference_fields:
-            - roleid
-          reference_table: roles
-          type: FOREIGN KEY
-        - deferrable: 1
-          expression: ''
-          fields:
-            - userid
-          match_type: ''
-          name: user_roles_fk_userid
-          on_delete: ''
-          on_update: ''
-          options: []
-          reference_fields:
-            - userid
-          reference_table: users
-          type: FOREIGN KEY
-      fields:
-        roleid:
-          data_type: integer
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 1
-          is_unique: 0
-          name: roleid
-          order: 1
-          size:
-            - 0
-        userid:
-          data_type: integer
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 1
-          is_unique: 0
-          name: userid
-          order: 2
-          size:
-            - 0
-      indices:
-        - fields:
-            - roleid
-          name: user_roles_idx_roleid
-          options: []
-          type: NORMAL
-        - fields:
-            - userid
-          name: user_roles_idx_userid
-          options: []
-          type: NORMAL
-      name: user_roles
-      options: []
-      order: 6
-    users:
-      constraints:
-        - deferrable: 1
-          expression: ''
-          fields:
-            - userid
-          match_type: ''
-          name: ''
-          on_delete: ''
-          on_update: ''
-          options: []
-          reference_fields: []
-          reference_table: ''
-          type: PRIMARY KEY
-        - deferrable: 1
-          expression: ''
-          fields:
-            - name
-          match_type: ''
-          name: users_name
+          name: dbix_class_deploymenthandler_versions_version
           on_delete: ''
           on_update: ''
           options: []
@@ -466,40 +29,51 @@ schema:
           reference_table: ''
           type: UNIQUE
       fields:
-        name:
+        ddl:
+          data_type: text
+          default_value: ~
+          is_nullable: 1
+          is_primary_key: 0
+          is_unique: 0
+          name: ddl
+          order: 3
+          size:
+            - 0
+        id:
+          data_type: int
+          default_value: ~
+          is_auto_increment: 1
+          is_nullable: 0
+          is_primary_key: 1
+          is_unique: 0
+          name: id
+          order: 1
+          size:
+            - 0
+        upgrade_sql:
+          data_type: text
+          default_value: ~
+          is_nullable: 1
+          is_primary_key: 0
+          is_unique: 0
+          name: upgrade_sql
+          order: 4
+          size:
+            - 0
+        version:
           data_type: varchar
           default_value: ~
           is_nullable: 0
           is_primary_key: 0
           is_unique: 1
-          name: name
+          name: version
           order: 2
           size:
-            - 255
-        password:
-          data_type: char
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 0
-          is_unique: 0
-          name: password
-          order: 3
-          size:
-            - 60
-        userid:
-          data_type: integer
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 1
-          is_unique: 0
-          name: userid
-          order: 1
-          size:
-            - 0
+            - 50
       indices: []
-      name: users
+      name: dbix_class_deploymenthandler_versions
       options: []
-      order: 4
+      order: 1
   triggers: {}
   views: {}
 translator:
@@ -756,7 +330,8 @@ translator:
               is_nullable: 0
               size: 60
             userid:
-              data_type: integer
+              data_type: serial
+              is_auto_increment: 1
               is_nullable: 0
               is_primary_key: 1
           _columns_info_loaded: 0
@@ -887,16 +462,12 @@ translator:
         _in_do_block: 0
         _sql_maker: ~
         _sql_maker_opts: {}
+        debug: 1
         savepoints: []
         schema: *1
         transaction_depth: 0
     sources:
-      - Post
-      - Role
-      - Session
-      - Forum
-      - UserRole
-      - User
+      - __VERSION
   parser_type: SQL::Translator::Parser::DBIx::Class
   producer_args: {}
   producer_type: SQL::Translator::Producer::YAML

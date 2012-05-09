@@ -487,8 +487,9 @@ schema:
           size:
             - 60
         userid:
-          data_type: integer
+          data_type: serial
           default_value: ~
+          is_auto_increment: 1
           is_nullable: 0
           is_primary_key: 1
           is_unique: 0
@@ -756,7 +757,8 @@ translator:
               is_nullable: 0
               size: 60
             userid:
-              data_type: integer
+              data_type: serial
+              is_auto_increment: 1
               is_nullable: 0
               is_primary_key: 1
           _columns_info_loaded: 0
@@ -887,6 +889,7 @@ translator:
         _in_do_block: 0
         _sql_maker: ~
         _sql_maker_opts: {}
+        debug: 1
         savepoints: []
         schema: *1
         transaction_depth: 0
